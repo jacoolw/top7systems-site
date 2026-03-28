@@ -1,0 +1,161 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #64648c;
+    --accent: #4f46e5;
+    --accent-light: #eef2ff;
+    --border: #e5e5ef;
+    --radius: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Document pages (privacy, support) */
+.doc {
+    padding: 48px 0 80px;
+}
+
+.back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: 32px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.doc h1 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.doc section {
+    margin-bottom: 32px;
+}
+
+.doc h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.doc h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.doc p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.doc ul {
+    color: var(--text-secondary);
+    padding-left: 24px;
+    margin-bottom: 12px;
+}
+
+.doc ul li {
+    margin-bottom: 8px;
+}
+
+.doc a {
+    color: var(--accent);
+}
+
+.doc a:hover {
+    text-decoration: underline;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+}
+
+.faq-item h3 {
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    margin-bottom: 0;
+}

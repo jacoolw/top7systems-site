@@ -1,0 +1,32 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- Camera body -->
+  <rect x="116" y="196" width="280" height="200" rx="28" fill="white" opacity="0.95"/>
+  <!-- Camera lens -->
+  <circle cx="256" cy="296" r="64" fill="none" stroke="#1d4ed8" stroke-width="10" opacity="0.6"/>
+  <circle cx="256" cy="296" r="40" fill="#1d4ed8" opacity="0.2"/>
+  <circle cx="256" cy="296" r="18" fill="#1d4ed8" opacity="0.4"/>
+  <!-- Flash -->
+  <rect x="168" y="210" width="24" height="12" rx="4" fill="#1d4ed8" opacity="0.3"/>
+  <!-- Viewfinder bump -->
+  <rect x="208" y="172" width="96" height="36" rx="12" fill="white" opacity="0.9"/>
+  <!-- GPS pin -->
+  <g transform="translate(370, 170)">
+    <path d="M0,0 C-18,0 -32,14 -32,32 C-32,56 0,80 0,80 C0,80 32,56 32,32 C32,14 18,0 0,0Z" fill="#ef4444" opacity="0.9"/>
+    <circle cx="0" cy="30" r="12" fill="white" opacity="0.9"/>
+  </g>
+  <!-- Voice wave lines -->
+  <g transform="translate(130, 340)" opacity="0.5">
+    <rect x="0" y="8" width="4" height="16" rx="2" fill="#1d4ed8"/>
+    <rect x="10" y="4" width="4" height="24" rx="2" fill="#1d4ed8"/>
+    <rect x="20" y="0" width="4" height="32" rx="2" fill="#1d4ed8"/>
+    <rect x="30" y="6" width="4" height="20" rx="2" fill="#1d4ed8"/>
+    <rect x="40" y="10" width="4" height="12" rx="2" fill="#1d4ed8"/>
+  </g>
+</svg>
