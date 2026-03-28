@@ -159,3 +159,61 @@ footer p {
 .faq-item p {
     margin-bottom: 0;
 }
+
+/* Collapsible FAQ */
+.faq-toggle { border-bottom: 1px solid var(--border); padding: 18px 0; }
+.faq-toggle:last-child { border-bottom: none; }
+.faq-toggle summary {
+    font-weight: 600; font-size: 1rem; color: var(--text);
+    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+}
+.faq-toggle summary::-webkit-details-marker { display: none; }
+.faq-toggle summary::after { content: '+'; font-size: 1.25rem; color: var(--text-secondary); transition: transform 0.2s; }
+.faq-toggle[open] summary::after { content: '\2212'; }
+.faq-toggle .faq-answer { padding-top: 10px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; }
+
+/* Feature grid */
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 32px; }
+.feature-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px;
+}
+.feature-icon { font-size: 26px; margin-bottom: 10px; }
+.feature-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.feature-card p { font-size: 0.875rem; margin-bottom: 0; }
+
+/* Steps */
+.step { display: flex; gap: 16px; margin-bottom: 22px; }
+.step-num {
+    flex-shrink: 0; width: 30px; height: 30px; background: var(--accent); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.8rem;
+}
+.step-content h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.step-content p { font-size: 0.9rem; margin-bottom: 0; }
+
+/* Settings table */
+.doc table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.875rem; }
+.doc th, .doc td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.doc th { font-weight: 600; color: var(--text); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.doc td { color: var(--text-secondary); }
+
+/* Info cards */
+.info-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 12px;
+}
+.info-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.info-card p { margin-bottom: 0; }
+
+/* Contact box */
+.contact-box {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 28px; text-align: center; margin-top: 40px;
+}
+.contact-box h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+.contact-box p { margin-bottom: 0; }
+.contact-box a { color: var(--accent); }
+
+@media (max-width: 600px) {
+    .feature-grid { grid-template-columns: 1fr; }
+}
