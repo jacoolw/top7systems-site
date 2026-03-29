@@ -1,37 +1,68 @@
+/* ==========================================================================
+   Top 7 Systems — Unified Stylesheet
+   ========================================================================== */
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --bg: #fafafa;
+    --bg: #ffffff;
+    --bg-alt: #f7f8fa;
     --surface: #ffffff;
-    --text: #1a1a2e;
-    --text-secondary: #64648c;
-    --accent: #4f46e5;
-    --accent-light: #eef2ff;
-    --border: #e5e5ef;
-    --radius: 16px;
+    --text: #0f172a;
+    --text-secondary: #64748b;
+    --accent: #0066FF;
+    --accent-hover: #0052cc;
+    --accent-light: #eff6ff;
+    --border: #e2e8f0;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.08);
+    --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header */
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
 
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -43,52 +74,240 @@ header {
 }
 
 .logo-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--accent);
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.logo-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .logo-text {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
-/* Footer */
+.header-contact {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.header-contact:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
 footer {
     margin-top: auto;
     border-top: 1px solid var(--border);
     padding: 32px 0;
-    text-align: center;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
-/* Document pages (privacy, support) */
+footer a {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Homepage — Hero
+   ========================================================================== */
+
+.hero {
+    padding: 80px 0 64px;
+    text-align: center;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    max-width: 600px;
+    margin: 0 auto 16px;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Homepage — Apps Grid
+   ========================================================================== */
+
+.apps-section {
+    padding-bottom: 96px;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+    position: relative;
+}
+
+.app-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: transparent;
+}
+
+.app-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.app-icon-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.app-card .app-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.app-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.app-links {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.app-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.app-links a:hover {
+    color: var(--accent);
+}
+
+.app-links a::after {
+    content: ' \2192';
+    font-size: 0.8em;
+    opacity: 0.4;
+    transition: opacity var(--transition);
+}
+
+.app-links a:hover::after {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Document Pages (Privacy, Terms, Support, Help)
+   ========================================================================== */
+
 .doc {
-    padding: 48px 0 80px;
+    padding: 48px 0 96px;
 }
 
 .back-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--accent);
     text-decoration: none;
     margin-bottom: 32px;
+    transition: gap var(--transition);
 }
 
 .back-link:hover {
-    text-decoration: underline;
+    gap: 8px;
 }
 
 .doc h1 {
@@ -96,6 +315,13 @@ footer p {
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.doc > p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
 }
 
 .last-updated {
@@ -105,13 +331,14 @@ footer p {
 }
 
 .doc section {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 }
 
 .doc h2 {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     margin-bottom: 12px;
+    letter-spacing: -0.01em;
 }
 
 .doc h3 {
@@ -123,6 +350,7 @@ footer p {
 .doc p {
     color: var(--text-secondary);
     margin-bottom: 12px;
+    line-height: 1.7;
 }
 
 .doc ul {
@@ -133,20 +361,239 @@ footer p {
 
 .doc ul li {
     margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 .doc a {
     color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
 }
 
 .doc a:hover {
     text-decoration: underline;
 }
 
-.faq-item {
-    background: var(--surface);
+/* ==========================================================================
+   Feature Grid
+   ========================================================================== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0 32px;
+}
+
+.feature-card {
+    background: var(--bg-alt);
     border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.feature-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.feature-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.feature-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.feature-card p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Steps
+   ========================================================================== */
+
+.step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.step-content h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Visual Workflow
+   ========================================================================== */
+
+.workflow {
+    margin: 32px 0 40px;
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    padding: 8px 0 16px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.workflow-step {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.workflow-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 130px;
+    padding: 20px 12px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.workflow-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.workflow-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-light);
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.workflow-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.workflow-sublabel {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    line-height: 1.3;
+}
+
+.workflow-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    color: var(--border);
+    font-size: 20px;
+    height: 84px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Settings Table
+   ========================================================================== */
+
+.doc table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 0.875rem;
+}
+
+.doc th, .doc td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.doc th {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--bg-alt);
+}
+
+.doc td {
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Info Cards
+   ========================================================================== */
+
+.info-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    transition: box-shadow var(--transition);
+}
+
+.info-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.info-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.info-card p {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq-item {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     padding: 20px 24px;
     margin-bottom: 12px;
 }
@@ -160,60 +607,165 @@ footer p {
     margin-bottom: 0;
 }
 
-/* Collapsible FAQ */
-.faq-toggle { border-bottom: 1px solid var(--border); padding: 18px 0; }
-.faq-toggle:last-child { border-bottom: none; }
+.faq-toggle {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+}
+
+.faq-toggle:last-child {
+    border-bottom: none;
+}
+
 .faq-toggle summary {
-    font-weight: 600; font-size: 1rem; color: var(--text);
-    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color var(--transition);
 }
-.faq-toggle summary::-webkit-details-marker { display: none; }
-.faq-toggle summary::after { content: '+'; font-size: 1.25rem; color: var(--text-secondary); transition: transform 0.2s; }
-.faq-toggle[open] summary::after { content: '\2212'; }
-.faq-toggle .faq-answer { padding-top: 10px; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; }
 
-/* Feature grid */
-.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0 32px; }
-.feature-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px;
+.faq-toggle summary:hover {
+    color: var(--accent);
 }
-.feature-icon { font-size: 26px; margin-bottom: 10px; }
-.feature-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
-.feature-card p { font-size: 0.875rem; margin-bottom: 0; }
 
-/* Steps */
-.step { display: flex; gap: 16px; margin-bottom: 22px; }
-.step-num {
-    flex-shrink: 0; width: 30px; height: 30px; background: var(--accent); color: #fff;
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 0.8rem;
+.faq-toggle summary::-webkit-details-marker {
+    display: none;
 }
-.step-content h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; color: var(--text); }
-.step-content p { font-size: 0.9rem; margin-bottom: 0; }
 
-/* Settings table */
-.doc table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.875rem; }
-.doc th, .doc td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
-.doc th { font-weight: 600; color: var(--text); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.doc td { color: var(--text-secondary); }
-
-/* Info cards */
-.info-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 20px 24px; margin-bottom: 12px;
+.faq-toggle summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+    margin-left: 16px;
 }
-.info-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
-.info-card p { margin-bottom: 0; }
 
-/* Contact box */
+.faq-toggle[open] summary::after {
+    content: '\2212';
+}
+
+.faq-toggle .faq-answer {
+    padding-top: 10px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Contact Box
+   ========================================================================== */
+
 .contact-box {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 28px; text-align: center; margin-top: 40px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    margin-top: 40px;
 }
-.contact-box h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
-.contact-box p { margin-bottom: 0; }
-.contact-box a { color: var(--accent); }
 
-@media (max-width: 600px) {
-    .feature-grid { grid-template-columns: 1fr; }
+.contact-box h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.contact-box p {
+    margin-bottom: 0;
+}
+
+.contact-box a {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   404 Page
+   ========================================================================== */
+
+.error-page {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.error-page h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--text), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.error-page p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.error-page a {
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.error-page a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-steps {
+        gap: 0;
+    }
+
+    .workflow-card {
+        width: 110px;
+        padding: 16px 8px;
+    }
+
+    .workflow-arrow {
+        padding: 0 3px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-inner {
+        gap: 8px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 56px 0 48px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
 }
