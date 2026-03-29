@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcreteCalc — Support &amp; Help | Top 7 Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .screenshot-row {
+            display: flex;
+            gap: 16px;
+            margin: 20px 0 28px;
+            flex-wrap: wrap;
+        }
+        .screenshot-row img {
+            width: 220px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .screenshot-single {
+            margin: 20px 0 28px;
+        }
+        .screenshot-single img {
+            width: 260px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .formula-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .formula-card h3 {
+            color: var(--text);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        .formula-card .formula {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #333;
+            overflow-x: auto;
+        }
+        .formula-card .example {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border);
+        }
+        .step-list {
+            counter-reset: steps;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            counter-increment: steps;
+            padding: 12px 0 12px 48px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+        .toc h2 {
+            margin-bottom: 12px;
+        }
+        .toc ul {
+            padding-left: 20px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .tip-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            color: #92400e;
+        }
+        .tip-box strong {
+            color: #78350f;
+        }
+        @media (max-width: 600px) {
+            .screenshot-row img { width: 160px; }
+            .screenshot-single img { width: 100%; max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <div class="logo-icon">7</div>
+                <span class="logo-text">Top 7 Systems</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="doc">
+            <a href="/" class="back-link">&larr; Back to all apps</a>
+            <h1>ConcreteCalc — Help &amp; Support</h1>
+
+            <!-- TABLE OF CONTENTS -->
+            <div class="toc">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#calculator">Using the Calculator</a></li>
+                    <li><a href="#shapes">Supported Shapes</a></li>
+                    <li><a href="#waste-factor">Waste Factor</a></li>
+                    <li><a href="#settings">Settings &amp; Customisation</a></li>
+                    <li><a href="#pricing">Setting Up Cost Estimates</a></li>
+                    <li><a href="#project">Project Tab &amp; Totals</a></li>
+                    <li><a href="#reference">Reference Guide</a></li>
+                    <li><a href="#formulas">Formulas &amp; How Calculations Work</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- GETTING STARTED -->
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>ConcreteCalc is a fast, reliable concrete volume calculator built for tradespeople, contractors, and DIYers. It works completely offline &mdash; no account needed, no internet required.</p>
+                <p>The app has three tabs:</p>
+                <ul>
+                    <li><strong>Calculator</strong> &mdash; Enter dimensions and get instant volume, bag counts, and truck loads.</li>
+                    <li><strong>Project</strong> &mdash; Save multiple calculations, see combined totals, and estimate costs.</li>
+                    <li><strong>Reference</strong> &mdash; Quick-reference tables for bag yields, common thicknesses, concrete strength, sonotube sizes, and more.</li>
+                </ul>
+                <div class="screenshot-row">
+                    <img src="screenshots/calculator-slab.png" alt="Calculator tab showing a slab calculation with length, width, thickness inputs">
+                    <img src="screenshots/project.png" alt="Project tab showing saved calculations and project total">
+                    <img src="screenshots/reference.png" alt="Reference tab with expandable sections for bag yields, thicknesses, and more">
+                </div>
+            </section>
+
+            <!-- USING THE CALCULATOR -->
+            <section id="calculator">
+                <h2>Using the Calculator</h2>
+                <ol class="step-list">
+                    <li><strong>Choose a shape</strong> from the row of icons at the top: Slab, Footing, Column, Wall, Steps, or Circle.</li>
+                    <li><strong>Enter your dimensions.</strong> In imperial mode you enter feet, inches, and fractions. In metric mode you enter metres and centimetres.</li>
+                    <li><strong>Pick a thickness</strong> (or depth/diameter depending on the shape) from the quick-select buttons, or tap <em>Custom</em> to enter your own.</li>
+                    <li><strong>Set a waste factor</strong> using the buttons below the dimensions. The default is 7% &mdash; a good general-purpose value.</li>
+                    <li><strong>View your results</strong> at the bottom of the screen: total volume, number of bags needed for each bag size, and truck loads required.</li>
+                    <li><strong>Add to Project</strong> &mdash; tap the button below the results to save this calculation to your project for combined totals.</li>
+                </ol>
+                <div class="screenshot-row">
+                    <img src="screenshots/calculator-slab.png" alt="Calculator with slab dimensions entered">
+                    <img src="screenshots/calculator-results.png" alt="Results showing volume, bags needed, and truck loads">
+                </div>
+                <div class="tip-box">
+                    <strong>Tip:</strong> Tap <em>Done</em> on the keyboard or swipe down on the screen to dismiss the keyboard and see your results.
+                </div>
+            </section>
+
+            <!-- SUPPORTED SHAPES -->
+            <section id="shapes">
+                <h2>Supported Shapes</h2>
+                <p>ConcreteCalc handles the six most common concrete pour shapes:</p>
+                <ul>
+                    <li><strong>Slab / Pad</strong> &mdash; Flat rectangular pours like patios, sidewalks, garage floors, and driveways. Enter length, width, and thickness.</li>
+                    <li><strong>Footing</strong> &mdash; Continuous strip footings for foundations and walls. Enter length, width, and depth.</li>
+                    <li><strong>Column (Sonotube)</strong> &mdash; Round columns and piers. Enter diameter, height, and number of columns. Great for deck footings.</li>
+                    <li><strong>Wall</strong> &mdash; Poured concrete walls. Enter length, height, and wall thickness.</li>
+                    <li><strong>Steps / Stairs</strong> &mdash; Concrete steps with a landing platform. Enter width, number of steps, rise, run, and platform depth.</li>
+                    <li><strong>Circle</strong> &mdash; Circular slabs like fire pit pads and round patios. Enter diameter and thickness.</li>
+                </ul>
+            </section>
+
+            <!-- WASTE FACTOR -->
+            <section id="waste-factor">
+                <h2>Waste Factor</h2>
+                <p>The waste factor adds extra volume to your order to account for spillage, uneven subgrade, over-excavation, and form irregularities. Running short on a pour is expensive &mdash; always round up.</p>
+                <ul>
+                    <li><strong>0%</strong> &mdash; Exact volume only (not recommended for ordering).</li>
+                    <li><strong>5%</strong> &mdash; Simple flat slabs with good, tight formwork.</li>
+                    <li><strong>7%</strong> &mdash; Standard recommendation for most jobs.</li>
+                    <li><strong>10%</strong> &mdash; Footings poured against earth, complex shapes, or uneven ground.</li>
+                    <li><strong>15%</strong> &mdash; Pumped concrete, irregular pours, or when conditions are unpredictable.</li>
+                    <li><strong>Custom</strong> &mdash; Enter any percentage you need.</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Pro tip:</strong> If this is your first time pouring on a particular site, err on the high side. A few extra bags or a small over-order on a truck is far cheaper than coming up short mid-pour and having to schedule a second delivery.
+                </div>
+            </section>
+
+            <!-- SETTINGS -->
+            <section id="settings">
+                <h2>Settings &amp; Customisation</h2>
+                <p>Tap the gear icon in the top-right corner of the Calculator tab to open Settings.</p>
+                <div class="screenshot-single">
+                    <img src="screenshots/settings.png" alt="Settings screen showing unit system picker, truck capacity, and bag sizes">
+                </div>
+                <h3>Unit System</h3>
+                <p>Switch between <strong>Imperial</strong> (feet, inches, cubic yards) and <strong>Metric</strong> (metres, centimetres, cubic metres). The app defaults to whatever measurement system is standard in your country.</p>
+                <h3>Truck Capacity</h3>
+                <p>Set the capacity of a standard ready-mix truck in your area. This is used to calculate how many truck loads you need. Common values:</p>
+                <ul>
+                    <li><strong>10 yd&sup3;</strong> &mdash; Standard truck in the US and Canada.</li>
+                    <li><strong>7.6 m&sup3;</strong> &mdash; Standard truck in Australia, UK, and most metric countries.</li>
+                </ul>
+                <h3>Bag Sizes</h3>
+                <p>Customise which bag sizes are available and their yields. The defaults are set based on your country &mdash; imperial countries get 40/60/80 lb bags, metric countries get 20/25/30/40 kg bags.</p>
+                <h3>Reset to Defaults</h3>
+                <p>Scroll to the bottom of Settings and tap <em>Reset to Defaults</em> to restore all settings to their original values for your region.</p>
+            </section>
+
+            <!-- PRICING SETUP -->
+            <section id="pricing">
+                <h2>Setting Up Cost Estimates</h2>
+                <p>ConcreteCalc can estimate the cost of your concrete order. Here is how to set it up:</p>
+                <ol class="step-list">
+                    <li>Go to the <strong>Project</strong> tab by tapping the second icon in the bottom tab bar.</li>
+                    <li>You need at least one calculation saved. If the Project tab is empty, go back to the Calculator, run a calculation, and tap <strong>Add to Project</strong>.</li>
+                    <li>In the Project tab, tap <strong>Cost Settings</strong> to expand the pricing section.</li>
+                    <li>Enter the <strong>price per cubic yard</strong> (or per cubic metre in metric mode). This is the rate your local ready-mix supplier charges. Call them for a quote &mdash; prices vary by region, mix strength, and time of year.</li>
+                    <li>Optionally enter a <strong>delivery fee</strong>. Many suppliers charge a flat delivery fee per truck.</li>
+                    <li>Your <strong>Estimated Cost</strong> appears immediately in the Project Total card above.</li>
+                </ol>
+                <div class="screenshot-single">
+                    <img src="screenshots/project.png" alt="Project tab showing cost settings and estimated cost">
+                </div>
+                <div class="tip-box">
+                    <strong>Note:</strong> Cost estimates are for planning purposes only. Actual prices depend on your supplier, mix design, delivery distance, and other factors. Always confirm pricing with your ready-mix supplier before ordering.
+                </div>
+            </section>
+
+            <!-- PROJECT TAB -->
+            <section id="project">
+                <h2>Project Tab &amp; Totals</h2>
+                <p>The Project tab lets you combine multiple calculations into a single job estimate:</p>
+                <ul>
+                    <li><strong>Add calculations</strong> from the Calculator tab by tapping <em>Add to Project</em> below the results.</li>
+                    <li><strong>See combined totals</strong> &mdash; total volume, total truck loads, and estimated cost for the entire project.</li>
+                    <li><strong>Remove individual items</strong> by swiping left on a row.</li>
+                    <li><strong>Share a summary</strong> &mdash; tap <em>Share Project Summary</em> to generate a plain-text summary you can send to a supplier, client, or colleague via text, email, or any app.</li>
+                    <li><strong>Clear the project</strong> by tapping the trash icon in the top-right corner.</li>
+                </ul>
+                <p>Your project is saved automatically and persists between app launches.</p>
+            </section>
+
+            <!-- REFERENCE GUIDE -->
+            <section id="reference">
+                <h2>Reference Guide</h2>
+                <p>The Reference tab gives you quick-access tables for common concrete data, so you do not have to look it up elsewhere:</p>
+                <ul>
+                    <li><strong>Bag Yields</strong> &mdash; How much concrete each bag size produces.</li>
+                    <li><strong>Common Thicknesses</strong> &mdash; Recommended slab thickness for sidewalks, driveways, garages, and commercial work.</li>
+                    <li><strong>PSI / MPa Strength Guide</strong> &mdash; Which concrete strength to order for your application.</li>
+                    <li><strong>Sonotube Sizes</strong> &mdash; Which tube diameter to use for deck posts, footings, and structural piers.</li>
+                    <li><strong>Waste Factor Guide</strong> &mdash; Recommended waste percentages for different job types.</li>
+                    <li><strong>Ready-Mix Trucks</strong> &mdash; Common truck capacities and when to order ready-mix vs. use bags.</li>
+                </ul>
+                <p>All reference data switches between imperial and metric to match your unit system setting.</p>
+                <div class="screenshot-single">
+                    <img src="screenshots/reference.png" alt="Reference tab showing expandable reference sections">
+                </div>
+            </section>
+
+            <!-- FORMULAS -->
+            <section id="formulas">
+                <h2>Formulas &amp; How Calculations Work</h2>
+                <p>ConcreteCalc uses standard geometry formulas trusted across the construction industry. Here is exactly how every calculation works, so you can verify the numbers yourself.</p>
+
+                <div class="formula-card">
+                    <h3>Slab / Pad</h3>
+                    <p>A simple rectangular volume.</p>
+                    <div class="formula">
+                        Volume = Length &times; Width &times; Thickness
+                    </div>
+                    <p>Imperial inputs are converted so all measurements are in feet before multiplying. Thickness in inches is divided by 12 to convert to feet. The result in cubic feet is divided by 27 to get cubic yards.</p>
+                    <div class="example">
+                        <strong>Example:</strong> A 10 ft &times; 10 ft slab at 4" thick<br>
+                        Volume = 10 &times; 10 &times; (4 &divide; 12) = 33.33 ft&sup3; = 1.23 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Footing</h3>
+                    <p>Identical to a slab &mdash; a rectangular solid defined by length, width, and depth.</p>
+                    <div class="formula">
+                        Volume = Length &times; Width &times; Depth
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> A footing 40 ft long, 1 ft 6 in wide, 1 ft deep<br>
+                        Volume = 40 &times; 1.5 &times; 1 = 60 ft&sup3; = 2.22 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Column (Sonotube)</h3>
+                    <p>A cylinder. The diameter input is converted to a radius in feet.</p>
+                    <div class="formula">
+                        Volume = &pi; &times; (Diameter &divide; 2)&sup2; &times; Height &times; Quantity
+                    </div>
+                    <p>When using imperial, the diameter in inches is divided by 24 to get the radius in feet (i.e. divided by 2 for radius, then by 12 to convert inches to feet).</p>
+                    <div class="example">
+                        <strong>Example:</strong> 4 columns, 12" diameter, 4 ft deep<br>
+                        Volume = &pi; &times; (12 &divide; 24)&sup2; &times; 4 &times; 4 = &pi; &times; 0.25 &times; 4 &times; 4 = 12.57 ft&sup3; = 0.47 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Wall</h3>
+                    <p>A flat rectangular volume defined by length, height, and wall thickness.</p>
+                    <div class="formula">
+                        Volume = Length &times; Height &times; Thickness
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> A wall 20 ft long, 4 ft high, 8" thick<br>
+                        Volume = 20 &times; 4 &times; (8 &divide; 12) = 53.33 ft&sup3; = 1.98 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Steps / Stairs</h3>
+                    <p>Steps are calculated as a series of stacked rectangles plus a platform slab. Each step is one rise taller than the one above it.</p>
+                    <div class="formula">
+                        Steps Volume = Width &times; Run &times; Rise &times; N &times; (N + 1) &divide; 2<br><br>
+                        Platform Volume = Width &times; Platform Depth &times; (N &times; Rise)<br><br>
+                        Total = Steps Volume + Platform Volume
+                    </div>
+                    <p>The formula N &times; (N+1) &divide; 2 is the triangular number series &mdash; it accounts for the fact that each lower step is one rise taller than the one above, forming a staircase shape.</p>
+                    <div class="example">
+                        <strong>Example:</strong> 3 steps, 4 ft wide, 7" rise, 11" run, 3 ft platform<br>
+                        Steps = 4 &times; (11/12) &times; (7/12) &times; 3 &times; 4 &divide; 2 = 12.83 ft&sup3;<br>
+                        Platform = 4 &times; 3 &times; (3 &times; 7/12) = 21.00 ft&sup3;<br>
+                        Total = 33.83 ft&sup3; = 1.25 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Circle (Round Slab)</h3>
+                    <p>A flat cylinder &mdash; like a slab but round.</p>
+                    <div class="formula">
+                        Volume = &pi; &times; (Diameter &divide; 2)&sup2; &times; Thickness
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> A 10 ft diameter circle, 4" thick<br>
+                        Volume = &pi; &times; 5&sup2; &times; (4 &divide; 12) = 26.18 ft&sup3; = 0.97 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Waste Factor</h3>
+                    <p>The waste factor is applied as a percentage increase on the base volume.</p>
+                    <div class="formula">
+                        Adjusted Volume = Base Volume &times; (1 + Waste% &divide; 100)
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> 1.23 yd&sup3; with 7% waste<br>
+                        Adjusted = 1.23 &times; 1.07 = 1.32 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Bags Needed</h3>
+                    <p>The number of bags is calculated by dividing the waste-adjusted volume by the yield per bag, then rounding up.</p>
+                    <div class="formula">
+                        Bags = &lceil; Adjusted Volume &divide; Yield Per Bag &rceil;
+                    </div>
+                    <p>Standard yields (imperial): 80 lb = 0.60 ft&sup3;, 60 lb = 0.45 ft&sup3;, 40 lb = 0.30 ft&sup3;.<br>
+                    Standard yields (metric): 40 kg = 0.020 m&sup3;, 30 kg = 0.015 m&sup3;, 25 kg = 0.013 m&sup3;, 20 kg = 0.010 m&sup3;.</p>
+                    <div class="example">
+                        <strong>Example:</strong> 35.67 ft&sup3; (with waste) using 80 lb bags<br>
+                        Bags = &lceil; 35.67 &divide; 0.60 &rceil; = &lceil; 59.44 &rceil; = 60 bags
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Truck Loads</h3>
+                    <p>The number of ready-mix truck loads is calculated by dividing total volume by truck capacity, rounded up.</p>
+                    <div class="formula">
+                        Truck Loads = &lceil; Total Volume &divide; Truck Capacity &rceil;
+                    </div>
+                    <p>Default truck capacities: 10 yd&sup3; (imperial) or 7.6 m&sup3; (metric). You can change this in Settings.</p>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Unit Conversions</h3>
+                    <div class="formula">
+                        1 cubic yard = 27 cubic feet<br>
+                        1 cubic foot = 0.0283168 cubic metres<br>
+                        1 cubic metre = 1.30795 cubic yards
+                    </div>
+                    <p>All calculations are performed in cubic feet internally, then converted to cubic yards or cubic metres for display.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>How accurate are the calculations?</h3>
+                    <p>The formulas use standard geometry &mdash; the same maths your ready-mix supplier uses. The accuracy depends on how precisely you measure your site. Always use the waste factor to account for real-world conditions like uneven ground and formwork imperfections.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Should I use bags or order ready-mix?</h3>
+                    <p>As a general rule, bags are practical for jobs under 1 cubic yard (0.75 m&sup3;). Anything larger and ready-mix is faster, cheaper per unit, and produces a more consistent result. Check the Reference tab for more guidance.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What waste factor should I use?</h3>
+                    <p>7% is the standard recommendation for most jobs. Use 5% for simple flat slabs with tight formwork, 10% for footings poured against earth or complex shapes, and 15% for pumped concrete or irregular pours. When in doubt, go higher &mdash; a short pour is far more costly than a small over-order.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I change between metric and imperial?</h3>
+                    <p>Yes. Tap the gear icon on the Calculator tab to open Settings, then switch the Unit System toggle. The app defaults to the measurement system used in your country, but you can change it at any time.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is my data saved?</h3>
+                    <p>Yes. Your project, cost settings, and preferences are saved automatically on your device. They persist between app launches. If you have iCloud backups enabled, your data is included in those backups. We never send your data to any server.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does the app work offline?</h3>
+                    <p>Yes, 100%. ConcreteCalc works entirely offline with no internet connection required. Use it on-site, in a basement, or anywhere you have your phone.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I share my project estimate?</h3>
+                    <p>In the Project tab, tap <em>Share Project Summary</em>. This generates a plain-text breakdown of all your calculations, totals, and cost estimate that you can send via text, email, AirDrop, or any other sharing method.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>The app is crashing or not working correctly</h3>
+                    <p>Make sure you are running the latest version of the app and iOS. Try closing and reopening the app. If the problem persists, contact us at the email below with a description of the issue and your device model.</p>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h2>Contact Support</h2>
+                <p>Cannot find the answer you need? We are happy to help. Email us at <a href="mailto:support@top7systems.net">support@top7systems.net</a> and we will typically respond within 48 hours.</p>
+                <p>When reporting a bug, please include:</p>
+                <ul>
+                    <li>Your device model (e.g. iPhone 15 Pro)</li>
+                    <li>Your iOS version (found in Settings &gt; General &gt; About)</li>
+                    <li>A description of what happened and what you expected</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Top 7 Systems. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
