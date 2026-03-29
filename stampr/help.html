@@ -29,10 +29,40 @@
             <h1>Stampr — Help & User Guide</h1>
             <p>Everything you need to know to get the most out of Stampr.</p>
 
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#using-the-camera">Using the Camera</a></li>
+                    <li><a href="#voice-notes">Voice Notes</a></li>
+                    <li><a href="#photo-library">Photo Library</a></li>
+                    <li><a href="#photo-details">Photo Details</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#settings">Settings & Customisation</a></li>
+                    <li><a href="#stampr-pro">Stampr Pro</a></li>
+                    <li><a href="#permissions">Permissions</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
             <!-- Getting Started -->
-            <section>
+            <section id="getting-started">
                 <h2>Getting Started</h2>
                 <p>Stampr is a GPS field camera designed for professionals who need location-stamped photos with metadata. It burns GPS coordinates, altitude, bearing, street address, and optional voice notes directly onto your photos.</p>
+                <p>The app has three tabs:</p>
+                <ul>
+                    <li><strong>Camera</strong> — Take GPS-stamped photos with a live metadata overlay.</li>
+                    <li><strong>Library</strong> — Browse, search, and organize your photos by project.</li>
+                    <li><strong>Settings</strong> — Customise the stamp format, toggle features, and manage your Pro subscription.</li>
+                </ul>
+
+                <div class="screenshot-row">
+                    <img src="screenshots/camera.png" alt="Camera tab showing live GPS overlay with coordinates, address, altitude, and bearing">
+                    <img src="screenshots/library.png" alt="Library tab showing photo grid organized by projects">
+                    <img src="screenshots/settings.png" alt="Settings tab showing stamp options, photo toggles, and Pro upgrade">
+                </div>
 
                 <div class="step">
                     <div class="step-num">1</div>
@@ -64,143 +94,153 @@
                 </div>
             </section>
 
-            <!-- Visual Workflow -->
-            <section>
-                <h2>How It Works</h2>
-                <p>Here is the complete Stampr workflow from start to finish:</p>
-                <div class="workflow">
-                    <div class="workflow-steps">
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#128241;</div>
-                                <div class="workflow-label">Open App</div>
-                                <div class="workflow-sublabel">Launch Stampr</div>
-                            </div>
-                        </div>
-                        <div class="workflow-arrow">&#8594;</div>
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#128274;</div>
-                                <div class="workflow-label">Grant Permissions</div>
-                                <div class="workflow-sublabel">Camera, Location, Mic</div>
-                            </div>
-                        </div>
-                        <div class="workflow-arrow">&#8594;</div>
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#128247;</div>
-                                <div class="workflow-label">Take Photo</div>
-                                <div class="workflow-sublabel">GPS auto-stamped</div>
-                            </div>
-                        </div>
-                        <div class="workflow-arrow">&#8594;</div>
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#127908;</div>
-                                <div class="workflow-label">Add Voice Note</div>
-                                <div class="workflow-sublabel">Auto-transcribed</div>
-                            </div>
-                        </div>
-                        <div class="workflow-arrow">&#8594;</div>
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#128218;</div>
-                                <div class="workflow-label">Review in Library</div>
-                                <div class="workflow-sublabel">Browse &amp; search</div>
-                            </div>
-                        </div>
-                        <div class="workflow-arrow">&#8594;</div>
-                        <div class="workflow-step">
-                            <div class="workflow-card">
-                                <div class="workflow-icon">&#128228;</div>
-                                <div class="workflow-label">Share / Export</div>
-                                <div class="workflow-sublabel">Photos + PDF report</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features -->
-            <section>
-                <h2>Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128205;</div>
-                        <h4>GPS Stamping</h4>
-                        <p>Coordinates, altitude, bearing, accuracy, and street address burned onto every photo.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#127908;</div>
-                        <h4>Voice Notes</h4>
-                        <p>Record voice memos per photo. Automatically transcribed and optionally printed on the image.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128193;</div>
-                        <h4>Projects</h4>
-                        <p>Organize photos into projects. Set a default project so new photos are automatically assigned.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128228;</div>
-                        <h4>Share & Export</h4>
-                        <p>Share stamped photos with an optional PDF report containing full GPS metadata.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#128506;</div>
-                        <h4>Map View</h4>
-                        <p>See all your photos plotted on a map. Tap a pin to jump to the photo detail.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">&#9729;</div>
-                        <h4>iCloud Backup</h4>
-                        <p>Your photos are automatically included in your device's iCloud backups.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Camera -->
-            <section>
+            <!-- Using the Camera -->
+            <section id="using-the-camera">
                 <h2>Using the Camera</h2>
+                <p>The Camera tab is where you take GPS-stamped photos. The live stamp overlay at the top shows exactly what will be burned onto your image.</p>
+
+                <div class="screenshot-row">
+                    <img src="screenshots/camera.png" alt="Camera view with live GPS stamp overlay showing address, coordinates, altitude, and bearing">
+                </div>
+
+                <h3>Stamp Overlay</h3>
+                <p>The live GPS data is displayed at the top of the camera view. This is exactly what will be stamped onto your photo. It updates in real time as you move. The overlay shows:</p>
+                <ul>
+                    <li>Street address (reverse-geocoded)</li>
+                    <li>GPS coordinates (latitude and longitude)</li>
+                    <li>Altitude, bearing, and accuracy</li>
+                    <li>Date and time</li>
+                </ul>
+
                 <h3>Zoom</h3>
                 <p>Pinch to zoom or tap the 1x, 2x, or 5x preset buttons above the shutter. The zoom level is shown on screen.</p>
 
                 <h3>Flash</h3>
                 <p>Tap the flash icon in the top-left corner to toggle the flash on or off.</p>
 
-                <h3>Stamp Overlay</h3>
-                <p>The live GPS data is displayed at the top of the camera view. This is exactly what will be stamped onto your photo. It updates in real time as you move.</p>
-
-                <h3>Voice Recording</h3>
-                <p>After taking a photo, hold the microphone button to record a voice note. Release to stop. The transcription appears automatically. You can disable voice recording prompts in Settings if you prefer to add notes later from the photo detail screen.</p>
+                <div class="tip-box">
+                    <strong>Tip:</strong> Make sure Location Services is enabled in iOS Settings for the most accurate GPS data. The accuracy indicator on the stamp overlay shows how precise your current fix is.
+                </div>
             </section>
 
-            <!-- Library -->
-            <section>
+            <!-- Voice Notes -->
+            <section id="voice-notes">
+                <h2>Voice Notes</h2>
+                <p>After taking a photo, Stampr prompts you to record a voice note. This is useful for adding context that would be tedious to type — site conditions, observations, measurements, or instructions.</p>
+
+                <div class="screenshot-row">
+                    <img src="screenshots/voice-note.png" alt="Voice note recording prompt showing hold-to-record microphone button">
+                </div>
+
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Record</h4>
+                        <p>After taking a photo, hold the microphone button to record. Release to stop.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Auto-Transcription</h4>
+                        <p>Stampr transcribes your voice note automatically using on-device speech recognition. Your audio is never sent to external servers.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Print on Photo (Optional)</h4>
+                        <p>Enable "Print Notes on Photo" in Settings to burn the transcribed text directly onto the stamp overlay.</p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> You can disable the voice recording prompt in Settings if you prefer to add notes later from the photo detail screen. You can also play back the original audio from the detail view.
+                </div>
+            </section>
+
+            <!-- Photo Library -->
+            <section id="photo-library">
                 <h2>Photo Library</h2>
+
                 <h3>Browsing Photos</h3>
                 <p>The Library tab shows all your photos in a grid sorted by date. Use the filter menu to narrow by time period or project. Use the search bar to find photos by notes, address, or project name.</p>
 
+                <div class="screenshot-row">
+                    <img src="screenshots/library.png" alt="Library tab showing projects row at top and photo grid below">
+                    <img src="screenshots/project-detail.png" alt="Project detail view showing photos assigned to Riverside Commons project">
+                </div>
+
                 <h3>Map View</h3>
-                <p>Toggle the map icon to see your photos plotted geographically. Only photos with valid GPS coordinates appear on the map.</p>
+                <p>Toggle the map icon to see your photos plotted geographically. Tap a pin to see the photo details and get directions. Only photos with valid GPS coordinates appear on the map.</p>
+
+                <div class="screenshot-single">
+                    <img src="screenshots/map-view.png" alt="Map view showing a Stampr photo pin on Apple Maps with coordinates">
+                </div>
 
                 <h3>Selecting Multiple Photos</h3>
                 <p>Tap "Select" to enter selection mode. Tap photos to select them, then share or delete the selection using the toolbar at the bottom.</p>
+            </section>
 
-                <h3>Photo Details</h3>
-                <p>Tap a photo to see its full metadata: GPS coordinates, altitude, bearing, accuracy, street address, timestamp, and any voice notes. You can play back the original audio, edit the text notes, and re-stamp the photo if you change settings.</p>
+            <!-- Photo Details -->
+            <section id="photo-details">
+                <h2>Photo Details</h2>
+                <p>Tap any photo in the Library to see its full metadata. The detail view shows everything that was captured with the photo.</p>
+
+                <div class="screenshot-row">
+                    <img src="screenshots/photo-detail.png" alt="Photo detail showing stamped construction photo with notes, map, and address">
+                    <img src="screenshots/photo-gps.png" alt="Photo detail with expanded GPS data showing altitude, bearing, tilt, and watermark">
+                </div>
+
+                <p>The detail view includes:</p>
+                <ul>
+                    <li><strong>Stamped photo</strong> — The full image with GPS data burned on</li>
+                    <li><strong>Project</strong> — Tap to change or assign a project</li>
+                    <li><strong>Notes</strong> — Voice transcription or manually entered text (editable)</li>
+                    <li><strong>Location</strong> — Interactive map, street address, and coordinates</li>
+                    <li><strong>GPS Data</strong> — Altitude, bearing, tilt/roll, accuracy, and capture time</li>
+                    <li><strong>Watermark</strong> — Custom text if set (Pro feature)</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> You can edit notes and re-stamp the photo at any time. The stamp is re-rendered from the original unstamped photo, so quality is never lost.
+                </div>
+            </section>
+
+            <!-- Stamped Photo Example -->
+            <section>
+                <h2>Stamped Photo Example</h2>
+                <p>Here is what a fully stamped photo looks like. The GPS data, address, project name, timestamp, and voice note transcription are all burned directly onto the image.</p>
+
+                <div class="screenshot-single">
+                    <img src="screenshots/stamped-photo.png" alt="Full stamped photo showing GPS coordinates, address, project name, and voice note text overlaid on a landscape photo">
+                </div>
+
+                <p>The stamp includes the project name, street address, GPS coordinates, altitude, bearing, date, watermark, and any voice note transcription — all configurable in Settings.</p>
             </section>
 
             <!-- Projects -->
-            <section>
+            <section id="projects">
                 <h2>Projects</h2>
+                <p>Projects help you organize photos by job site, inspection, or any grouping that makes sense for your work.</p>
+
+                <div class="screenshot-row">
+                    <img src="screenshots/library.png" alt="Library showing project cards at the top — tap to filter by project">
+                    <img src="screenshots/project-detail.png" alt="Inside a project showing all assigned photos">
+                </div>
+
                 <h3>Creating a Project</h3>
-                <p>In the Library tab, open the filter menu and tap "New Project". Give it a name and optionally set it as your default project.</p>
+                <p>In the Library tab, tap "+ New" next to the Projects row. Give it a name, pick a colour, and optionally set it as your default project.</p>
+
+                <div class="screenshot-single">
+                    <img src="screenshots/library.png" alt="New Project dialog with name field, colour picker, and default toggle">
+                </div>
 
                 <h3>Assigning Photos</h3>
                 <p>From the photo detail screen, tap the project card to move a photo to a different project or remove it from a project. The stamp on the photo updates automatically to reflect the new project name.</p>
 
                 <h3>Default Project</h3>
-                <p>Set a default project so all new photos are automatically assigned to it.</p>
+                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job.</p>
 
                 <h3>Renaming a Project</h3>
                 <p>Open the project, tap the menu, and choose "Rename". After renaming, Stampr asks if you want to update the project name on all existing photos in that project.</p>
@@ -210,8 +250,14 @@
             </section>
 
             <!-- Settings -->
-            <section>
-                <h2>Settings</h2>
+            <section id="settings">
+                <h2>Settings & Customisation</h2>
+                <p>Tap the gear icon or the Settings tab to customise how Stampr works.</p>
+
+                <div class="screenshot-single">
+                    <img src="screenshots/settings.png" alt="Settings screen showing stamp text size, GPS toggle, address toggle, and Pro upgrade">
+                </div>
+
                 <table>
                     <thead>
                         <tr><th>Setting</th><th>Description</th><th>Default</th></tr>
@@ -232,15 +278,20 @@
             </section>
 
             <!-- Stampr Pro -->
-            <section>
+            <section id="stampr-pro">
                 <h2>Stampr Pro</h2>
                 <p>Stampr includes 15 free photos per month. To unlock unlimited photos and remove the watermark, purchase Stampr Pro — a one-time payment with no subscription.</p>
+
+                <div class="tip-box">
+                    <strong>What you get with Pro:</strong> Unlimited photos, no "Stampr" watermark, and the ability to set a custom watermark (e.g. your company name) on every photo.
+                </div>
+
                 <h3>Restoring Your Purchase</h3>
-                <p>If you reinstall the app or switch devices, go to Settings and tap "Restore Purchase". Your Pro access will be restored automatically via the App Store.</p>
+                <p>If you reinstall the app or switch devices, go to Settings and tap "Restore Purchase". Your Pro access will be restored automatically via the App Store. Make sure you're signed into the same Apple ID you used for the original purchase.</p>
             </section>
 
             <!-- Permissions -->
-            <section>
+            <section id="permissions">
                 <h2>Permissions</h2>
                 <div class="info-card">
                     <h3>Camera</h3>
@@ -265,7 +316,7 @@
             </section>
 
             <!-- FAQ -->
-            <section>
+            <section id="faq">
                 <h2>Frequently Asked Questions</h2>
 
                 <details class="faq-toggle">
@@ -311,7 +362,7 @@
             </section>
 
             <!-- Contact -->
-            <section>
+            <section id="contact">
                 <div class="contact-box">
                     <h3>Still need help?</h3>
                     <p>Email us at <a href="mailto:support@top7systems.net">support@top7systems.net</a> and we'll get back to you within 48 hours.</p>
