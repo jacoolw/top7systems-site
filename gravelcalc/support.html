@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GravelCalc — Support &amp; Help | Top 7 Systems</title>
+    <meta name="description" content="Help and support for GravelCalc — gravel, mulch, and fill volume calculator for iOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .formula-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .formula-card h3 {
+            color: var(--text);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        .formula-card .formula {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #333;
+            overflow-x: auto;
+        }
+        .formula-card .example {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border);
+        }
+        .step-list {
+            counter-reset: steps;
+            list-style: none;
+            padding-left: 0;
+        }
+        .step-list li {
+            counter-increment: steps;
+            padding: 12px 0 12px 48px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+        .toc h2 {
+            margin-bottom: 12px;
+        }
+        .toc ul {
+            padding-left: 20px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .tip-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            color: #92400e;
+        }
+        .tip-box strong {
+            color: #78350f;
+        }
+        .density-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+        .density-table th,
+        .density-table td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .density-table th {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .density-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
+                    <span class="logo-text">Top 7 Systems</span>
+                </a>
+                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="doc">
+            <a href="/" class="back-link">&larr; Back to all apps</a>
+            <h1>GravelCalc — Help &amp; Support</h1>
+
+            <!-- TABLE OF CONTENTS -->
+            <div class="toc">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#calculator">Using the Calculator</a></li>
+                    <li><a href="#materials">Supported Materials</a></li>
+                    <li><a href="#shapes">Supported Shapes</a></li>
+                    <li><a href="#waste-factor">Waste Factor</a></li>
+                    <li><a href="#settings">Settings &amp; Customisation</a></li>
+                    <li><a href="#pricing">Setting Up Cost Estimates</a></li>
+                    <li><a href="#project">Project Tab &amp; Totals</a></li>
+                    <li><a href="#reference">Reference Guide</a></li>
+                    <li><a href="#formulas">Formulas &amp; How Calculations Work</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- GETTING STARTED -->
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>GravelCalc is a fast, reliable volume and weight calculator for landscaping and fill materials. It supports gravel, mulch, topsoil, sand, decomposed granite, and river rock. It works completely offline &mdash; no account needed, no internet required.</p>
+                <p>The app has three tabs:</p>
+                <ul>
+                    <li><strong>Calculator</strong> &mdash; Pick a material and shape, enter dimensions, and get instant volume in cubic yards or metres, weight in tons or tonnes, and truck loads.</li>
+                    <li><strong>Project</strong> &mdash; Save multiple calculations, see combined totals, and estimate costs.</li>
+                    <li><strong>Reference</strong> &mdash; Quick-reference tables for material densities, recommended depths, coverage per cubic yard, waste factors, and truck sizes.</li>
+                </ul>
+            </section>
+
+            <!-- USING THE CALCULATOR -->
+            <section id="calculator">
+                <h2>Using the Calculator</h2>
+                <ol class="step-list">
+                    <li><strong>Choose a material</strong> from the horizontal row at the top: Gravel, Mulch, Topsoil, Sand, DG (Decomposed Granite), or River Rock. Each material has its own density, so weight calculations are accurate for your chosen fill.</li>
+                    <li><strong>Choose a shape</strong> from the second row: Rectangle, Circle, Triangle, or L-Shape.</li>
+                    <li><strong>Enter your dimensions.</strong> In imperial mode you enter feet, inches, and fractions. In metric mode you enter metres and centimetres.</li>
+                    <li><strong>Pick a depth</strong> from the quick-select buttons, or tap the slider icon to enter a custom depth.</li>
+                    <li><strong>Set a waste factor</strong> using the buttons below. The default is 7% &mdash; a good general-purpose value.</li>
+                    <li><strong>View your results</strong> at the bottom of the screen: total volume, weight based on material density, and truck loads required.</li>
+                    <li><strong>Add to Project</strong> &mdash; tap the button below the results to save this calculation to your project for combined totals.</li>
+                </ol>
+                <div class="tip-box">
+                    <strong>Tip:</strong> Tap <em>Done</em> on the keyboard or swipe down on the screen to dismiss the keyboard and see your results.
+                </div>
+            </section>
+
+            <!-- SUPPORTED MATERIALS -->
+            <section id="materials">
+                <h2>Supported Materials</h2>
+                <p>GravelCalc includes six common landscaping and fill materials, each with accurate density data for weight calculations:</p>
+
+                <table class="density-table">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>tons/yd&sup3;</th>
+                            <th>tonnes/m&sup3;</th>
+                            <th>Typical Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gravel</strong></td>
+                            <td>1.40</td>
+                            <td>1.83</td>
+                            <td>Driveways, drainage, base layers, paths</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mulch</strong></td>
+                            <td>0.40</td>
+                            <td>0.52</td>
+                            <td>Garden beds, tree rings, playground areas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Topsoil</strong></td>
+                            <td>1.08</td>
+                            <td>1.41</td>
+                            <td>Garden beds, lawn prep, raised beds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sand</strong></td>
+                            <td>1.35</td>
+                            <td>1.76</td>
+                            <td>Paver base, sandboxes, levelling</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Decomposed Granite</strong></td>
+                            <td>1.50</td>
+                            <td>1.96</td>
+                            <td>Pathways, patios, xeriscaping</td>
+                        </tr>
+                        <tr>
+                            <td><strong>River Rock</strong></td>
+                            <td>1.35</td>
+                            <td>1.76</td>
+                            <td>Decorative landscaping, dry creek beds, borders</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <strong>Why density matters:</strong> Landscaping materials are often sold by weight (tons or tonnes) rather than volume. GravelCalc converts your volume calculation to weight automatically using the density of your selected material, so you can order the right amount whether your supplier prices by the yard or by the ton.
+                </div>
+            </section>
+
+            <!-- SUPPORTED SHAPES -->
+            <section id="shapes">
+                <h2>Supported Shapes</h2>
+                <p>GravelCalc handles the four most common area shapes for landscaping:</p>
+                <ul>
+                    <li><strong>Rectangle</strong> &mdash; The most common shape. Driveways, garden beds, paths, and patios. Enter length and width.</li>
+                    <li><strong>Circle</strong> &mdash; Round areas like tree rings, fire pit surrounds, and circular patios. Enter diameter.</li>
+                    <li><strong>Triangle</strong> &mdash; Triangular garden beds and corner areas. Enter base and height.</li>
+                    <li><strong>L-Shape</strong> &mdash; An L-shaped area calculated as a rectangle minus a cutout. Enter overall length and width, then the cutout length and width. Great for L-shaped paths, driveways that wrap around a corner, or garden beds with notches.</li>
+                </ul>
+                <p>All shapes use a shared depth picker since landscaping materials are spread at a consistent depth across the area.</p>
+            </section>
+
+            <!-- WASTE FACTOR -->
+            <section id="waste-factor">
+                <h2>Waste Factor</h2>
+                <p>The waste factor adds extra volume to your order to account for uneven ground, compaction, spillage, and spreading irregularities. It is always better to have a little extra than to come up short.</p>
+                <ul>
+                    <li><strong>0%</strong> &mdash; Exact volume only (not recommended for ordering).</li>
+                    <li><strong>5%</strong> &mdash; Simple rectangular areas on flat, prepared ground.</li>
+                    <li><strong>7%</strong> &mdash; Standard recommendation for most landscaping jobs.</li>
+                    <li><strong>10%</strong> &mdash; Irregular shapes, sloped ground, or areas with obstacles.</li>
+                    <li><strong>15%</strong> &mdash; Complex layouts, hard-to-access areas, or when compaction is expected.</li>
+                    <li><strong>Custom</strong> &mdash; Tap the slider icon to enter any percentage you need.</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Pro tip:</strong> Materials like gravel and decomposed granite compact significantly after spreading. If you plan to compact the material with a plate compactor or tamper, add an extra 10&ndash;15% on top of your usual waste factor.
+                </div>
+            </section>
+
+            <!-- SETTINGS -->
+            <section id="settings">
+                <h2>Settings &amp; Customisation</h2>
+                <p>Tap the gear icon in the top-right corner of the Calculator tab to open Settings.</p>
+
+                <h3>Unit System</h3>
+                <p>Switch between <strong>Imperial</strong> (feet, inches, cubic yards, tons) and <strong>Metric</strong> (metres, centimetres, cubic metres, tonnes). The app defaults to whatever measurement system is standard in your country.</p>
+
+                <h3>Truck Capacity</h3>
+                <p>Set the capacity of a standard dump truck in your area. This is used to calculate how many truck loads you need. Common values:</p>
+                <ul>
+                    <li><strong>10 yd&sup3;</strong> &mdash; Standard dump truck in the US and Canada.</li>
+                    <li><strong>7.6 m&sup3;</strong> &mdash; Standard dump truck in Australia, UK, and most metric countries.</li>
+                </ul>
+
+                <h3>Pricing</h3>
+                <p>Set a price per cubic yard (or per cubic metre) and an optional delivery fee to see cost estimates in the Calculator and Project tabs.</p>
+
+                <h3>Reset to Defaults</h3>
+                <p>Scroll to the bottom of Settings and tap <em>Reset All Settings</em> to restore all settings to their original values for your region.</p>
+            </section>
+
+            <!-- PRICING SETUP -->
+            <section id="pricing">
+                <h2>Setting Up Cost Estimates</h2>
+                <p>GravelCalc can estimate the cost of your material order. Here is how to set it up:</p>
+                <ol class="step-list">
+                    <li>Tap the <strong>gear icon</strong> on the Calculator tab to open Settings.</li>
+                    <li>Under <strong>Pricing</strong>, enter the <strong>price per cubic yard</strong> (or per cubic metre in metric mode). This is the rate your local supplier charges. Call them for a quote &mdash; prices vary by material, region, and time of year.</li>
+                    <li>Optionally enter a <strong>delivery fee</strong>. Many suppliers charge a flat fee per truck load.</li>
+                    <li>Your cost estimates appear in the <strong>See Cost</strong> button on the Calculator, and in the <strong>Project Total</strong> card.</li>
+                </ol>
+                <div class="tip-box">
+                    <strong>Note:</strong> Cost estimates are for planning purposes only. Actual prices depend on your supplier, material grade, delivery distance, and other factors. Always confirm pricing with your supplier before ordering.
+                </div>
+            </section>
+
+            <!-- PROJECT TAB -->
+            <section id="project">
+                <h2>Project Tab &amp; Totals</h2>
+                <p>The Project tab lets you combine multiple calculations into a single job estimate:</p>
+                <ul>
+                    <li><strong>Add calculations</strong> from the Calculator tab by tapping <em>Add to Project</em> below the results.</li>
+                    <li><strong>See combined totals</strong> &mdash; total volume, total weight, total truck loads, and estimated cost for the entire project.</li>
+                    <li><strong>Mix materials</strong> &mdash; add gravel for the driveway, mulch for the garden beds, and topsoil for the lawn &mdash; all in one project.</li>
+                    <li><strong>Remove individual items</strong> by long-pressing on a row and selecting Delete.</li>
+                    <li><strong>Share a summary</strong> &mdash; tap <em>Share Project Summary</em> to generate a plain-text summary you can send to a supplier or client via text, email, or any app.</li>
+                    <li><strong>Clear the project</strong> by tapping the trash icon in the top-right corner.</li>
+                </ul>
+                <p>Your project is saved automatically and persists between app launches.</p>
+            </section>
+
+            <!-- REFERENCE GUIDE -->
+            <section id="reference">
+                <h2>Reference Guide</h2>
+                <p>The Reference tab gives you quick-access tables for common landscaping data:</p>
+                <ul>
+                    <li><strong>Material Densities</strong> &mdash; Weight per cubic yard and per cubic metre for all six materials.</li>
+                    <li><strong>Recommended Depths</strong> &mdash; How deep to spread each material for best results.</li>
+                    <li><strong>Coverage per Cubic Yard</strong> &mdash; How many square feet one cubic yard covers at different depths.</li>
+                    <li><strong>Waste Factor Guide</strong> &mdash; Recommended waste percentages for different job types.</li>
+                    <li><strong>Common Truck Sizes</strong> &mdash; Capacities for pickup trucks through to tandem dump trucks.</li>
+                </ul>
+                <p>All reference data displays both imperial and metric values.</p>
+            </section>
+
+            <!-- FORMULAS -->
+            <section id="formulas">
+                <h2>Formulas &amp; How Calculations Work</h2>
+                <p>GravelCalc uses standard geometry formulas for area and volume, combined with material density data for weight. Here is exactly how every calculation works.</p>
+
+                <div class="formula-card">
+                    <h3>Rectangle</h3>
+                    <p>A simple rectangular area at a uniform depth.</p>
+                    <div class="formula">
+                        Volume = Length &times; Width &times; Depth
+                    </div>
+                    <p>Imperial inputs are converted so all measurements are in feet before multiplying. Depth in inches is divided by 12 to convert to feet. The result in cubic feet is divided by 27 to get cubic yards.</p>
+                    <div class="example">
+                        <strong>Example:</strong> A 20 ft &times; 12 ft driveway at 4" deep<br>
+                        Volume = 20 &times; 12 &times; (4 &divide; 12) = 80 ft&sup3; = 2.96 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Circle</h3>
+                    <p>A circular area at a uniform depth.</p>
+                    <div class="formula">
+                        Volume = &pi; &times; (Diameter &divide; 2)&sup2; &times; Depth
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> A 10 ft diameter tree ring at 3" deep<br>
+                        Volume = &pi; &times; 5&sup2; &times; (3 &divide; 12) = 19.63 ft&sup3; = 0.73 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Triangle</h3>
+                    <p>A triangular area at a uniform depth.</p>
+                    <div class="formula">
+                        Volume = 0.5 &times; Base &times; Height &times; Depth
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> A corner bed with 8 ft base, 6 ft height, at 3" deep<br>
+                        Volume = 0.5 &times; 8 &times; 6 &times; (3 &divide; 12) = 6 ft&sup3; = 0.22 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>L-Shape</h3>
+                    <p>An L-shaped area calculated as a full rectangle minus a rectangular cutout.</p>
+                    <div class="formula">
+                        Volume = (Total Length &times; Total Width &minus; Cutout Length &times; Cutout Width) &times; Depth
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> An L-shaped path, 20&times;15 ft overall, minus a 10&times;8 ft cutout, at 4" deep<br>
+                        Volume = (300 &minus; 80) &times; (4 &divide; 12) = 73.33 ft&sup3; = 2.72 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Waste Factor</h3>
+                    <p>The waste factor is applied as a percentage increase on the base volume.</p>
+                    <div class="formula">
+                        Adjusted Volume = Base Volume &times; (1 + Waste% &divide; 100)
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> 2.96 yd&sup3; with 7% waste<br>
+                        Adjusted = 2.96 &times; 1.07 = 3.17 yd&sup3;
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Weight Conversion</h3>
+                    <p>Weight is calculated by multiplying the waste-adjusted volume by the material density.</p>
+                    <div class="formula">
+                        Weight (tons) = Volume (yd&sup3;) &times; Material Density (tons/yd&sup3;)<br><br>
+                        Weight (tonnes) = Volume (m&sup3;) &times; Material Density (tonnes/m&sup3;)
+                    </div>
+                    <div class="example">
+                        <strong>Example:</strong> 3.17 yd&sup3; of gravel at 1.40 tons/yd&sup3;<br>
+                        Weight = 3.17 &times; 1.40 = 4.44 tons
+                    </div>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Truck Loads</h3>
+                    <p>The number of dump truck loads is calculated by dividing total volume by truck capacity, rounded up.</p>
+                    <div class="formula">
+                        Truck Loads = &lceil; Total Volume &divide; Truck Capacity &rceil;
+                    </div>
+                    <p>Default truck capacities: 10 yd&sup3; (imperial) or 7.6 m&sup3; (metric). You can change this in Settings.</p>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Unit Conversions</h3>
+                    <div class="formula">
+                        1 cubic yard = 27 cubic feet<br>
+                        1 cubic foot = 0.0283168 cubic metres<br>
+                        1 cubic metre = 1.30795 cubic yards
+                    </div>
+                    <p>All calculations are performed in cubic feet internally, then converted to cubic yards or cubic metres for display.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>How accurate are the calculations?</h3>
+                    <p>The formulas use standard geometry &mdash; the same maths your landscape supplier uses. The accuracy depends on how precisely you measure your site. Always use the waste factor to account for real-world conditions like uneven ground and compaction.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Why does the app calculate weight as well as volume?</h3>
+                    <p>Many landscape suppliers sell materials by weight (tons) rather than volume (cubic yards). GravelCalc converts between the two using accurate material densities so you can compare quotes and order the right amount regardless of how your supplier prices their product.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What depth should I use?</h3>
+                    <p>It depends on the material and application. Check the Recommended Depths table in the Reference tab for guidance. As a general rule: 2&ndash;4 inches for gravel driveways and paths, 2&ndash;3 inches for mulch, and 4&ndash;6 inches for topsoil in garden beds. The app pre-selects a recommended depth when you choose a material.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What waste factor should I use?</h3>
+                    <p>7% is the standard recommendation for most jobs. Use 5% for simple flat areas, 10% for slopes or irregular shapes, and 15% for areas where compaction is expected. When in doubt, go higher &mdash; having a small surplus is far better than running short.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I change between metric and imperial?</h3>
+                    <p>Yes. Tap the gear icon on the Calculator tab to open Settings, then switch the Unit System. The app defaults to the measurement system used in your country, but you can change it at any time.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is my data saved?</h3>
+                    <p>Yes. Your project, cost settings, and preferences are saved automatically on your device. They persist between app launches. If you have iCloud backups enabled, your data is included in those backups. We never send your data to any server.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does the app work offline?</h3>
+                    <p>Yes, 100%. GravelCalc works entirely offline with no internet connection required. Use it on-site, in the yard, or anywhere you have your phone.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I calculate multiple materials in one project?</h3>
+                    <p>Yes. Each calculation you add to the Project tab tracks which material it uses. You can have gravel for the driveway, mulch for the beds, and topsoil for the lawn all in one project with separate and combined totals.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>The app is crashing or not working correctly</h3>
+                    <p>Make sure you are running the latest version of the app and iOS. Try closing and reopening the app. If the problem persists, contact us at the email below with a description of the issue and your device model.</p>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h2>Contact Support</h2>
+                <p>Cannot find the answer you need? We are happy to help. Email us at <a href="mailto:support@top7systems.net">support@top7systems.net</a> and we will typically respond within 48 hours.</p>
+                <p>When reporting a bug, please include:</p>
+                <ul>
+                    <li>Your device model (e.g. iPhone 16 Pro)</li>
+                    <li>Your iOS version (found in Settings &gt; General &gt; About)</li>
+                    <li>A description of what happened and what you expected</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Top 7 Systems</p>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
