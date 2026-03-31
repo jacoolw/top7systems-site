@@ -193,6 +193,46 @@ footer a:hover {
     text-align: center;
 }
 
+/* Platform Tabs */
+
+.platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.platform-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.platform-tab:hover {
+    border-color: var(--text-secondary);
+    color: var(--text);
+}
+
+.platform-tab.active {
+    background: var(--text);
+    color: #fff;
+    border-color: var(--text);
+}
+
+.platform-tab svg {
+    flex-shrink: 0;
+}
+
 .apps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
