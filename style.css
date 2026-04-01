@@ -326,6 +326,16 @@ footer a:hover {
     opacity: 1;
 }
 
+.app-links .coming-soon {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
 /* ==========================================================================
    Document Pages (Privacy, Terms, Support, Help)
    ========================================================================== */
