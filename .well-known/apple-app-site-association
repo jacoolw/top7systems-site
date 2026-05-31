@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["4ZM37MKPY4.net.top7systems.localwave"],
+        "components": [
+          {
+            "/": "/localwave/listen",
+            "comment": "Localwave station share link (bare path)"
+          },
+          {
+            "/": "/localwave/listen/*",
+            "comment": "Localwave station share links"
+          }
+        ]
+      }
+    ]
+  }
+}
