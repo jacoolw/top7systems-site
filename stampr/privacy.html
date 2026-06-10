@@ -27,7 +27,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr — Privacy Policy</h1>
-            <p class="last-updated">Last updated: March 28, 2026</p>
+            <p class="last-updated">Last updated: June 10, 2026</p>
 
             <section>
                 <h2>Introduction</h2>
@@ -50,10 +50,13 @@
                 <h2>Data That Stays on Your Device</h2>
                 <p>All data created within Stampr remains on your device. This includes:</p>
                 <ul>
-                    <li><strong>Photos</strong> — Both original and stamped photos are stored locally using SwiftData.</li>
-                    <li><strong>GPS data</strong> — Coordinates, altitude, and bearing are used only to stamp your photos and are stored on-device.</li>
-                    <li><strong>Voice recordings</strong> — Audio data is stored locally with the associated photo. Speech recognition is performed entirely on-device using Apple's Speech framework.</li>
+                    <li><strong>Photos</strong> — Both original and stamped photos are stored locally on your device.</li>
+                    <li><strong>Videos</strong> — Stamped videos are processed on-device and saved to your own Photos library.</li>
+                    <li><strong>GPS data</strong> — Coordinates, altitude, and bearing are used only to stamp your photos (and, if enabled, to embed standard EXIF location metadata in the photo files you choose to share) and are stored on-device.</li>
+                    <li><strong>Voice recordings and transcripts</strong> — Audio is stored locally with the associated photo. Speech recognition is performed entirely on-device using Apple's Speech framework.</li>
+                    <li><strong>AI note cleanup and tags</strong> — On devices with Apple Intelligence, note cleanup and tag suggestions run entirely on-device using Apple's on-device models. Your notes are never sent to us or to any server.</li>
                     <li><strong>Street addresses</strong> — Reverse geocoding uses Apple's location services. The resulting address is stored on your device. We do not receive or store this data.</li>
+                    <li><strong>Project files</strong> — When you choose "Share Project File", Stampr packages your photos and metadata into a file that is shared only through the channels you select (AirDrop, Messages, email, etc.). We never receive a copy.</li>
                     <li><strong>Settings and preferences</strong> — Stored locally on your device.</li>
                 </ul>
             </section>
@@ -67,8 +70,9 @@
                 <h2>Third-Party Services</h2>
                 <p>Stampr uses the following Apple services:</p>
                 <ul>
-                    <li><strong>Apple Location Services</strong> — For GPS coordinates and reverse geocoding. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+                    <li><strong>Apple Location Services & Maps</strong> — For GPS coordinates, reverse geocoding, and the map imagery shown in the app and in PDF reports. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
                     <li><strong>Apple Speech Framework</strong> — For on-device voice transcription. Audio is processed locally and is not sent to Apple's servers.</li>
+                    <li><strong>Apple Intelligence (on-device)</strong> — For optional AI note cleanup and tag suggestions, processed entirely on your device.</li>
                     <li><strong>App Store / StoreKit</strong> — For in-app purchases. Purchase transactions are handled by Apple.</li>
                 </ul>
                 <p>We do not use any third-party analytics, advertising, or tracking services.</p>
