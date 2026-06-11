@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stampr for Android — Help & User Guide | Top 7 Systems</title>
+    <meta name="description" content="Help and user guide for Stampr for Android — the GPS field camera app with voice notes, stamped video, and PDF reports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
+                    <span class="logo-text">Top 7 Systems</span>
+                </a>
+                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="doc">
+            <a href="/" class="back-link">&larr; Back to all apps</a>
+            <h1>Stampr for Android — Help & User Guide</h1>
+            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 1.0 for Android phones.</p>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#using-the-camera">Using the Camera</a></li>
+                    <li><a href="#voice-notes">Voice Notes & AI Cleanup</a></li>
+                    <li><a href="#stamped-video">Stamped Video</a></li>
+                    <li><a href="#photo-library">Photo Library</a></li>
+                    <li><a href="#photo-details">Photo Details</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#sharing-reports">Sharing, Reports & Data Export</a></li>
+                    <li><a href="#project-files">Project Files — Team Handoff</a></li>
+                    <li><a href="#settings">Settings & Customisation</a></li>
+                    <li><a href="#stampr-pro">Stampr Pro</a></li>
+                    <li><a href="#shortcuts">Quick Settings Tile & Shortcuts</a></li>
+                    <li><a href="#permissions">Permissions</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Getting Started -->
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>Stampr is a GPS field camera designed for professionals who need location-stamped photos and video with metadata. It burns GPS coordinates, altitude, bearing, street address, and optional voice notes directly onto your photos — and embeds the GPS data into the photo file itself (EXIF), so your shots pin correctly in Google Photos, GIS software, and claims tools.</p>
+                <p>The app has three tabs:</p>
+                <ul>
+                    <li><strong>Camera</strong> — Take GPS-stamped photos and videos with a live metadata overlay.</li>
+                    <li><strong>Library</strong> — Browse, search, and organize your photos by project and tags.</li>
+                    <li><strong>Settings</strong> — Customise the stamp format, toggle features, and manage your Pro purchase.</li>
+                </ul>
+
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Grant Permissions</h4>
+                        <p>When you first open Stampr, allow access to your camera and location (choose "While using the app" with precise location). Microphone access is needed only if you use voice notes or record video. You can change these anytime in Android Settings &gt; Apps &gt; Stampr &gt; Permissions.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Take Your First Photo</h4>
+                        <p>Point the camera and tap the shutter button. Stampr saves the photo immediately and stamps it with your GPS data, address, and timestamp — all frozen at the exact moment you pressed the shutter.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Add a Voice Note (Optional)</h4>
+                        <p>After each photo, hold the microphone button to record a voice note. Stampr transcribes it on-device (a one-time ~32&nbsp;MB speech model download is offered first), and on supported devices an on-device AI tidies the dictation into a clean caption with suggested tags. Prefer fully hands-free? Turn on Hands-Free mode in Settings and Stampr records automatically after every shot, stopping when you stop talking.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>Review in Library</h4>
+                        <p>Switch to the Library tab to see all your stamped photos. Tap any photo for full details, metadata, and sharing options.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Using the Camera -->
+            <section id="using-the-camera">
+                <h2>Using the Camera</h2>
+                <p>The Camera tab is where you take GPS-stamped photos and videos. The live stamp overlay at the top shows exactly what will be burned onto your image.</p>
+
+                <h3>Stamp Overlay</h3>
+                <p>The live GPS data is displayed at the top of the camera view. This is exactly what will be stamped onto your photo. It updates in real time as you move. The overlay shows:</p>
+                <ul>
+                    <li>Street address (reverse-geocoded)</li>
+                    <li>GPS coordinates — in Decimal, DMS, UTM, or MGRS format</li>
+                    <li>Altitude (metres or feet), bearing (true or magnetic north), and accuracy</li>
+                    <li>Date and time</li>
+                </ul>
+                <p>The accuracy readout is colour-coded: <strong>green</strong> within 5&nbsp;m, <strong>amber</strong> within 15&nbsp;m, <strong>red</strong> beyond that. If there's no GPS fix yet, the overlay shows "ACQUIRING GPS…" — and photos taken without a fix are stamped "NO GPS FIX" rather than misleading zero coordinates.</p>
+                <p>With <em>Map on Stamp</em> enabled in Settings, a small OpenStreetMap inset showing your position is added to the stamp as well.</p>
+
+                <h3>Photo / Video Mode</h3>
+                <p>Switch between PHOTO and VIDEO with the mode picker above the shutter. See <a href="#stamped-video">Stamped Video</a> below for details.</p>
+
+                <h3>Zoom & Lenses</h3>
+                <p>Pinch to zoom or tap the preset buttons above the shutter. On phones with an ultra-wide camera you also get a 0.5&times; preset.</p>
+
+                <h3>Level Indicator</h3>
+                <p>A subtle bubble level in the centre of the viewfinder shows when your horizon is straight — it turns <strong>green</strong> when you're level, in both portrait and landscape. Great for straight-on documentation shots. You can turn it off in Settings.</p>
+
+                <h3>Require GPS Fix</h3>
+                <p>If your work demands coordinates on every shot, enable <em>Require GPS Fix</em> in Settings. The shutter will then wait for a GPS lock, with a "Capture Anyway" escape hatch if you need the shot regardless.</p>
+
+                <h3>Flash & Resolution</h3>
+                <p>Tap the flash icon to toggle the flash. Enable <em>Maximum Resolution</em> in Settings to capture at your phone's full sensor resolution (larger files).</p>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> Make sure Location is enabled in Android Settings (with precise location for Stampr) for the most accurate GPS data. The colour-coded accuracy indicator on the stamp overlay shows how precise your current fix is.
+                </div>
+            </section>
+
+            <!-- Voice Notes -->
+            <section id="voice-notes">
+                <h2>Voice Notes & AI Cleanup</h2>
+                <p>Voice notes add context that would be tedious to type — site conditions, observations, measurements, or instructions. Stampr transcribes them on-device and can burn the text directly onto the photo.</p>
+
+                <h3>The Speech Model</h3>
+                <p>Transcription runs entirely on your phone using the open-source Whisper speech-recognition model — no cloud, no account, and it works on <em>every</em> Android phone, not just flagships. The first time you use voice notes, Stampr offers a one-time model download (about 32&nbsp;MB); you can also start it from Settings &rarr; Voice Recognition Model. After that, transcription works completely offline.</p>
+
+                <h3>Three Voice Modes</h3>
+                <p>Choose how voice notes work in Settings &rarr; Voice Notes:</p>
+                <ul>
+                    <li><strong>Prompt After Photo</strong> (default) — After each shot, a sheet appears. Hold the microphone button to record, release to stop.</li>
+                    <li><strong>Hands-Free</strong> — Recording starts automatically after every shutter press and stops by itself about two seconds after you stop talking. From pocket to documented photo without touching the screen — ideal with gloves on.</li>
+                    <li><strong>Off</strong> — No voice prompt. You can still add notes later from the photo detail screen.</li>
+                </ul>
+
+                <h3>AI Note Cleanup</h3>
+                <p>On devices with Android's on-device AI (Gemini Nano — recent Pixel and Galaxy flagships), Stampr's <em>AI Note Cleanup</em> tidies your dictation into a clear, professional caption and suggests searchable tags — entirely on-device. "um so there's a crack on the uh north wall" becomes "Crack on north wall." The verbatim transcript is always kept too: you can see the original on any photo's detail screen.</p>
+                <p>On devices without on-device AI, the verbatim transcription is used as-is — nothing is lost.</p>
+
+                <div class="tip-box">
+                    <strong>Important:</strong> your photo is saved the moment you press the shutter — before the voice note. If anything interrupts the recording, the photo is never lost.
+                </div>
+            </section>
+
+            <!-- Stamped Video -->
+            <section id="stamped-video">
+                <h2>Stamped Video</h2>
+                <p>Record site walkthroughs with the GPS stamp burned onto the footage.</p>
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Switch to VIDEO</h4>
+                        <p>Tap VIDEO in the mode picker above the shutter. The shutter button turns red.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Record</h4>
+                        <p>Tap to start recording (with sound), tap again to stop. Recordings cap at 3 minutes. The GPS data, address, and time are captured at the moment recording starts.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Stamped & Saved to Your Gallery</h4>
+                        <p>Stampr burns the same stamp band your photos get — plus your watermark or logo — onto the video, then saves it to your gallery in the Movies/Stampr folder. Look for the "Stamped video saved to Movies" confirmation.</p>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>Note:</strong> videos count one photo credit each on the free plan, and they live in your gallery (Google Photos or your gallery app) rather than the in-app Library.
+                </div>
+            </section>
+
+            <!-- Photo Library -->
+            <section id="photo-library">
+                <h2>Photo Library</h2>
+
+                <h3>Browsing Photos</h3>
+                <p>The Library tab shows all your photos in a grid sorted by date. Use the filter menu to narrow by time period, project, or <strong>tag</strong>. Use the search bar to find photos by notes (including the original transcript), tags, address, or project name.</p>
+
+                <h3>Map View</h3>
+                <p>Toggle the map icon to see your photos plotted on an OpenStreetMap view. <strong>Tap any marker to open that photo's details.</strong> Only photos with valid GPS coordinates appear on the map.</p>
+
+                <h3>Selecting Multiple Photos</h3>
+                <p>Tap "Select" to enter selection mode. Tap photos to select them, then share or delete the selection using the toolbar.</p>
+            </section>
+
+            <!-- Photo Details -->
+            <section id="photo-details">
+                <h2>Photo Details</h2>
+                <p>Tap any photo in the Library to see its full metadata. The detail view shows everything that was captured with the photo:</p>
+                <ul>
+                    <li><strong>Stamped photo</strong> — The full image with GPS data burned on; tap for fullscreen</li>
+                    <li><strong>Project</strong> — Tap to change or assign a project</li>
+                    <li><strong>Notes & tags</strong> — AI-cleaned caption (editable), the original transcript, and tag chips you can add or remove</li>
+                    <li><strong>Before / After</strong> — Link this photo with another to document repairs; share the pair as a side-by-side composite</li>
+                    <li><strong>Location</strong> — Map, street address (editable), coordinates, and the UTM reference; tap the coordinates to open them in your maps app</li>
+                    <li><strong>GPS Data</strong> — Altitude, bearing, tilt/roll, accuracy, and capture time</li>
+                </ul>
+
+                <h3>Editable Address</h3>
+                <p>Reverse-geocoded addresses aren't always perfect — rural sites, new subdivisions, and large lots often come back wrong. Tap the address on the detail screen to correct it, and Stampr re-stamps the photo with your corrected address. This is free for everyone.</p>
+
+                <h3>Before / After Pairs</h3>
+                <p>Tap <em>Link Before/After Photo</em> to pair two photos — the older one automatically becomes the "before". Once linked, the share menu gains <em>Share Before/After</em>, which exports a labelled side-by-side composite image. Perfect for documenting repairs.</p>
+
+                <h3>Sharing One Photo</h3>
+                <p>The share button offers <em>Share Stamped Photo</em> (with the PDF report), <em>Share Original</em> (the unstamped capture), and <em>Share Before/After</em> when the photo is paired.</p>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> You can edit notes, tags, the address, or the project at any time. The stamp is re-rendered from the original unstamped photo using the same options it was first stamped with, so quality and consistency are never lost.
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>Projects help you organize photos by job site, inspection, or any grouping that makes sense for your work.</p>
+
+                <h3>Creating a Project</h3>
+                <p>In the Library tab, tap "+ New" next to the Projects row. Give it a name, pick a colour, and optionally set it as your default project.</p>
+
+                <h3>Assigning Photos</h3>
+                <p>From the photo detail screen, tap the project card to move a photo to a different project or remove it from a project. The stamp on the photo updates automatically to reflect the new project name.</p>
+
+                <h3>Default Project</h3>
+                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job.</p>
+
+                <h3>Renaming & Deleting</h3>
+                <p>Open the project menu to rename or delete. After renaming, Stampr asks if you want to update the project name on all existing photos. When deleting, you can keep the photos unassigned or delete them too.</p>
+            </section>
+
+            <!-- Sharing & Reports -->
+            <section id="sharing-reports">
+                <h2>Sharing, Reports & Data Export</h2>
+
+                <h3>PDF Field Reports</h3>
+                <p>When you share photos, Stampr attaches a professional PDF report — the document you hand to a client or claims assessor. The report includes:</p>
+                <ul>
+                    <li>A branded cover header (your logo appears here with Pro)</li>
+                    <li>A map overview page with numbered pins matching the photo list</li>
+                    <li>Every photo embedded at quality, with its full metadata table, notes, and tags</li>
+                </ul>
+
+                <h3>GPS in the Photo File (EXIF)</h3>
+                <p>Every stamped photo also carries machine-readable GPS coordinates, altitude, bearing, and the capture time in its EXIF metadata. Shared photos pin correctly in Google Photos, Google Earth, GIS packages, and insurance claims software. You can turn this off in Settings if you need location-free files.</p>
+
+                <h3>Data Export — CSV, KML, GeoJSON</h3>
+                <p>From any project's menu, choose <em>Export Data</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags.</p>
+            </section>
+
+            <!-- Project Files -->
+            <section id="project-files">
+                <h2>Project Files — Team Handoff</h2>
+                <p>Hand a whole project to a teammate as a single file — no accounts, no cloud service. It even works across platforms: Stampr project files move between Android phones and iPhones.</p>
+
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Share the Project File</h4>
+                        <p>Open the project, tap the menu, and choose <em>Share Project File</em>. Stampr packs every photo (stamped and original), voice note, and all metadata into one <strong>.stamprproj</strong> file you can send by Quick Share, email, Drive — anything.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Open on the Other Device</h4>
+                        <p>On the receiving phone, tap the file in your Files app, Drive, or the email attachment and choose Stampr. (The always-reliable path: Library &rarr; filter menu &rarr; "Import Project…".)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Merge Without Duplicates</h4>
+                        <p>Importing merges by photo identity: photos you already have are skipped, new ones are added to the matching project. Trade files back and forth as a job progresses — you'll never get duplicates.</p>
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <strong>iPhone ↔ Android:</strong> project files exported from Stampr for Android open in Stampr 2.1 or later on iOS, and vice versa — so a mixed-device crew can work on the same job.
+                </div>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings">
+                <h2>Settings & Customisation</h2>
+                <p>The Settings tab controls how Stampr stamps, captures, and shares.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Setting</th><th>Description</th><th>Default</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Stamp Text Size</td><td>Font size of the stamp overlay (8–24pt)</td><td>12pt</td></tr>
+                        <tr><td>Coordinates</td><td>Decimal Degrees, DMS, UTM, or MGRS</td><td>Decimal</td></tr>
+                        <tr><td>Units</td><td>Metric (m) or Imperial (ft) for altitude and accuracy</td><td>Metric</td></tr>
+                        <tr><td>North Reference</td><td>True or magnetic north — bearings are marked &deg;T or &deg;M</td><td>True</td></tr>
+                        <tr><td>Voice Notes</td><td>Off, Prompt After Photo, or Hands-Free</td><td>Prompt</td></tr>
+                        <tr><td>Voice Recognition Model</td><td>One-time ~32&nbsp;MB download; transcription then runs fully on-device</td><td>—</td></tr>
+                        <tr><td>AI Note Cleanup</td><td>On-device AI tidies dictation and suggests tags</td><td>On*</td></tr>
+                        <tr><td>Require GPS Fix</td><td>Block the shutter until coordinates are locked</td><td>Off</td></tr>
+                        <tr><td>Maximum Resolution</td><td>Capture at the sensor's full resolution</td><td>Off</td></tr>
+                        <tr><td>Level Indicator</td><td>Bubble level in the viewfinder</td><td>On</td></tr>
+                        <tr><td>Print GPS Data on Photo</td><td>Coordinates, altitude, and bearing on the stamp</td><td>On</td></tr>
+                        <tr><td>Print Street Address on Photo</td><td>Reverse-geocoded address on the stamp</td><td>On</td></tr>
+                        <tr><td>Print Notes on Photo</td><td>Burns voice transcription onto the stamp</td><td>Off</td></tr>
+                        <tr><td>Embed GPS in File (EXIF)</td><td>Machine-readable location inside the photo file</td><td>On</td></tr>
+                        <tr><td>Map on Stamp</td><td>Small OpenStreetMap inset on the photo (uses the network)</td><td>Off</td></tr>
+                        <tr><td>Location Services</td><td>Enable GPS, address, and compass data</td><td>On</td></tr>
+                        <tr><td>Watermark / Logo</td><td>Custom text or logo branding on photos and reports (Pro)</td><td>None</td></tr>
+                    </tbody>
+                </table>
+                <p><small>* AI Note Cleanup requires a device with on-device AI (Gemini Nano); on other devices the verbatim transcription is used.</small></p>
+            </section>
+
+            <!-- Stampr Pro -->
+            <section id="stampr-pro">
+                <h2>Stampr Pro</h2>
+                <p>Stampr includes 15 free photos per month. To unlock unlimited photos and remove the watermark, purchase Stampr Pro — a one-time payment with no subscription, ever.</p>
+
+                <div class="tip-box">
+                    <strong>What you get with Pro:</strong> Unlimited photos and videos, no "Stampr" watermark, a custom text watermark or your own <strong>logo</strong> on every photo and PDF report — and right after upgrading, Stampr offers to re-stamp your existing photos to remove the free watermark from them too.
+                </div>
+
+                <h3>Restoring Your Purchase</h3>
+                <p>If you reinstall the app or switch devices, go to Settings and tap "Restore Purchase". Your Pro access will be restored automatically via Google Play. Make sure you're signed into the same Google account you used for the original purchase.</p>
+            </section>
+
+            <!-- QS Tile & Shortcuts -->
+            <section id="shortcuts">
+                <h2>Quick Settings Tile & Shortcuts</h2>
+                <h3>Quick Settings Tile</h3>
+                <p>Add the <em>Stampr Camera</em> tile to your Quick Settings shade for the fastest path to a stamped photo: swipe down from the top of the screen, tap the edit (pencil) button, and drag the Stampr Camera tile into your panel. One tap opens the camera ready to shoot — even from the lock screen shade.</p>
+                <h3>App Shortcuts</h3>
+                <p>Long-press the Stampr icon on your home screen for <em>Take Stamped Photo</em> and <em>Open Library</em> shortcuts. You can drag either onto your home screen as its own one-tap icon.</p>
+            </section>
+
+            <!-- Permissions -->
+            <section id="permissions">
+                <h2>Permissions</h2>
+                <div class="info-card">
+                    <h3>Camera</h3>
+                    <p>Required to take photos and videos. If access was declined, the viewfinder shows a shortcut to enable it in Android Settings.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Location (precise)</h3>
+                    <p>Used to stamp GPS coordinates, altitude, bearing, and street address onto photos — only while you're using the app. You can disable location in Settings if you don't need location data.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Microphone</h3>
+                    <p>Needed for voice notes and video sound. Only used while recording. Voice transcription happens on-device — your audio is never sent to any server.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Internet</h3>
+                    <p>Used for street address lookup, OpenStreetMap imagery, the one-time speech model download, and Google Play Billing. Capture, stamping, and transcription all work offline.</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <details class="faq-toggle">
+                    <summary>Where are my photos stored?</summary>
+                    <div class="faq-answer">Photos are stored in Stampr's private storage on your device. Cloud backup (Google One) covers your settings only — photos are not uploaded anywhere. When you move to a new phone with Android's device-to-device transfer, everything comes across. To keep copies of important work, share project files or export your data. Stamped videos are saved to your gallery.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Do my photos sync between devices?</summary>
+                    <div class="faq-answer">Not automatically — your library lives on each device, by design (nothing is uploaded). To move work across devices, share a project file (.stamprproj) from one device and open it on the other; importing merges without duplicates.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Can I share projects with iPhone users?</summary>
+                    <div class="faq-answer">Yes — the .stamprproj format is cross-platform. Project files from Stampr for Android open in Stampr 2.1 or later on iOS, and iPhone project files exported from Stampr 2.1+ open on Android. A mixed-device crew can trade the same job file back and forth.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Can I change the stamp after taking a photo?</summary>
+                    <div class="faq-answer">Yes. Open the photo in the Library and edit the notes, tags, address, or project. The stamp is re-rendered from the original unstamped photo using the options it was captured with, so quality is never lost.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Why does Stampr download a file before my first voice note?</summary>
+                    <div class="faq-answer">Voice transcription runs entirely on your phone using the Whisper speech model, which is about 32&nbsp;MB and downloads once. After that, transcription works completely offline and your audio never leaves the device. You can start or check the download in Settings &rarr; Voice Recognition Model.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>What does AI Note Cleanup need?</summary>
+                    <div class="faq-answer">A device with Android's on-device AI (Gemini Nano) — recent Pixel and Galaxy flagships. Everything runs on-device; your notes never leave the phone. On devices without it, Stampr uses the verbatim Whisper transcription, which still works on every phone, completely offline.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Does Stampr send my location data anywhere?</summary>
+                    <div class="faq-answer">No. All GPS data stays on your device. Location is used only to stamp your photos and reverse-geocode a street address. Nothing is transmitted to our servers — we don't have any.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>What are UTM and MGRS formats?</summary>
+                    <div class="faq-answer">Grid coordinate systems used by surveyors, engineers, and emergency services. Switch the coordinate format in Settings and the stamp, detail view, and PDF reports all follow. Decimal degrees and DMS remain available.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Why is the address not showing?</summary>
+                    <div class="faq-answer">Street address requires an internet connection for reverse geocoding. If you're offline, the GPS coordinates will still be stamped but the address may be unavailable. You can also add or correct the address later from the photo's detail screen — Stampr re-stamps the photo with your correction.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Can I use Stampr offline?</summary>
+                    <div class="faq-answer">Yes. GPS, capture, stamping, voice transcription, and AI cleanup all work without internet (after the one-time speech model download). The only features that need connectivity are street address lookup and the OpenStreetMap imagery in the map view, map inset, and reports.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>How do I share photos with the GPS report?</summary>
+                    <div class="faq-answer">Open a photo and tap the share button, or select multiple photos in the Library and tap Share. The PDF report — with your photos embedded and a map overview — is attached automatically.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Hands-free mode stops too early (or too late) on a noisy site</summary>
+                    <div class="faq-answer">Hands-free listens for about two seconds of silence after you've spoken. On very loud sites the background noise can keep it recording — tap the checkmark on the recording bar to finish immediately, or the X to discard. You can always fall back to the hold-to-record prompt mode in Settings &rarr; Voice Notes.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>My video saved without a stamp / I can't find my video</summary>
+                    <div class="faq-answer">Stamped videos are saved to your gallery, not the in-app Library — look in Google Photos or your gallery app under Movies/Stampr. Processing happens right after you stop recording; keep the app open until you see the "Stamped video saved to Movies" confirmation.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>I purchased Pro but it's not showing. What do I do?</summary>
+                    <div class="faq-answer">Go to Settings and tap "Restore Purchase". Make sure you're signed into the same Google account you used for the purchase. If the issue persists, contact us at support@top7systems.net.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Is my voice recording sent to Google or any server?</summary>
+                    <div class="faq-answer">No. Speech recognition and AI note cleanup are performed entirely on-device. Your audio and notes never leave your phone.</div>
+                </details>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact">
+                <div class="contact-box">
+                    <h3>Still need help?</h3>
+                    <p>Email us at <a href="mailto:support@top7systems.net">support@top7systems.net</a> and we'll get back to you within 48 hours.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Top 7 Systems</p>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
