@@ -1,0 +1,10 @@
+# Files excluded from the deployed Cloudflare Worker assets (assets.directory = ".").
+# Keeps the build under the 25 MiB-per-asset limit and avoids serving repo internals.
+.git
+.git/**
+.github
+.claude
+.gitignore
+.assetsignore
+.DS_Store
+**/.DS_Store
