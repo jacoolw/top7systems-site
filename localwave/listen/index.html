@@ -61,7 +61,7 @@
     <p>Discover 1,100+ Australian stations on a live map.</p>
     <div class="stores">
       <a id="appstore" href="https://apps.apple.com/app/id6761519338">Get it on the App&nbsp;Store</a>
-      <span id="playstore" class="soon">Android coming soon</span>
+      <a id="playstore" href="https://play.google.com/store/apps/details?id=au.localwave">Get it on Google&nbsp;Play</a>
     </div>
   </div>
   <div class="tagline">Localwave. Every town has a voice. Find it.</div>
@@ -76,7 +76,7 @@
     if (m) id = decodeURIComponent(m[1]);
   }
 
-  // Android is still in testing — surface its "coming soon" pill first for Android visitors.
+  // Surface the Google Play link first for Android visitors.
   var ua = navigator.userAgent || '';
   if (/android/i.test(ua)) document.getElementById('playstore').style.order = '-1';
 
