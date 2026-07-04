@@ -27,7 +27,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr — Privacy Policy</h1>
-            <p class="last-updated">Last updated: June 10, 2026</p>
+            <p class="last-updated">Last updated: July 4, 2026</p>
 
             <section>
                 <h2>Introduction</h2>
@@ -47,10 +47,10 @@
             </section>
 
             <section>
-                <h2>Data That Stays on Your Device</h2>
-                <p>All data created within Stampr remains on your device. This includes:</p>
+                <h2>Data That Stays With You</h2>
+                <p>All data created within Stampr is stored on your device and, if you have iCloud Sync enabled (see below), in your own private iCloud. It is never sent to us. This includes:</p>
                 <ul>
-                    <li><strong>Photos</strong> — Both original and stamped photos are stored locally on your device.</li>
+                    <li><strong>Photos</strong> — Both original and stamped photos are stored on your device (and in your private iCloud when sync is on).</li>
                     <li><strong>Videos</strong> — Stamped videos are processed on-device and saved to your own Photos library.</li>
                     <li><strong>GPS data</strong> — Coordinates, altitude, and bearing are used only to stamp your photos (and, if enabled, to embed standard EXIF location metadata in the photo files you choose to share) and are stored on-device.</li>
                     <li><strong>Voice recordings and transcripts</strong> — Audio is stored locally with the associated photo. Speech recognition is performed entirely on-device using Apple's Speech framework.</li>
@@ -62,8 +62,19 @@
             </section>
 
             <section>
+                <h2>iCloud Sync</h2>
+                <p>Stampr can sync your photos, projects, voice notes, and transcripts between your devices using iCloud. When iCloud Sync is enabled (it is on by default):</p>
+                <ul>
+                    <li><strong>Your data goes only to your own iCloud.</strong> Sync uses the private iCloud (CloudKit) database attached to your Apple Account. This data is accessible only to you. We cannot access, read, or retrieve it. We operate no servers and hold no keys to your iCloud.</li>
+                    <li><strong>No accounts, no sign-up.</strong> Sync works through the Apple Account already on your device. Stampr has no account system of its own.</li>
+                    <li><strong>You can turn it off.</strong> Disable iCloud Sync anytime in Stampr's Settings (Data section). With sync off, all data stays only on your device.</li>
+                    <li><strong>Apple's terms apply to iCloud.</strong> Storage and transmission of your iCloud data are handled by Apple and subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+                </ul>
+            </section>
+
+            <section>
                 <h2>iCloud Backup</h2>
-                <p>If you have iCloud Backup enabled on your device, Stampr's data may be included in your device backups. This is managed by Apple and subject to Apple's privacy policy. We do not have access to your iCloud data.</p>
+                <p>Separately from sync, if you have iCloud Backup enabled on your device, Stampr's data may be included in your device backups. This is managed by Apple and subject to Apple's privacy policy. We do not have access to your iCloud data.</p>
             </section>
 
             <section>
@@ -73,6 +84,7 @@
                     <li><strong>Apple Location Services & Maps</strong> — For GPS coordinates, reverse geocoding, and the map imagery shown in the app and in PDF reports. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
                     <li><strong>Apple Speech Framework</strong> — For on-device voice transcription. Audio is processed locally and is not sent to Apple's servers.</li>
                     <li><strong>Apple Intelligence (on-device)</strong> — For optional AI note cleanup and tag suggestions, processed entirely on your device.</li>
+                    <li><strong>iCloud / CloudKit</strong> — For optional sync of your data between your own devices, stored in your private iCloud database. See "iCloud Sync" above.</li>
                     <li><strong>App Store / StoreKit</strong> — For in-app purchases. Purchase transactions are handled by Apple.</li>
                 </ul>
                 <p>We do not use any third-party analytics, advertising, or tracking services.</p>
@@ -90,10 +102,11 @@
 
             <section>
                 <h2>Data Deletion</h2>
-                <p>Since all data is stored locally on your device, you can delete it at any time by:</p>
+                <p>Your data is under your control at all times. You can delete it by:</p>
                 <ul>
-                    <li>Deleting individual photos from within the app</li>
-                    <li>Uninstalling Stampr from your device, which removes all app data</li>
+                    <li>Deleting individual photos or projects from within the app; with iCloud Sync on, deletions propagate to your other devices as well</li>
+                    <li>Turning off iCloud Sync in Stampr's Settings if you no longer want data synced to iCloud</li>
+                    <li>Uninstalling Stampr from your device, which removes all local app data (data already synced to your private iCloud remains under your Apple Account's iCloud storage until deleted)</li>
                 </ul>
             </section>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampr — Help & User Guide | Top 7 Systems</title>
-    <meta name="description" content="Help and user guide for Stampr 2.0 — the GPS field camera app with voice notes, stamped video, and PDF reports for iPhone and iPad.">
+    <meta name="description" content="Help and user guide for Stampr, the GPS field camera app with voice notes, stamped video, PDF reports, and private iCloud sync for iPhone and iPad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr — Help & User Guide</h1>
-            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.0 for iPhone and iPad.</p>
+            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.0 and later for iPhone and iPad.</p>
 
             <!-- Table of Contents -->
             <div class="toc">
@@ -40,6 +40,7 @@
                     <li><a href="#photo-library">Photo Library</a></li>
                     <li><a href="#photo-details">Photo Details</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#icloud-sync">iCloud Sync</a></li>
                     <li><a href="#sharing-reports">Sharing, Reports & Data Export</a></li>
                     <li><a href="#project-files">Project Files — Team Handoff</a></li>
                     <li><a href="#settings">Settings & Customisation</a></li>
@@ -64,8 +65,8 @@
 
                 <div class="screenshot-row">
                     <img src="screenshots/camera.png" alt="Camera tab showing live GPS overlay with coordinates, address, altitude, and bearing">
-                    <img src="screenshots/library.png" alt="Library tab showing photo grid organized by projects with real inspection photos">
-                    <img src="screenshots/settings.png" alt="Settings tab showing stamp options, coordinate formats, and Pro upgrade">
+                    <img src="screenshots/library.png" alt="Library tab showing the projects rail, filter and sort buttons, and photos grouped by day">
+                    <img src="screenshots/settings.png" alt="Settings tab showing capture options, branding, and the iCloud Sync toggle">
                 </div>
 
                 <div class="step">
@@ -123,14 +124,23 @@
                 <h3>Zoom & Lenses</h3>
                 <p>Pinch to zoom or tap the preset buttons above the shutter. On iPhones with multiple rear cameras you also get a 0.5&times; ultra-wide preset, and zooming switches to the telephoto lens automatically for true optical quality — not just a digital crop.</p>
 
+                <h3>Focus &amp; Exposure</h3>
+                <p>Tap anywhere in the viewfinder to focus and set exposure on that point. Long-press to <strong>lock</strong> focus and exposure (AE/AF lock) so they stay put while you reframe, useful for high-contrast scenes or repeated shots of the same subject.</p>
+
+                <h3>Front Camera</h3>
+                <p>Tap the camera-flip button to switch between the rear and front cameras, handy for documenting yourself on site or capturing awkward angles.</p>
+
+                <h3>Volume-Button Shutter</h3>
+                <p>Press either volume button to take the photo (or start and stop a video), just like the built-in Camera app. Great with gloves or when holding the phone at arm's length.</p>
+
                 <h3>Level Indicator</h3>
-                <p>A subtle bubble level in the centre of the viewfinder shows when your horizon is straight — it turns <strong>green</strong> when you're level within 1.5&deg;, in both portrait and landscape. Great for straight-on documentation shots. You can turn it off in Settings.</p>
+                <p>A subtle bubble level in the centre of the viewfinder shows when your horizon is straight. It turns <strong>green</strong> when you're level within 1.5&deg;, in both portrait and landscape, and gives a small haptic tick as it locks on. Great for straight-on documentation shots. You can turn it off in Settings.</p>
 
                 <h3>Require GPS Fix</h3>
                 <p>If your work demands coordinates on every shot, enable <em>Require GPS Fix</em> in Settings. The shutter will then wait for a GPS lock, with a "Capture Anyway" escape hatch if you need the shot regardless.</p>
 
                 <h3>Flash & Resolution</h3>
-                <p>Tap the flash icon in the top-left corner to toggle the flash. Enable <em>Maximum Resolution</em> in Settings to capture at your iPhone's full sensor resolution (larger files).</p>
+                <p>Tap the flash icon in the top-left corner to cycle the flash through off, auto, and on. Enable <em>Maximum Resolution</em> in Settings to capture at your iPhone's full sensor resolution (larger files).</p>
 
                 <div class="tip-box">
                     <strong>Tip:</strong> Make sure Location Services is enabled in iOS Settings for the most accurate GPS data. The colour-coded accuracy indicator on the stamp overlay shows how precise your current fix is.
@@ -155,7 +165,7 @@
                 </ul>
 
                 <h3>AI Note Cleanup</h3>
-                <p>On devices with Apple Intelligence, Stampr's <em>AI Note Cleanup</em> tidies your dictation into a clear, professional caption and suggests up to five searchable tags — entirely on-device. "um so there's a crack on the uh north wall" becomes "Crack on north wall." The verbatim transcript is always kept too: tap <em>Show original transcript</em> on any photo to see exactly what was said.</p>
+                <p>On devices with Apple Intelligence, Stampr's <em>AI Note Cleanup</em> tidies your dictation into a clear, professional caption and suggests up to five searchable tags, entirely on-device. "um so there's a crack on the uh north wall" becomes "Crack on north wall." Cleanup is strictly grounded: it only removes dictation artifacts and can never invent content. Every cleaned note is checked word by word against your transcript, and if anything doesn't match, Stampr falls back to the verbatim transcript. The verbatim transcript is always kept too: tap <em>Show original transcript</em> on any photo to see exactly what was said.</p>
                 <p>In the voice note sheet you can flip between the AI-cleaned version and the original before saving. On devices without Apple Intelligence, the verbatim transcription is used as-is.</p>
 
                 <div class="tip-box">
@@ -198,10 +208,10 @@
                 <h2>Photo Library</h2>
 
                 <h3>Browsing Photos</h3>
-                <p>The Library tab shows all your photos in a grid sorted by date. Use the filter menu to narrow by time period, project, or <strong>tag</strong>. Use the search bar to find photos by notes (including the original transcript), tags, address, or project name.</p>
+                <p>The Library tab shows all your photos in a grid sorted by date, newest first by default. Switch to oldest-first with the sort button (the up-down arrows) in the toolbar. Use the filter menu to narrow by time period (including a <strong>Yesterday</strong> filter for writing up the previous day's work), project, or <strong>tag</strong>. Use the search bar to find photos by notes (including the original transcript), tags, address, or project name.</p>
 
                 <div class="screenshot-row">
-                    <img src="screenshots/library.png" alt="Library tab showing projects row at top and photo grid below">
+                    <img src="screenshots/library.png" alt="Library tab showing the projects row, filter and sort buttons, and photo grid grouped by day">
                     <img src="screenshots/project-detail.png" alt="Project detail view showing real inspection photos in a grid">
                 </div>
 
@@ -209,11 +219,11 @@
                 <p>Toggle the map icon to see your photos plotted geographically. <strong>Tap any pin to open that photo's details.</strong> Only photos with valid GPS coordinates appear on the map.</p>
 
                 <div class="screenshot-single">
-                    <img src="screenshots/map-view.png" alt="Map view showing Stampr photo pins along the waterfront">
+                    <img src="screenshots/map-view.png" alt="Map view showing Stampr photo pins along the San Francisco Embarcadero waterfront">
                 </div>
 
                 <h3>Selecting Multiple Photos</h3>
-                <p>Tap "Select" to enter selection mode. Tap photos to select them, then share or delete the selection using the toolbar at the bottom.</p>
+                <p>Tap "Select" to enter selection mode. Tap photos to select them, then share or delete the selection using the toolbar at the bottom. Deleting asks for confirmation first and tells you exactly how many photos are affected, so a stray tap can't wipe out your work.</p>
             </section>
 
             <!-- Photo Details -->
@@ -222,7 +232,7 @@
                 <p>Tap any photo in the Library to see its full metadata. The detail view shows everything that was captured with the photo.</p>
 
                 <div class="screenshot-row">
-                    <img src="screenshots/photo-detail.png" alt="Photo detail showing stamped construction photo with notes, tags, and before/after pairing">
+                    <img src="screenshots/photo-detail.png" alt="Photo detail showing the stamp band, project card, voice note with cleaned caption and tags, and before/after linking">
                     <img src="screenshots/photo-gps.png" alt="Photo detail with expanded GPS data showing altitude, bearing, tilt, and watermark">
                 </div>
 
@@ -282,6 +292,21 @@
                 <p>Open the project menu to rename or delete. After renaming, Stampr asks if you want to update the project name on all existing photos. When deleting, you can keep the photos unassigned or delete them too.</p>
             </section>
 
+            <!-- iCloud Sync -->
+            <section id="icloud-sync">
+                <h2>iCloud Sync</h2>
+                <p>Your photos, projects, and voice notes sync through your own private iCloud, so your Stampr library carries over automatically when you set up a new iPhone (or between your iPhone and iPad signed into the same Apple Account).</p>
+                <ul>
+                    <li><strong>It's your iCloud, not ours.</strong> Everything syncs through the private iCloud database attached to your Apple Account. Nothing is shared with us. We cannot see your photos, notes, or locations, and there is no Stampr account to create.</li>
+                    <li><strong>On by default.</strong> Sync is enabled out of the box. It needs you to be signed into iCloud on the device and counts against your own iCloud storage.</li>
+                    <li><strong>Turn it off anytime.</strong> Go to Settings &rarr; Data &rarr; iCloud Sync. When it's off, photos and notes stay only on the device and are not backed up to iCloud.</li>
+                    <li><strong>Restart to apply.</strong> After flipping the toggle, Stampr shows a "Restart Stampr to apply" note. Quit and reopen the app for the change to take effect.</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Sync is for your own devices.</strong> To hand work to someone else, a teammate, a client, or another crew member, use <em>Share Project File</em> instead (see Project Files below). That works with or without iCloud Sync.
+                </div>
+            </section>
+
             <!-- Sharing & Reports -->
             <section id="sharing-reports">
                 <h2>Sharing, Reports & Data Export</h2>
@@ -292,6 +317,7 @@
                     <li>A branded cover header (your logo appears here with Pro)</li>
                     <li>A map overview page with numbered pins matching the photo list</li>
                     <li>Every photo embedded at quality, with its full metadata table, notes, and tags</li>
+                    <li>Photos in chronological order, accurate "Page N of M" footers on every page, and long notes that continue cleanly onto the next page</li>
                 </ul>
 
                 <div class="screenshot-single">
@@ -299,7 +325,7 @@
                 </div>
 
                 <h3>GPS in the Photo File (EXIF)</h3>
-                <p>Every stamped photo also carries machine-readable GPS coordinates, altitude, bearing, and the capture time in its EXIF metadata. Shared photos pin correctly in Apple Photos, Google Earth, GIS packages, and insurance claims software. You can turn this off in Settings if you need location-free files.</p>
+                <p>Every stamped photo also carries machine-readable GPS coordinates, altitude, bearing, and the capture time in its EXIF metadata. The time zone at the moment of capture is preserved too, both on the printed date stamp and in the EXIF time-offset field, so a photo taken interstate keeps its local capture time. Shared photos pin correctly in Apple Photos, Google Earth, GIS packages, and insurance claims software. You can turn this off in Settings if you need location-free files.</p>
 
                 <h3>Data Export — CSV, KML, GeoJSON</h3>
                 <p>From any project's menu, choose <em>Export Data</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags.</p>
@@ -339,7 +365,7 @@
                 <p>The Settings tab controls how Stampr stamps, captures, and shares.</p>
 
                 <div class="screenshot-single">
-                    <img src="screenshots/settings.png" alt="Settings screen showing stamp text size, coordinate format, units, north reference and capture options">
+                    <img src="screenshots/settings.png" alt="Settings screen showing capture options, the Branding section, and the iCloud Sync toggle in the Data section">
                 </div>
 
                 <table>
@@ -363,6 +389,7 @@
                         <tr><td>Auto-Save to Camera Roll</td><td>Save stamped photos to the Photos app too</td><td>Off</td></tr>
                         <tr><td>Include Report When Sharing</td><td>Attach the PDF report with map and photos</td><td>On</td></tr>
                         <tr><td>Watermark / Logo</td><td>Custom text or logo branding on photos and reports (Pro)</td><td>None</td></tr>
+                        <tr><td>iCloud Sync</td><td>Sync photos, projects, and voice notes through your private iCloud (restart to apply)</td><td>On</td></tr>
                         <tr><td>Location Services</td><td>Enable GPS, address, and compass data</td><td>On</td></tr>
                     </tbody>
                 </table>
@@ -424,11 +451,15 @@
 
                 <details class="faq-toggle">
                     <summary>Where are my photos stored?</summary>
-                    <div class="faq-answer">Photos are stored locally on your device. They are included in your device backups (iCloud Backup or computer backups), and you can move whole projects between devices with project files (see Project Files above). Stamped videos are saved to your Photos library.</div>
+                    <div class="faq-answer">Photos are stored on your device and, with iCloud Sync on (the default), also in your own private iCloud, so they carry over to a new phone. Turn sync off in Settings &rarr; Data if you want everything to stay on-device only. You can also move whole projects between devices with project files (see Project Files above). Stamped videos are saved to your Photos library.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Do my photos sync between my iPhone and iPad?</summary>
-                    <div class="faq-answer">Not automatically in 2.0 — your library lives on each device. To move work across devices, share a project file (.stamprproj) from one device and tap it on the other; importing merges without duplicates. Automatic sync is on our roadmap.</div>
+                    <div class="faq-answer">Yes. With iCloud Sync on, photos, projects, and voice notes sync through your private iCloud between devices signed into the same Apple Account. If you prefer manual control, turn sync off and use project files (.stamprproj) instead; importing merges without duplicates.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Can Top 7 Systems see my synced photos?</summary>
+                    <div class="faq-answer">No. Sync uses the private iCloud database attached to your own Apple Account. The data is accessible only to you. We have no servers, no accounts, and no way to read it.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Can I change the stamp after taking a photo?</summary>
@@ -440,7 +471,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Does Stampr send my location data anywhere?</summary>
-                    <div class="faq-answer">No. All GPS data stays on your device. Location is used only to stamp your photos and reverse-geocode a street address. Nothing is transmitted to our servers — we don't have any.</div>
+                    <div class="faq-answer">Not to us. Location is used only to stamp your photos and reverse-geocode a street address, and it stays on your device (plus your own private iCloud if sync is on). Nothing is transmitted to our servers. We don't have any.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>What are UTM and MGRS formats?</summary>
