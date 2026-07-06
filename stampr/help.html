@@ -176,7 +176,7 @@
             <!-- Stamped Video -->
             <section id="stamped-video">
                 <h2>Stamped Video</h2>
-                <p>New in Stampr 2.0 — record site walkthroughs with the GPS stamp burned onto the footage.</p>
+                <p>Record site walkthroughs with the GPS stamp burned onto the footage. Videos live right alongside your photos in the Library, each with its own detail view, a place in its project, and an entry in your PDF reports.</p>
                 <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-content">
@@ -188,18 +188,21 @@
                     <div class="step-num">2</div>
                     <div class="step-content">
                         <h4>Record</h4>
-                        <p>Tap to start recording (with sound), tap again to stop. Recordings cap at 3 minutes. The GPS data, address, and time are captured at the moment recording starts.</p>
+                        <p>Tap to start recording (with sound), tap again to stop. Recordings cap at 3 minutes. The GPS data, address, bearing, and time are frozen at the moment recording starts and burned into every frame, along with your watermark or logo.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
                     <div class="step-content">
-                        <h4>Stamped & Saved to Photos</h4>
-                        <p>Stampr burns the same stamp band your photos get — plus your watermark or logo — onto the video, then saves it straight to your Photos library. Look for the "Stamped video saved to Photos" confirmation.</p>
+                        <h4>Saved to your Library</h4>
+                        <p>The stamped clip saves straight into your in-app Library ("Video saved to Library"), where it shows in the grid with a duration badge. Its soundtrack is transcribed on-device into a searchable, editable note, exactly like a photo voice note.</p>
                     </div>
                 </div>
+                <div class="screenshot-single">
+                    <img src="screenshots/video-detail.png" alt="Stamped video open in the Library showing the GPS stamp band burned into the footage, playback controls, and the transcribed walkthrough note">
+                </div>
                 <div class="tip-box">
-                    <strong>Note:</strong> videos count one photo credit each on the free plan, and they live in your Photos library rather than the in-app Library.
+                    <strong>Note:</strong> videos count one capture each toward the free monthly limit. They stay in Stampr's Library on the device that recorded them. Because clips are large, they are not carried by iCloud Sync. Turn on <em>Auto-Save to Camera Roll</em> in Settings if you also want each clip copied to the Photos app.
                 </div>
             </section>
 
@@ -207,8 +210,8 @@
             <section id="photo-library">
                 <h2>Photo Library</h2>
 
-                <h3>Browsing Photos</h3>
-                <p>The Library tab shows all your photos in a grid sorted by date, newest first by default. Switch to oldest-first with the sort button (the up-down arrows) in the toolbar. Use the filter menu to narrow by time period (including a <strong>Yesterday</strong> filter for writing up the previous day's work), project, or <strong>tag</strong>. Use the search bar to find photos by notes (including the original transcript), tags, address, or project name.</p>
+                <h3>Browsing Photos &amp; Videos</h3>
+                <p>The Library tab shows all your photos and videos in a grid sorted by date, newest first by default. Videos appear alongside photos with a duration badge in the corner. Switch to oldest-first with the sort button (the up-down arrows) in the toolbar. Use the filter menu to narrow by time period (including a <strong>Yesterday</strong> filter for writing up the previous day's work), project, or <strong>tag</strong>. Use the search bar to find captures by notes (including the original transcript), tags, address, or project name.</p>
 
                 <div class="screenshot-row">
                     <img src="screenshots/library.png" alt="Library tab showing the projects row, filter and sort buttons, and photo grid grouped by day">
@@ -301,6 +304,7 @@
                     <li><strong>On by default.</strong> Sync is enabled out of the box. It needs you to be signed into iCloud on the device and counts against your own iCloud storage.</li>
                     <li><strong>Turn it off anytime.</strong> Go to Settings &rarr; Data &rarr; iCloud Sync. When it's off, photos and notes stay only on the device and are not backed up to iCloud.</li>
                     <li><strong>Restart to apply.</strong> After flipping the toggle, Stampr shows a "Restart Stampr to apply" note. Quit and reopen the app for the change to take effect.</li>
+                    <li><strong>Videos stay on the device.</strong> Because clips are large, videos are kept in the app's Library on the device that recorded them and are not carried by iCloud Sync. They are included in your normal encrypted device backup. To keep a copy elsewhere, turn on Auto-Save to Camera Roll.</li>
                 </ul>
                 <div class="tip-box">
                     <strong>Sync is for your own devices.</strong> To hand work to someone else, a teammate, a client, or another crew member, use <em>Share Project File</em> instead (see Project Files below). That works with or without iCloud Sync.
@@ -312,12 +316,13 @@
                 <h2>Sharing, Reports & Data Export</h2>
 
                 <h3>PDF Field Reports</h3>
-                <p>When you share photos, Stampr attaches a professional PDF report — the document you hand to a client or claims assessor. The 2.0 report includes:</p>
+                <p>When you share photos and videos, Stampr attaches a professional PDF report, the document you hand to a client or claims assessor. The report includes:</p>
                 <ul>
                     <li>A branded cover header (your logo appears here with Pro)</li>
-                    <li>A map overview page with numbered pins matching the photo list</li>
+                    <li>A map overview page with numbered pins matching the capture list</li>
                     <li>Every photo embedded at quality, with its full metadata table, notes, and tags</li>
-                    <li>Photos in chronological order, accurate "Page N of M" footers on every page, and long notes that continue cleanly onto the next page</li>
+                    <li>A poster frame and full metadata for each video in the selection, with the clip attached to the share as a stamped .mov file</li>
+                    <li>Captures in chronological order, accurate "Page N of M" footers on every page, and long notes that continue cleanly onto the next page</li>
                 </ul>
 
                 <div class="screenshot-single">
@@ -386,7 +391,7 @@
                         <tr><td>Print Address on Photo</td><td>Include street address on the stamp</td><td>On</td></tr>
                         <tr><td>Print Notes on Photo</td><td>Burns voice transcription onto the stamp</td><td>Off</td></tr>
                         <tr><td>Embed GPS in File (EXIF)</td><td>Machine-readable location inside the photo file</td><td>On</td></tr>
-                        <tr><td>Auto-Save to Camera Roll</td><td>Save stamped photos to the Photos app too</td><td>Off</td></tr>
+                        <tr><td>Auto-Save to Camera Roll</td><td>Also copy stamped photos and videos to the Photos app</td><td>Off</td></tr>
                         <tr><td>Include Report When Sharing</td><td>Attach the PDF report with map and photos</td><td>On</td></tr>
                         <tr><td>Watermark / Logo</td><td>Custom text or logo branding on photos and reports (Pro)</td><td>None</td></tr>
                         <tr><td>iCloud Sync</td><td>Sync photos, projects, and voice notes through your private iCloud (restart to apply)</td><td>On</td></tr>
@@ -415,7 +420,7 @@
                 <h3>Action Button & Siri</h3>
                 <p>Stampr provides a <em>Take Stamped Photo</em> action you can assign to the Action button (iPhone 15 Pro and later) or trigger with Siri — from pocket to a stamped capture in one press. It also works in the Shortcuts app for custom automations.</p>
                 <h3>Spotlight</h3>
-                <p>Your photo notes, addresses, and tags are indexed in iOS Spotlight search. Swipe down on your home screen, search a phrase from a note, and tap the result to jump straight to that photo in Stampr.</p>
+                <p>The notes, addresses, and tags on your photos <em>and videos</em> are indexed in iOS Spotlight search. Swipe down on your home screen, search a phrase from a note, and tap the result to jump straight to that capture in Stampr.</p>
                 <h3>iPad</h3>
                 <p>Stampr 2.0 runs natively on iPad with a layout built for the larger screen — the same library, projects, reports, and project-file import.</p>
             </section>
@@ -441,7 +446,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Photo Library (Add)</h3>
-                    <p>Required for "Auto-Save to Camera Roll" and for saving stamped videos to your Photos library.</p>
+                    <p>Only needed for "Auto-Save to Camera Roll", which copies your stamped photos and videos to the Photos app. Stampr keeps every capture in its own Library without it.</p>
                 </div>
             </section>
 
@@ -451,7 +456,7 @@
 
                 <details class="faq-toggle">
                     <summary>Where are my photos stored?</summary>
-                    <div class="faq-answer">Photos are stored on your device and, with iCloud Sync on (the default), also in your own private iCloud, so they carry over to a new phone. Turn sync off in Settings &rarr; Data if you want everything to stay on-device only. You can also move whole projects between devices with project files (see Project Files above). Stamped videos are saved to your Photos library.</div>
+                    <div class="faq-answer">Photos are stored on your device and, with iCloud Sync on (the default), also in your own private iCloud, so they carry over to a new phone. Turn sync off in Settings &rarr; Data if you want everything to stay on-device only. You can also move whole projects between devices with project files (see Project Files above). Videos are kept in Stampr's Library on the device that recorded them, and because clips are large they are not carried by iCloud Sync; turn on Auto-Save to Camera Roll if you want each one copied to the Photos app as well.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Do my photos sync between my iPhone and iPad?</summary>
@@ -495,7 +500,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>My video saved without a stamp / I can't find my video</summary>
-                    <div class="faq-answer">Stamped videos are saved to the Photos app, not the in-app Library — look in your Photos recents. Processing happens right after you stop recording ("Stamping video…"); keep the app open until you see the confirmation toast.</div>
+                    <div class="faq-answer">Stamped videos save into Stampr's in-app Library, in the same grid as your photos (look for the clip with a duration badge) and inside its assigned project. Processing happens right after you stop recording ("Stamping video…"); keep the app open until you see the "Video saved to Library" confirmation. If you'd also like clips copied to the Photos app, turn on Auto-Save to Camera Roll in Settings.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>I purchased Pro but it's not showing. What do I do?</summary>
