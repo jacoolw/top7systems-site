@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent: Climb Your Way Through Algebra 1 — Coming Soon | Top 7 Systems</title>
+    <meta name="description" content="Ascent turns a full US Algebra 1 course into a climb up Mount Everest. Master equations, graphs, and quadratics to gain real altitude, camp by camp, for ages 13 and up. No ads, no tracking. Coming soon to the App Store.">
+    <link rel="canonical" href="https://top7systems.net/ascent/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top7systems.net/ascent/">
+    <meta property="og:title" content="Ascent: Climb Your Way Through Algebra 1">
+    <meta property="og:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
+    <meta property="og:image" content="https://top7systems.net/ascent/icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ascent: Climb Your Way Through Algebra 1">
+    <meta name="twitter:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
+    <meta name="twitter:image" content="https://top7systems.net/ascent/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ascent: Climb Your Way Through Algebra 1",
+      "operatingSystem": "iOS",
+      "applicationCategory": "EducationalApplication",
+      "url": "https://top7systems.net/ascent/",
+      "image": "https://top7systems.net/ascent/icon.png",
+      "description": "A full US Algebra 1 course played as a climb up Mount Everest. Every skill mastered gains real altitude, from Lukla to the summit. Coming soon to the App Store.",
+      "inLanguage": "en",
+      "publisher": { "@type": "Organization", "name": "Top 7 Systems", "url": "https://top7systems.net/" },
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 13 }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When does Ascent launch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Soon. The whole mountain is built and climbable end to end, from Lukla to the summit; we are in final testing and App Store preparation. Email support@top7systems.net and we will send you one note on launch day." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much will Ascent cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Free to start: the route through Camp One — foundations, the language of algebra, and all of linear equations — costs nothing. A single one-time purchase, the Full Expedition, unlocks the rest of the mountain. No subscription, and it is family shareable." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Ascent for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Anyone taking or retaking Algebra 1, roughly ages 13 and up. Already partway through algebra? An optional placement check at the start, the flight in, can drop you as high as Camp Two so you never grind through material you already own. For ages 8 to 11 we make Numina, our arithmetic game." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it a complete Algebra 1 course?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fifty-six skills across twelve legs cover a full US Algebra 1 course: equations, inequalities, functions, systems, exponents, polynomials, factoring, quadratics, and radicals, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ascent use AI to make the questions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Every problem, hint, and worked solution comes from our own exact algebra engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it private? Does it work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes and yes. No ads, no tracking, no third-party code, no data collection. Everything works offline, and optional sync runs through your own private iCloud." }
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root { --as-brand: #3d4e8d; --as-brand-soft: #edf0fa; --as-flag: #f0a03c; }
+
+        /* Night-sky hero */
+        .as-hero {
+            position: relative; text-align: center; overflow: hidden;
+            margin: 32px 0 8px; padding: 64px 24px 96px; border-radius: 24px;
+            background: linear-gradient(180deg, #0a102c 0%, #141f4a 55%, #223061 100%);
+            color: #eef2ff;
+        }
+        .as-stars { position: absolute; inset: 0; pointer-events: none; }
+        .as-stars::before, .as-stars::after {
+            content: ""; position: absolute; inset: 0;
+            background-image:
+                radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,0.9), transparent 100%),
+                radial-gradient(1px 1px at 28% 12%, rgba(255,255,255,0.7), transparent 100%),
+                radial-gradient(1.5px 1.5px at 44% 30%, rgba(255,255,255,0.55), transparent 100%),
+                radial-gradient(1px 1px at 61% 9%, rgba(255,255,255,0.8), transparent 100%),
+                radial-gradient(2px 2px at 74% 24%, rgba(255,255,255,0.75), transparent 100%),
+                radial-gradient(1px 1px at 88% 15%, rgba(255,255,255,0.6), transparent 100%),
+                radial-gradient(1px 1px at 8% 55%, rgba(255,255,255,0.5), transparent 100%),
+                radial-gradient(1.5px 1.5px at 93% 47%, rgba(255,255,255,0.65), transparent 100%),
+                radial-gradient(1px 1px at 22% 72%, rgba(255,255,255,0.4), transparent 100%),
+                radial-gradient(1.5px 1.5px at 80% 68%, rgba(255,255,255,0.45), transparent 100%);
+        }
+        .as-stars::after {
+            background-image:
+                radial-gradient(120px 120px at 84% 18%, rgba(246,240,210,0.22), transparent 70%),
+                radial-gradient(1px 1px at 35% 48%, rgba(255,255,255,0.5), transparent 100%),
+                radial-gradient(1px 1px at 55% 62%, rgba(255,255,255,0.35), transparent 100%),
+                radial-gradient(1px 1px at 68% 40%, rgba(255,255,255,0.45), transparent 100%);
+        }
+        .as-ridge { position: absolute; left: 0; right: 0; bottom: -2px; width: 100%; height: 90px; display: block; pointer-events: none; }
+        .as-hero-inner { position: relative; z-index: 1; }
+        .as-icon {
+            width: 116px; height: 116px; border-radius: 26px;
+            box-shadow: 0 14px 40px rgba(4, 8, 30, 0.6), 0 0 0 1px rgba(255,255,255,0.12);
+        }
+        .as-hero h1 { font-size: clamp(2.2rem, 6vw, 3rem); letter-spacing: -0.03em; margin: 18px 0 6px; color: #fff; }
+        .as-tagline { color: #c7d2ea; font-size: 1.15rem; max-width: 500px; margin: 0 auto 26px; line-height: 1.55; }
+        .as-badge {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: rgba(240, 160, 60, 0.14); color: #f6bc66;
+            border: 1px solid rgba(240, 160, 60, 0.45);
+            padding: 9px 20px; border-radius: 999px;
+            font-weight: 700; font-size: 0.82rem; letter-spacing: 0.09em; text-transform: uppercase;
+        }
+        .as-badge .dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--as-flag); animation: as-pulse 2.4s ease-in-out infinite; }
+        @media (max-width: 480px) { .as-badge { font-size: 0.7rem; letter-spacing: 0.06em; padding: 8px 14px; } }
+        @keyframes as-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+        @media (prefers-reduced-motion: reduce) { .as-badge .dot { animation: none; } }
+        .as-notify {
+            display: block; margin-top: 18px; color: #aebbdd; font-weight: 600; font-size: 0.92rem;
+            text-decoration: none; transition: color var(--transition);
+        }
+        .as-notify:hover { color: #fff; text-decoration: underline; }
+
+        .as-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 26px 20px 6px; }
+        .as-pills span {
+            font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);
+            background: var(--bg-alt); border: 1px solid var(--border);
+            padding: 6px 13px; border-radius: 999px;
+        }
+
+        .as-shots {
+            display: flex; gap: 14px; overflow-x: auto; padding: 18px 20px 24px;
+            scroll-snap-type: x mandatory; justify-content: center; flex-wrap: wrap;
+        }
+        .as-shots img {
+            width: 205px; border-radius: 20px; scroll-snap-align: center;
+            box-shadow: 0 12px 34px rgba(10, 16, 44, 0.28);
+        }
+
+        .as-section { padding: 28px 20px; }
+        .as-lead { color: var(--text-secondary); max-width: 620px; margin: 8px 0 0; line-height: 1.65; }
+        .as-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+        .as-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+        .as-card .ico {
+            width: 44px; height: 44px; border-radius: 12px; background: var(--as-brand-soft);
+            display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 12px;
+        }
+        .as-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+        .as-card p { color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; }
+
+        .as-route { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 14px; margin-top: 22px; }
+        .as-leg {
+            display: flex; gap: 14px; align-items: flex-start; background: var(--surface);
+            border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px;
+        }
+        .as-leg .num {
+            flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: var(--as-brand);
+            color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+        }
+        .as-leg.top .num { background: var(--as-flag); }
+        .as-leg h3 { font-size: 1rem; margin-bottom: 3px; }
+        .as-leg p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+        .as-leg .alt { color: var(--text-secondary); opacity: 0.75; font-variant-numeric: tabular-nums; }
+
+        .as-strip {
+            display: flex; gap: 14px; overflow-x: auto; padding: 18px 4px 10px;
+            scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+        }
+        .as-strip figure { flex: 0 0 auto; width: 176px; margin: 0; scroll-snap-align: start; }
+        .as-strip img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+            box-shadow: 0 8px 22px rgba(10, 16, 44, 0.22); border: 1px solid var(--border);
+        }
+        .as-strip figcaption { text-align: center; margin-top: 9px; line-height: 1.35; }
+        .as-strip figcaption strong { display: block; font-size: 0.82rem; color: var(--text); font-weight: 700; }
+        .as-strip figcaption span { font-size: 0.74rem; color: var(--text-secondary); }
+
+        .as-cta {
+            text-align: center; background: var(--as-brand-soft); border-radius: 20px;
+            padding: 36px 24px; margin: 20px 20px 8px;
+        }
+        .as-cta h2 { font-size: 1.4rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+        .as-cta p { color: var(--text-secondary); max-width: 480px; margin: 0 auto 20px; line-height: 1.6; }
+        .as-cta .as-badge { background: rgba(240, 160, 60, 0.14); color: #b96f14; border-color: rgba(185, 111, 20, 0.35); }
+        .as-cta .as-notify { color: var(--as-brand); }
+        .as-cta .as-notify:hover { color: var(--text); }
+
+        .as-faq { max-width: 720px; margin: 18px auto 0; }
+        .as-faq details { border-bottom: 1px solid var(--border); }
+        .as-faq summary {
+            cursor: pointer; list-style: none; padding: 17px 4px; font-weight: 600; font-size: 1.02rem;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        }
+        .as-faq summary::-webkit-details-marker { display: none; }
+        .as-faq summary::after {
+            content: "+"; color: var(--as-brand); font-size: 1.5rem; font-weight: 400; line-height: 1;
+            transition: transform var(--transition);
+        }
+        .as-faq details[open] summary::after { transform: rotate(45deg); }
+        .as-faq .answer { color: var(--text-secondary); line-height: 1.65; padding: 0 4px 18px; font-size: 0.96rem; margin: 0; }
+
+        .as-doclinks { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; padding: 22px; }
+        .as-doclinks a { color: var(--as-brand); text-decoration: none; font-weight: 600; }
+        .as-doclinks a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
+                    <span class="logo-text">Top 7 Systems</span>
+                </a>
+                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="as-hero">
+            <div class="as-stars" aria-hidden="true"></div>
+            <div class="as-hero-inner">
+                <img src="/ascent/icon.png" alt="Ascent app icon: a moonlit mountain with a flag on the summit" class="as-icon">
+                <h1>Ascent</h1>
+                <p class="as-tagline">Climb Mount Everest, one algebra skill at a time. Reach the summit and you've finished Algebra&nbsp;1.</p>
+                <span class="as-badge"><span class="dot" aria-hidden="true"></span>Coming soon to the App&nbsp;Store</span>
+                <a class="as-notify" href="mailto:support@top7systems.net?subject=Notify%20me%20when%20Ascent%20launches">Get one email on launch day &rarr;</a>
+            </div>
+            <svg class="as-ridge" viewBox="0 0 960 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 62 L90 44 L150 58 L235 22 L305 48 L390 30 L480 2 L555 34 L625 18 L700 44 L775 28 L855 52 L960 36 L960 90 Z" fill="rgba(238,242,255,0.14)"/><path d="M0 90 L0 74 L110 58 L190 68 L280 44 L370 58 L480 24 L590 52 L680 40 L790 60 L880 50 L960 58 L960 90 Z" fill="rgba(238,242,255,0.22)"/></svg>
+        </section>
+
+        <div class="as-pills">
+            <span>Ages 13+</span>
+            <span>Full Algebra 1 course</span>
+            <span>56 skills, 12 legs</span>
+            <span>No ads</span>
+            <span>No tracking</span>
+            <span>iPhone &amp; iPad</span>
+        </div>
+
+        <section class="as-shots">
+            <img src="/ascent/shots/01-climb-through-algebra-1.png" alt="The mountain map: the route from Lukla to the summit, with camps for each algebra unit and your climber at 6,065 m">
+            <img src="/ascent/shots/02-master-stacked-fractions.png" alt="Solving an equation with stacked fractions, answered correctly on the notebook-paper working card">
+            <img src="/ascent/shots/03-graph-lines-with-your-finger.png" alt="Drawing the line y = 2x + 1 with a finger on the interactive graph canvas, graded correct">
+            <img src="/ascent/shots/06-earn-patches-streaks-altitude.png" alt="Session results showing an expedition patch, a streak, and altitude gained">
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Why Ascent works</h2>
+            <div class="as-grid">
+                <div class="as-card">
+                    <div class="ico">🏔️</div>
+                    <h3>Altitude you earn</h3>
+                    <p>Every skill you master gains real height on the route to Everest's summit. Camps mark finished units, fireworks light the night sky at milestones, and summiting means the whole course is done.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📻</div>
+                    <h3>Stuck never means stranded</h3>
+                    <p>The radio to Base Camp is one tap away on every problem: four levels of hints, never punished. Every concept has a lesson you can reread and endless fresh worked examples.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📈</div>
+                    <h3>Graphs you can touch</h3>
+                    <p>Draw lines with your finger, plot a system's solution, shade an inequality, read a parabola — on an interactive coordinate plane that grades your graph exactly.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">✍️</div>
+                    <h3>Real math, not multiple choice</h3>
+                    <p>A true math keyboard and native rendering of stacked fractions, exponents, and radicals — plus a scratchpad for rough work by finger or Apple Pencil, never graded, wiped like scrap paper.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">✅</div>
+                    <h3>Exact, never AI-guessed</h3>
+                    <p>Every problem, hint, and answer check comes from our own exact algebra engine: &radic;8 counts as 2&radic;2, and an expanded form won't pass as factored. No generative AI, so the math is always right.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🔒</div>
+                    <h3>Private by design</h3>
+                    <p>No ads, no tracking, no third-party code, no data collection. Works offline, and optional sync runs through your own private iCloud. From the makers of <a href="/numina/">Numina</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The route: twelve legs to the summit</h2>
+            <p class="as-lead">Starting in Lukla at 2,860 m, each leg is one unit of a full US Algebra&nbsp;1 course. Altitude is only gained when a skill is truly mastered — spaced reviews and an acclimatization gate at every camp make sure it sticks. Already know some algebra? The optional flight in can start you as high as Camp&nbsp;Two.</p>
+            <div class="as-route">
+                <div class="as-leg">
+                    <div class="num">1</div>
+                    <div><h3>Namche Bazaar</h3><p>Foundations <span class="alt">&middot; 3,440 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">2</div>
+                    <div><h3>Everest Base Camp</h3><p>The language of algebra <span class="alt">&middot; 5,364 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">3</div>
+                    <div><h3>Camp One, through the Khumbu Icefall</h3><p>Linear equations <span class="alt">&middot; 6,065 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">4</div>
+                    <div><h3>Camp Two, up the Western Cwm</h3><p>Inequalities <span class="alt">&middot; 6,400 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">5</div>
+                    <div><h3>Camp Three, on the Lhotse Face</h3><p>Functions <span class="alt">&middot; 7,162 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">6</div>
+                    <div><h3>The Yellow Band</h3><p>Linear functions and data <span class="alt">&middot; 7,500 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">7</div>
+                    <div><h3>The South Col</h3><p>Systems of equations <span class="alt">&middot; 7,924 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">8</div>
+                    <div><h3>The Balcony</h3><p>Exponents and growth <span class="alt">&middot; 8,430 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">9</div>
+                    <div><h3>The South Summit</h3><p>Polynomials <span class="alt">&middot; 8,749 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">10</div>
+                    <div><h3>The Hillary Step</h3><p>Factoring <span class="alt">&middot; 8,790 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">11</div>
+                    <div><h3>The Summit Ridge</h3><p>Quadratics <span class="alt">&middot; 8,830 m</span></p></div>
+                </div>
+                <div class="as-leg top">
+                    <div class="num">12</div>
+                    <div><h3>The Summit</h3><p>Radicals and Summit Day <span class="alt">&middot; 8,849 m</span></p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">One problem from every leg</h2>
+            <p class="as-lead">Every unit of the course, photographed in play — a real question from each leg, answered correct. Scroll the strip to walk the whole route.</p>
+            <div class="as-strip">
+                <figure>
+                    <img src="/ascent/shots/legs/leg01-foundations.png" alt="Simplify −2 + x − 5, answered x − 7 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Foundations</strong><span>Namche Bazaar</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg02-language.png" alt="Distribute 4(x + 8), answered 4x + 32 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>The language of algebra</strong><span>Everest Base Camp</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg03-equations.png" alt="Solve 7x − 1 = 5x + 13, answered x = 7 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Linear equations</strong><span>Camp One</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg04-inequalities.png" alt="Solve −4x − 7 ≤ 17, answered x ≥ −6 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Inequalities</strong><span>Camp Two</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg05-functions.png" alt="If f(x) = 4x − 6, find f(6) — answered 18 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Functions</strong><span>Camp Three</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg06-lines.png" alt="Reading the slope of a graphed line, answered one half and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Linear functions &amp; data</strong><span>The Yellow Band</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg07-systems.png" alt="Solve the system −2x − y = −11 and 3x − y = 9, answered (4, 3) and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Systems of equations</strong><span>The South Col</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg08-exponents.png" alt="Simplify (3x to the fourth) squared, answered 9x to the eighth and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Exponents &amp; growth</strong><span>The Balcony</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg09-polynomials.png" alt="Multiply (x + 3)(x + 5), answered x² + 8x + 15 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Polynomials</strong><span>The South Summit</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg10-factoring.png" alt="Factor x² + 8x + 15 completely, answered (x + 5)(x + 3) and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Factoring</strong><span>The Hillary Step</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg11-quadratics.png" alt="Reading the vertex of a graphed parabola, answered (3, −1) and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Quadratics</strong><span>The Summit Ridge</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent/shots/legs/leg12-radicals.png" alt="Simplify √8, answered 2√2 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Radicals &amp; Summit Day</strong><span>The Summit</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="as-cta">
+            <h2>The mountain is waiting.</h2>
+            <p>Ascent is in final testing. Want to know the moment it opens? We'll send exactly one email — on launch day.</p>
+            <span class="as-badge"><span class="dot" aria-hidden="true"></span>Coming soon to the App&nbsp;Store</span>
+            <a class="as-notify" href="mailto:support@top7systems.net?subject=Notify%20me%20when%20Ascent%20launches">Get notified &rarr;</a>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Questions climbers ask</h2>
+            <div class="as-faq">
+                <details open>
+                    <summary>When does Ascent launch?</summary>
+                    <p class="answer">Soon. The whole mountain is built and climbable end to end, from Lukla to the summit; we're in final testing and App Store preparation. <a href="mailto:support@top7systems.net?subject=Notify%20me%20when%20Ascent%20launches">Email us</a> and we'll send you one note on launch day.</p>
+                </details>
+                <details>
+                    <summary>How much will it cost?</summary>
+                    <p class="answer">Free to start: the route through Camp One — foundations, the language of algebra, and all of linear equations — costs nothing. A single one-time purchase, the Full Expedition, unlocks the rest of the mountain. No subscription, and it's family shareable.</p>
+                </details>
+                <details>
+                    <summary>Who is Ascent for?</summary>
+                    <p class="answer">Anyone taking or retaking Algebra 1, roughly ages 13 and up. Already partway through algebra? An optional placement check at the start — the flight in — can drop you as high as Camp Two, so you never grind through material you already own. For ages 8 to 11, we make <a href="/numina/">Numina</a>, our arithmetic game.</p>
+                </details>
+                <details>
+                    <summary>Is it a complete Algebra 1 course?</summary>
+                    <p class="answer">Yes. Fifty-six skills across twelve legs cover a full US Algebra 1 course: equations, inequalities, functions, systems, exponents, polynomials, factoring, quadratics, and radicals, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course.</p>
+                </details>
+                <details>
+                    <summary>Does Ascent use AI to make the questions?</summary>
+                    <p class="answer">No. Every problem, hint, and worked solution comes from our own exact algebra engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content.</p>
+                </details>
+                <details>
+                    <summary>Is it private? Does it work offline?</summary>
+                    <p class="answer">Yes and yes. No ads, no tracking, no third-party code, no data collection. Everything works offline, and optional sync runs through your own private iCloud.</p>
+                </details>
+            </div>
+        </section>
+
+        <nav class="as-doclinks">
+            <a href="mailto:support@top7systems.net?subject=Notify%20me%20when%20Ascent%20launches">Get notified</a>
+            <a href="/numina/">Numina (ages 8&ndash;11)</a>
+            <a href="/">All apps</a>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Top 7 Systems</p>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
