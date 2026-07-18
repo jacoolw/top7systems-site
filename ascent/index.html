@@ -10,11 +10,11 @@
     <meta property="og:url" content="https://top7systems.net/ascent/">
     <meta property="og:title" content="Ascent: Climb Your Way Through Algebra 1">
     <meta property="og:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
-    <meta property="og:image" content="https://top7systems.net/ascent/icon.png">
+    <meta property="og:image" content="https://top7systems.net/ascent/panorama.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ascent: Climb Your Way Through Algebra 1">
     <meta name="twitter:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
-    <meta name="twitter:image" content="https://top7systems.net/ascent/icon.png">
+    <meta name="twitter:image" content="https://top7systems.net/ascent/panorama.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -75,36 +75,16 @@
     <style>
         :root { --as-brand: #3d4e8d; --as-brand-soft: #edf0fa; --as-flag: #f0a03c; }
 
-        /* Night-sky hero */
+        /* Panorama hero */
         .as-hero {
             position: relative; text-align: center; overflow: hidden;
-            margin: 32px 0 8px; padding: 64px 24px 96px; border-radius: 24px;
-            background: linear-gradient(180deg, #0a102c 0%, #141f4a 55%, #223061 100%);
+            margin: 32px 0 8px; padding: 72px 24px 84px; border-radius: 24px;
+            background:
+                linear-gradient(180deg, rgba(7, 12, 38, 0.55) 0%, rgba(7, 12, 38, 0.28) 45%, rgba(7, 12, 38, 0.5) 100%),
+                url('/ascent/panorama.jpg') center 38% / cover no-repeat,
+                linear-gradient(180deg, #0a102c 0%, #141f4a 55%, #223061 100%);
             color: #eef2ff;
         }
-        .as-stars { position: absolute; inset: 0; pointer-events: none; }
-        .as-stars::before, .as-stars::after {
-            content: ""; position: absolute; inset: 0;
-            background-image:
-                radial-gradient(1.5px 1.5px at 12% 22%, rgba(255,255,255,0.9), transparent 100%),
-                radial-gradient(1px 1px at 28% 12%, rgba(255,255,255,0.7), transparent 100%),
-                radial-gradient(1.5px 1.5px at 44% 30%, rgba(255,255,255,0.55), transparent 100%),
-                radial-gradient(1px 1px at 61% 9%, rgba(255,255,255,0.8), transparent 100%),
-                radial-gradient(2px 2px at 74% 24%, rgba(255,255,255,0.75), transparent 100%),
-                radial-gradient(1px 1px at 88% 15%, rgba(255,255,255,0.6), transparent 100%),
-                radial-gradient(1px 1px at 8% 55%, rgba(255,255,255,0.5), transparent 100%),
-                radial-gradient(1.5px 1.5px at 93% 47%, rgba(255,255,255,0.65), transparent 100%),
-                radial-gradient(1px 1px at 22% 72%, rgba(255,255,255,0.4), transparent 100%),
-                radial-gradient(1.5px 1.5px at 80% 68%, rgba(255,255,255,0.45), transparent 100%);
-        }
-        .as-stars::after {
-            background-image:
-                radial-gradient(120px 120px at 84% 18%, rgba(246,240,210,0.22), transparent 70%),
-                radial-gradient(1px 1px at 35% 48%, rgba(255,255,255,0.5), transparent 100%),
-                radial-gradient(1px 1px at 55% 62%, rgba(255,255,255,0.35), transparent 100%),
-                radial-gradient(1px 1px at 68% 40%, rgba(255,255,255,0.45), transparent 100%);
-        }
-        .as-ridge { position: absolute; left: 0; right: 0; bottom: -2px; width: 100%; height: 90px; display: block; pointer-events: none; }
         .as-hero-inner { position: relative; z-index: 1; }
         .as-icon {
             width: 116px; height: 116px; border-radius: 26px;
@@ -148,6 +128,7 @@
         .as-section { padding: 28px 20px; }
         .as-lead { color: var(--text-secondary); max-width: 620px; margin: 8px 0 0; line-height: 1.65; }
         .as-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+        .as-grid-4 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-bottom: 20px; }
         .as-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
         .as-card .ico {
             width: 44px; height: 44px; border-radius: 12px; background: var(--as-brand-soft);
@@ -230,7 +211,6 @@
 
     <main class="container">
         <section class="as-hero">
-            <div class="as-stars" aria-hidden="true"></div>
             <div class="as-hero-inner">
                 <img src="/ascent/icon.png" alt="Ascent app icon: a moonlit mountain with a flag on the summit" class="as-icon">
                 <h1>Ascent</h1>
@@ -238,7 +218,6 @@
                 <span class="as-badge"><span class="dot" aria-hidden="true"></span>Coming soon to the App&nbsp;Store</span>
                 <a class="as-notify" href="mailto:support@top7systems.net?subject=Notify%20me%20when%20Ascent%20launches">Get one email on launch day &rarr;</a>
             </div>
-            <svg class="as-ridge" viewBox="0 0 960 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 L0 62 L90 44 L150 58 L235 22 L305 48 L390 30 L480 2 L555 34 L625 18 L700 44 L775 28 L855 52 L960 36 L960 90 Z" fill="rgba(238,242,255,0.14)"/><path d="M0 90 L0 74 L110 58 L190 68 L280 44 L370 58 L480 24 L590 52 L680 40 L790 60 L880 50 L960 58 L960 90 Z" fill="rgba(238,242,255,0.22)"/></svg>
         </section>
 
         <div class="as-pills">
@@ -401,6 +380,34 @@
                     <figcaption><strong>Radicals &amp; Summit Day</strong><span>The Summit</span></figcaption>
                 </figure>
             </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The engine behind every problem</h2>
+            <p class="as-lead">Ascent does not use generative AI and does not ship a fixed bank of worksheet questions. Every problem, hint, and worked solution comes from our own algebra engine, built for this app and checked to be exactly right.</p>
+            <div class="as-grid as-grid-4">
+                <div class="as-card">
+                    <div class="ico">🎲</div>
+                    <h3>Endless and fresh</h3>
+                    <p>Each of the 56 skills has its own generator that composes new problems on the spot. Practice a skill twice and you meet different numbers, while the difficulty stays true to where you are on the mountain.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">⚖️</div>
+                    <h3>Exact to the last fraction</h3>
+                    <p>The engine computes in exact arithmetic: fractions stay fractions and radicals stay radicals, so 5/6 never becomes 0.83 and &radic;8 is understood to equal 2&radic;2. Answers are graded by mathematical equivalence, and any correctly simplified form counts.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🧭</div>
+                    <h3>One source of truth</h3>
+                    <p>The same engine that writes a problem also checks your answer, feeds the four radio hints, and walks the worked solution, with every step guaranteed to preserve the equation's solutions. Help can never contradict the math.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🩺</div>
+                    <h3>It knows the classic slips</h3>
+                    <p>Wrong answers are compared against the mistakes students actually make, like forgetting to flip an inequality sign. When yours matches one, Ascent names the slip and how to fix it instead of just saying "try again", and a matcher only fires when the mistake is unambiguous.</p>
+                </div>
+            </div>
+            <p class="as-lead">The whole course is machine-verified: in our test suite an automated learner climbs all 56 skills end to end, every route-test answer is re-derived independently, and the engine survives thousands of randomized stress tests before anything ships.</p>
         </section>
 
         <section class="as-cta">
