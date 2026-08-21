@@ -4,219 +4,303 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 7 Systems</title>
-    <meta name="description" content="Top 7 Systems — simple, reliable apps for professionals who need things to just work.">
+    <meta name="description" content="Top 7 Systems is a small development studio making lightweight apps for iOS, Android and the web: Numina, Ascent, Stampr, Localwave, ConcreteCalc, GravelCalc, FrostDip and ABS Cube.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/home.css">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="/" class="logo">
-                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
-                    <span class="logo-text">Top 7 Systems</span>
-                </a>
-                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
-            </div>
+    <header class="site-header">
+        <div class="wrap">
+            <a href="/" class="brand">
+                <span class="brand-mark" aria-hidden="true">T7</span>
+                <span>Top 7 Systems</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#apps" class="nav-link">Apps</a>
+                <a href="#web" class="nav-link">Web tools</a>
+                <a href="mailto:support@top7systems.net" class="btn btn--ink">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <img src="/flowerbranch.png" alt="" class="hero-branch" aria-hidden="true">
-            <span class="hero-label">Development Studio</span>
-            <h1>Useful by design.</h1>
-            <p>Lightweight apps that do exactly what they say.</p>
+    <main>
+        <section class="hero wrap">
+            <div class="eyebrow label">
+                <span>Development studio</span>
+                <span>iOS · Android · Web</span>
+            </div>
+            <h1>Useful by <span class="outline">design.</span></h1>
+            <div class="hero-row">
+                <p class="hero-sub">Lightweight apps that do <span class="hl">exactly</span> what they say.</p>
+                <!-- Counts are hard-coded: update them when an app is added or removed. -->
+                <div class="stats" aria-label="What we make">
+                    <div class="stat stat--blue"><b>07</b><span class="label">Apps on iPhone &amp; iPad</span></div>
+                    <div class="stat"><b>03</b><span class="label">Apps on Android</span></div>
+                    <div class="stat stat--sky"><b>01</b><span class="label">Tool in the browser</span></div>
+                </div>
+            </div>
         </section>
 
-        <section class="apps-section">
-            <h2 class="section-label">Apps</h2>
 
-            <div class="platform-tabs">
-                <button class="platform-tab active" data-platform="ios">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    iOS
-                </button>
-                <button class="platform-tab" data-platform="android">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.27-.86-.31-.16-.69-.04-.86.27l-1.87 3.23C14.83 8.35 13.02 8 11.99 8c-1.02 0-2.84.35-4.45.94L5.67 5.71c-.16-.31-.54-.43-.86-.27-.31.16-.43.55-.27.86l1.84 3.18C2.92 11.07 1 14.12 1 17.5h22c0-3.38-1.92-6.43-5.4-8.02zM7 15.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
-                    Android
-                </button>
+        <section class="section wrap" id="apps">
+            <div class="section-head">
+                <h2>Apps<span class="count" id="apps-count">07</span></h2>
+                <div class="seg" role="group" aria-label="Platform">
+                    <button type="button" data-platform="ios" aria-pressed="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        iOS
+                    </button>
+                    <button type="button" data-platform="android" aria-pressed="false">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.27-.86-.31-.16-.69-.04-.86.27l-1.87 3.23C14.83 8.35 13.02 8 11.99 8c-1.02 0-2.84.35-4.45.94L5.67 5.71c-.16-.31-.54-.43-.86-.27-.31.16-.43.55-.27.86l1.84 3.18C2.92 11.07 1 14.12 1 17.5h22c0-3.38-1.92-6.43-5.4-8.02zM7 15.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                        Android
+                    </button>
+                </div>
             </div>
 
-            <div class="apps-grid" data-platform-content="ios">
+            <div class="grid" data-platform-content="ios">
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/numina/icon.png" alt="Numina icon"></div>
-                    <h3>Numina</h3>
-                    <p class="app-desc">A research-backed math game for children ages 8 to 11. Times tables, fractions, decimals and more, taught the way kids actually learn. No ads, no tracking, ever.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/us/app/numina-math-games-for-kids/id6782535813" target="_blank">App Store</a>
-                        <a href="/numina/">Landing Page</a>
-                        <a href="/numina/research.html">Research</a>
-                        <a href="/numina/support.html">Support</a>
-                        <a href="/numina/privacy.html">Privacy</a>
-                        <a href="/numina/terms.html">Terms</a>
+                <article class="card card--wide">
+                    <div class="card-top">
+                        <div class="icon"><img src="/stampr/icon.png" alt="Stampr icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">01</span><span class="tag">iOS</span></div>
                     </div>
-                </div>
+                    <h3>Stampr</h3>
+                    <p>GPS field camera for iPhone and iPad. Stamp coordinates, address, and AI-cleaned voice notes onto photos and video, then share photo-embedded PDF reports or whole projects as a single file. Syncs privately through your own iCloud.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Stampr pages">
+                            <a href="/stampr/">Landing page</a>
+                            <a href="/stampr/help.html">Help</a>
+                            <a href="/stampr/support.html">Support</a>
+                            <a href="/stampr/privacy.html">Privacy</a>
+                            <a href="/stampr/terms.html">Terms</a>
+                        </nav>
+                    </div>
+                </article>
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/ascent/icon.png" alt="Ascent icon"></div>
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/ascent/icon.png" alt="Ascent icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">02</span><span class="tag">iOS</span></div>
+                    </div>
                     <h3>Ascent</h3>
-                    <p class="app-desc">Algebra 1 as a climb up Mount Everest, for ages 13 and up. Every skill you master gains real altitude; reach the summit and you've finished the course. No ads, no tracking, ever.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/us/app/ascent-algebra-1/id6792160553" target="_blank">App Store</a>
-                        <a href="/ascent/">Landing Page</a>
-                        <a href="/ascent/support.html">Support</a>
-                        <a href="/ascent/privacy.html">Privacy</a>
-                        <a href="/ascent/terms.html">Terms</a>
+                    <p>Algebra 1 as a climb up Mount Everest, for ages 13 and up. Every skill you master gains real altitude; reach the summit and you've finished the course. No ads, no tracking, ever.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/us/app/ascent-algebra-1/id6792160553" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Ascent pages">
+                            <a href="/ascent/">Landing page</a>
+                            <a href="/ascent/support.html">Support</a>
+                            <a href="/ascent/privacy.html">Privacy</a>
+                            <a href="/ascent/terms.html">Terms</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/concretecalc/icon.png" alt="ConcreteCalc icon"></div>
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/concretecalc/icon.png" alt="ConcreteCalc icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">03</span><span class="tag">iOS</span></div>
+                    </div>
                     <h3>ConcreteCalc</h3>
-                    <p class="app-desc">Concrete volume calculator for tradespeople.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/app/concretecalc-concrete-volume/id6761324505" target="_blank">App Store</a>
-                        <a href="/concretecalc/privacy.html">Privacy</a>
-                        <a href="/concretecalc/support.html">Support</a>
+                    <p>Concrete volume calculator for tradespeople.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/app/concretecalc-concrete-volume/id6761324505" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="ConcreteCalc pages">
+                            <a href="/concretecalc/privacy.html">Privacy</a>
+                            <a href="/concretecalc/support.html">Support</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/gravelcalc/icon.png" alt="GravelCalc icon"></div>
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/gravelcalc/icon.png" alt="GravelCalc icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">04</span><span class="tag">iOS</span></div>
+                    </div>
                     <h3>GravelCalc</h3>
-                    <p class="app-desc">Gravel, mulch, and fill calculator. Volume, weight, and truck loads for six landscaping materials.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/app/gravelcalc-fill-calculator/id6761389391" target="_blank">App Store</a>
-                        <a href="/gravelcalc/privacy.html">Privacy</a>
-                        <a href="/gravelcalc/support.html">Support</a>
+                    <p>Gravel, mulch, and fill calculator. Volume, weight, and truck loads for six landscaping materials.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/app/gravelcalc-fill-calculator/id6761389391" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="GravelCalc pages">
+                            <a href="/gravelcalc/privacy.html">Privacy</a>
+                            <a href="/gravelcalc/support.html">Support</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/stampr/icon.png" alt="Stampr icon"></div>
-                    <h3>Stampr</h3>
-                    <p class="app-desc">GPS field camera for iPhone and iPad. Stamp coordinates, address, and AI-cleaned voice notes onto photos and video, then share photo-embedded PDF reports or whole projects as a single file. Syncs privately through your own iCloud.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625" target="_blank">App Store</a>
-                        <a href="/stampr/">Landing Page</a>
-                        <a href="/stampr/help.html">Help</a>
-                        <a href="/stampr/support.html">Support</a>
-                        <a href="/stampr/privacy.html">Privacy</a>
-                        <a href="/stampr/terms.html">Terms</a>
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/frostdip/icon.png" alt="FrostDip icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">05</span><span class="tag">iOS</span></div>
                     </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/localwave/icon.png" alt="Localwave icon"></div>
-                    <h3>Localwave</h3>
-                    <p class="app-desc">Discover and listen to 1,100+ Australian radio stations on an interactive map. Community radio, championed.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/us/app/localwave-australian-radio/id6761519338" target="_blank">App Store</a>
-                        <a href="/localwave/">Landing Page</a>
-                        <a href="/localwave/support.html">Support</a>
-                        <a href="/localwave/privacy.html">Privacy</a>
-                        <a href="/localwave/terms.html">Terms</a>
-                    </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/frostdip/icon.png" alt="FrostDip icon"></div>
                     <h3>FrostDip</h3>
-                    <p class="app-desc">Your cold plunge companion. Track your sessions, build consistency, and push your limits.</p>
-                    <div class="app-links">
-                        <a href="https://apps.apple.com/app/frostdip-cold-plunge-timer/id6761245447" target="_blank">App Store</a>
-                        <a href="/frostdip/privacy.html">Privacy</a>
-                        <a href="/frostdip/support.html">Support</a>
+                    <p>Your cold plunge companion. Track your sessions, build consistency, and push your limits.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/app/frostdip-cold-plunge-timer/id6761245447" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="FrostDip pages">
+                            <a href="/frostdip/privacy.html">Privacy</a>
+                            <a href="/frostdip/support.html">Support</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
-            </div>
-
-            <div class="apps-grid" data-platform-content="android" style="display: none;">
-
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/concretecalc/icon.png" alt="ConcreteCalc icon"></div>
-                    <h3>ConcreteCalc</h3>
-                    <p class="app-desc">Concrete volume calculator for tradespeople.</p>
-                    <div class="app-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.top7systems.concretecalc" target="_blank">Google Play</a>
-                        <a href="/android/concretecalc/privacy.html">Privacy</a>
-                        <a href="/android/concretecalc/support.html">Support</a>
+                <article class="card card--wide">
+                    <div class="card-top">
+                        <div class="icon"><img src="/numina/icon.png" alt="Numina icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">06</span><span class="tag">iOS</span></div>
                     </div>
-                </div>
-
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/stampr/icon.png" alt="Stampr icon"></div>
-                    <h3>Stampr</h3>
-                    <p class="app-desc">GPS field camera for Android. Stamp coordinates, address, and AI-cleaned voice notes onto photos and video, then share photo-embedded PDF reports or whole projects as a single file. One-time Pro, no subscription.</p>
-                    <div class="app-links">
-                        <a href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank">Google Play</a>
-                        <a href="/stampr/">Landing Page</a>
-                        <a href="/android/stampr/help.html">Help</a>
-                        <a href="/android/stampr/support.html">Support</a>
-                        <a href="/android/stampr/privacy.html">Privacy</a>
-                        <a href="/android/stampr/terms.html">Terms</a>
+                    <h3>Numina</h3>
+                    <p>A research-backed math game for children ages 8 to 11. Times tables, fractions, decimals and more, taught the way kids actually learn. No ads, no tracking, ever.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/us/app/numina-math-games-for-kids/id6782535813" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Numina pages">
+                            <a href="/numina/">Landing page</a>
+                            <a href="/numina/research.html">Research</a>
+                            <a href="/numina/support.html">Support</a>
+                            <a href="/numina/privacy.html">Privacy</a>
+                            <a href="/numina/terms.html">Terms</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/localwave/icon.png" alt="Localwave icon"></div>
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon icon--zoom"><img src="/localwave/icon.png" alt="Localwave icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">07</span><span class="tag">iOS</span></div>
+                    </div>
                     <h3>Localwave</h3>
-                    <p class="app-desc">Discover and listen to 1,100+ Australian radio stations on an interactive map. Community radio, championed.</p>
-                    <div class="app-links">
-                        <a href="https://play.google.com/store/apps/details?id=au.localwave" target="_blank">Google Play</a>
-                        <a href="/localwave/">Landing Page</a>
-                        <a href="/android/localwave/support.html">Support</a>
-                        <a href="/android/localwave/privacy.html">Privacy</a>
-                        <a href="/android/localwave/terms.html">Terms</a>
+                    <p>Discover and listen to 1,100+ Australian radio stations on an interactive map. Community radio, championed.</p>
+                    <div class="card-foot">
+                        <a href="https://apps.apple.com/us/app/localwave-australian-radio/id6761519338" target="_blank" rel="noopener" class="btn">App Store <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Localwave pages">
+                            <a href="/localwave/">Landing page</a>
+                            <a href="/localwave/support.html">Support</a>
+                            <a href="/localwave/privacy.html">Privacy</a>
+                            <a href="/localwave/terms.html">Terms</a>
+                        </nav>
                     </div>
-                </div>
+                </article>
 
             </div>
 
+            <div class="grid" data-platform-content="android" hidden>
+
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/concretecalc/icon.png" alt="ConcreteCalc icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">01</span><span class="tag">Android</span></div>
+                    </div>
+                    <h3>ConcreteCalc</h3>
+                    <p>Concrete volume calculator for tradespeople.</p>
+                    <div class="card-foot">
+                        <a href="https://play.google.com/store/apps/details?id=com.top7systems.concretecalc" target="_blank" rel="noopener" class="btn">Google Play <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="ConcreteCalc for Android pages">
+                            <a href="/android/concretecalc/privacy.html">Privacy</a>
+                            <a href="/android/concretecalc/support.html">Support</a>
+                        </nav>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon"><img src="/stampr/icon.png" alt="Stampr icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">02</span><span class="tag">Android</span></div>
+                    </div>
+                    <h3>Stampr</h3>
+                    <p>GPS field camera for Android. Stamp coordinates, address, and AI-cleaned voice notes onto photos and video, then share photo-embedded PDF reports or whole projects as a single file. One-time Pro, no subscription.</p>
+                    <div class="card-foot">
+                        <a href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener" class="btn">Google Play <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Stampr for Android pages">
+                            <a href="/stampr/">Landing page</a>
+                            <a href="/android/stampr/help.html">Help</a>
+                            <a href="/android/stampr/support.html">Support</a>
+                            <a href="/android/stampr/privacy.html">Privacy</a>
+                            <a href="/android/stampr/terms.html">Terms</a>
+                        </nav>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-top">
+                        <div class="icon icon--zoom"><img src="/localwave/icon.png" alt="Localwave icon" loading="lazy"></div>
+                        <div class="tags"><span class="tag tag--num">03</span><span class="tag">Android</span></div>
+                    </div>
+                    <h3>Localwave</h3>
+                    <p>Discover and listen to 1,100+ Australian radio stations on an interactive map. Community radio, championed.</p>
+                    <div class="card-foot">
+                        <a href="https://play.google.com/store/apps/details?id=au.localwave" target="_blank" rel="noopener" class="btn">Google Play <span class="arrow">&nearr;</span></a>
+                        <nav class="raw-links" aria-label="Localwave for Android pages">
+                            <a href="/localwave/">Landing page</a>
+                            <a href="/android/localwave/support.html">Support</a>
+                            <a href="/android/localwave/privacy.html">Privacy</a>
+                            <a href="/android/localwave/terms.html">Terms</a>
+                        </nav>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
-        <section class="apps-section">
-            <h2 class="section-label">Web Tools</h2>
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-icon-wrap"><img src="/abscube/icon.svg" alt="ABS Cube icon"></div>
-                    <h3>ABS Cube</h3>
-                    <p class="app-desc">Australian economic data read for a small-business finance manager: input costs, wage growth, demand and the cost of money, each forecast, plus the price rise it takes to hold your margin. Runs entirely in your browser.</p>
-                    <div class="app-links">
-                        <a href="/abscube/">Open tool</a>
+        <section class="section wrap" id="web">
+            <div class="section-head">
+                <h2>Web tools<span class="count">01</span></h2>
+                <p class="section-note label">Nothing to install. Opens in the browser.</p>
+            </div>
+            <div class="grid">
+                <article class="card card--web">
+                    <div class="card-body">
+                        <div class="card-copy">
+                            <div class="card-top">
+                                <div class="icon"><img src="/abscube/icon.svg" alt="ABS Cube icon" loading="lazy"></div>
+                                <div class="tags"><span class="tag tag--num">01</span><span class="tag">Web</span></div>
+                            </div>
+                            <h3>ABS Cube</h3>
+                            <p>Australian economic data read for a small-business finance manager: input costs, wage growth, demand and the cost of money, each forecast, plus the price rise it takes to hold your margin. Runs entirely in your browser.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="/abscube/" class="btn btn--ink">Open tool <span class="arrow">&rarr;</span></a>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-row label">
                 <p>&copy; 2026 Top 7 Systems</p>
                 <a href="mailto:support@top7systems.net">support@top7systems.net</a>
             </div>
+            <div class="wordmark" aria-hidden="true">Top 7 Systems</div>
         </div>
     </footer>
+
     <script>
-        document.querySelectorAll('.platform-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                const platform = tab.dataset.platform;
-                document.querySelectorAll('.platform-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                document.querySelectorAll('[data-platform-content]').forEach(grid => {
-                    grid.style.display = grid.dataset.platformContent === platform ? '' : 'none';
+        (function () {
+            var buttons = document.querySelectorAll('.seg [data-platform]');
+            var grids = document.querySelectorAll('[data-platform-content]');
+            var count = document.getElementById('apps-count');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var platform = btn.dataset.platform;
+                    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+                    grids.forEach(function (grid) {
+                        var show = grid.dataset.platformContent === platform;
+                        grid.hidden = !show;
+                        if (show && count) {
+                            var n = grid.querySelectorAll('.card').length;
+                            count.textContent = (n < 10 ? '0' : '') + n;
+                        }
+                    });
                 });
             });
-        });
+        })();
     </script>
 </body>
 </html>

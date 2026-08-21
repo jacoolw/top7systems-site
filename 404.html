@@ -6,39 +6,50 @@
     <title>Page Not Found | Top 7 Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/home.css">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-inner">
-                <a href="/" class="logo">
-                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
-                    <span class="logo-text">Top 7 Systems</span>
-                </a>
-                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
-            </div>
+    <header class="site-header">
+        <div class="wrap">
+            <a href="/" class="brand">
+                <span class="brand-mark" aria-hidden="true">T7</span>
+                <span>Top 7 Systems</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="/#apps" class="nav-link">Apps</a>
+                <a href="/#web" class="nav-link">Web tools</a>
+                <a href="mailto:support@top7systems.net" class="btn btn--ink">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
+    <main class="wrap">
         <div class="error-page">
+            <p class="label">Error</p>
             <h1>404</h1>
-            <p>This page doesn't exist.</p>
-            <a href="/">&larr; Back to home</a>
+            <p class="note">This page doesn't exist.</p>
+            <div>
+                <a href="/" class="btn">&larr; Back to home</a>
+            </div>
+            <nav class="raw-links" aria-label="Shortcuts">
+                <a href="/#apps">Apps</a>
+                <a href="/#web">Web tools</a>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </nav>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-row label">
                 <p>&copy; 2026 Top 7 Systems</p>
                 <a href="mailto:support@top7systems.net">support@top7systems.net</a>
             </div>
+            <div class="wordmark" aria-hidden="true">Top 7 Systems</div>
         </div>
     </footer>
 </body>
