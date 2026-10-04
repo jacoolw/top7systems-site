@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent: Geometry. Climb the Matterhorn Through High School Geometry | Top 7 Systems</title>
+    <meta name="description" content="Ascent: Geometry turns a full US high school Geometry course into a climb up the Matterhorn. Figures drawn to measure, two-column proofs by tapping, and real altitude for every skill mastered, for ages 13 and up. No ads, no tracking. Coming soon to the App Store.">
+    <link rel="canonical" href="https://top7systems.net/ascent-geometry/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top7systems.net/ascent-geometry/">
+    <meta property="og:title" content="Ascent: Geometry. Climb the Matterhorn Through Geometry">
+    <meta property="og:description" content="A full high school Geometry course as a climb up the Matterhorn. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
+    <meta property="og:image" content="https://top7systems.net/ascent-geometry/panorama.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ascent: Geometry. Climb the Matterhorn Through Geometry">
+    <meta name="twitter:description" content="A full high school Geometry course as a climb up the Matterhorn. Every skill you master gains real altitude. Ages 13+. Coming soon to the App Store.">
+    <meta name="twitter:image" content="https://top7systems.net/ascent-geometry/panorama.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ascent: Geometry",
+      "operatingSystem": "iOS",
+      "applicationCategory": "EducationalApplication",
+      "url": "https://top7systems.net/ascent-geometry/",
+      "image": "https://top7systems.net/ascent-geometry/icon.png",
+      "description": "A full US high school Geometry course played as a climb up the Matterhorn. Every skill mastered gains real altitude, from Zermatt to the summit. Coming soon to the App Store.",
+      "inLanguage": "en",
+      "publisher": { "@type": "Organization", "name": "Top 7 Systems", "url": "https://top7systems.net/" },
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 13 }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Ascent: Geometry available now?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is finished and being submitted to the App Store for iPhone and iPad. The whole mountain is climbable end to end, from Zermatt to the summit, and the download will be free. Email us to hear the day it goes live." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much will Ascent: Geometry cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Free to start: the route through Hirli (the tools of geometry, reasoning and proof, and parallel lines) costs nothing. A single one-time purchase, the Full Ascent, opens the rest of the mountain from the Hörnli Hut to the summit. No subscription, and it is family shareable." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Ascent: Geometry for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Anyone taking or retaking high school Geometry, roughly ages 13 and up. Already partway through the course? An optional placement check at the start can move you up the approach as high as the Hörnli Hut, so you never grind through material you already own. For Algebra 1 we make Ascent: Algebra 1, and for ages 8 to 11 Numina, our arithmetic game." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it a complete Geometry course?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sixty-seven skills across twelve legs cover a full US high school Geometry course: the tools of geometry, reasoning and proof, parallel lines, transformations, congruent triangles, the centers and inequalities of triangles, quadrilaterals and polygons, similarity, right triangles and trigonometry, circles, coordinate geometry, and area and volume, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course." }
+        },
+        {
+          "@type": "Question",
+          "name": "I'm not in the US. Does Ascent: Geometry match my syllabus?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, for the geometry itself. Geometry is taught as a one-year course in the US, but the same skills run through the geometry strand of GCSE Maths in the UK, Years 8 to 10 in Australia, and lower secondary courses across Europe, Canada, India, and beyond. Ascent teaches skill by skill rather than grade by grade, and the optional placement check starts you where your class already is. Two-column proofs are an American habit; the reasoning behind them is universal." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ascent: Geometry use AI to make the questions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Every figure, problem, hint, and worked solution comes from our own geometry engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it private? Does it work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes and yes. No ads, no tracking, no third-party code, no data collection, no account. Everything runs on the device and works offline." }
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root { --as-brand: #3d4e8d; --as-brand-soft: #edf0fa; --as-flag: #f0a03c; }
+
+        /* Panorama hero */
+        .as-hero {
+            position: relative; text-align: center; overflow: hidden;
+            margin: 32px 0 8px; padding: 72px 24px 84px; border-radius: 24px;
+            background:
+                linear-gradient(180deg, rgba(7, 12, 38, 0.55) 0%, rgba(7, 12, 38, 0.28) 45%, rgba(7, 12, 38, 0.5) 100%),
+                url('/ascent-geometry/panorama.jpg') center 42% / cover no-repeat,
+                linear-gradient(180deg, #0a102c 0%, #141f4a 55%, #223061 100%);
+            color: #eef2ff;
+        }
+        .as-hero-inner { position: relative; z-index: 1; }
+        .as-icon {
+            width: 116px; height: 116px; border-radius: 26px;
+            box-shadow: 0 14px 40px rgba(4, 8, 30, 0.6), 0 0 0 1px rgba(255,255,255,0.12);
+        }
+        .as-hero h1 { font-size: clamp(2.2rem, 6vw, 3rem); letter-spacing: -0.03em; margin: 18px 0 6px; color: #fff; }
+        .as-hero h1 small { display: block; font-size: 0.42em; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #c7d2ea; margin-top: 4px; }
+        .as-tagline { color: #c7d2ea; font-size: 1.15rem; max-width: 520px; margin: 0 auto 26px; line-height: 1.55; }
+        .as-badge {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: rgba(240, 160, 60, 0.14); color: #f6bc66;
+            border: 1px solid rgba(240, 160, 60, 0.45);
+            padding: 9px 20px; border-radius: 999px;
+            font-weight: 700; font-size: 0.82rem; letter-spacing: 0.09em; text-transform: uppercase;
+        }
+        .as-badge .dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--as-flag); animation: as-pulse 2.4s ease-in-out infinite; }
+        .as-appstore {
+            display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff;
+            padding: 13px 22px; border-radius: 14px; font-weight: 600; text-decoration: none;
+            transition: transform var(--transition), box-shadow var(--transition);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.25);
+        }
+        .as-appstore:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.35); }
+        .as-appstore small { display: block; font-size: 0.7rem; font-weight: 500; opacity: 0.8; line-height: 1; margin-bottom: 2px; }
+        .as-appstore span { font-size: 1.2rem; line-height: 1; }
+        .as-cta .as-appstore { box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+        .as-cta .as-appstore:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.24); }
+        @media (max-width: 480px) { .as-badge { font-size: 0.7rem; letter-spacing: 0.06em; padding: 8px 14px; } }
+        @keyframes as-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+        @media (prefers-reduced-motion: reduce) { .as-badge .dot { animation: none; } }
+        .as-notify {
+            display: block; margin-top: 18px; color: #aebbdd; font-weight: 600; font-size: 0.92rem;
+            text-decoration: none; transition: color var(--transition);
+        }
+        .as-notify:hover { color: #fff; text-decoration: underline; }
+
+        .as-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 26px 20px 6px; }
+        .as-pills span {
+            font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);
+            background: var(--bg-alt); border: 1px solid var(--border);
+            padding: 6px 13px; border-radius: 999px;
+        }
+
+        .as-shots {
+            display: flex; gap: 14px; overflow-x: auto; padding: 18px 20px 24px;
+            scroll-snap-type: x mandatory; justify-content: center; flex-wrap: wrap;
+        }
+        .as-shots img {
+            width: 205px; border-radius: 20px; scroll-snap-align: center;
+            box-shadow: 0 12px 34px rgba(10, 16, 44, 0.28);
+        }
+
+        .as-section { padding: 28px 20px; }
+        .as-lead { color: var(--text-secondary); max-width: 620px; margin: 8px 0 0; line-height: 1.65; }
+        .as-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+        .as-grid-4 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-bottom: 20px; }
+        .as-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+        .as-card .ico {
+            width: 44px; height: 44px; border-radius: 12px; background: var(--as-brand-soft);
+            display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 12px;
+        }
+        .as-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+        .as-card p { color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; }
+
+        .as-route { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 14px; margin-top: 22px; }
+        .as-leg {
+            display: flex; gap: 14px; align-items: flex-start; background: var(--surface);
+            border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px;
+        }
+        .as-leg .num {
+            flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: var(--as-brand);
+            color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+        }
+        .as-leg.top .num { background: var(--as-flag); }
+        .as-leg.free .num { background: #2f8f99; }
+        .as-syllabus .num { background: var(--as-brand-soft); font-size: 1.15rem; }
+        .as-leg h3 { font-size: 1rem; margin-bottom: 3px; }
+        .as-leg p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+        .as-leg .alt { color: var(--text-secondary); opacity: 0.75; font-variant-numeric: tabular-nums; }
+        .as-key { color: var(--text-secondary); font-size: 0.85rem; margin-top: 14px; }
+        .as-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; vertical-align: -1px; margin: 0 4px 0 10px; }
+
+        .as-strip {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 22px 14px; padding: 18px 0 10px;
+        }
+        .as-strip figure { margin: 0; }
+        .as-strip img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+            box-shadow: 0 8px 22px rgba(10, 16, 44, 0.22); border: 1px solid var(--border);
+        }
+        .as-strip figcaption { text-align: center; margin-top: 9px; line-height: 1.35; }
+        .as-strip figcaption strong { display: block; font-size: 0.82rem; color: var(--text); font-weight: 700; }
+        .as-strip figcaption span { font-size: 0.74rem; color: var(--text-secondary); }
+
+        .as-cta {
+            text-align: center; background: var(--as-brand-soft); border-radius: 20px;
+            padding: 36px 24px; margin: 20px 20px 8px;
+        }
+        .as-cta h2 { font-size: 1.4rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+        .as-cta p { color: var(--text-secondary); max-width: 480px; margin: 0 auto 20px; line-height: 1.6; }
+        .as-cta .as-badge { background: rgba(240, 160, 60, 0.14); color: #b96f14; border-color: rgba(185, 111, 20, 0.35); }
+        .as-cta .as-notify { color: var(--as-brand); }
+        .as-cta .as-notify:hover { color: var(--text); }
+
+        .as-faq { max-width: 720px; margin: 18px auto 0; }
+        .as-faq-more { max-width: 720px; margin: 26px auto 0; text-align: center; color: var(--text-secondary); line-height: 1.6; }
+        .as-faq-more a { color: var(--as-brand); font-weight: 600; }
+        .as-faq details { border-bottom: 1px solid var(--border); }
+        .as-faq summary {
+            cursor: pointer; list-style: none; padding: 17px 4px; font-weight: 600; font-size: 1.02rem;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        }
+        .as-faq summary::-webkit-details-marker { display: none; }
+        .as-faq summary::after {
+            content: "+"; color: var(--as-brand); font-size: 1.5rem; font-weight: 400; line-height: 1;
+            transition: transform var(--transition);
+        }
+        .as-faq details[open] summary::after { transform: rotate(45deg); }
+        .as-faq .answer { color: var(--text-secondary); line-height: 1.65; padding: 0 4px 18px; font-size: 0.96rem; margin: 0; }
+
+        .as-doclinks { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; padding: 22px; }
+        .as-doclinks a { color: var(--as-brand); text-decoration: none; font-weight: 600; }
+        .as-doclinks a:hover { text-decoration: underline; }
+    </style>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
+                    <span class="logo-text">Top 7 Systems</span>
+                </a>
+                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="as-hero">
+            <div class="as-hero-inner">
+                <img src="/ascent-geometry/icon.png" alt="Ascent: Geometry app icon: the Matterhorn by moonlight with a flag on the summit and a dashed altitude line with its right-angle mark" class="as-icon">
+                <h1>Ascent <small>Geometry</small></h1>
+                <p class="as-tagline">Climb the Matterhorn, one geometry skill at a time. Reach the summit and you've finished high school Geometry.</p>
+                <!-- LAUNCH: replace the badge and notify link with the App Store button:
+                <a class="as-appstore" href="https://apps.apple.com/us/app/ascent-geometry/idXXXXXXXXXX">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <span><small>Download on the</small>App Store</span>
+                </a>
+                -->
+                <span class="as-badge"><span class="dot"></span>Coming soon to the App Store</span>
+                <a class="as-notify" href="mailto:support@top7systems.net?subject=Tell%20me%20when%20Ascent%3A%20Geometry%20is%20out">Tell me when it's out &rarr;</a>
+            </div>
+        </section>
+
+        <div class="as-pills">
+            <span>Ages 13+</span>
+            <span>Full high school Geometry course</span>
+            <span>67 skills, 12 legs</span>
+            <span>No ads</span>
+            <span>No tracking</span>
+            <span>iPhone &amp; iPad</span>
+        </div>
+
+        <section class="as-shots">
+            <img src="/ascent-geometry/shots/01-climb-through-geometry.png" alt="The mountain map: the route from Zermatt to the summit of the Matterhorn, with a landmark for each geometry unit and your climber at 2,889 m">
+            <img src="/ascent-geometry/shots/02-solve-figures-drawn-true.png" alt="Parallel lines cut by a transversal, drawn to measure, with x solved from the marked angles and marked correct">
+            <img src="/ascent-geometry/shots/03-prove-it-step-by-step.png" alt="A two-column proof that two triangles are congruent, built by tapping statements and reasons, with every step holding">
+            <img src="/ascent-geometry/shots/06-earn-patches-streaks-altitude.png" alt="Session results showing a mastered skill, a seven-day streak, the Furi patch, and altitude gained">
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Why Ascent works</h2>
+            <div class="as-grid">
+                <div class="as-card">
+                    <div class="ico">🏔️</div>
+                    <h3>Altitude you earn</h3>
+                    <p>Every skill you master gains real height on the Hörnli ridge of the Matterhorn, from Zermatt at 1,608 m to the summit at 4,478 m. Landmarks mark finished units, fireworks light the sky at milestones, and summiting means the whole course is done.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📻</div>
+                    <h3>Stuck never means stranded</h3>
+                    <p>The radio to the Hörnli Hut is one tap away on every problem: four levels of hints, never punished. Every skill has a lesson card with a worked example you can reread, and a magnifier opens any figure full screen.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📐</div>
+                    <h3>Figures that tell the truth</h3>
+                    <p>Every figure is drawn to the measures it states: the angle labeled 61° is 61°, the side labeled 15 is longer than the one labeled 10. Tick marks, arcs, right-angle boxes, parallel arrows, circle sectors, dashed hidden edges, solids, and a numbered grid, all honest.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🧩</div>
+                    <h3>Proofs a phone can do</h3>
+                    <p>Two-column proofs built by tapping statements and reasons, graded as chains of reasoning: any valid order passes, and the first unsupported step is named. They grow with you, from filling in reasons to building the whole proof from a bank with distractors.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">✅</div>
+                    <h3>Exact, never AI-guessed</h3>
+                    <p>Every figure, problem, hint, and answer check comes from our own geometry engine: 11&radic;3 is 11&radic;3, arc lengths stay in terms of &pi;, and the trig values you need are printed, so no calculator is required. No generative AI, so the math is always right.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🔒</div>
+                    <h3>Private by design</h3>
+                    <p>No ads, no tracking, no third-party code, no data collection, no account. Everything runs on the device and works offline. From the makers of <a href="/ascent/">Ascent: Algebra 1</a> and <a href="/numina/">Numina</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The route: twelve legs to the summit</h2>
+            <p class="as-lead">The real Hörnli ridge, landmark by landmark, with swisstopo altitudes. Each leg is one unit of a full US high school Geometry course. Altitude is only gained when a skill is truly mastered: spaced reviews and an acclimatization gate at every landmark make sure it sticks. The approach from Zermatt to Hirli is free forever; the Full Ascent opens the climb from the Hörnli Hut to the summit, which is where the real climbing starts.</p>
+            <div class="as-route">
+                <div class="as-leg free">
+                    <div class="num">1</div>
+                    <div><h3>Furi</h3><p>Tools of geometry <span class="alt">&middot; 1,867 m</span></p></div>
+                </div>
+                <div class="as-leg free">
+                    <div class="num">2</div>
+                    <div><h3>Schwarzsee</h3><p>Reasoning and proof <span class="alt">&middot; 2,583 m</span></p></div>
+                </div>
+                <div class="as-leg free">
+                    <div class="num">3</div>
+                    <div><h3>Hirli</h3><p>Parallel lines <span class="alt">&middot; 2,889 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">4</div>
+                    <div><h3>The Hörnli Hut</h3><p>Transformations <span class="alt">&middot; 3,260 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">5</div>
+                    <div><h3>The Couloirs</h3><p>Congruent triangles <span class="alt">&middot; 3,400 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">6</div>
+                    <div><h3>The Yellow Band</h3><p>Inside triangles <span class="alt">&middot; about 3,570 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">7</div>
+                    <div><h3>The Old Hut</h3><p>Quadrilaterals and polygons <span class="alt">&middot; 3,745 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">8</div>
+                    <div><h3>The Solvay Hut</h3><p>Similarity <span class="alt">&middot; 4,003 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">9</div>
+                    <div><h3>The Shoulder</h3><p>Right triangles and trigonometry <span class="alt">&middot; about 4,200 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">10</div>
+                    <div><h3>The Fixed Ropes</h3><p>Circles <span class="alt">&middot; about 4,300 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">11</div>
+                    <div><h3>The Roof</h3><p>Coordinate geometry <span class="alt">&middot; about 4,400 m</span></p></div>
+                </div>
+                <div class="as-leg top">
+                    <div class="num">12</div>
+                    <div><h3>The Summit</h3><p>Area, volume, and Summit Day <span class="alt">&middot; 4,478 m</span></p></div>
+                </div>
+            </div>
+            <p class="as-key">Free forever<i style="background:#2f8f99"></i> &nbsp; The Full Ascent<i style="background:var(--as-brand)"></i> &nbsp; The top<i style="background:var(--as-flag)"></i></p>
+            <p class="as-lead">The scene follows the real day of a Hörnli climb: an afternoon approach through the larches, sunset at the hut, the lower ridge by headlamp, dawn at the Solvay Hut, and the summit in morning sun.</p>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Geometry around the world</h2>
+            <p class="as-lead">In the US, Geometry is a one-year high school course. Elsewhere the same skills are spread through the geometry strand of a broader maths course. If you study under a different syllabus, here is where the climb fits.</p>
+            <div class="as-route as-syllabus">
+                <div class="as-leg">
+                    <div class="num">🇺🇸</div>
+                    <div><h3>United States</h3><p>This is the course itself: a complete high school Geometry aligned to the Common Core standards, as taught in grades 9 and 10, and checked against the Florida B.E.S.T., New York Regents, Virginia, Tennessee, and Louisiana blueprints.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇬🇧</div>
+                    <div><h3>United Kingdom</h3><p>The geometry and measures strand of KS3 and GCSE Maths (ages 12 to 16): angle facts, congruence and similarity, transformations, Pythagoras and trigonometry, area and volume, and the Higher-tier circle theorems.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇦🇺</div>
+                    <div><h3>Australia</h3><p>The Measurement and Space strand of Years 8 to 10 in the Australian Curriculum: congruence and similarity, Pythagoras and trigonometry, surface area and volume, and the Year 10 circle geometry.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇪🇺</div>
+                    <div><h3>Europe</h3><p>Lower secondary geometry across most of Europe, roughly ages 12 to 16: Germany's Sekundarstufe I (Kongruenz, Strahlensätze, Pythagoras, Trigonometrie), France's cycle 4 (Thalès, Pythagore, trigonométrie, transformations), and their neighbours.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇨🇦</div>
+                    <div><h3>Canada</h3><p>Grade 9 and 10 geometry and measurement in most provinces, including the trigonometry and analytic geometry of grade 10.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇳🇿</div>
+                    <div><h3>New Zealand</h3><p>The geometry and measurement of Years 9 to 11, up to the NCEA Level 1 geometric reasoning standards.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇮🇳</div>
+                    <div><h3>India</h3><p>The geometry of CBSE and ICSE classes 9 and 10: lines and angles, triangles and congruence, quadrilaterals, circles, similar triangles, coordinate geometry, an introduction to trigonometry, and surface areas and volumes.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇿🇦</div>
+                    <div><h3>South Africa</h3><p>The Euclidean geometry, similarity, Pythagoras, and measurement of CAPS grades 8 to 10, and the circle geometry that opens grade 11.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🌍</div>
+                    <div><h3>International schools</h3><p>The geometry core of IGCSE Maths and the IB Middle Years Programme.</p></div>
+                </div>
+            </div>
+            <p class="as-lead">Syllabuses differ in order and emphasis, so Ascent teaches one skill at a time rather than one grade at a time. The optional placement check starts you wherever your class already is. Two-column proofs are an American habit, but the reasoning they train is the same everywhere.</p>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">One problem from every leg</h2>
+            <p class="as-lead">Every unit of the course, photographed in play: one real question from each of the twelve legs, answered correct, at that leg's hour of the day.</p>
+            <div class="as-strip">
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg01-tools.png" alt="Two angles marked (5x + 25)° and (6x + 32)° are complementary; find x, answered x = 3 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Tools of geometry</strong><span>Furi</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg02-proof.png" alt="A proof that two angles are congruent from two right angles, built in two columns, every step holding" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Reasoning &amp; proof</strong><span>Schwarzsee</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg03-parallel.png" alt="A triangle with an exterior angle, three angles given as expressions in x; find x, answered x = 11 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Parallel lines</strong><span>Hirli</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg04-transformations.png" alt="Which rotation about its center maps a parallelogram onto itself, answered 180° and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Transformations</strong><span>The Hörnli Hut</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg05-congruence.png" alt="A kite with two pairs of congruent sides; prove two angles congruent, built in two columns, every step holding" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Congruent triangles</strong><span>The Couloirs</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg06-triangles.png" alt="A triangle with sides 18, 10 and 15; which angle is the largest, answered angle L and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Inside triangles</strong><span>The Yellow Band</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg07-polygons.png" alt="A parallelogram with its diagonals; prove the diagonals bisect each other, built in two columns, every step holding" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Quadrilaterals &amp; polygons</strong><span>The Old Hut</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg08-similarity.png" alt="Two segments crossing between parallel lines; prove a product of lengths equal, built in two columns, every step holding" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Similarity</strong><span>The Solvay Hut</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg09-trigonometry.png" alt="A right triangle with legs 8 and 11; which expression gives the angle, answered inverse tangent of 8 over 11 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Right triangles &amp; trig</strong><span>The Shoulder</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg10-circles.png" alt="A circle of radius 14 with a 90° central angle; find the arc length in terms of π, answered 7π and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Circles</strong><span>The Fixed Ropes</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg11-coordinates.png" alt="Circle C has equation x² − 14x + y² − 6y = 23; find its center, answered (7, 3) and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Coordinate geometry</strong><span>The Roof</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/ascent-geometry/shots/legs/leg12-summit.png" alt="A Summit Day review problem: a right triangle with legs 8 and 15; which expression gives the angle, answered inverse tangent of 15 over 8 and marked correct" loading="lazy" width="480" height="1043">
+                    <figcaption><strong>Area, volume &amp; Summit Day</strong><span>The Summit</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The engine behind every problem</h2>
+            <p class="as-lead">Ascent: Geometry does not use generative AI and does not ship a fixed bank of worksheet questions. Every figure, problem, hint, and worked solution comes from our own geometry engine, built for this app and checked to be exactly right.</p>
+            <div class="as-grid as-grid-4">
+                <div class="as-card">
+                    <div class="ico">🎲</div>
+                    <h3>Endless and fresh</h3>
+                    <p>Each of the 67 skills has its own generator that composes new problems on the spot. Practice a skill twice and you meet a different figure, while the difficulty stays true to where you are on the mountain.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📏</div>
+                    <h3>Drawn true, then labeled</h3>
+                    <p>The engine picks the real geometry first and writes the labels to match it, so a figure can never lie. Lengths, angles, arcs, and grids are measured back off the drawing in our tests, and the renderer fits every label before it draws, so nothing is ever clipped.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">⚖️</div>
+                    <h3>Exact to the last radical</h3>
+                    <p>The engine computes exactly: 11&radic;3 stays 11&radic;3, a sector's area stays in terms of &pi;, and a ratio stays a fraction. Answers are graded by mathematical equivalence, so any correctly simplified form counts, and a proof is graded as a chain of reasoning rather than a fixed script.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🩺</div>
+                    <h3>It knows the classic slips</h3>
+                    <p>Wrong answers are compared against the mistakes students actually make, like adding the legs instead of their squares, or taking an inscribed angle to equal its arc. When yours matches one, Ascent names the slip and how to fix it instead of just saying "try again", and a matcher only fires when the mistake is unambiguous.</p>
+                </div>
+            </div>
+            <p class="as-lead">The whole course is machine-verified: in our test suite an automated learner climbs all 67 skills end to end, every answer is re-derived independently of the generator that wrote it, every proof is checked both as written and in every other valid order, and a teacher read every lesson and a sample of every skill's problems before anything shipped.</p>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Room to work</h2>
+            <p class="as-lead">Geometry is worked out, not guessed. Every problem comes with a scratchpad, opened with a tap: open space to redraw the figure, write the equation, and show your steps before you commit to an answer.</p>
+            <div class="as-grid">
+                <div class="as-card">
+                    <div class="ico">✏️</div>
+                    <h3>Draw it or type it</h3>
+                    <p>Sketch your working with a finger or Apple Pencil, using a pen, highlighter, and eraser. Or switch to type and jot rough notes. Whatever helps you think.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🔍</div>
+                    <h3>See the figure large</h3>
+                    <p>A magnifier on every figure opens it full screen with the question underneath, so the marks are never too small to read on a phone. Tap Done and the keypad is where you left it.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🙈</div>
+                    <h3>Yours alone</h3>
+                    <p>The app never reads or grades what you write on the scratchpad. It is thinking space, not an answer box, and like real scrap paper it wipes clean for the next problem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-cta">
+            <h2>The mountain is waiting.</h2>
+            <p>The whole route is built, from Zermatt to the summit. Free to download, free through Hirli, and one unlock opens the rest.</p>
+            <!-- LAUNCH: swap for the App Store button (see the hero). -->
+            <span class="as-badge"><span class="dot"></span>Coming soon to the App Store</span>
+            <a class="as-notify" href="mailto:support@top7systems.net?subject=Tell%20me%20when%20Ascent%3A%20Geometry%20is%20out">Tell me when it's out &rarr;</a>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Questions climbers ask</h2>
+            <div class="as-faq">
+                <details open>
+                    <summary>Is Ascent: Geometry available now?</summary>
+                    <p class="answer">It is finished and being submitted to the App Store for iPhone and iPad. The whole mountain is climbable end to end, from Zermatt to the summit, and the download will be free. <a href="mailto:support@top7systems.net?subject=Tell%20me%20when%20Ascent%3A%20Geometry%20is%20out">Email us</a> to hear the day it goes live.</p>
+                </details>
+                <details>
+                    <summary>How much will it cost?</summary>
+                    <p class="answer">Free to start: the route through Hirli (the tools of geometry, reasoning and proof, and parallel lines) costs nothing. A single one-time purchase, the Full Ascent, opens the rest of the mountain from the Hörnli Hut to the summit. No subscription, and it's family shareable.</p>
+                </details>
+                <details>
+                    <summary>Who is Ascent: Geometry for?</summary>
+                    <p class="answer">Anyone taking or retaking high school Geometry, roughly ages 13 and up. Already partway through the course? An optional placement check at the start can move you up the approach as high as the Hörnli Hut, so you never grind through material you already own. For Algebra 1, we make <a href="/ascent/">Ascent: Algebra 1</a>; for ages 8 to 11, <a href="/numina/">Numina</a>, our arithmetic game.</p>
+                </details>
+                <details>
+                    <summary>Is it a complete Geometry course?</summary>
+                    <p class="answer">Yes. Sixty-seven skills across twelve legs cover a full US high school Geometry course: the tools of geometry, reasoning and proof, parallel lines, transformations, congruent triangles, the centers and inequalities of triangles, quadrilaterals and polygons, similarity, right triangles and trigonometry, circles, coordinate geometry, and area and volume, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course. Probability and compass constructions are left for an update.</p>
+                </details>
+                <details>
+                    <summary>I'm not in the US. Does it match my syllabus?</summary>
+                    <p class="answer">Yes, for the geometry itself. Geometry is taught as a one-year course in the US, but the same skills run through the geometry strand of GCSE Maths in the UK, Years 8 to 10 in Australia, and lower secondary courses across Europe, Canada, India, and beyond. Ascent teaches skill by skill rather than grade by grade, and the optional placement check starts you where your class already is. Two-column proofs are an American habit; the reasoning behind them is universal.</p>
+                </details>
+                <details>
+                    <summary>Does Ascent use AI to make the questions?</summary>
+                    <p class="answer">No. Every figure, problem, hint, and worked solution comes from our own geometry engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content.</p>
+                </details>
+                <details>
+                    <summary>Is it private? Does it work offline?</summary>
+                    <p class="answer">Yes and yes. No ads, no tracking, no third-party code, no data collection, no account. Everything runs on the device and works offline.</p>
+                </details>
+            </div>
+            <p class="as-faq-more">More questions? The <a href="/ascent-geometry/support.html">Support page</a> has step-by-step help: unlocking the Full Ascent, redeeming a code, calling the hut for hints, reading a figure, building a proof, and using the scratchpad.</p>
+        </section>
+
+        <nav class="as-doclinks">
+            <a href="/ascent-geometry/support.html">Support</a>
+            <a href="/ascent-geometry/privacy.html">Privacy</a>
+            <a href="/ascent-geometry/terms.html">Terms</a>
+            <a href="/ascent/">Ascent: Algebra 1</a>
+            <a href="/numina/">Numina (ages 8&ndash;11)</a>
+            <a href="/">All apps</a>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Top 7 Systems</p>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
