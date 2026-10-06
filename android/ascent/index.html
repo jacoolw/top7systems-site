@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent for Android: Climb Your Way Through Algebra 1 | Top 7 Systems</title>
+    <meta name="description" content="Ascent turns a full US Algebra 1 course into a climb up Mount Everest. Master equations, graphs, and quadratics to gain real altitude, camp by camp, for ages 13 and up. No ads, no tracking. Coming soon to Google Play.">
+    <link rel="canonical" href="https://top7systems.net/android/ascent/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top7systems.net/android/ascent/">
+    <meta property="og:title" content="Ascent for Android: Climb Your Way Through Algebra 1">
+    <meta property="og:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to Google Play.">
+    <meta property="og:image" content="https://top7systems.net/ascent/panorama.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ascent for Android: Climb Your Way Through Algebra 1">
+    <meta name="twitter:description" content="A full Algebra 1 course as a climb up Mount Everest. Every skill you master gains real altitude. Ages 13+. Coming soon to Google Play.">
+    <meta name="twitter:image" content="https://top7systems.net/ascent/panorama.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Ascent: Climb Your Way Through Algebra 1",
+      "operatingSystem": "Android",
+      "applicationCategory": "EducationalApplication",
+      "url": "https://top7systems.net/android/ascent/",
+      "image": "https://top7systems.net/ascent/icon.png",
+      "description": "A full US Algebra 1 course played as a climb up Mount Everest. Every skill mastered gains real altitude, from Lukla to the summit. Coming soon to Google Play.",
+      "inLanguage": "en",
+      "publisher": { "@type": "Organization", "name": "Top 7 Systems", "url": "https://top7systems.net/" },
+      "audience": { "@type": "PeopleAudience", "suggestedMinAge": 13 }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Ascent available now?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ascent for Android is coming soon to Google Play, with the same course and the same engine as the iPhone and iPad app, which is out now on the App Store. The whole mountain is climbable end to end, from Lukla to the summit, and the download is free." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much will Ascent cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Free to start: the route through Camp One (foundations, the language of algebra, and all of linear equations) costs nothing. A single one-time purchase, the Full Expedition, unlocks the rest of the mountain. No subscription, and one purchase covers every climber on the device." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Ascent for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Anyone taking or retaking Algebra 1, roughly ages 13 and up. Already partway through algebra? An optional placement check at the start, the flight in, can drop you as high as Camp Two so you never grind through material you already own. For ages 8 to 11 we make Numina, our arithmetic game for iPhone and iPad." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it a complete Algebra 1 course?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fifty-six skills across twelve legs cover a full US Algebra 1 course: equations, inequalities, functions, systems, exponents, polynomials, factoring, quadratics, and radicals, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course." }
+        },
+        {
+          "@type": "Question",
+          "name": "I'm not in the US. Does Ascent match my syllabus?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, for the algebra itself. Algebra 1 is the American name, but the same skills run through GCSE Maths in the UK, Years 8 to 10 in Australia, and lower secondary courses across Europe, Canada, India, and beyond. Ascent teaches skill by skill rather than grade by grade, and the optional placement check starts you where your class already is. It covers the algebra strand only, not the geometry or statistics parts of those courses." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ascent use AI to make the questions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Every problem, hint, and worked solution comes from our own exact algebra engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it private? Does it work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes and yes. No ads, no tracking, no analytics, no data collection. Everything works offline, and your progress stays on your device." }
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root { --as-brand: #3d4e8d; --as-brand-soft: #edf0fa; --as-flag: #f0a03c; }
+
+        /* Panorama hero */
+        .as-hero {
+            position: relative; text-align: center; overflow: hidden;
+            margin: 32px 0 8px; padding: 72px 24px 84px; border-radius: 24px;
+            background:
+                linear-gradient(180deg, rgba(7, 12, 38, 0.55) 0%, rgba(7, 12, 38, 0.28) 45%, rgba(7, 12, 38, 0.5) 100%),
+                url('/ascent/panorama.jpg') center 38% / cover no-repeat,
+                linear-gradient(180deg, #0a102c 0%, #141f4a 55%, #223061 100%);
+            color: #eef2ff;
+        }
+        .as-hero-inner { position: relative; z-index: 1; }
+        .as-icon {
+            width: 116px; height: 116px; border-radius: 26px;
+            box-shadow: 0 14px 40px rgba(4, 8, 30, 0.6), 0 0 0 1px rgba(255,255,255,0.12);
+        }
+        .as-hero h1 { font-size: clamp(2.2rem, 6vw, 3rem); letter-spacing: -0.03em; margin: 18px 0 6px; color: #fff; }
+        .as-tagline { color: #c7d2ea; font-size: 1.15rem; max-width: 500px; margin: 0 auto 26px; line-height: 1.55; }
+        .as-badge {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: rgba(240, 160, 60, 0.14); color: #f6bc66;
+            border: 1px solid rgba(240, 160, 60, 0.45);
+            padding: 9px 20px; border-radius: 999px;
+            font-weight: 700; font-size: 0.82rem; letter-spacing: 0.09em; text-transform: uppercase;
+        }
+        .as-badge .dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--as-flag); animation: as-pulse 2.4s ease-in-out infinite; }
+        .as-appstore {
+            display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff;
+            padding: 13px 22px; border-radius: 14px; font-weight: 600; text-decoration: none;
+            transition: transform var(--transition), box-shadow var(--transition);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.25);
+        }
+        .as-appstore:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.35); }
+        .as-appstore small { display: block; font-size: 0.7rem; font-weight: 500; opacity: 0.8; line-height: 1; margin-bottom: 2px; }
+        .as-appstore span { font-size: 1.2rem; line-height: 1; }
+        .as-cta .as-appstore { box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+        .as-cta .as-appstore:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.24); }
+        @media (max-width: 480px) { .as-badge { font-size: 0.7rem; letter-spacing: 0.06em; padding: 8px 14px; } }
+        @keyframes as-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+        @media (prefers-reduced-motion: reduce) { .as-badge .dot { animation: none; } }
+        .as-notify {
+            display: block; margin-top: 18px; color: #aebbdd; font-weight: 600; font-size: 0.92rem;
+            text-decoration: none; transition: color var(--transition);
+        }
+        .as-notify:hover { color: #fff; text-decoration: underline; }
+
+        .as-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 26px 20px 6px; }
+        .as-pills span {
+            font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);
+            background: var(--bg-alt); border: 1px solid var(--border);
+            padding: 6px 13px; border-radius: 999px;
+        }
+
+        .as-shots {
+            display: flex; gap: 14px; overflow-x: auto; padding: 18px 20px 24px;
+            scroll-snap-type: x mandatory; justify-content: center; flex-wrap: wrap;
+        }
+        .as-shots img {
+            width: 205px; border-radius: 20px; scroll-snap-align: center;
+            box-shadow: 0 12px 34px rgba(10, 16, 44, 0.28);
+        }
+
+        .as-section { padding: 28px 20px; }
+        .as-lead { color: var(--text-secondary); max-width: 620px; margin: 8px 0 0; line-height: 1.65; }
+        .as-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+        .as-grid-4 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-bottom: 20px; }
+        .as-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+        .as-card .ico {
+            width: 44px; height: 44px; border-radius: 12px; background: var(--as-brand-soft);
+            display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 12px;
+        }
+        .as-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+        .as-card p { color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; }
+
+        .as-route { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 14px; margin-top: 22px; }
+        .as-leg {
+            display: flex; gap: 14px; align-items: flex-start; background: var(--surface);
+            border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 18px;
+        }
+        .as-leg .num {
+            flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: var(--as-brand);
+            color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+        }
+        .as-leg.top .num { background: var(--as-flag); }
+        .as-syllabus .num { background: var(--as-brand-soft); font-size: 1.15rem; }
+        .as-leg h3 { font-size: 1rem; margin-bottom: 3px; }
+        .as-leg p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+        .as-leg .alt { color: var(--text-secondary); opacity: 0.75; font-variant-numeric: tabular-nums; }
+
+        .as-strip {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 22px 14px; padding: 18px 0 10px;
+        }
+        .as-strip figure { margin: 0; }
+        .as-strip img {
+            width: 100%; height: auto; border-radius: 16px; display: block;
+            box-shadow: 0 8px 22px rgba(10, 16, 44, 0.22); border: 1px solid var(--border);
+        }
+        .as-strip figcaption { text-align: center; margin-top: 9px; line-height: 1.35; }
+        .as-strip figcaption strong { display: block; font-size: 0.82rem; color: var(--text); font-weight: 700; }
+        .as-strip figcaption span { font-size: 0.74rem; color: var(--text-secondary); }
+
+        .as-cta {
+            text-align: center; background: var(--as-brand-soft); border-radius: 20px;
+            padding: 36px 24px; margin: 20px 20px 8px;
+        }
+        .as-cta h2 { font-size: 1.4rem; margin-bottom: 8px; letter-spacing: -0.01em; }
+        .as-cta p { color: var(--text-secondary); max-width: 480px; margin: 0 auto 20px; line-height: 1.6; }
+        .as-cta .as-badge { background: rgba(240, 160, 60, 0.14); color: #b96f14; border-color: rgba(185, 111, 20, 0.35); }
+        .as-cta .as-notify { color: var(--as-brand); }
+        .as-cta .as-notify:hover { color: var(--text); }
+
+        .as-faq { max-width: 720px; margin: 18px auto 0; }
+        .as-faq-more { max-width: 720px; margin: 26px auto 0; text-align: center; color: var(--text-secondary); line-height: 1.6; }
+        .as-faq-more a { color: var(--as-brand); font-weight: 600; }
+        .as-faq details { border-bottom: 1px solid var(--border); }
+        .as-faq summary {
+            cursor: pointer; list-style: none; padding: 17px 4px; font-weight: 600; font-size: 1.02rem;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+        }
+        .as-faq summary::-webkit-details-marker { display: none; }
+        .as-faq summary::after {
+            content: "+"; color: var(--as-brand); font-size: 1.5rem; font-weight: 400; line-height: 1;
+            transition: transform var(--transition);
+        }
+        .as-faq details[open] summary::after { transform: rotate(45deg); }
+        .as-faq .answer { color: var(--text-secondary); line-height: 1.65; padding: 0 4px 18px; font-size: 0.96rem; margin: 0; }
+
+        .as-doclinks { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; padding: 22px; }
+        .as-doclinks a { color: var(--as-brand); text-decoration: none; font-weight: 600; }
+        .as-doclinks a:hover { text-decoration: underline; }
+    </style>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#4338ca"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#logo-grad)"/><text x="16" y="21.5" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="13">T7</text></svg></div>
+                    <span class="logo-text">Top 7 Systems</span>
+                </a>
+                <a href="mailto:support@top7systems.net" class="header-contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="as-hero">
+            <div class="as-hero-inner">
+                <img src="/ascent/icon.png" alt="Ascent app icon: a moonlit mountain with a flag on the summit" class="as-icon">
+                <h1>Ascent</h1>
+                <p class="as-tagline">Climb Mount Everest, one algebra skill at a time. Reach the summit and you've finished Algebra&nbsp;1.</p>
+                <span class="as-badge"><span class="dot"></span>Coming soon to Google Play</span>
+                <a class="as-notify" href="/ascent/">On iPhone or iPad? Ascent is out now on the App Store &rarr;</a>
+            </div>
+        </section>
+
+        <div class="as-pills">
+            <span>Ages 13+</span>
+            <span>Full Algebra 1 course</span>
+            <span>56 skills, 12 legs</span>
+            <span>No ads</span>
+            <span>No tracking</span>
+            <span>Android phones &amp; tablets</span>
+        </div>
+
+        <section class="as-shots">
+            <img src="/android/ascent/shots/01-climb-through-algebra-1.png" alt="The mountain map on Android: the route from Lukla to the summit, with camps for each algebra unit and your climber at 8,425 m">
+            <img src="/android/ascent/shots/02-master-stacked-fractions.png" alt="Adding one third x and one fourth x, answered seven twelfths x with a stacked fraction and marked correct">
+            <img src="/android/ascent/shots/03-graph-lines-with-your-finger.png" alt="Drawing the line y = x − 2 with a finger on the interactive graph canvas, graded correct">
+            <img src="/android/ascent/shots/06-earn-patches-streaks-altitude.png" alt="Session results showing a skill mastered, a seven day streak, and a new expedition patch">
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Why Ascent works</h2>
+            <div class="as-grid">
+                <div class="as-card">
+                    <div class="ico">🏔️</div>
+                    <h3>Altitude you earn</h3>
+                    <p>Every skill you master gains real height on the route to Everest's summit. Camps mark finished units, fireworks light the night sky at milestones, and summiting means the whole course is done.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📻</div>
+                    <h3>Stuck never means stranded</h3>
+                    <p>The radio to Base Camp is one tap away on every problem: up to four levels of hints, never punished. Every concept has a lesson you can reread and endless fresh worked examples.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">📈</div>
+                    <h3>Graphs you can touch</h3>
+                    <p>Draw lines with your finger, plot a system's solution, shade an inequality, read a parabola, all on an interactive coordinate plane that grades your graph exactly.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">✍️</div>
+                    <h3>Real math, not multiple choice</h3>
+                    <p>A true math keyboard and native rendering of stacked fractions, exponents, and radicals, plus a scratchpad for rough work by finger or stylus, never graded, wiped like scrap paper.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">✅</div>
+                    <h3>Exact, never AI-guessed</h3>
+                    <p>Every problem, hint, and answer check comes from our own exact algebra engine: &radic;8 counts as 2&radic;2, and an expanded form won't pass as factored. No generative AI, so the math is always right.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🔒</div>
+                    <h3>Private by design</h3>
+                    <p>No ads, no tracking, no analytics, no data collection. Works offline, and everything stays on your device. From the makers of <a href="/numina/">Numina</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The route: twelve legs to the summit</h2>
+            <p class="as-lead">Starting in Lukla at 2,860 m, each leg is one unit of a full US Algebra&nbsp;1 course. Altitude is only gained when a skill is truly mastered: spaced reviews and an acclimatization gate at every camp make sure it sticks. Already know some algebra? The optional flight in can start you as high as Camp&nbsp;Two.</p>
+            <div class="as-route">
+                <div class="as-leg">
+                    <div class="num">1</div>
+                    <div><h3>Namche Bazaar</h3><p>Foundations <span class="alt">&middot; 3,440 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">2</div>
+                    <div><h3>Everest Base Camp</h3><p>The language of algebra <span class="alt">&middot; 5,364 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">3</div>
+                    <div><h3>Camp One, through the Khumbu Icefall</h3><p>Linear equations <span class="alt">&middot; 6,065 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">4</div>
+                    <div><h3>Camp Two, up the Western Cwm</h3><p>Inequalities <span class="alt">&middot; 6,400 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">5</div>
+                    <div><h3>Camp Three, on the Lhotse Face</h3><p>Functions <span class="alt">&middot; 7,162 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">6</div>
+                    <div><h3>The Yellow Band</h3><p>Linear functions and data <span class="alt">&middot; 7,500 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">7</div>
+                    <div><h3>The South Col</h3><p>Systems of equations <span class="alt">&middot; 7,924 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">8</div>
+                    <div><h3>The Balcony</h3><p>Exponents and growth <span class="alt">&middot; 8,430 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">9</div>
+                    <div><h3>The South Summit</h3><p>Polynomials <span class="alt">&middot; 8,749 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">10</div>
+                    <div><h3>The Hillary Step</h3><p>Factoring <span class="alt">&middot; 8,790 m</span></p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">11</div>
+                    <div><h3>The Summit Ridge</h3><p>Quadratics <span class="alt">&middot; 8,830 m</span></p></div>
+                </div>
+                <div class="as-leg top">
+                    <div class="num">12</div>
+                    <div><h3>The Summit</h3><p>Radicals and Summit Day <span class="alt">&middot; 8,849 m</span></p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Algebra 1 around the world</h2>
+            <p class="as-lead">Algebra 1 is the American name for this course, but the mathematics is the same everywhere. If you study under a different syllabus, here is where the climb fits.</p>
+            <div class="as-route as-syllabus">
+                <div class="as-leg">
+                    <div class="num">🇺🇸</div>
+                    <div><h3>United States</h3><p>This is the course itself: a complete Algebra 1 aligned to the Common Core standards, as taught in grades 8 and 9.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇬🇧</div>
+                    <div><h3>United Kingdom</h3><p>The algebra running through KS3 and GCSE Maths (ages 12 to 16): y = mx + c, simultaneous equations, expanding and factorising, up to the Higher-tier quadratic formula.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇦🇺</div>
+                    <div><h3>Australia</h3><p>The algebra strand of Years 8 to 10 in the Australian Curriculum, from index laws to factorising and quadratics: the ground Year 11 Methods stands on.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇪🇺</div>
+                    <div><h3>Europe</h3><p>Lower secondary maths across most of Europe, roughly ages 13 to 16: Germany's Sekundarstufe I up to quadratic equations, France's cycle 4 into lycée, and their neighbours.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇨🇦</div>
+                    <div><h3>Canada</h3><p>Grade 9 and 10 mathematics in most provinces, from linear relations through factoring and quadratics.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇳🇿</div>
+                    <div><h3>New Zealand</h3><p>The algebra of Years 9 to 11, up to the NCEA Level 1 standards.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇮🇳</div>
+                    <div><h3>India</h3><p>The algebra of CBSE and ICSE classes 8 to 10: linear equations in two variables, polynomials and factorisation, and class 10 quadratic equations.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🇿🇦</div>
+                    <div><h3>South Africa</h3><p>The algebra of CAPS grades 8 to 10, from linear equations and exponents through factorisation and grade 10 quadratics.</p></div>
+                </div>
+                <div class="as-leg">
+                    <div class="num">🌍</div>
+                    <div><h3>International schools</h3><p>The algebra core of IGCSE Maths and the IB Middle Years Programme.</p></div>
+                </div>
+            </div>
+            <p class="as-lead">Syllabuses differ in order and emphasis, so Ascent teaches one skill at a time rather than one grade at a time. The optional flight in places you wherever your class already is, and nothing in the app assumes you are American: just the algebra itself.</p>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">One problem from every leg</h2>
+            <p class="as-lead">Every unit of the course, photographed in play: one real question from each of the twelve legs, answered correct.</p>
+            <div class="as-strip">
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg01-foundations.png" alt="Simplify x − 3 + 4, answered x + 1 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Foundations</strong><span>Namche Bazaar</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg02-language.png" alt="Distribute 3(x − 4), answered 3x − 12 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>The language of algebra</strong><span>Everest Base Camp</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg03-equations.png" alt="Solve 6x − 6 = 2x + 10, answered x = 4 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Linear equations</strong><span>Camp One</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg04-inequalities.png" alt="Solve 2x − 6 ≥ 3x − 3, answered x ≤ −3 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Inequalities</strong><span>Camp Two</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg05-functions.png" alt="If f(x) = 3x + 2, find f(−2), answered −4 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Functions</strong><span>Camp Three</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg06-lines.png" alt="Reading the slope of a graphed line, answered 1 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Linear functions &amp; data</strong><span>The Yellow Band</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg07-systems.png" alt="Solve the system −2x − 3y = −4 and 2x + 4y = 6, answered (−1, 2) and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Systems of equations</strong><span>The South Col</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg08-exponents.png" alt="Simplify 3x times 2x to the fourth, answered 6x to the fifth and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Exponents &amp; growth</strong><span>The Balcony</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg09-polynomials.png" alt="Multiply (x − 2)(x − 3), answered x² − 5x + 6 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Polynomials</strong><span>The South Summit</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg10-factoring.png" alt="Factor x² − 9x + 18 completely, answered (x − 3)(x − 6) and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Factoring</strong><span>The Hillary Step</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg11-quadratics.png" alt="Reading the vertex of a graphed parabola, answered (1, −2) and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Quadratics</strong><span>The Summit Ridge</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="/android/ascent/shots/legs/leg12-radicals.png" alt="Simplify √96, answered 4√6 and marked correct" loading="lazy" width="480" height="1011">
+                    <figcaption><strong>Radicals &amp; Summit Day</strong><span>The Summit</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">The engine behind every problem</h2>
+            <p class="as-lead">Ascent does not use generative AI and does not ship a fixed bank of worksheet questions. Every problem, hint, and worked solution comes from our own algebra engine, built for this app and checked to be exactly right.</p>
+            <div class="as-grid as-grid-4">
+                <div class="as-card">
+                    <div class="ico">🎲</div>
+                    <h3>Endless and fresh</h3>
+                    <p>Each of the 56 skills has its own generator that composes new problems on the spot. Practice a skill twice and you meet different numbers, while the difficulty stays true to where you are on the mountain.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">⚖️</div>
+                    <h3>Exact to the last fraction</h3>
+                    <p>The engine computes in exact arithmetic: fractions stay fractions and radicals stay radicals, so 5/6 never becomes 0.83 and &radic;8 is understood to equal 2&radic;2. Answers are graded by mathematical equivalence, and any correctly simplified form counts.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🧭</div>
+                    <h3>One source of truth</h3>
+                    <p>The same engine that writes a problem also checks your answer, feeds the radio hints, and walks the worked solution, with every step guaranteed to preserve the equation's solutions. Help can never contradict the math.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🩺</div>
+                    <h3>It knows the classic slips</h3>
+                    <p>Wrong answers are compared against the mistakes students actually make, like forgetting to flip an inequality sign. When yours matches one, Ascent names the slip and how to fix it instead of just saying "try again", and a matcher only fires when the mistake is unambiguous.</p>
+                </div>
+            </div>
+            <p class="as-lead">The whole course is machine-verified: in our test suite an automated learner climbs all 56 skills end to end, every route-test answer is re-derived independently, and the engine survives thousands of randomized stress tests before anything ships.</p>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Room to work</h2>
+            <p class="as-lead">Algebra is worked out, not guessed. Every problem in Ascent comes with a scratchpad, opened with a tap: open space to think, sketch, and show your steps before you commit to an answer.</p>
+            <div class="as-grid">
+                <div class="as-card">
+                    <div class="ico">✏️</div>
+                    <h3>Draw it or type it</h3>
+                    <p>Sketch your working with a finger or a stylus, using a pen, highlighter, and eraser. Or switch to type and jot rough notes on the algebra keys. Whatever helps you think.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🙈</div>
+                    <h3>Yours alone</h3>
+                    <p>The app never reads or grades what you write here. It is thinking space, not an answer box, so there is no wrong way to use it.</p>
+                </div>
+                <div class="as-card">
+                    <div class="ico">🧽</div>
+                    <h3>Fresh every problem</h3>
+                    <p>Like real scrap paper, it wipes clean when you move on. And it is there on every single problem, route tests included.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-cta">
+            <h2>The mountain is waiting.</h2>
+            <p>The whole route is open, from Lukla to the summit. Free to download, free through Camp One, and one unlock opens the rest.</p>
+            <span class="as-badge"><span class="dot"></span>Coming soon to Google Play</span>
+                <a class="as-notify" href="/ascent/">On iPhone or iPad? Ascent is out now on the App Store &rarr;</a>
+        </section>
+
+        <section class="as-section">
+            <h2 class="section-label">Questions climbers ask</h2>
+            <div class="as-faq">
+                <details open>
+                    <summary>Is Ascent available now?</summary>
+                    <p class="answer">Ascent for Android is coming soon to Google Play, with the same course and the same exact-math engine as the iPhone and iPad app, which is <a href="/ascent/">out now on the App Store</a>. The whole mountain is climbable end to end, from Lukla to the summit, and the download is free.</p>
+                </details>
+                <details>
+                    <summary>How much will it cost?</summary>
+                    <p class="answer">Free to start: the route through Camp One (foundations, the language of algebra, and all of linear equations) costs nothing. A single one-time purchase, the Full Expedition, unlocks the rest of the mountain. No subscription, and one purchase covers every climber on the device.</p>
+                </details>
+                <details>
+                    <summary>Who is Ascent for?</summary>
+                    <p class="answer">Anyone taking or retaking Algebra 1, roughly ages 13 and up. Already partway through algebra? An optional placement check at the start, the flight in, can drop you as high as Camp Two, so you never grind through material you already own. For ages 8 to 11, we make <a href="/numina/">Numina</a>, our arithmetic game for iPhone and iPad.</p>
+                </details>
+                <details>
+                    <summary>Is it a complete Algebra 1 course?</summary>
+                    <p class="answer">Yes. Fifty-six skills across twelve legs cover a full US Algebra 1 course: equations, inequalities, functions, systems, exponents, polynomials, factoring, quadratics, and radicals, finishing with the three-part Summit Day mixed review. Reaching the summit means finishing the course.</p>
+                </details>
+                <details>
+                    <summary>I'm not in the US. Does Ascent match my syllabus?</summary>
+                    <p class="answer">Yes, for the algebra itself. Algebra 1 is the American name, but the same skills run through GCSE Maths in the UK, Years 8 to 10 in Australia, and lower secondary courses across Europe, Canada, India, and beyond. Ascent teaches skill by skill rather than grade by grade, and the optional placement check starts you where your class already is. It covers the algebra strand only, not the geometry or statistics parts of those courses.</p>
+                </details>
+                <details>
+                    <summary>Does Ascent use AI to make the questions?</summary>
+                    <p class="answer">No. Every problem, hint, and worked solution comes from our own exact algebra engine and is checked for correctness, so the math is always right. There is no generative AI anywhere in the learning content.</p>
+                </details>
+                <details>
+                    <summary>Is it private? Does it work offline?</summary>
+                    <p class="answer">Yes and yes. No ads, no tracking, no analytics, no data collection. Everything works offline, and your progress stays on your device.</p>
+                </details>
+            </div>
+            <p class="as-faq-more">More questions? The <a href="/android/ascent/support">Support page</a> has step-by-step help: unlocking the Full Expedition, redeeming a code, calling Base Camp for hints, and using the scratchpad.</p>
+        </section>
+
+        <nav class="as-doclinks">
+            <a href="/android/ascent/support">Support</a>
+            <a href="/android/ascent/privacy">Privacy</a>
+            <a href="/android/ascent/terms">Terms</a>
+            <a href="/ascent/">Ascent on iPhone &amp; iPad</a>
+            <a href="/numina/">Numina (ages 8&ndash;11)</a>
+            <a href="/">All apps</a>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Top 7 Systems</p>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
