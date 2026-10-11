@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootInch – Feet-Inch-Fraction Construction Calculator for iPhone &amp; iPad. Pay once.</title>
+    <meta name="description" content="FootInch is the feet-inch-fraction construction calculator you pay for once. Rafters, stairs, roofing, concrete, framing and layout solvers, a tape ruler that shows your mark, and voice entry. No subscription, no ads.">
+    <meta name="keywords" content="construction calculator, feet inch fraction calculator, tape measure calculator, rafter calculator, stair calculator, concrete calculator, carpenter calculator app, iPhone construction calculator, no subscription">
+    <meta property="og:title" content="FootInch – Every jobsite calculation. Pay once.">
+    <meta property="og:description" content="Feet-inch-fraction math, rafters, stairs, concrete, roofing and layout solvers for iPhone and iPad. One purchase, no subscription.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://top7systems.net/footinch/">
+    <meta property="og:image" content="https://top7systems.net/footinch/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://top7systems.net/footinch/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"FootInch: Construction Calc","operatingSystem":"iOS","applicationCategory":"UtilitiesApplication","description":"Feet-inch-fraction construction calculator with rafter, stair, roofing, concrete, framing and layout solvers. One-time purchase.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Top 7 Systems","url":"https://top7systems.net"}}
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand: #D4850F; --brand-light: #F5A623; --brand-deep: #B45309; --brand-glow: rgba(245, 166, 35, 0.18);
+            --tape: #FACC15; --ink: #0f172a; --dark: #111214; --dark-2: #1a1b1f; --dark-3: #24262c;
+            --surface: #ffffff; --surface-alt: #f8f9fb; --text: #0f172a; --text-2: #475569; --text-on-dark: #f1f5f9; --muted-dark: #9aa3b2;
+            --border: #e2e8f0; --border-dark: #2c2f36; --teal: #22c3c9;
+            --radius: 12px; --radius-lg: 20px; --radius-xl: 28px;
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08); --shadow-lg: 0 16px 56px rgba(0,0,0,0.16);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-light); }
+        h1, h2, h3 { line-height: 1.12; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; margin-bottom: 12px; }
+        .lead { font-size: 1.15rem; color: var(--text-2); max-width: 640px; }
+        .section { padding: 96px 0; }
+        .section-head { max-width: 720px; margin-bottom: 48px; }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+        .btn--brand { background: var(--brand-light); color: #1a1200; box-shadow: 0 8px 24px var(--brand-glow); }
+        .btn--brand:hover { transform: translateY(-2px); background: #ffb63a; }
+        .btn--ghost { border: 1.5px solid var(--border-dark); color: var(--text-on-dark); }
+        .btn--ghost:hover { border-color: var(--brand-light); color: var(--brand-light); }
+        .btn--ink { background: var(--ink); color: #fff; }
+        .btn--ink:hover { background: #1e293b; }
+
+        /* Nav */
+        .nav { position: sticky; top: 0; z-index: 50; background: rgba(17,18,20,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-dark); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { display: flex; align-items: center; gap: 10px; color: var(--text-on-dark); text-decoration: none; font-weight: 800; }
+        .brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .brand small { color: var(--muted-dark); font-weight: 500; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: var(--muted-dark); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--text-on-dark); }
+        .nav-links .btn { padding: 10px 16px; font-size: 0.9rem; }
+        @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
+
+        /* Hero */
+        .hero { background: radial-gradient(1100px 600px at 80% -10%, rgba(245,166,35,0.22), transparent 60%), linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 100%); color: var(--text-on-dark); padding: 88px 0 0; overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+        .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 900; margin: 18px 0 20px; }
+        .hero h1 .accent { color: var(--brand-light); }
+        .hero p.lead { color: var(--muted-dark); font-size: 1.2rem; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 32px 0 20px; align-items: center; }
+        .hero-note { color: var(--muted-dark); font-size: 0.9rem; }
+        .hero-note b { color: var(--text-on-dark); }
+        .hero-visual { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 560px; }
+        .phone { width: 300px; border-radius: 44px; border: 10px solid #000; background: #000; box-shadow: var(--shadow-lg), 0 0 0 1px #2a2a2a; overflow: hidden; transform: translateY(40px); }
+        .phone img { display: block; width: 100%; height: auto; }
+        .float-chip { position: absolute; background: var(--dark-3); border: 1px solid var(--border-dark); color: var(--text-on-dark); border-radius: 14px; padding: 10px 14px; font-size: 0.9rem; font-weight: 600; box-shadow: var(--shadow-md); }
+        .float-chip b { color: var(--brand-light); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+        .chip-1 { left: -8px; top: 40px; } .chip-2 { right: -8px; top: 190px; } .chip-3 { left: -4px; bottom: 150px; }
+        @media (max-width: 1100px) { .float-chip { display: none; } }
+        @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-visual { min-height: 480px; } .phone { width: 260px; } }
+
+        /* Trust bar */
+        .trust { background: var(--dark-2); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); color: var(--muted-dark); }
+        .trust-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; padding: 18px 0; font-size: 0.92rem; font-weight: 600; }
+        .trust-inner span::before { content: "✓"; color: var(--brand-light); margin-right: 8px; }
+
+        /* Demo */
+        .demo { background: var(--surface-alt); }
+        .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+        @media (max-width: 860px) { .demo-grid { grid-template-columns: 1fr; } }
+        .calc { background: #e9ebf0; border-radius: var(--radius-xl); padding: 14px; max-width: 420px; margin: 0 auto; box-shadow: var(--shadow-lg); user-select: none; }
+        .calc-display { background: #fff; border-radius: 18px; padding: 14px 16px; text-align: right; min-height: 110px; display: flex; flex-direction: column; justify-content: flex-end; }
+        .calc-expr { color: var(--text-2); font-size: 0.85rem; min-height: 1.2em; font-variant-numeric: tabular-nums; }
+        .calc-main { font-size: 2.3rem; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .calc-alt { color: var(--text-2); font-size: 0.85rem; min-height: 1.2em; font-variant-numeric: tabular-nums; }
+        .calc-hint { color: var(--brand-deep); font-size: 0.85rem; }
+        .ruler { margin-top: 10px; height: 40px; border-radius: 9px; background: var(--tape); position: relative; overflow: hidden; }
+        .ruler canvas { width: 100%; height: 100%; display: block; }
+        .calc-row { display: grid; gap: 7px; margin-top: 7px; }
+        .calc-row.u { grid-template-columns: repeat(6, 1fr); }
+        .calc-row.k { grid-template-columns: repeat(4, 1fr); }
+        .key { border: 0; border-radius: 12px; height: 52px; font: inherit; font-size: 1.25rem; font-weight: 500; background: #fff; color: var(--text); cursor: pointer; transition: transform .06s ease, filter .06s ease; }
+        .key:active { transform: scale(0.97); filter: brightness(0.92); }
+        .key.unit { background: var(--teal); color: #121212; font-weight: 700; font-size: 1rem; }
+        .key.op, .key.eq { background: var(--brand-light); color: #1c1200; font-weight: 700; }
+        .key.fn { background: #d9dce3; }
+        .key.ac { background: #d9dce3; color: #dc2626; font-weight: 700; }
+        .key.eq { grid-column: span 2; }
+        .demo-copy h2 { margin-bottom: 14px; }
+        .demo-copy ol { margin: 20px 0 0 20px; color: var(--text-2); }
+        .demo-copy ol li { margin-bottom: 10px; }
+        .demo-copy code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; color: var(--brand-deep); font-weight: 600; }
+
+        /* Features */
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 900px) { .features { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .features { grid-template-columns: 1fr; } }
+        .feature { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-md); }
+        .feature .ico { width: 44px; height: 44px; border-radius: 12px; background: rgba(245,166,35,0.14); color: var(--brand-deep); display: grid; place-items: center; font-weight: 800; margin-bottom: 16px; font-size: 1.1rem; }
+        .feature h3 { font-size: 1.12rem; margin-bottom: 8px; }
+        .feature p { color: var(--text-2); font-size: 0.97rem; }
+        .feature code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--brand-deep); font-weight: 600; }
+
+        /* Screens */
+        .screens { background: var(--dark); color: var(--text-on-dark); }
+        .screens .lead { color: var(--muted-dark); }
+        .screen-scroll { display: flex; gap: 20px; overflow-x: auto; padding: 8px 4px 24px; scroll-snap-type: x mandatory; -ms-overflow-style: none; scrollbar-width: none; }
+        .screen-scroll::-webkit-scrollbar { display: none; }
+        .screen { flex: 0 0 auto; width: 250px; scroll-snap-align: start; }
+        .screen img { width: 100%; border-radius: 28px; border: 1px solid var(--border-dark); box-shadow: var(--shadow-lg); display: block; }
+        .screen p { margin-top: 12px; color: var(--muted-dark); font-size: 0.92rem; text-align: center; }
+
+        /* Solvers */
+        .solvers { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+        .solver { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-alt); }
+        .solver .dot { flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: var(--brand-light); margin-top: 8px; }
+        .solver b { display: block; }
+        .solver span { color: var(--text-2); font-size: 0.9rem; }
+        .solver.free b::after { content: "Free"; margin-left: 8px; font-size: 0.7rem; background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 999px; vertical-align: middle; }
+
+        /* Pricing */
+        .pricing { background: var(--surface-alt); }
+        .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 880px; }
+        @media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
+        .plan { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-md); }
+        .plan.pro { border: 2px solid var(--brand-light); position: relative; }
+        .plan.pro::before { content: "One-time purchase"; position: absolute; top: -14px; left: 24px; background: var(--brand-light); color: #1c1200; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; }
+        .price { font-size: 2.6rem; font-weight: 900; letter-spacing: -0.03em; }
+        .price small { font-size: 1rem; color: var(--text-2); font-weight: 600; }
+        .plan ul { list-style: none; margin-top: 18px; }
+        .plan li { padding: 8px 0; border-top: 1px solid var(--border); color: var(--text-2); }
+        .plan li::before { content: "✓"; color: var(--brand-deep); font-weight: 800; margin-right: 10px; }
+        .compare { margin-top: 36px; background: var(--dark); color: var(--text-on-dark); border-radius: var(--radius-lg); padding: 28px 30px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; max-width: 880px; }
+        .compare b { color: var(--brand-light); }
+        .compare .big { font-size: 2rem; font-weight: 900; }
+        @media (max-width: 600px) { .compare { grid-template-columns: 1fr; } }
+
+        /* FAQ */
+        details { border-top: 1px solid var(--border); padding: 18px 0; }
+        details:last-of-type { border-bottom: 1px solid var(--border); }
+        summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; color: var(--brand-deep); font-size: 1.4rem; font-weight: 400; }
+        details[open] summary::after { content: "–"; }
+        details p { margin-top: 10px; color: var(--text-2); max-width: 760px; }
+
+        /* CTA + footer */
+        .cta { background: linear-gradient(135deg, var(--brand-deep), var(--brand-light)); color: #1a1200; text-align: center; padding: 80px 0; }
+        .cta h2 { color: #1a1200; }
+        .cta .btn--ink { margin-top: 20px; }
+        footer { background: var(--dark); color: var(--muted-dark); padding: 40px 0; font-size: 0.9rem; }
+        .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+        footer a { color: var(--text-on-dark); text-decoration: none; margin-right: 18px; }
+        footer a:hover { color: var(--brand-light); }
+        .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="/footinch/" class="brand"><img src="icon.png" alt="" width="32" height="32"> FootInch <small>by Top 7 Systems</small></a>
+            <div class="nav-links">
+                <a href="#demo">Try it</a>
+                <a href="#features">Features</a>
+                <a href="#solvers">Solvers</a>
+                <a href="#pricing">Pricing</a>
+                <a href="support.html">Support</a>
+                <a href="#download" class="btn btn--brand">Get FootInch</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">iPhone &amp; iPad · Pay once · No subscription</span>
+                <h1>Every jobsite calculation. <span class="accent">One price.</span></h1>
+                <p class="lead">FootInch is the feet-inch-fraction calculator built for framers, carpenters, concrete crews, roofers and serious DIYers. Type measurements the way you read a tape, see the mark on a real ruler, and solve rafters, stairs, concrete and layouts without a yearly bill.</p>
+                <div class="hero-ctas" id="download">
+                    <a class="btn btn--brand" href="https://apps.apple.com/app/footinch-construction-calc/id0000000000" data-appstore>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download on the App Store
+                    </a>
+                    <a class="btn btn--ghost" href="#demo">Try the keypad in your browser</a>
+                </div>
+                <p class="hero-note"><b>Free</b> calculator, tape, converter and stair solver. <b>FootInch Pro</b> unlocks every solver for a single $4.99 purchase, shared with your family.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="float-chip chip-1">5 ft 6 in 3/8 + 2 ft = <b>7' 6-3/8"</b></div>
+                <div class="float-chip chip-2">10' × 12' × 4" = <b>1.48 cu yd</b></div>
+                <div class="float-chip chip-3">6:12 pitch, 10' run → <b>11' 2-3/16"</b></div>
+                <div class="phone"><img src="screenshots/calc.png" alt="FootInch calculator showing 5' 6-3/8&quot; + 2' 0&quot; = 7' 6-3/8&quot; with the tape ruler marking the result" width="1179" height="2556"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="trust">
+        <div class="container trust-inner">
+            <span>Works fully offline</span>
+            <span>No account, no tracking</span>
+            <span>One purchase, not a subscription</span>
+            <span>iPhone and iPad</span>
+            <span>Family Sharing</span>
+        </div>
+    </div>
+
+    <section class="section demo" id="demo">
+        <div class="container demo-grid">
+            <div class="demo-copy reveal">
+                <span class="eyebrow">Try it here</span>
+                <h2>Type it like you read the tape.</h2>
+                <p class="lead">This is the real FootInch entry logic running in your browser. Press the keys below or use your keyboard: digits, <code>f</code> for feet, <code>i</code> for inches, <code>/</code> for fractions, <code>+ − * /</code> and <code>Enter</code>.</p>
+                <ol>
+                    <li>Press <code>5</code> <code>ft</code> <code>6</code> <code>in</code> <code>3</code> <code>/</code> <code>8</code> — the display reads 5' 6-3/8".</li>
+                    <li>Press <code>+</code> <code>2</code> <code>ft</code> <code>=</code> — you get 7' 6-3/8", and the ruler shows where the mark lands.</li>
+                    <li>Press <code>×</code> <code>4</code> <code>ft</code> <code>=</code> — units follow along: 30.125 sq ft.</li>
+                </ol>
+            </div>
+            <div class="calc reveal" id="calc" aria-label="FootInch demo calculator">
+                <div class="calc-display">
+                    <div class="calc-expr" id="c-expr">&nbsp;</div>
+                    <div class="calc-main" id="c-main">0</div>
+                    <div class="calc-alt" id="c-alt"><span class="calc-hint">Try: 5 ft 6 in 3 / 8 + 2 ft =</span></div>
+                    <div class="ruler"><canvas id="c-ruler" width="800" height="80" aria-hidden="true"></canvas></div>
+                </div>
+                <div class="calc-row u">
+                    <button class="key unit" data-k="ft">ft</button><button class="key unit" data-k="in">in</button><button class="key unit" data-k="yd">yd</button><button class="key unit" data-k="m">m</button><button class="key unit" data-k="cm">cm</button><button class="key unit" data-k="mm">mm</button>
+                </div>
+                <div class="calc-row k">
+                    <button class="key ac" data-k="ac">AC</button><button class="key fn" data-k="bs" aria-label="Backspace">⌫</button><button class="key unit" data-k="/">/</button><button class="key op" data-k="div">÷</button>
+                    <button class="key" data-k="7">7</button><button class="key" data-k="8">8</button><button class="key" data-k="9">9</button><button class="key op" data-k="mul">×</button>
+                    <button class="key" data-k="4">4</button><button class="key" data-k="5">5</button><button class="key" data-k="6">6</button><button class="key op" data-k="sub">−</button>
+                    <button class="key" data-k="1">1</button><button class="key" data-k="2">2</button><button class="key" data-k="3">3</button><button class="key op" data-k="add">+</button>
+                    <button class="key" data-k="0">0</button><button class="key" data-k=".">.</button><button class="key eq" data-k="eq">=</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Why FootInch</span>
+                <h2>Built for how carpenters actually work.</h2>
+                <p class="lead">Everything a handheld construction calculator does, with the parts a phone can do better: a ruler that shows your mark, a tape you can tap, and your voice.</p>
+            </div>
+            <div class="features">
+                <div class="feature reveal"><div class="ico">ft</div><h3>Feet-inch-fraction entry</h3><p>Type <code>5 ft 6 in 3/8</code>, not decimals. Mix in metric, yards and bare fractions. Precision from 1/2" to 1/64".</p></div>
+                <div class="feature reveal"><div class="ico">⌐</div><h3>A ruler under every result</h3><p>The display shows a strip of tape measure with a red mark at your answer, so you transfer it to the real tape without re-reading fractions.</p></div>
+                <div class="feature reveal"><div class="ico">x²</div><h3>Square and cubic math</h3><p>Length × length is an area, × length is a volume. Tap any unit to convert: cubic yards for the concrete truck, square feet for the flooring order.</p></div>
+                <div class="feature reveal"><div class="ico">∠</div><h3>Rise · Run · Diag · Pitch</h3><p>Enter any two and read the rest. Pitch as 6:12, degrees or percent. Square-ups, rafters and stringers in seconds.</p></div>
+                <div class="feature reveal"><div class="ico">🎙</div><h3>Voice entry</h3><p>Hands full? Say “five feet six and three eighths plus two feet”. Recognized on the phone itself and never uploaded.</p></div>
+                <div class="feature reveal"><div class="ico">≡</div><h3>Tape, memory, copy</h3><p>Every result is kept on a tape you can tap to reuse or share. Long-press any result to copy it in feet-inch, decimal or millimeters.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section screens">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">On the phone</span>
+                <h2>Clear in sunlight, quick with gloves on.</h2>
+                <p class="lead">Big keys with dark text on bright color, haptic clicks, and a dark mode for the truck at 5 am.</p>
+            </div>
+            <div class="screen-scroll">
+                <div class="screen reveal"><img src="screenshots/calc.png" alt="Calculator with 7' 6-3/8&quot; result and tape ruler" loading="lazy"><p>Result on a real ruler</p></div>
+                <div class="screen reveal"><img src="screenshots/triangle.png" alt="Rise, run, diagonal and pitch solved from 6:12 and a 10 ft run" loading="lazy"><p>Rise, run, diagonal, pitch</p></div>
+                <div class="screen reveal"><img src="screenshots/rafter.png" alt="Rafter solver results" loading="lazy"><p>Rafters, hips and jacks</p></div>
+                <div class="screen reveal"><img src="screenshots/stairs.png" alt="Stair solver results with code checks" loading="lazy"><p>Stairs with code checks</p></div>
+                <div class="screen reveal"><img src="screenshots/spacing.png" alt="Equal spacing solver for balusters" loading="lazy"><p>Baluster and picket layout</p></div>
+                <div class="screen reveal"><img src="screenshots/dark.png" alt="FootInch in dark mode" loading="lazy"><p>Dark mode</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="solvers">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">13 solvers</span>
+                <h2>Fill in what you know. Read the cut list.</h2>
+                <p class="lead">Every solver accepts measurements the way you say them — 9' 1", 109, 2768 mm — and echoes how it read them before it answers. Results update as you type, right above the keyboard.</p>
+            </div>
+            <div class="solvers">
+                <div class="solver free reveal"><span class="dot"></span><div><b>Stairs</b><span>Risers, treads, stringer length, angle, IRC checks</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Rafters</b><span>Common, hip and valley lengths, jack differences, plumb and seat cuts</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Roofing</b><span>Area, squares, bundles, sheathing, underlayment</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Concrete</b><span>Slabs, footings and columns in yards and bags</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Block &amp; brick</b><span>Units, mortar bags, courses</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Drywall &amp; sheets</b><span>4×8, 4×9, 4×10, 4×12 counts, mud, tape, screws</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Board feet</b><span>Lumber volume and cost</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Wall framing</b><span>Studs on center, plates, sheathing</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Circle &amp; arc</b><span>Radius from chord and rise, arc length, segment area</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Polygon</b><span>Miter angles, radii, width across flats</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Crown &amp; compound miter</b><span>Miter and bevel for any spring and corner angle</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Equal spacing</b><span>Balusters, pickets, shelves, with every layout mark</span></div></div>
+                <div class="solver reveal"><span class="dot"></span><div><b>Pitch &amp; slope</b><span>x:12, degrees, percent, ratio, rafter factor</span></div></div>
+                <div class="solver free reveal"><span class="dot"></span><div><b>Unit converter</b><span>Length, area and volume in every unit</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Pay once. Keep it forever.</h2>
+                <p class="lead">A calculator shouldn't bill you every year. FootInch Pro is a single in-app purchase, tied to your Apple Account and shared with your family.</p>
+            </div>
+            <div class="plans">
+                <div class="plan reveal">
+                    <div class="price">Free</div>
+                    <ul>
+                        <li>Full feet-inch-fraction calculator</li>
+                        <li>Rise, run, diagonal and pitch keys</li>
+                        <li>Tape ruler, paperless tape, memory</li>
+                        <li>Voice entry</li>
+                        <li>Unit converter and stair solver</li>
+                    </ul>
+                </div>
+                <div class="plan pro reveal">
+                    <div class="price">$4.99 <small>once</small></div>
+                    <ul>
+                        <li>Everything in Free</li>
+                        <li>All 13 solvers: rafters, roofing, concrete, block, drywall, board feet, framing, circles, polygons, crown, spacing, slope</li>
+                        <li>Family Sharing</li>
+                        <li>Every future update</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="compare reveal">
+                <div>Subscription construction calculators charge around <b>$40 a year</b>. Over five years that's <b>$200</b> for the same math. FootInch Pro is <b>$4.99, once.</b></div>
+                <div class="big">40×</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Questions</span>
+                <h2>Straight answers.</h2>
+            </div>
+            <details><summary>Does it need an internet connection?</summary><p>No. Everything runs on your device, including voice recognition. The only network call is Apple's App Store when you buy or restore FootInch Pro.</p></details>
+            <details><summary>How do I type 5' 6-3/8"?</summary><p>Press 5, ft, 6, in, 3, /, 8. A number after ft is taken as inches and a fraction after in is part of that inch. Solver fields accept typed forms too: 5' 6 3/8", 66.375, 6-3/8 and 1676 mm all work.</p></details>
+            <details><summary>What does the ruler under the result show?</summary><p>A two-inch window of tape measure centred on your answer with 1/16" ticks, cumulative inch numbers and red foot marks, exactly like the tape in your pouch. In metric it shows millimetres and centimetres.</p></details>
+            <details><summary>Is the math checked?</summary><p>The engine and every solver are covered by automated tests against worked examples: a 6:12 rafter over a 24' span, a 9' 1" stair rise, a 38° crown at a 90° corner. The formulas are published on the <a href="support.html">support page</a> so you can verify them.</p></details>
+            <details><summary>Will there ever be a subscription?</summary><p>No. FootInch Pro is a one-time purchase and will stay that way.</p></details>
+            <details><summary>Does it work on iPad?</summary><p>Yes, with a full-size keypad and hardware keyboard shortcuts.</p></details>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Measure twice. Calculate once.</h2>
+            <p>Free on the App Store for iPhone and iPad.</p>
+            <a class="btn btn--ink" href="https://apps.apple.com/app/footinch-construction-calc/id0000000000" data-appstore>Download FootInch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container foot">
+            <div>&copy; 2026 Top 7 Systems. FootInch is not affiliated with any calculator manufacturer.</div>
+            <div><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="/">All apps</a><a href="mailto:support@top7systems.net">Contact</a></div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        // ---- Reveal on scroll
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        // ---- Mini FootInch engine (inches canonical; dim 0 scalar, 1 length, 2 area, 3 volume)
+        var UNITS = { ft: 12, in: 1, yd: 36, m: 1000 / 25.4, cm: 10 / 25.4, mm: 1 / 25.4 };
+        var FOLLOW = { ft: 'in', in: 'in', yd: 'ft', m: 'cm', cm: 'mm', mm: 'mm' };
+        var S = { parts: [], typed: '', num: null, tokens: [], shown: null, isResult: false, expr: '', uLen: 'ftin', uArea: 'sqft', uVol: 'cuft' };
+        var DEN = 16;
+        function gcd(a, b) { return b ? gcd(b, a % b) : a; }
+        function frac(x) { var t = Math.round(x * DEN), w = Math.floor(t / DEN), n = t % DEN, d = DEN; if (n) { var g = gcd(n, d); n /= g; d /= g; } return { w: w, n: n, d: d }; }
+        function fi(inches) { var s = inches < 0 ? '-' : ''; var f = frac(Math.abs(inches)); var ft = Math.floor(f.w / 12), iw = f.w % 12; var ip = f.n ? iw + '-' + f.n + '/' + f.d + '"' : iw + '"'; if (ft > 0) return s + ft + "' " + ip; if (iw === 0 && f.n) return s + f.n + '/' + f.d + '"'; return s + ip; }
+        function dec(v, d) { return Number(v.toFixed(d)).toLocaleString('en-US', { maximumFractionDigits: d }); }
+        var LEN = { ftin: null, in: null, yd: [36, 4, ' yd'], m: [1000 / 25.4, 4, ' m'], cm: [10 / 25.4, 2, ' cm'], mm: [1 / 25.4, 1, ' mm'] };
+        var AREA = { sqft: [144, 3, ' sq ft'], sqin: [1, 1, ' sq in'], sqyd: [1296, 3, ' sq yd'], m2: [1550.0031, 3, ' m²'] };
+        var VOL = { cuft: [1728, 3, ' cu ft'], cuin: [1, 1, ' cu in'], cuyd: [46656, 3, ' cu yd'], m3: [61023.7441, 3, ' m³'] };
+        function fmt(q) {
+            if (q.dim === 0) return dec(q.v, 4);
+            if (q.dim === 1) { if (S.uLen === 'ftin') return fi(q.v); if (S.uLen === 'in') { var f = frac(Math.abs(q.v)); return (q.v < 0 ? '-' : '') + (f.n ? (f.w ? f.w + '-' : '') + f.n + '/' + f.d : f.w) + '"'; } var u = LEN[S.uLen]; return dec(q.v / u[0], u[1]) + u[2]; }
+            if (q.dim === 2) { var a = AREA[S.uArea]; return dec(q.v / a[0], a[1]) + a[2]; }
+            var c = VOL[S.uVol]; return dec(q.v / c[0], c[1]) + c[2];
+        }
+        function setUnit(k, dim) {
+            if (dim === 1) S.uLen = k === 'ft' ? 'ftin' : k;
+            else if (dim === 2) S.uArea = { ft: 'sqft', in: 'sqin', yd: 'sqyd', m: 'm2', cm: 'm2', mm: 'm2' }[k];
+            else if (dim === 3) S.uVol = { ft: 'cuft', in: 'cuin', yd: 'cuyd', m: 'm3', cm: 'm3', mm: 'm3' }[k];
+        }
+        function alts(q) { if (q.dim === 1) return dec(q.v / 12, 4) + ' ft · ' + dec(q.v, 3) + ' in · ' + dec(q.v * 25.4, 1) + ' mm'; if (q.dim === 2) return dec(q.v, 1) + ' sq in · ' + dec(q.v / 1296, 3) + ' sq yd · ' + dec(q.v / 1550.0031, 3) + ' m²'; if (q.dim === 3) return dec(q.v / 46656, 3) + ' cu yd · ' + dec(q.v / 231, 2) + ' gal · ' + dec(q.v / 61023.7441, 3) + ' m³'; return ''; }
+        function pendingValue() { if (S.num !== null) { var dv = parseFloat(S.typed); if (!S.typed || !dv) return null; return parseFloat(S.num) / dv; } if (!S.typed) return null; return parseFloat(S.typed); }
+        function entryQuantity() { var parts = S.parts.slice(); var p = pendingValue(); if (p !== null) { if (parts.length) parts.push({ v: p, u: FOLLOW[parts[parts.length - 1].u], pw: 1 }); else return { v: p, dim: 0 }; } if (!parts.length) return null; if (parts.length === 1 && parts[0].pw > 1) return { v: parts[0].v * Math.pow(UNITS[parts[0].u], parts[0].pw), dim: parts[0].pw }; var inches = 0; parts.forEach(function (x) { inches += x.v * UNITS[x.u]; }); return { v: inches, dim: 1 }; }
+        function entryText() { var out = []; S.parts.forEach(function (p, i) { var n = dec(p.v, 4); if (i === S.parts.length - 1 && p.u === 'in' && p.pw === 1 && S.num !== null && p.v === Math.floor(p.v)) { out.push(n + '-' + S.num + '/' + S.typed + '"'); return; } if (p.pw === 2) out.push(n + ' sq ' + p.u); else if (p.pw === 3) out.push(n + ' cu ' + p.u); else out.push(p.u === 'ft' ? n + "'" : p.u === 'in' ? n + '"' : n + ' ' + p.u); }); var lastInFrac = S.parts.length && S.parts[S.parts.length - 1].u === 'in' && S.parts[S.parts.length - 1].pw === 1 && S.num !== null; if (S.num !== null && !lastInFrac) out.push(S.num + '/' + S.typed); else if (S.num === null && S.typed) out.push(S.typed); return out.length ? out.join(' ') : '0'; }
+        function isEmpty() { return !S.parts.length && !S.typed && S.num === null; }
+        function clearEntry() { S.parts = []; S.typed = ''; S.num = null; }
+        function apply(op, a, b) { if (op === 'add' || op === 'sub') { if (a.dim !== b.dim) { if (a.dim === 0) a = { v: a.v * Math.pow(1, b.dim), dim: b.dim }; else if (b.dim === 0) b = { v: b.v, dim: a.dim }; else throw 'Can\'t add different kinds of units'; } return { v: op === 'add' ? a.v + b.v : a.v - b.v, dim: a.dim }; } if (op === 'mul') { if (a.dim + b.dim > 3) throw 'Beyond cubic units'; return { v: a.v * b.v, dim: a.dim + b.dim }; } if (!b.v) throw 'Can\'t divide by zero'; if (a.dim - b.dim < 0) throw 'Unsupported units'; return { v: a.v / b.v, dim: a.dim - b.dim }; }
+        var PREC = { add: 1, sub: 1, mul: 2, div: 2 }, SYM = { add: '+', sub: '−', mul: '×', div: '÷' };
+        function fold(minP) { while (S.tokens.length >= 3) { var o = S.tokens[S.tokens.length - 2]; if (typeof o !== 'string' || PREC[o] < minP) break; var b = S.tokens.pop(); S.tokens.pop(); var a = S.tokens.pop(); S.tokens.push(apply(o, a, b)); } }
+        function exprText() { return S.tokens.map(function (t) { return typeof t === 'string' ? SYM[t] : fmt(t); }).join(' '); }
+        var msg = '';
+        function press(k) {
+            msg = '';
+            try {
+                if (/^[0-9]$/.test(k)) { if (S.isResult) { S.tokens = []; S.shown = null; S.isResult = false; S.expr = ''; } if (S.typed === '0') S.typed = k; else S.typed += k; }
+                else if (k === '.') { if (S.isResult) { S.tokens = []; S.shown = null; S.isResult = false; S.expr = ''; } if (S.num === null && S.typed.indexOf('.') < 0) S.typed = S.typed ? S.typed + '.' : '0.'; }
+                else if (k === '/') { if (S.num === null && S.typed && S.typed.indexOf('.') < 0) { S.num = S.typed; S.typed = ''; } }
+                else if (k === 'bs') { if (S.typed) S.typed = S.typed.slice(0, -1); else if (S.num !== null) { S.typed = S.num; S.num = null; } else if (S.parts.length) S.parts.pop(); }
+                else if (k === 'ac') { clearEntry(); S.tokens = []; S.shown = null; S.isResult = false; S.expr = ''; S.uLen = 'ftin'; S.uArea = 'sqft'; S.uVol = 'cuft'; }
+                else if (UNITS[k]) { if (isEmpty() && S.shown) { if (S.shown.dim === 0) { S.shown = { v: S.shown.v * UNITS[k], dim: 1 }; S.isResult = true; } setUnit(k, S.shown.dim); msg = ''; } else { var p = pendingValue(); if (p !== null) { S.parts.push({ v: p, u: k, pw: 1 }); S.typed = ''; S.num = null; } else if (S.parts.length === 1 && S.parts[0].u === k && S.parts[0].pw < 3) S.parts[0].pw++; } }
+                else if (PREC[k]) { var q = entryQuantity(); if (q) { S.tokens.push(q); clearEntry(); } else if (!S.tokens.length && S.shown) S.tokens = [S.shown]; if (!S.tokens.length) return; if (typeof S.tokens[S.tokens.length - 1] === 'string') { S.tokens[S.tokens.length - 1] = k; return; } fold(PREC[k]); S.shown = S.tokens[S.tokens.length - 1]; S.tokens.push(k); S.isResult = false; S.expr = ''; }
+                else if (k === 'eq') { var q2 = entryQuantity(); if (q2) { S.tokens.push(q2); clearEntry(); } if (typeof S.tokens[S.tokens.length - 1] === 'string') S.tokens.pop(); if (!S.tokens.length) return; var isExpr = S.tokens.length > 1; var e = exprText(); fold(0); S.shown = S.tokens[0]; S.tokens = []; S.isResult = true; S.expr = isExpr ? e + ' =' : ''; }
+            } catch (err) { msg = String(err); clearEntry(); S.tokens = []; S.isResult = false; }
+            render();
+        }
+        var main = document.getElementById('c-main'), alt = document.getElementById('c-alt'), expr = document.getElementById('c-expr'), canvas = document.getElementById('c-ruler');
+        function render() {
+            var typing = !isEmpty();
+            main.textContent = typing ? entryText() : (S.shown ? fmt(S.shown) : '0');
+            if (msg) alt.innerHTML = '<span class="calc-hint">' + msg + '</span>';
+            else if (typing) alt.innerHTML = '&nbsp;';
+            else if (S.shown) alt.textContent = alts(S.shown) || ' ';
+            else alt.innerHTML = '<span class="calc-hint">Try: 5 ft 6 in 3 / 8 + 2 ft =</span>';
+            expr.textContent = S.tokens.length ? exprText() : (S.isResult ? S.expr : ' ');
+            var q = typing ? entryQuantity() : S.shown;
+            drawRuler(q && q.dim === 1 && q.v > 0 ? q.v : null);
+        }
+        function drawRuler(v) {
+            var ctx = canvas.getContext('2d'), W = canvas.width, H = canvas.height; ctx.clearRect(0, 0, W, H);
+            ctx.globalAlpha = v === null ? 0.35 : 1; var val = v || 0, span = 2.0, start = Math.max(0, val - span / 2), x = function (i) { return (i - start) / span * W; };
+            ctx.fillStyle = '#FACC15'; ctx.fillRect(0, 0, W, H); ctx.strokeStyle = '#1f1a0d'; ctx.fillStyle = '#1f1a0d'; ctx.font = 'bold 18px Inter, sans-serif';
+            for (var k = Math.ceil(start * 16); k <= Math.floor((start + span) * 16); k++) { var i = k / 16, h = k % 16 === 0 ? 0.66 : k % 8 === 0 ? 0.5 : k % 4 === 0 ? 0.38 : k % 2 === 0 ? 0.27 : 0.18; ctx.lineWidth = k % 16 === 0 ? 3 : k % 8 === 0 ? 2 : 1.4; ctx.beginPath(); ctx.moveTo(x(i), 0); ctx.lineTo(x(i), H * h); ctx.stroke(); if (k % 16 === 0) { var inch = k / 16; if (inch > 0 && inch % 12 === 0) { ctx.fillStyle = '#dc2626'; ctx.fillText(inch / 12 + 'F', x(i) + 6, H - 26); ctx.fillStyle = '#1f1a0d'; } ctx.fillText(String(inch), x(i) + 6, H - 6); } }
+            if (v !== null) { ctx.strokeStyle = '#dc2626'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(x(val), 0); ctx.lineTo(x(val), H); ctx.stroke(); ctx.fillStyle = '#dc2626'; ctx.beginPath(); ctx.moveTo(x(val) - 9, 0); ctx.lineTo(x(val) + 9, 0); ctx.lineTo(x(val), 12); ctx.closePath(); ctx.fill(); }
+            ctx.globalAlpha = 1;
+        }
+        document.querySelectorAll('#calc .key').forEach(function (b) { b.addEventListener('click', function () { press(b.getAttribute('data-k')); }); });
+        var calcEl = document.getElementById('calc');
+        document.addEventListener('keydown', function (e) {
+            if (!calcEl.getBoundingClientRect().height || e.metaKey || e.ctrlKey || e.altKey) return;
+            var r = calcEl.getBoundingClientRect(); if (r.bottom < 0 || r.top > window.innerHeight) return;
+            var map = { '+': 'add', '-': 'sub', '*': 'mul', 'x': 'mul', 'Enter': 'eq', '=': 'eq', 'Backspace': 'bs', 'Escape': 'ac', 'f': 'ft', "'": 'ft', 'i': 'in', '"': 'in', 'y': 'yd', 'm': 'm', 'c': 'cm', 'l': 'mm', '/': '/', '.': '.' };
+            var k = /^[0-9]$/.test(e.key) ? e.key : map[e.key]; if (k === undefined) return; e.preventDefault(); press(k);
+        });
+        render();
+    })();
+    </script>
+</body>
+</html>
