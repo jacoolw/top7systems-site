@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammock for iPhone: the Guide | Top 7 Systems</title>
+    <meta name="description" content="How to use Hammock on iPhone and iPad: saving from the share sheet, search, the Pile, lists, Pick for me, widgets, progress and ratings, the logbook, Hammock Plus, backups, moving from Android, themes, categories and troubleshooting.">
+    <link rel="canonical" href="https://top7systems.net/hammock/guide">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://top7systems.net/hammock/guide">
+    <meta property="og:title" content="Hammock for iPhone: the Guide">
+    <meta property="og:description" content="Everything Hammock does, and how, from saving your first find to moving your library from Android.">
+    <meta property="og:image" content="https://top7systems.net/hammock/og-image.jpg">
+    <meta name="theme-color" content="#FBF6EE">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --linen: #FBF6EE; --linen-2: #F3EBDD; --linen-3: #EDE3D5; --ink: #211E1A; --ink-2: #4E463D; --ink-3: #6E655A;
+            --teal: #1F6F6B; --teal-deep: #165955; --teal-soft: #BDE8E3; --honey: #E0A43B; --honey-soft: #F3DEBD; --terracotta: #B5542F;
+            --line: rgba(33,30,26,0.1);
+        }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        body { font-family: 'Manrope', system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--linen); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+        a { color: var(--teal); font-weight: 600; }
+        img { max-width: 100%; display: block; }
+        :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; line-height: 1.15; }
+
+        .nav { position: sticky; top: 0; z-index: 50; background: rgba(251,246,238,0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; color: var(--ink); white-space: nowrap; }
+        .brand img { width: 32px; height: 32px; border-radius: 9px; }
+        .brand small { color: var(--ink-3); font-weight: 600; }
+        .nav-links { display: flex; gap: 22px; }
+        .nav-links a { color: var(--ink-2); text-decoration: none; font-size: 0.95rem; }
+        .nav-links a:hover, .nav-links a[aria-current] { color: var(--teal); }
+        @media (max-width: 640px) { .nav-links a:not(:last-child) { display: none; } .brand small { display: none; } }
+
+        .intro { padding: 56px 0 28px; }
+        .intro .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); }
+        .intro .eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--honey); border-radius: 2px; }
+        .intro h1 { font-size: clamp(2.4rem, 5.5vw, 3.8rem); margin: 14px 0 14px; }
+        .intro p { font-size: 1.15rem; color: var(--ink-2); max-width: 680px; }
+
+        .layout { display: grid; grid-template-columns: 240px 1fr; gap: 56px; padding-bottom: 80px; }
+        @media (max-width: 900px) { .layout { grid-template-columns: 1fr; gap: 24px; } }
+        .toc { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 110px); overflow: auto; padding: 18px; border-radius: 20px; background: var(--linen-2); }
+        .toc p { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
+        .toc ol { list-style: none; display: grid; gap: 2px; }
+        .toc a { display: block; padding: 6px 10px; border-radius: 10px; color: var(--ink-2); font-weight: 600; font-size: 0.93rem; text-decoration: none; }
+        .toc a:hover { background: var(--linen-3); color: var(--ink); }
+        @media (max-width: 900px) { .toc { position: static; max-height: none; } .toc ol { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .toc ol { grid-template-columns: 1fr; } }
+
+        article section { padding: 28px 0 10px; border-top: 1px solid var(--line); }
+        article section:first-child { border-top: 0; padding-top: 0; }
+        article h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 12px; }
+        article h3 { font-size: 1.18rem; margin: 22px 0 6px; }
+        article p { color: var(--ink-2); margin: 10px 0; max-width: 720px; }
+        article ul, article ol.steps { margin: 10px 0 10px 0; padding-left: 0; list-style: none; display: grid; gap: 10px; max-width: 720px; }
+        article ul li { position: relative; padding-left: 22px; color: var(--ink-2); }
+        article ul li::before { content: ""; position: absolute; left: 4px; top: 0.7em; width: 7px; height: 7px; border-radius: 50%; background: var(--honey); }
+        ol.steps { counter-reset: step; }
+        ol.steps li { counter-increment: step; position: relative; padding-left: 46px; color: var(--ink-2); min-height: 34px; }
+        ol.steps li::before { content: counter(step); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%; background: var(--honey-soft); color: #6E4708; font-family: 'Fraunces', serif; font-weight: 700; display: grid; place-items: center; }
+        b, strong { color: var(--ink); }
+        .tip { margin: 16px 0; padding: 16px 18px; border-radius: 18px; background: #fff; border: 1px solid var(--line); color: var(--ink-2); max-width: 720px; }
+        .tip b { color: var(--teal-deep); }
+        .figure { display: grid; grid-template-columns: 1fr 210px; gap: 32px; align-items: start; }
+        .figure .phone { border-radius: 36px; border: 6px solid #141110; background: #141110; overflow: hidden; box-shadow: 0 18px 44px rgba(33,30,26,0.16); }
+        .figure .phone img { border-radius: 30px; }
+        .figure figcaption { font-size: 0.85rem; color: var(--ink-3); text-align: center; margin-top: 8px; }
+        @media (max-width: 720px) { .figure { grid-template-columns: 1fr; } .figure figure { max-width: 220px; margin: 0 auto; } }
+        table { width: 100%; max-width: 720px; border-collapse: collapse; margin: 14px 0; font-size: 0.95rem; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink-2); }
+        th { color: var(--ink); font-weight: 800; background: var(--linen-2); }
+        .kbd { display: inline-block; padding: 1px 8px; border-radius: 8px; background: var(--linen-3); font-weight: 700; color: var(--ink); font-size: 0.9em; }
+
+        footer { padding: 36px 0; color: var(--ink-3); font-size: 0.9rem; border-top: 1px solid var(--line); }
+        .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+        footer a { color: var(--ink-2); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <nav class="nav" aria-label="Hammock">
+        <div class="container nav-inner">
+            <a href="./" class="brand"><img src="icon.png" alt="" width="32" height="32"><span>Hammock <small>for iPhone</small></span></a>
+            <div class="nav-links">
+                <a href="./">Overview</a>
+                <a href="/hammock/guide" aria-current="page">Guide</a>
+                <a href="/hammock/support">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container intro">
+        <span class="eyebrow">The Guide</span>
+        <h1>How Hammock works</h1>
+        <p>Everything the app does, and where to find it, from saving your first find to moving a whole library from Android. If something is not covered here, email <a href="mailto:support@top7systems.net">support@top7systems.net</a>.</p>
+    </header>
+
+    <div class="container layout">
+        <nav class="toc" aria-label="Contents">
+            <p>Contents</p>
+            <ol>
+                <li><a href="#start">Getting started</a></li>
+                <li><a href="#share">Saving from any app</a></li>
+                <li><a href="#search">Searching</a></li>
+                <li><a href="#pile">The Pile</a></li>
+                <li><a href="#item">An item's page</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#pick">Pick for me</a></li>
+                <li><a href="#widgets">Widgets, Control Center and Siri</a></li>
+                <li><a href="#library">Library</a></li>
+                <li><a href="#logbook">Logbook</a></li>
+                <li><a href="#plus">Hammock Plus</a></li>
+                <li><a href="#backup">Backups and Android</a></li>
+                <li><a href="#themes">Themes and categories</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#access">Accessibility</a></li>
+                <li><a href="#trouble">Troubleshooting</a></li>
+            </ol>
+        </nav>
+
+        <article>
+            <section id="start">
+                <h2>Getting started</h2>
+                <div class="figure">
+                    <div>
+                        <p>Hammock is a downtime organiser: one calm place for every book, film, series, game, podcast and album you want to get to, plus a logbook of what you finished. There is no account and no server. Everything lives on your iPhone or iPad.</p>
+                        <p>The app has four tabs and a search button:</p>
+                        <ul>
+                            <li><b>Home</b>: Pick for me, what you are in the middle of, what is pinned to Up next, what is fresh in the Pile and what you finished recently. The clock button opens the logbook and the gear opens Settings.</li>
+                            <li><b>Pile</b>: everything saved but not sorted yet. The badge shows how many things are waiting.</li>
+                            <li><b>Lists</b>: your own collections, which can mix categories.</li>
+                            <li><b>Library</b>: everything, by category and status.</li>
+                            <li><b>Search</b> (the magnifying glass): one search across every catalogue.</li>
+                        </ul>
+                        <p>Hammock runs on iPhone and iPad with iOS 18 or later. On iOS 26 the tab bar and buttons use Liquid Glass; earlier versions get the classic look.</p>
+                    </div>
+                    <figure><div class="phone"><img src="shots/home.jpg" alt="Hammock's home screen" loading="lazy"></div><figcaption>Home</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="share">
+                <h2>Saving from any app</h2>
+                <p>The quickest way in is the share sheet. In Safari, Letterboxd, Goodreads, IMDb, Apple Podcasts, Apple Music, Apple TV, YouTube, Steam or any other app, share a page or a link and choose <b>Hammock</b>.</p>
+                <ol class="steps">
+                    <li>Tap <b>Share</b> (the square with an arrow) and tap <b>Hammock</b> in the row of apps.</li>
+                    <li>A sheet opens over the app you were in. Hammock reads the page, fills in the title and cover, and guesses the category from the site: a Goodreads link becomes a book, a Steam link a game, a Spotify show a podcast. It also looks the title up in that category's catalogue, so a film saved from a review site gets its poster, director and year rather than the page's banner.</li>
+                    <li>Change the title or category if you like, then tap <b>Save to the Pile</b>.</li>
+                </ol>
+                <p>The item appears in the Pile as soon as you next open Hammock, with a message at the bottom to open it. If you saved before the page finished loading, Hammock finishes reading it then and fills in the cover and details.</p>
+                <div class="tip"><b>Can't see Hammock in the share sheet?</b> Scroll the row of apps to the end and tap <b>More</b>, then tap <b>Edit</b> and add Hammock to your favourites so it shows first. Hammock appears for links and text; apps that share only photos or files do not offer it.</div>
+            </section>
+
+            <section id="search">
+                <h2>Searching</h2>
+                <div class="figure">
+                    <div>
+                        <p>Tap the magnifying glass and type a title. With <b>Everything</b> selected, Hammock searches every catalogue at once and groups the results by category. Tap a category chip to search just that catalogue.</p>
+                        <ul>
+                            <li>Things already in your library appear first under <b>Already in Hammock</b>, so nothing gets added twice. Tap one to open it.</li>
+                            <li>Tap <b>Add</b> on a result (or anywhere on its row). It lands in the Pile, and a message offers to open it.</li>
+                            <li>Searching from inside a list adds straight into that list. Searching from the Library's <b>+</b> starts in the category you were looking at.</li>
+                            <li><b>Add manually</b> (top right) opens a form for things no catalogue knows. Paste a link into its Link field and Hammock reads the page for the title, creator, year and cover.</li>
+                        </ul>
+                        <table>
+                            <tr><th>Category</th><th>Catalogue</th></tr>
+                            <tr><td>Books</td><td>Open Library</td></tr>
+                            <tr><td>Films</td><td>Wikipedia</td></tr>
+                            <tr><td>TV shows</td><td>TVmaze</td></tr>
+                            <tr><td>Video games</td><td>Steam store (PC titles)</td></tr>
+                            <tr><td>Podcasts and music</td><td>Apple's public catalogue</td></tr>
+                            <tr><td>Board games, Other and your own categories</td><td>None: add by hand or share a link</td></tr>
+                        </table>
+                    </div>
+                    <figure><div class="phone"><img src="shots/search.jpg" alt="Search results for dune" loading="lazy"></div><figcaption>One search, every catalogue</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="pile">
+                <h2>The Pile</h2>
+                <p>The Pile is your inbox: everything you save lands there until you sort it. An item leaves the Pile as soon as it is in a list, started, finished or dropped.</p>
+                <ul>
+                    <li><b>Swipe right</b> on a row to start it.</li>
+                    <li><b>Swipe left</b> to delete it, or to reveal <b>Done</b>. Every delete shows a message with <b>Undo</b> for a few seconds, and Undo puts back the item with its lists, tags and history.</li>
+                    <li><b>Touch and hold</b> a row for the full menu: Start, Mark done, Pin to Up next, Add to list and Delete.</li>
+                </ul>
+                <p>The same touch-and-hold menu works on every cover and row in the app.</p>
+            </section>
+
+            <section id="item">
+                <h2>An item's page</h2>
+                <div class="figure">
+                    <div>
+                        <p>Tap any cover or row to open its page. The cover zooms open into a page with a soft backdrop made from the cover itself.</p>
+                        <ul>
+                            <li><b>Status</b>: Want, Started, Done or Dropped. Marking something Done records the date, fills its progress and sends it to the logbook. Changing your mind within ten minutes corrects the last entry rather than adding another.</li>
+                            <li><b>Progress</b>: tap <span class="kbd">+</span> and <span class="kbd">−</span>, or tap the card to type a current value and a total and choose what it is counted in: pages, chapters, episodes, hours, minutes, levels or percent. Adding progress to something you only wanted starts it.</li>
+                            <li><b>Rating</b>: tap the left half of a star for a half star, the right half for a whole one. Tap your current rating again to clear it.</li>
+                            <li><b>Lists</b>: the lists it is in, each removable with its ×, and <b>Add to list</b>.</li>
+                            <li><b>Tags</b>: separate them with commas. They save when you press Done on the keyboard or leave the field.</li>
+                            <li><b>Notes</b>: save by themselves as you type.</li>
+                            <li>The <b>pin</b> button puts it on Home under Up next. The <b>…</b> menu edits the title, creator and year, shares the link, or deletes the item.</li>
+                            <li><b>Change cover</b>, also in the <b>…</b> menu, shows the artwork the catalogue has for that title so you can pick another, paste an image link, or remove the cover.</li>
+                        </ul>
+                    </div>
+                    <figure><div class="phone"><img src="shots/item.jpg" alt="An item's page" loading="lazy"></div><figcaption>The Martian, in progress</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="lists">
+                <h2>Lists</h2>
+                <p>Lists can mix categories: "Rainy weekend" can hold a novel, two films and a game. Create one in the <b>Lists</b> tab with <b>+</b> and give it a name, a colour and an icon.</p>
+                <ul>
+                    <li>Add to a list from an item's page (<b>Add to list</b>), from any touch-and-hold menu, or with <b>+</b> inside the list, which opens search with that list as the destination.</li>
+                    <li>Inside a list, swipe left on a row to remove it from the list. The item stays in your library.</li>
+                    <li>The <b>…</b> menu edits the list, deletes it (its items stay in your library), or <b>Share as picture</b>.</li>
+                </ul>
+                <h3>Sharing a list as a picture</h3>
+                <p>Share as picture draws a card with the list's name and up to nine covers in its colour. Tap <b>Share</b> to send it to Messages, Instagram, WhatsApp, Mail, Photos or anywhere else in the share sheet. The picture is made on your iPhone; nothing is posted unless you choose an app to post it to.</p>
+            </section>
+
+            <section id="pick">
+                <h2>Pick for me</h2>
+                <div class="figure">
+                    <div>
+                        <p>Tap the <b>Pick for me</b> card on Home when you cannot decide. Hammock shuffles through the things you want to get to and settles on one.</p>
+                        <ul>
+                            <li>Tap a category chip to pick only from, say, films.</li>
+                            <li><b>Pick again</b> chooses something else; <b>Start it</b> marks it started and puts it under Continue.</li>
+                            <li>Tap the pick itself to open its page.</li>
+                        </ul>
+                        <p>Pick for me chooses from everything with the status Want, whether it is in the Pile or in a list.</p>
+                    </div>
+                    <figure><div class="phone"><img src="shots/pick.jpg" alt="The Pick for me sheet" loading="lazy"></div><figcaption>Pick for me</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="widgets">
+                <h2>Widgets, Control Center and Siri</h2>
+                <p>Pick for me also lives outside the app. The Control Center button and Siri are free; the Home Screen and Lock Screen widgets come with Hammock Plus.</p>
+                <h3>Home Screen widget</h3>
+                <ol class="steps">
+                    <li>Touch and hold an empty spot on your Home Screen until the apps jiggle.</li>
+                    <li>Tap <b>Edit</b>, then <b>Add Widget</b>.</li>
+                    <li>Search for <b>Hammock</b>, choose <b>Pick for me</b> in the small or medium size, and tap <b>Add Widget</b>.</li>
+                </ol>
+                <p>The widget shows one thing from your wants with its cover. Tap it to open that item; tap the shuffle button to pick again without opening the app. It also changes by itself a few times a day.</p>
+                <h3>Lock Screen</h3>
+                <p>Touch and hold the Lock Screen, tap <b>Customize</b>, choose the Lock Screen, tap the widget area and add Hammock's <b>Pick for me</b>. It shows tonight's suggestion; tapping it opens the item.</p>
+                <h3>Control Center</h3>
+                <p>Open Control Center, touch and hold an empty area, tap <b>Add a Control</b> and search for Hammock. The <b>Pick for me</b> button opens Hammock straight to a fresh pick.</p>
+                <h3>Siri and Shortcuts</h3>
+                <p>Say "Pick something in Hammock" or "Hammock pick for me". The same action is in the Shortcuts app, so you can add it to your own shortcuts or to the Action button.</p>
+            </section>
+
+            <section id="library">
+                <h2>Library</h2>
+                <p>The <b>Library</b> tab shows everything. Use the chips at the top to choose a category (or All) and the segments for <b>Want</b>, <b>Started</b>, <b>Done</b> and <b>Dropped</b>. The button at the top right switches between a list and a poster wall, and Hammock remembers your choice. <b>+</b> searches in the category you are looking at.</p>
+            </section>
+
+            <section id="logbook">
+                <h2>Logbook</h2>
+                <div class="figure">
+                    <div>
+                        <p>The clock button on Home opens the logbook: every start, finish and drop by month, with the rating you gave. The tiles at the top count what you finished this year and this month, and your average rating this year.</p>
+                        <p>With Hammock Plus the logbook also shows a chart of finishes for each of the last twelve months and a breakdown by category for the year. Tap any entry to open the item.</p>
+                        <p>Each item counts once per month, so finishing a series and correcting its status does not inflate your numbers.</p>
+                    </div>
+                    <figure><div class="phone"><img src="shots/logbook.jpg" alt="The logbook with charts" loading="lazy"></div><figcaption>Your year in charts</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="plus">
+                <h2>Hammock Plus</h2>
+                <p>Hammock is free with no limits on items or lists. <b>Hammock Plus</b> is a single one-time purchase made in the app through the App Store. It is not a subscription. It unlocks all eight colour themes, the logbook charts, custom categories, and the Home Screen and Lock Screen widgets.</p>
+                <ol class="steps">
+                    <li>Open <b>Settings</b> (the gear on Home) and tap <b>Unlock Plus</b>, or tap any locked feature.</li>
+                    <li>The App Store's own purchase sheet appears. Confirm with Face ID, Touch ID or your password. Payment is handled by Apple; we never see your payment details.</li>
+                    <li>Plus unlocks at once on this device and on your other devices with the same Apple Account.</li>
+                </ol>
+                <p><b>Restoring:</b> on a new or reset device, open Plus and tap <b>Restore Purchases</b>. <b>Family Sharing:</b> if you share purchases with your family, they get Plus too. <b>Refunds</b> are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            </section>
+
+            <section id="backup">
+                <h2>Backups, and moving between Android and iPhone</h2>
+                <p>Your library is stored on your device. iCloud Backup and computer backups of your iPhone include it like any app's data, and restoring a device backup brings it back.</p>
+                <h3>Exporting a backup file</h3>
+                <p>In <b>Settings → Your data</b>, tap <b>Export backup</b> and choose where to save it, for example iCloud Drive or On My iPhone in Files. The file is plain JSON with all your items, lists, tags, ratings, notes and logbook, readable by hand if you ever need to.</p>
+                <h3>Importing a backup</h3>
+                <p>Tap <b>Import backup</b> and choose the file. Importing <b>merges</b>: nothing is deleted, and items you already have (same title in the same category) are skipped. Lists with the same name are joined.</p>
+                <h3>Moving from Android</h3>
+                <ol class="steps">
+                    <li>In Hammock for Android, open <b>Settings → Your data → Export backup</b> and save the file to Google Drive, or share it to yourself by email.</li>
+                    <li>On your iPhone, save the file to Files (from Mail, tap the attachment and choose Save to Files; from Google Drive, use Open in, then Save to Files).</li>
+                    <li>In Hammock, open <b>Settings → Your data → Import backup</b> and choose the file.</li>
+                </ol>
+                <p>Moving the other way works the same, because both apps read and write the same format. Hammock Plus is bought separately on each platform's store.</p>
+            </section>
+
+            <section id="themes">
+                <h2>Themes and categories</h2>
+                <p><b>Settings → Appearance</b> has eight colour themes: Linen and Honey are free; Terracotta, Meadow, Ocean, Plum, Rose and Ink come with Plus. Each has a light version and a dusk version that is never pure black. Choose <b>System</b>, <b>Light</b> or <b>Dark</b> to follow your iPhone or fix one. The share sheet and the widgets follow your theme too.</p>
+                <p><b>Settings → Categories</b> lets you rename, recolour and re-icon any category, change what its progress is counted in, and hide the ones you do not use (their items stay in your library). With Plus you can add your own, such as Recipes or Courses; deleting one moves its items to Other.</p>
+            </section>
+
+            <section id="privacy">
+                <h2>Privacy</h2>
+                <p>Hammock has no account and keeps your library on your device. It uses the internet only when you search a catalogue (your search words go to that catalogue), save or open a link, or when covers are downloaded from where they are published. There are no ads, no analytics and no tracking. The App Store privacy label is "Data Not Collected". The full details are in the <a href="/hammock/privacy">privacy policy</a>.</p>
+            </section>
+
+            <section id="access">
+                <h2>Accessibility</h2>
+                <ul>
+                    <li><b>VoiceOver</b> reads every cover as its title, creator, category, progress and rating. On the rating stars, swipe up or down to change the rating by half a star; on the progress card, swipe up or down to step progress. In the Pile, the rotor's Actions offer Start, Mark done and Delete.</li>
+                    <li><b>Dynamic Type</b>: text grows with your text size setting, and the status picker turns into wrapping buttons when the labels no longer fit side by side.</li>
+                    <li><b>Reduce Motion</b>: Pick for me lands directly without the shuffle.</li>
+                    <li>Every action has a haptic you can feel, and every change is also spoken by VoiceOver.</li>
+                </ul>
+            </section>
+
+            <section id="trouble">
+                <h2>Troubleshooting</h2>
+                <h3>Search says "Search did not work"</h3>
+                <p>A catalogue could not be reached. Check your connection and try again; the other catalogues still answer. Apple's catalogue allows a limited number of searches a minute, so a short pause can help.</p>
+                <h3>A cover is missing</h3>
+                <p>Not every catalogue entry has artwork, and some pages do not publish an image. The item still works, with a coloured card and its first letter. Covers you have seen are kept on the device, so they also show offline.</p>
+                <h3>Something I shared is not in the Pile</h3>
+                <p>Shared items arrive when Hammock next opens. If you shared while Hammock was already open, switch away and back. If the sheet closed before you tapped Save, nothing was saved.</p>
+                <h3>The widget says it is part of Hammock Plus</h3>
+                <p>Open Hammock once after buying or restoring Plus; the widget updates within a few seconds.</p>
+                <h3>Plus is not available or the price does not show</h3>
+                <p>The App Store did not answer. Check the connection and that In-App Purchases are allowed in Settings → Screen Time → Content & Privacy Restrictions, then open Plus again.</p>
+                <h3>I want to start over</h3>
+                <p>Export a backup first if you might want it later, then delete the app and install it again. Restore Plus from Settings afterwards.</p>
+                <p>Still stuck? Email <a href="mailto:support@top7systems.net">support@top7systems.net</a> with your device, iOS version and what you expected to happen. A screenshot helps.</p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Top 7 Systems · <a href="/hammock/privacy">Privacy</a> · <a href="/hammock/terms">Terms</a></p>
+            <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+        </div>
+    </footer>
+</body>
+</html>
