@@ -2,7 +2,7 @@
   "version": 1,
   "generatedAt": "2026-04-03T00:00:00Z",
   "source": "radio-browser.info + ACMA Licensed Broadcasting Transmitter Data (CC BY 2.5 AU)",
-  "stationCount": 1500,
+  "stationCount": 1501,
   "stations": [
     {
       "id": "da3a6aa9-97ba-4b16-b3d8-637aec3e4477",
@@ -45620,6 +45620,39 @@
       ],
       "codec": "AAC+",
       "bitrate": 64,
+      "lastVerified": null,
+      "recordingDisabled": false
+    },
+    {
+      "id": "67cedbe8-d5f1-5a75-bb56-c4d8ae97735f",
+      "name": "91.3 SportFM",
+      "callsign": "6WSM",
+      "frequency": "91.3 FM",
+      "description": "Sport radio for Perth, WA. Community station covering WAFL, Perth Glory and grassroots sport.",
+      "genre": "sport",
+      "secondaryGenres": [
+        "community"
+      ],
+      "state": "WA",
+      "city": "Perth",
+      "latitude": -32.087262,
+      "longitude": 115.778896,
+      "streamURL": "https://stream.lava.net.au/au_wa_6wsm_sportfm",
+      "streamURLHQ": null,
+      "websiteURL": "https://www.sportfm.com.au",
+      "logoURL": "https://www.sportfm.com.au/wp-content/uploads/2024/04/sportfm_logo.png",
+      "isCommunity": true,
+      "isCommercial": false,
+      "isNational": false,
+      "isABC": false,
+      "isSBS": false,
+      "tags": [
+        "fm",
+        "community",
+        "sport"
+      ],
+      "codec": "MP3",
+      "bitrate": 112,
       "lastVerified": null,
       "recordingDisabled": false
     }
