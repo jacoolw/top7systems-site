@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampr - GPS Photo &amp; Video Stamp Camera with Voice Notes | iOS &amp; Android</title>
-    <meta name="description" content="Stamp GPS coordinates, address, and voice notes directly onto photos and videos, or keep GPS-stamped field notes without a photo on Android. Organize by project, export PDF reports, sync privately through iCloud on iPhone. No subscription.">
+    <meta name="description" content="Stamp GPS coordinates, address, and voice notes directly onto photos and videos, or keep GPS-stamped field notes without a photo. Organize by project, export PDF reports, sync privately through iCloud on iPhone. No subscription.">
     <meta name="keywords" content="GPS camera, photo stamp, video stamp, GPS video, voice notes, field notes, GPS notes, search and rescue log, geotag, survey camera, site photo, field camera, construction photo, GPS photo app, iCloud sync">
     <meta property="og:title" content="Stampr - GPS Photo &amp; Video Stamp Camera">
     <meta property="og:description" content="Say it. Stamp it. Done. The GPS field camera that burns coordinates and voice notes onto your photos and videos.">
@@ -543,6 +543,36 @@
             border: 6px solid #000;
         }
 
+        /* One feature shown on both platforms, side by side. */
+        .feature-visual-pair {
+            gap: 20px;
+            align-items: flex-end;
+        }
+
+        .feature-visual-pair figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        .feature-visual-pair .feature-screenshot {
+            width: 220px;
+        }
+
+        .feature-visual-pair figcaption {
+            margin-top: 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-muted-dark);
+        }
+
+        .feature-store-links {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 24px;
+        }
+
         @media (max-width: 768px) {
             .feature-row {
                 grid-template-columns: 1fr;
@@ -563,6 +593,17 @@
             }
             .feature-screenshot {
                 width: 220px;
+            }
+            .feature-visual-pair {
+                gap: 14px;
+            }
+            .feature-visual-pair .feature-screenshot {
+                width: 150px;
+                border-radius: 20px;
+                border-width: 4px;
+            }
+            .feature-store-links {
+                justify-content: center;
             }
         }
 
@@ -1400,16 +1441,16 @@
                 </div>
             </div>
 
-            <!-- Feature 4: Field Notes (Android) -->
+            <!-- Feature 4: Field Notes -->
             <div class="feature-row reverse reveal" id="field-notes">
                 <div class="feature-text">
-                    <span class="section-label">Field Notes <span class="label-pill">New on Android</span></span>
+                    <span class="section-label">Field Notes <span class="label-pill">New</span></span>
                     <h2>Notes without a photo, stamped like one</h2>
-                    <p>Not everything worth recording needs a picture. Turn on Field Notes and Stampr for Android adds a Notes tab: tap the mic and talk, or type, and each note gets the time and your GPS position, just like a photo, then is turned into text on the phone. Keep one log open for a whole job or search. The photos and videos you take along the way go into it too, and when you close it, you can share the lot as a PDF report.</p>
+                    <p>Not everything worth recording needs a picture. Turn on Field Notes and Stampr adds a Notes tab: tap the mic and talk, or type, and each note gets the time and your GPS position, just like a photo, then is turned into text on the phone. Keep one log open for a whole job or search. The photos and videos you take along the way go into it too, and when you close it, you can share the lot as a PDF report.</p>
                     <ul class="feature-list">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Tap or hold the mic, or press a volume button with gloves on
+                            Tap or hold the mic. Hands full? Use Siri or the Action button on iPhone, or a volume button on Android
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1424,10 +1465,20 @@
                             Free and unlimited. Off by default; switch it on in Settings
                         </li>
                     </ul>
-                    <a class="platform-store-link" href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener">Get it on Google Play &rarr;</a>
+                    <div class="feature-store-links">
+                        <a class="platform-store-link" href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625?pt=127886316&amp;ct=web-fieldnotes&amp;mt=8" target="_blank" rel="noopener">Download on the App Store &rarr;</a>
+                        <a class="platform-store-link" href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener">Get it on Google Play &rarr;</a>
+                    </div>
                 </div>
-                <div class="feature-visual">
-                    <img class="feature-screenshot" src="screenshots/android/field-notes.png" alt="Stampr for Android Notes tab showing an open search log: voice and typed notes with tags, USNG coordinates, altitude and accuracy, above the record button" loading="lazy">
+                <div class="feature-visual feature-visual-pair">
+                    <figure>
+                        <img class="feature-screenshot" src="screenshots/field-notes.png" alt="Stampr for iPhone Notes tab showing an open search log: voice and typed notes with tags, MGRS coordinates, altitude and accuracy, above the record button" loading="lazy">
+                        <figcaption>iPhone</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="feature-screenshot" src="screenshots/android/field-notes.png" alt="Stampr for Android Notes tab showing an open search log: voice and typed notes with tags, USNG coordinates, altitude and accuracy, above the record button" loading="lazy">
+                        <figcaption>Android</figcaption>
+                    </figure>
                 </div>
             </div>
 
@@ -1601,7 +1652,7 @@
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Private iCloud sync: photos, projects, and voice notes carry to a new phone. Optional, switchable in Settings
+                            Private iCloud sync: photos, projects, voice notes, and field notes carry to a new phone. Optional, switchable in Settings
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1614,6 +1665,10 @@
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Action button, Siri, and Spotlight search of your notes
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><a href="#field-notes">Field Notes</a> hands-free: say "Record a note in Stampr", press the Action button, or touch and hold the app icon for Record Note</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1639,7 +1694,7 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span><a href="#field-notes">Field Notes</a>: GPS-stamped voice or typed notes without a photo, kept in an open log for a whole job or search. Optional and free</span>
+                            <span><a href="#field-notes">Field Notes</a> hands-free: press a volume button, or use the Stampr Note Quick Settings tile or the Record note shortcut</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1697,7 +1752,7 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            Unlimited field notes (Android)
+                            Unlimited field notes
                         </li>
                         <li class="disabled">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1774,7 +1829,7 @@
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>On Android, yes. Turn on Field Notes in Settings &rarr; Capture and a Notes tab appears. Speak or type a note and it's stamped with the time and your GPS position, then turned into text on the phone. Notes go into an open log for a whole job or search, along with your photos and videos, and closing the log offers a PDF report. Free and unlimited. See the <a href="/android/stampr/help.html#field-notes">Field Notes guide</a>.</p>
+                        <p>Yes, on iPhone and Android. Turn on Field Notes in Settings &rarr; Capture and a Notes tab appears. Speak or type a note and it's stamped with the time and your GPS position, then turned into text on the phone. Notes go into an open log for a whole job or search, along with your photos and videos, and closing the log offers a PDF report. Free and unlimited. See the Field Notes guide for <a href="/stampr/help.html#field-notes">iPhone</a> or <a href="/android/stampr/help.html#field-notes">Android</a>.</p>
                     </div>
                 </div>
 
@@ -1794,7 +1849,7 @@
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Everything except custom branding. You get GPS stamping, video recording, voice notes, AI cleanup, project organisation, PDF reports, and all export formats. The free tier includes 15 stamped photos or videos per month with a small "Stampr" watermark. Field notes on Android are free and unlimited, and never count toward the 15.</p>
+                        <p>Everything except custom branding. You get GPS stamping, video recording, voice notes, AI cleanup, project organisation, PDF reports, and all export formats. The free tier includes 15 stamped photos or videos per month with a small "Stampr" watermark. Field notes are free and unlimited, and never count toward the 15.</p>
                     </div>
                 </div>
 
@@ -1834,7 +1889,7 @@
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>On iPhone, yes. Photos, projects, and voice notes sync through your own private iCloud, so your library carries over to a new phone. You can turn sync off in Settings. On Android, storage is local-only and nothing is uploaded; use project files (.stamprproj) to move work between devices.</p>
+                        <p>On iPhone, yes. Photos, projects, voice notes, and field notes sync through your own private iCloud, so your library carries over to a new phone. You can turn sync off in Settings. On Android, storage is local-only and nothing is uploaded; use project files (.stamprproj) to move work between devices.</p>
                     </div>
                 </div>
 

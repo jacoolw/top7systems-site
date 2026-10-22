@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampr — Help & User Guide | Top 7 Systems</title>
-    <meta name="description" content="Help and user guide for Stampr, the GPS field camera app with voice notes, stamped video, PDF reports, and private iCloud sync for iPhone and iPad.">
+    <meta name="description" content="Help and user guide for Stampr, the GPS field camera app with voice notes, field notes, stamped video, PDF reports, and private iCloud sync for iPhone and iPad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr — Help & User Guide</h1>
-            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.0 and later for iPhone and iPad.</p>
+            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.8 for iPhone and iPad.</p>
 
             <!-- Table of Contents -->
             <div class="toc">
@@ -40,6 +40,7 @@
                     <li><a href="#using-the-camera">Using the Camera</a></li>
                     <li><a href="#voice-notes">Voice Notes & AI Cleanup</a></li>
                     <li><a href="#stamped-video">Stamped Video</a></li>
+                    <li><a href="#field-notes">Field Notes</a></li>
                     <li><a href="#photo-library">Photo Library</a></li>
                     <li><a href="#photo-details">Photo Details</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -59,11 +60,12 @@
             <section id="getting-started">
                 <h2>Getting Started</h2>
                 <p>Stampr is a GPS field camera designed for professionals who need location-stamped photos and video with metadata. It burns GPS coordinates, altitude, bearing, street address, and optional voice notes directly onto your photos — and embeds the GPS data into the photo file itself (EXIF), so your shots pin correctly in Photos, GIS software, and claims tools.</p>
-                <p>The app has three tabs:</p>
+                <p>The app has three tabs, plus a fourth if you turn on Field Notes:</p>
                 <ul>
-                    <li><strong>Camera</strong> — Take GPS-stamped photos and videos with a live metadata overlay.</li>
-                    <li><strong>Library</strong> — Browse, search, and organize your photos by project and tags.</li>
-                    <li><strong>Settings</strong> — Customise the stamp format, toggle features, and manage your Pro purchase.</li>
+                    <li><strong>Camera</strong>: Take GPS-stamped photos and videos with a live metadata overlay.</li>
+                    <li><strong>Notes</strong> (optional): Speak or type GPS-stamped notes without a photo, kept in an open log. See <a href="#field-notes">Field Notes</a>.</li>
+                    <li><strong>Library</strong>: Browse, search, and organize your photos, videos, and notes by project and tags.</li>
+                    <li><strong>Settings</strong>: Customise the stamp format, toggle features, and manage your Pro purchase.</li>
                 </ul>
 
                 <div class="screenshot-row">
@@ -76,7 +78,7 @@
                     <div class="step-num">1</div>
                     <div class="step-content">
                         <h4>Grant Permissions</h4>
-                        <p>When you first open Stampr, allow access to your camera and location. Microphone access is needed only if you use voice notes or record video. You can change these anytime in iOS Settings.</p>
+                        <p>When you first open Stampr, allow access to your camera and location. Microphone access is needed only if you use voice notes or field notes, or record video. You can change these anytime in iOS Settings.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -209,12 +211,103 @@
                 </div>
             </section>
 
+            <!-- Field Notes -->
+            <section id="field-notes">
+                <h2>Field Notes</h2>
+                <p>Some things worth recording have no picture: a radio check, the fork you took, a measurement, what a witness said. Field Notes lets you speak or type a note without taking a photo, and stamps each one with the time and your GPS position, just like a photo. Notes go into an open log that you keep for a whole job or search until you close it, together with the photos and videos you take along the way. Field Notes arrived in Stampr 2.8.</p>
+
+                <div class="screenshot-single">
+                    <img src="screenshots/field-notes.png" alt="Notes tab with an open search log: voice and typed notes with tags and MGRS grid references, the live GPS strip, and the record button">
+                </div>
+
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Turn It On</h4>
+                        <p>Field Notes is off by default. Go to Settings &rarr; Capture and turn on <em>Field Notes</em>. A <strong>Notes</strong> tab appears between Camera and Library.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Start a Log</h4>
+                        <p>On the Notes tab, tap <em>Start Log</em>. It's named with the date and time, like "Log 22 Oct, 8:05 pm", and the name comes up selected, so you can type the job or search name straight over it. Pick a colour and tap <em>Start</em>. Until you close it, every note, photo, and video goes into this log.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Speak or Type</h4>
+                        <p>Tap the microphone and talk, then tap again to save. Each note lands in the log with its time and position, and turns into text a moment later.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>Close and Share</h4>
+                        <p>When the job or search is over, open the &middot;&middot;&middot; menu at the top right and choose <em>Close Log</em>, then <em>Close and Share Report</em> to send the whole log as a PDF report.</p>
+                    </div>
+                </div>
+
+                <h3>Ways to Record</h3>
+                <ul>
+                    <li><strong>Tap</strong> the microphone to start, and tap again to save.</li>
+                    <li><strong>Hold</strong> it while you talk, and let go to save.</li>
+                    <li>Tap the <strong>keyboard</strong> button to type a note, then <em>Save Note</em>.</li>
+                    <li>Say <strong>"Record a note in Stampr"</strong> to Siri, or set the <strong>Action button</strong> to <em>Record Field Note</em>. Stampr opens on the Notes tab already recording; ask or press again to save. See <a href="#shortcuts">Shortcuts &amp; Search</a>.</li>
+                    <li>Touch and hold the Stampr icon on the Home Screen and choose <strong>Record Note</strong>.</li>
+                </ul>
+                <p>While a note records, the screen stays on, and you feel a tap as it starts and as it saves. Tap the X beside the microphone to throw a recording away. A note can run for up to five minutes: the timer shows the limit in the last 30 seconds, and at five minutes Stampr saves the note, so you can tap the microphone to carry on in a new one.</p>
+                <div class="tip-box">
+                    <strong>Nothing is lost:</strong> a note is saved the moment it stops. If you switch tabs, leave the app, or take a call partway through a note, what you've said so far is kept as a note.
+                </div>
+
+                <h3>Time and Place</h3>
+                <p>Each note is stamped with where you were when you <em>started</em> it: coordinates in your chosen format, altitude, and GPS accuracy, plus the street address when <em>Print Address on Photo</em> is on and Stampr can look it up. There's no compass bearing on a note, as you weren't aiming the camera at anything. The strip above the microphone shows your current position; when its dot is green, that's the position your next note gets.</p>
+                <p>If there's no fresh fix when you start, Stampr uses the first one that arrives within a minute. If none arrives, the note is still kept and marked <strong>NO GPS FIX</strong>, the same as a photo. The strip says why there's no position (<em>Waiting for GPS…</em>, <em>Location is off in Stampr</em>, <em>Location access is off for Stampr</em>, or <em>Stampr can't use your location yet</em>) and offers a button to fix it.</p>
+
+                <h3>From Speech to Text</h3>
+                <p>Notes are turned into text on the phone by Apple's on-device speech recognition, as photo voice notes are, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. A note waiting its turn shows <em>Transcribing…</em>. The first time, iOS may need to download its speech model; the recording is kept meanwhile. If a note can't be transcribed, it keeps its recording and Stampr tries again the next time it opens. You can also open the note and tap <em>Transcribe</em>, or <em>Try Again</em> if no speech was recognised.</p>
+                <p>On devices with Apple Intelligence, <em>AI Note Cleanup</em> tidies notes and suggests tags, as it does for photos. The original transcript is always kept: tap <em>Show original transcript</em> on the note.</p>
+
+                <h3>The Open Log</h3>
+                <p>A log is a project that stays open: while it's open, every new note, photo, and video goes into it, so a whole search reads as one timeline, oldest first, with a divider for each day. The Notes tab shows the open log, with its name and a count at the top and the newest entry at the bottom. The &middot;&middot;&middot; menu manages it:</p>
+                <ul>
+                    <li><strong>Start a New Log…</strong>: begin another log, which closes the current one.</li>
+                    <li><strong>Switch Log…</strong> (or <strong>Open a Log…</strong> when none is open): open an existing log. Any project can be one.</li>
+                    <li><strong>Close Log</strong>: new notes, photos, and videos stop going into it. It stays in the Library as a project, and you can open it again any time.</li>
+                    <li><strong>Export PDF Report</strong> and <strong>Share Log as Text</strong>: see <a href="#sharing-notes">Sharing Notes</a> below.</li>
+                </ul>
+                <p>The camera button beside the microphone takes you to the camera, and the photos and videos you take go into the open log. Notes made with no log open are kept too, under No Project, and can be filed later.</p>
+                <div class="tip-box">
+                    <strong>Good to know:</strong> the open log is your default project, the one new photos are filed into. Starting a log makes it the default, and closing it clears the default, so photos taken after the search stay out of its log.
+                </div>
+
+                <h3>Reading and Editing a Note</h3>
+                <p>Tap the play button on a note to hear it right in the log, or tap the note to open it. On a note's screen you can play the recording, read its stamp, correct the text (the original transcript stays one tap away), add or remove tags, move it to another project or log, see where it was taken on a map with its address, coordinates, UTM and MGRS / USNG references, altitude, and accuracy, open it in Maps, share it, or delete it. In the log, touch and hold a note for <em>Copy Text</em>, <em>Share Note</em>, and <em>Delete Note</em>.</p>
+                <p>Notes also appear in the Library and in their project, alongside your photos and videos, and Spotlight finds them by their words. A project with notes can be read as a log too: tap the list button at the top of the project (<em>Show as log</em>).</p>
+
+                <h3 id="sharing-notes">Sharing Notes</h3>
+                <ul>
+                    <li><strong>PDF report</strong>: &middot;&middot;&middot; &rarr; <em>Export PDF Report</em>, or <em>Close and Share Report</em> as you close the log. Notes sit among the photos and videos in time order, marked VOICE NOTE or TYPED NOTE, with their words, tags, and location, and with pins on the map overview. A report of notes alone is titled "Stampr Field Notes".</li>
+                    <li><strong>As text</strong>: &middot;&middot;&middot; &rarr; <em>Share Log as Text</em> sends the whole log, oldest first, as plain text you can paste into a message, an email, or an incident record. One note goes the same way from its screen with <em>Share as Text</em>, or with its recording attached using <em>Share with Recording</em>.</li>
+                    <li><strong>With photos</strong>: share a selection from the Library that includes notes, and the notes travel as a Notes.txt file beside the photos and report.</li>
+                    <li><strong>Data export</strong>: CSV, KML, and GeoJSON exports include notes, so a search's notes can go straight into Google Earth or a GIS tool.</li>
+                    <li><strong>Project files</strong>: <em>Share Project File</em> includes notes and their recordings.</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Free and unlimited:</strong> field notes never use one of your 15 free photos a month. Only photos and videos count.
+                </div>
+                <p>With iCloud Sync on, notes and their recordings sync to your other devices along with your photos. Turning Field Notes off hides the Notes tab and the Home Screen quick action; notes you've already made stay in the Library. Asking Siri or pressing the Action button for a note turns Field Notes back on.</p>
+            </section>
+
             <!-- Photo Library -->
             <section id="photo-library">
                 <h2>Photo Library</h2>
 
                 <h3>Browsing Photos &amp; Videos</h3>
                 <p>The Library tab shows all your photos and videos in a grid sorted by date, newest first by default. Videos appear alongside photos with a duration badge in the corner. Switch to oldest-first with the sort button (the up-down arrows) in the toolbar. Use the filter menu to narrow by time period (including a <strong>Yesterday</strong> filter for writing up the previous day's work), project, or <strong>tag</strong>. Use the search bar to find captures by notes (including the original transcript), tags, address, or project name.</p>
+                <p>If you use <a href="#field-notes">Field Notes</a>, your notes appear in the same grid as cards showing their words, a microphone or keyboard icon, and the time. Tap one to open it. Search finds them by their words too.</p>
 
                 <div class="screenshot-row">
                     <img src="screenshots/library.png" alt="Library tab showing the projects row, filter and sort buttons, and photo grid grouped by day">
@@ -222,7 +315,7 @@
                 </div>
 
                 <h3>Map View</h3>
-                <p>Toggle the map icon to see your photos plotted geographically. <strong>Tap any pin to open that photo's details.</strong> Only photos with valid GPS coordinates appear on the map.</p>
+                <p>Toggle the map icon to see your photos plotted geographically. <strong>Tap any pin to open that photo's details.</strong> Only photos with valid GPS coordinates appear on the map, along with any field notes that have a position.</p>
 
                 <div class="screenshot-single">
                     <img src="screenshots/map-view.png" alt="Map view showing Stampr photo pins along the San Francisco Embarcadero waterfront">
@@ -292,7 +385,10 @@
                 <p>From the photo detail screen, tap the project card to move a photo to a different project or remove it from a project. The stamp on the photo updates automatically to reflect the new project name.</p>
 
                 <h3>Default Project</h3>
-                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job.</p>
+                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job. An open field-notes log is your default project; see <a href="#field-notes">Field Notes</a>.</p>
+
+                <h3>Reading a Project as a Log</h3>
+                <p>A project with field notes can also be read as a log: tap the list button at the top of the project (<em>Show as log</em>) to see its notes, photos, and videos as one timeline, oldest first. Tap it again (<em>Show as grid</em>) to go back to the grid.</p>
 
                 <h3>Renaming & Deleting</h3>
                 <p>Open the project menu to rename or delete. After renaming, Stampr asks if you want to update the project name on all existing photos. When deleting, you can keep the photos unassigned or delete them too.</p>
@@ -301,7 +397,7 @@
             <!-- iCloud Sync -->
             <section id="icloud-sync">
                 <h2>iCloud Sync</h2>
-                <p>Your photos, projects, and voice notes sync through your own private iCloud, so your Stampr library carries over automatically when you set up a new iPhone (or between your iPhone and iPad signed into the same Apple Account).</p>
+                <p>Your photos, projects, voice notes, and field notes sync through your own private iCloud, so your Stampr library carries over automatically when you set up a new iPhone (or between your iPhone and iPad signed into the same Apple Account).</p>
                 <ul>
                     <li><strong>It's your iCloud, not ours.</strong> Everything syncs through the private iCloud database attached to your Apple Account. Nothing is shared with us. We cannot see your photos, notes, or locations, and there is no Stampr account to create.</li>
                     <li><strong>On by default.</strong> Sync is enabled out of the box. It needs you to be signed into iCloud on the device and counts against your own iCloud storage.</li>
@@ -326,6 +422,7 @@
                     <li>Every photo embedded at quality, with its full metadata table, notes, and tags</li>
                     <li>A poster frame and full metadata for each video in the selection, with the clip attached to the share as a stamped .mov file</li>
                     <li>Captures in chronological order, accurate "Page N of M" footers on every page, and long notes that continue cleanly onto the next page</li>
+                    <li>Any field notes in the selection, in time order among the photos and videos, marked VOICE NOTE or TYPED NOTE with their words, tags, and location</li>
                 </ul>
 
                 <div class="screenshot-single">
@@ -336,7 +433,7 @@
                 <p>Every stamped photo also carries machine-readable GPS coordinates, altitude, bearing, and the capture time in its EXIF metadata. The time zone at the moment of capture is preserved too, both on the printed date stamp and in the EXIF time-offset field, so a photo taken interstate keeps its local capture time. Shared photos pin correctly in Apple Photos, Google Earth, GIS packages, and insurance claims software. You can turn this off in Settings if you need location-free files.</p>
 
                 <h3>Data Export — CSV, KML, GeoJSON</h3>
-                <p>From any project's menu, choose <em>Export Data</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags.</p>
+                <p>From any project's menu, choose <em>Export Data</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags. Field notes in the project are included as well, each with its time, position, words, and tags.</p>
             </section>
 
             <!-- Project Files -->
@@ -348,7 +445,7 @@
                     <div class="step-num">1</div>
                     <div class="step-content">
                         <h4>Share the Project File</h4>
-                        <p>Open the project, tap the menu, and choose <em>Share Project File</em>. Stampr packs every photo (stamped and original), voice note, and all metadata into one <strong>.stamprproj</strong> file you can AirDrop, message, or email.</p>
+                        <p>Open the project, tap the menu, and choose <em>Share Project File</em>. Stampr packs every photo (stamped and original), voice note, field note with its recording, and all metadata into one <strong>.stamprproj</strong> file you can AirDrop, message, or email.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -362,7 +459,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Merge Without Duplicates</h4>
-                        <p>Importing merges by photo identity: photos you already have are skipped, new ones are added to the matching project. Trade files back and forth as a job progresses — you'll never get duplicates.</p>
+                        <p>Importing merges by photo identity: photos you already have are skipped, new ones are added to the matching project. Trade files back and forth as a job progresses, and you'll never get duplicates. Field notes merge the same way; the receiving iPhone needs Stampr 2.8 or later to bring them in (older versions import the photos and skip the notes).</p>
                     </div>
                 </div>
             </section>
@@ -386,6 +483,7 @@
                         <tr><td>Units</td><td>Metric (m) or Imperial (ft) for altitude and accuracy</td><td>Metric</td></tr>
                         <tr><td>North Reference</td><td>True or magnetic north — bearings are marked &deg;T or &deg;M</td><td>True</td></tr>
                         <tr><td>Voice Notes</td><td>Off, Prompt After Photo, or Hands-Free</td><td>Prompt</td></tr>
+                        <tr><td>Field Notes</td><td>Adds the Notes tab for GPS-stamped voice or typed notes without a photo, kept in an open log</td><td>Off</td></tr>
                         <tr><td>AI Note Cleanup</td><td>On-device AI tidies dictation and suggests tags</td><td>On*</td></tr>
                         <tr><td>Require GPS Fix</td><td>Block the shutter until coordinates are locked</td><td>Off</td></tr>
                         <tr><td>Maximum Resolution</td><td>Capture at the sensor's full resolution</td><td>Off</td></tr>
@@ -397,7 +495,7 @@
                         <tr><td>Auto-Save to Camera Roll</td><td>Also copy stamped photos and videos to the Photos app</td><td>Off</td></tr>
                         <tr><td>Include Report When Sharing</td><td>Attach the PDF report with map and photos</td><td>On</td></tr>
                         <tr><td>Watermark / Logo</td><td>Custom text or logo branding on photos and reports (Pro)</td><td>None</td></tr>
-                        <tr><td>iCloud Sync</td><td>Sync photos, projects, and voice notes through your private iCloud (restart to apply)</td><td>On</td></tr>
+                        <tr><td>iCloud Sync</td><td>Sync photos, projects, voice notes, and field notes through your private iCloud (restart to apply)</td><td>On</td></tr>
                         <tr><td>Location Services</td><td>Enable GPS, address, and compass data</td><td>On</td></tr>
                     </tbody>
                 </table>
@@ -407,7 +505,7 @@
             <!-- Stampr Pro -->
             <section id="stampr-pro">
                 <h2>Stampr Pro</h2>
-                <p>Stampr includes 15 free photos per month. To unlock unlimited photos and remove the watermark, purchase Stampr Pro — a one-time payment with no subscription.</p>
+                <p>Stampr includes 15 free photos per month. To unlock unlimited photos and remove the watermark, purchase Stampr Pro, a one-time payment with no subscription. Field notes are free and unlimited on every plan, and never count toward the 15.</p>
 
                 <div class="tip-box">
                     <strong>What you get with Pro:</strong> Unlimited photos and videos, no "Stampr" watermark, a custom text watermark or your own <strong>logo</strong> on every photo and PDF report — and right after upgrading, Stampr offers to re-stamp your existing photos to remove the free watermark from them too.
@@ -422,8 +520,11 @@
                 <h2>Shortcuts & Search</h2>
                 <h3>Action Button & Siri</h3>
                 <p>Stampr provides a <em>Take Stamped Photo</em> action you can assign to the Action button (iPhone 15 Pro and later) or trigger with Siri — from pocket to a stamped capture in one press. It also works in the Shortcuts app for custom automations.</p>
+                <p>A second action, <em>Record Field Note</em>, opens the Notes tab already recording a <a href="#field-notes">field note</a>; run it again to save the note. Assign it to the Action button in iOS Settings &rarr; Action Button &rarr; Shortcut, or say "Record a note in Stampr" (also "Take a Stampr note"). It switches Field Notes on if it was off.</p>
+                <h3>Home Screen Quick Action</h3>
+                <p>While Field Notes is on, touch and hold the Stampr icon on the Home Screen and choose <em>Record Note</em> to open the Notes tab already recording.</p>
                 <h3>Spotlight</h3>
-                <p>The notes, addresses, and tags on your photos <em>and videos</em> are indexed in iOS Spotlight search. Swipe down on your home screen, search a phrase from a note, and tap the result to jump straight to that capture in Stampr.</p>
+                <p>The notes, addresses, and tags on your photos, videos, and field notes are indexed in iOS Spotlight search. Swipe down on your home screen, search a phrase from a note, and tap the result to jump straight to it in Stampr.</p>
                 <h3>iPad</h3>
                 <p>Stampr 2.0 runs natively on iPad with a layout built for the larger screen — the same library, projects, reports, and project-file import.</p>
             </section>
@@ -437,15 +538,15 @@
                 </div>
                 <div class="info-card">
                     <h3>Location</h3>
-                    <p>Used to stamp GPS coordinates, altitude, bearing, and street address onto photos. You can disable this in Settings if you don't need location data.</p>
+                    <p>Used to stamp GPS coordinates, altitude, bearing, and street address onto photos and videos, and the position onto field notes. You can disable this in Settings if you don't need location data.</p>
                 </div>
                 <div class="info-card">
                     <h3>Microphone</h3>
-                    <p>Needed for voice notes and video sound. Only used while recording. You can disable voice recording in Settings.</p>
+                    <p>Needed for voice notes, field notes, and video sound. Only used while recording. You can disable voice recording in Settings, and still type field notes without it.</p>
                 </div>
                 <div class="info-card">
                     <h3>Speech Recognition</h3>
-                    <p>Used to transcribe voice notes into text on-device. Your audio is not sent to external servers.</p>
+                    <p>Used to transcribe voice notes and field notes into text on-device. Your audio is not sent to external servers.</p>
                 </div>
                 <div class="info-card">
                     <h3>Photo Library (Add)</h3>
@@ -462,8 +563,12 @@
                     <div class="faq-answer">Photos are stored on your device and, with iCloud Sync on (the default), also in your own private iCloud, so they carry over to a new phone. Turn sync off in Settings &rarr; Data if you want everything to stay on-device only. You can also move whole projects between devices with project files (see Project Files above). Videos are kept in Stampr's Library on the device that recorded them, and because clips are large they are not carried by iCloud Sync; turn on Auto-Save to Camera Roll if you want each one copied to the Photos app as well.</div>
                 </details>
                 <details class="faq-toggle">
+                    <summary>Can I record a note without taking a photo?</summary>
+                    <div class="faq-answer">Yes. Turn on Field Notes in Settings &rarr; Capture and a Notes tab appears. Speak or type a note and it's stamped with the time and your GPS position, then turned into text on the phone. Notes go into an open log for a whole job or search, along with your photos and videos, and closing the log offers a PDF report. Field notes are free and unlimited. See <a href="#field-notes">Field Notes</a>.</div>
+                </details>
+                <details class="faq-toggle">
                     <summary>Do my photos sync between my iPhone and iPad?</summary>
-                    <div class="faq-answer">Yes. With iCloud Sync on, photos, projects, and voice notes sync through your private iCloud between devices signed into the same Apple Account. If you prefer manual control, turn sync off and use project files (.stamprproj) instead; importing merges without duplicates.</div>
+                    <div class="faq-answer">Yes. With iCloud Sync on, photos, projects, voice notes, and field notes sync through your private iCloud between devices signed into the same Apple Account. If you prefer manual control, turn sync off and use project files (.stamprproj) instead; importing merges without duplicates.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Can Top 7 Systems see my synced photos?</summary>
