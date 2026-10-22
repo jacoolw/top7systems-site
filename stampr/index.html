@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampr - GPS Photo &amp; Video Stamp Camera with Voice Notes | iOS &amp; Android</title>
-    <meta name="description" content="Stamp GPS coordinates, address, and voice notes directly onto photos and videos. Organize by project, export PDF reports, sync privately through iCloud on iPhone. No subscription. Available on iPhone and Android.">
-    <meta name="keywords" content="GPS camera, photo stamp, video stamp, GPS video, voice notes, geotag, survey camera, site photo, field camera, construction photo, GPS photo app, iCloud sync">
+    <meta name="description" content="Stamp GPS coordinates, address, and voice notes directly onto photos and videos, or keep GPS-stamped field notes without a photo on Android. Organize by project, export PDF reports, sync privately through iCloud on iPhone. No subscription.">
+    <meta name="keywords" content="GPS camera, photo stamp, video stamp, GPS video, voice notes, field notes, GPS notes, search and rescue log, geotag, survey camera, site photo, field camera, construction photo, GPS photo app, iCloud sync">
     <meta property="og:title" content="Stampr - GPS Photo &amp; Video Stamp Camera">
     <meta property="og:description" content="Say it. Stamp it. Done. The GPS field camera that burns coordinates and voice notes onto your photos and videos.">
     <meta property="og:type" content="website">
@@ -486,6 +486,14 @@
             margin-bottom: 12px;
         }
 
+        .label-pill {
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--brand-glow);
+            font-size: 10px;
+            letter-spacing: 0.08em;
+        }
+
         .feature-text h2 {
             font-size: clamp(1.5rem, 3vw, 2.25rem);
             font-weight: 800;
@@ -792,6 +800,12 @@
             flex-shrink: 0;
         }
 
+        .pricing-features a {
+            color: var(--brand);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
         .pricing-features li.disabled {
             color: #c5c5c5;
         }
@@ -998,7 +1012,7 @@
         }
 
         .faq-item.open .faq-answer {
-            max-height: 300px;
+            max-height: 600px;
             padding-bottom: 20px;
         }
 
@@ -1006,6 +1020,12 @@
             font-size: 0.95rem;
             color: var(--text-secondary);
             line-height: 1.7;
+        }
+
+        .faq-answer a {
+            color: var(--brand);
+            font-weight: 600;
+            text-decoration: none;
         }
 
         /* ================================================================
@@ -1380,8 +1400,39 @@
                 </div>
             </div>
 
-            <!-- Feature 4: Organize by Project -->
-            <div class="feature-row reverse reveal">
+            <!-- Feature 4: Field Notes (Android) -->
+            <div class="feature-row reverse reveal" id="field-notes">
+                <div class="feature-text">
+                    <span class="section-label">Field Notes <span class="label-pill">New on Android</span></span>
+                    <h2>Notes without a photo, stamped like one</h2>
+                    <p>Not everything worth recording needs a picture. Turn on Field Notes and Stampr for Android adds a Notes tab: tap the mic and talk, or type, and each note gets the time and your GPS position, just like a photo, then is turned into text on the phone. Keep one log open for a whole job or search. The photos and videos you take along the way go into it too, and when you close it, you can share the lot as a PDF report.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tap or hold the mic, or press a volume button with gloves on
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Coordinates, altitude, and accuracy on every note, in your chosen format, including MGRS / USNG
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            One timeline per search: notes, photos, and videos, oldest first
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free and unlimited. Off by default; switch it on in Settings
+                        </li>
+                    </ul>
+                    <a class="platform-store-link" href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener">Get it on Google Play &rarr;</a>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="screenshots/android/field-notes.png" alt="Stampr for Android Notes tab showing an open search log: voice and typed notes with tags, USNG coordinates, altitude and accuracy, above the record button" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Feature 5: Organize by Project -->
+            <div class="feature-row reveal">
                 <div class="feature-text">
                     <span class="section-label">Project Organisation</span>
                     <h2>Every photo in its place. Every project at your fingertips.</h2>
@@ -1410,8 +1461,8 @@
                 </div>
             </div>
 
-            <!-- Feature 5: PDF Reports -->
-            <div class="feature-row reveal">
+            <!-- Feature 6: PDF Reports -->
+            <div class="feature-row reverse reveal">
                 <div class="feature-text">
                     <span class="section-label">Reports & Export</span>
                     <h2>Professional PDF reports in one tap</h2>
@@ -1588,6 +1639,10 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><a href="#field-notes">Field Notes</a>: GPS-stamped voice or typed notes without a photo, kept in an open log for a whole job or search. Optional and free</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             Optional OpenStreetMap inset on the stamp, editable addresses
                         </li>
                         <li>
@@ -1639,6 +1694,10 @@
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                             15 photos or videos/month
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Unlimited field notes (Android)
                         </li>
                         <li class="disabled">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1711,6 +1770,16 @@
 
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
+                        Can I record a note without taking a photo?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>On Android, yes. Turn on Field Notes in Settings &rarr; Capture and a Notes tab appears. Speak or type a note and it's stamped with the time and your GPS position, then turned into text on the phone. Notes go into an open log for a whole job or search, along with your photos and videos, and closing the log offers a PDF report. Free and unlimited. See the <a href="/android/stampr/help.html#field-notes">Field Notes guide</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
                         Is my data private?
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     </button>
@@ -1725,7 +1794,7 @@
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Everything except custom branding. You get GPS stamping, video recording, voice notes, AI cleanup, project organisation, PDF reports, and all export formats. The free tier includes 15 stamped photos or videos per month with a small "Stampr" watermark.</p>
+                        <p>Everything except custom branding. You get GPS stamping, video recording, voice notes, AI cleanup, project organisation, PDF reports, and all export formats. The free tier includes 15 stamped photos or videos per month with a small "Stampr" watermark. Field notes on Android are free and unlimited, and never count toward the 15.</p>
                     </div>
                 </div>
 

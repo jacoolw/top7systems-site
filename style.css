@@ -4,6 +4,9 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Anchor jumps (contents links, deep links) land below the sticky header. */
+html { scroll-padding-top: 80px; }
+
 :root {
     --bg: #ffffff;
     --bg-alt: #f7f8fa;

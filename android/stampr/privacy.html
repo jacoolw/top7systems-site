@@ -30,7 +30,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr for Android: Privacy Policy</h1>
-            <p class="last-updated">Last updated: August 1, 2026</p>
+            <p class="last-updated">Last updated: October 23, 2026</p>
 
             <section>
                 <h2>Introduction</h2>
@@ -43,7 +43,7 @@
                 <ul>
                     <li>Your name, email address, or contact details</li>
                     <li>Your GPS location or coordinates</li>
-                    <li>Your photos, videos, or voice recordings</li>
+                    <li>Your photos, videos, voice recordings, or notes</li>
                     <li>Your device identifiers, advertising ID, or IP address</li>
                     <li>Usage analytics or tracking data</li>
                 </ul>
@@ -55,19 +55,20 @@
                 <p>All data created within Stampr remains on your device. This includes:</p>
                 <ul>
                     <li><strong>Photos</strong>: Both original and stamped photos are stored in the app's private storage on your device.</li>
-                    <li><strong>Videos</strong>: Stamped videos are processed on-device and saved to your own gallery (the Movies/Stampr folder).</li>
-                    <li><strong>GPS data</strong>: Coordinates, altitude, and bearing are used only to stamp your photos (and, if enabled, to embed standard EXIF location metadata in the photo files you choose to share) and are stored on-device.</li>
-                    <li><strong>Voice recordings and transcripts</strong>: Audio is stored locally with the associated photo. Speech recognition runs entirely on-device using the open-source Whisper speech model. Your audio is never uploaded anywhere.</li>
+                    <li><strong>Videos</strong>: Stamped videos are processed on-device and stored in the app's private storage, like photos. If you turn on <em>Auto-Save to Gallery</em>, copies of your stamped photos and videos are also saved to your own gallery (the Pictures/Stampr and Movies/Stampr folders).</li>
+                    <li><strong>Field notes</strong>: If you turn on Field Notes, the notes you speak or type, their recordings and transcripts, and the time and position each was taken at are stored in the app's private storage on your device.</li>
+                    <li><strong>GPS data</strong>: Coordinates, altitude, and bearing are used only to stamp your photos, videos, and field notes (and, if enabled, to embed standard EXIF location metadata in the photo files you choose to share) and are stored on-device.</li>
+                    <li><strong>Voice recordings and transcripts</strong>: Audio is stored locally with the associated photo, video, or note. Speech recognition runs entirely on-device using the open-source Whisper speech model. Your audio is never uploaded anywhere.</li>
                     <li><strong>AI note cleanup and tags</strong>: On supported devices, note cleanup and tag suggestions run entirely on-device using Android's built-in AI model (Gemini Nano). Your notes are never sent to us or to any server.</li>
                     <li><strong>Street addresses</strong>: when the <em>Street Address</em> setting is on, Stampr sends the photo's coordinate to the platform geocoder to turn it into a readable address. The resulting address is stored on your device. Turning that setting off stops the lookup entirely, so no coordinate is sent. We never receive or store any of it.</li>
-                    <li><strong>Project files</strong>: When you choose "Share Project File", Stampr packages your photos and metadata into a file that is shared only through the channels you select (Quick Share, email, Drive, etc.). We never receive a copy.</li>
+                    <li><strong>Project files</strong>: When you choose "Share Project File", Stampr packages your photos, field notes, and metadata into a file that is shared only through the channels you select (Quick Share, email, Drive, etc.). We never receive a copy.</li>
                     <li><strong>Settings and preferences</strong>: Stored locally on your device.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Backups and Device Transfer</h2>
-                <p>If you have Google backup enabled on your device, Stampr's <strong>settings</strong> (including the free-tier photo counter) may be included in your cloud backup. <strong>Your photos, videos, and voice notes are excluded from cloud backup</strong>: they exist only on your device, so keep your own copies of important work (for example by sharing project files). When you move to a new phone with Android's device-to-device transfer, everything, photos included, transfers directly between the two devices. Backups are managed by Google and subject to Google's privacy policy; we have no access to them.</p>
+                <p>If you have Google backup enabled on your device, Stampr's <strong>settings</strong> (including the free-tier photo counter) may be included in your cloud backup. <strong>Your photos, videos, voice notes, and field notes are excluded from cloud backup</strong>: they exist only on your device, so keep your own copies of important work (for example by sharing project files). When you move to a new phone with Android's device-to-device transfer, everything, photos included, transfers directly between the two devices. Backups are managed by Google and subject to Google's privacy policy; we have no access to them.</p>
             </section>
 
             <section>
@@ -92,8 +93,8 @@
                 <p>Stampr requests only what it needs to do its job:</p>
                 <ul>
                     <li><strong>Camera</strong>: to take photos and record video.</li>
-                    <li><strong>Location (precise)</strong>: to stamp GPS coordinates, altitude, bearing, and street address onto your photos. Used only while the app is in use. Everything is processed on-device except the optional address lookup and map imagery described above.</li>
-                    <li><strong>Microphone</strong>: for voice notes and video sound, only while recording.</li>
+                    <li><strong>Location (precise)</strong>: to stamp GPS coordinates, altitude, bearing, and street address onto your photos and videos, and the position onto field notes. Used only while the app is in use. Everything is processed on-device except the optional address lookup and map imagery described above.</li>
+                    <li><strong>Microphone</strong>: for voice notes, field notes, and video sound, only while recording.</li>
                     <li><strong>Internet</strong>: for the map imagery, address lookup, the one-time speech model download, and Google Play Billing.</li>
                 </ul>
                 <p>Stampr does not request access to your contacts, files, or photo library, and does not run in the background.</p>
@@ -108,7 +109,7 @@
                 <h2>Data Deletion</h2>
                 <p>Since all data is stored locally on your device, you can delete it at any time by:</p>
                 <ul>
-                    <li>Deleting individual photos or projects from within the app</li>
+                    <li>Deleting individual photos, videos, notes, or projects from within the app (copies saved to your gallery with Auto-Save to Gallery stay there until you delete them in your gallery)</li>
                     <li>Clearing the app's storage via Android Settings &gt; Apps &gt; Stampr &gt; Storage &gt; Clear storage</li>
                     <li>Uninstalling Stampr from your device, which removes all app data</li>
                 </ul>

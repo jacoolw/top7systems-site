@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stampr for Android: Help & User Guide | Top 7 Systems</title>
-    <meta name="description" content="Help and user guide for Stampr for Android: the GPS field camera app with voice notes, stamped video, and PDF reports.">
+    <meta name="description" content="Help and user guide for Stampr for Android: the GPS field camera app with voice notes, stamped video, field notes, and PDF reports.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr for Android: Help & User Guide</h1>
-            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 1.0 for Android phones.</p>
+            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 1.1 for Android phones.</p>
 
             <!-- Table of Contents -->
             <div class="toc">
@@ -40,6 +40,7 @@
                     <li><a href="#using-the-camera">Using the Camera</a></li>
                     <li><a href="#voice-notes">Voice Notes & AI Cleanup</a></li>
                     <li><a href="#stamped-video">Stamped Video</a></li>
+                    <li><a href="#field-notes">Field Notes</a></li>
                     <li><a href="#photo-library">Photo Library</a></li>
                     <li><a href="#photo-details">Photo Details</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -58,10 +59,11 @@
             <section id="getting-started">
                 <h2>Getting Started</h2>
                 <p>Stampr is a GPS field camera designed for professionals who need location-stamped photos and video with metadata. It burns GPS coordinates, altitude, bearing, street address, and optional voice notes directly onto your photos, and embeds the GPS data into the photo file itself (EXIF), so your shots pin correctly in Google Photos, GIS software, and claims tools.</p>
-                <p>The app has three tabs:</p>
+                <p>The app has three tabs, plus a fourth if you turn on Field Notes:</p>
                 <ul>
                     <li><strong>Camera</strong>: Take GPS-stamped photos and videos with a live metadata overlay.</li>
-                    <li><strong>Library</strong>: Browse, search, and organize your photos by project and tags.</li>
+                    <li><strong>Notes</strong> (optional): Speak or type GPS-stamped notes without a photo, kept in an open log. See <a href="#field-notes">Field Notes</a>.</li>
+                    <li><strong>Library</strong>: Browse, search, and organize your photos, videos, and notes by project and tags.</li>
                     <li><strong>Settings</strong>: Customise the stamp format, toggle features, and manage your Pro purchase.</li>
                 </ul>
 
@@ -69,7 +71,7 @@
                     <div class="step-num">1</div>
                     <div class="step-content">
                         <h4>Grant Permissions</h4>
-                        <p>When you first open Stampr, allow access to your camera and location (choose "While using the app" with precise location). Microphone access is needed only if you use voice notes or record video. You can change these anytime in Android Settings &gt; Apps &gt; Stampr &gt; Permissions.</p>
+                        <p>When you first open Stampr, allow access to your camera and location (choose "While using the app" with precise location). Microphone access is needed only if you use voice notes or field notes, or record video. You can change these anytime in Android Settings &gt; Apps &gt; Stampr &gt; Permissions.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -124,8 +126,11 @@
                 <h3>Require GPS Fix</h3>
                 <p>If your work demands coordinates on every shot, enable <em>Require GPS Fix</em> in Settings. The shutter will then wait for a GPS lock, with a "Capture Anyway" escape hatch if you need the shot regardless.</p>
 
+                <h3>Focus, Front Camera & Volume Buttons</h3>
+                <p>Tap the viewfinder to focus there. Long-press to lock focus and exposure (the viewfinder shows <em>AE/AF LOCK</em>), and tap again to unlock. The switch-camera button flips to the front camera. The volume buttons work as a shutter, which is easier with gloves on: press one to take a photo, or to start and stop a video.</p>
+
                 <h3>Flash & Resolution</h3>
-                <p>Tap the flash icon to toggle the flash. Enable <em>Maximum Resolution</em> in Settings to capture at your phone's full sensor resolution (larger files).</p>
+                <p>Tap the flash icon to cycle the flash off, auto, and on. In video mode the same button turns the torch on or off. Enable <em>Maximum Resolution</em> in Settings to capture at your phone's full sensor resolution (larger files).</p>
 
                 <div class="tip-box">
                     <strong>Tip:</strong> Make sure Location is enabled in Android Settings (with precise location for Stampr) for the most accurate GPS data. The colour-coded accuracy indicator on the stamp overlay shows how precise your current fix is.
@@ -178,13 +183,99 @@
                 <div class="step">
                     <div class="step-num">3</div>
                     <div class="step-content">
-                        <h4>Stamped & Saved to Your Gallery</h4>
-                        <p>Stampr burns the same stamp band your photos get (plus your watermark or logo) onto the video, then saves it to your gallery in the Movies/Stampr folder. Look for the "Stamped video saved to Movies" confirmation.</p>
+                        <h4>Stamped & Kept in Your Library</h4>
+                        <p>Stampr burns the same stamp band your photos get (plus your watermark or logo) onto the video and keeps it in the Library with your photos, in the same projects, reports, and exports. Look for the "Video saved to Library" confirmation. What you say while filming is transcribed on the phone into the video's note. To also keep a copy in your gallery's Movies/Stampr folder, turn on <em>Auto-Save to Gallery</em> in Settings.</p>
                     </div>
                 </div>
                 <div class="tip-box">
-                    <strong>Note:</strong> videos count one photo credit each on the free plan, and they live in your gallery (Google Photos or your gallery app) rather than the in-app Library.
+                    <strong>Note:</strong> each video uses one of the 15 free captures a month, the same as a photo. Videos aren't packed into project files; share them individually from the video's screen.
                 </div>
+            </section>
+
+            <!-- Field Notes -->
+            <section id="field-notes">
+                <h2>Field Notes</h2>
+                <p>Some things worth recording have no picture: a radio check, the fork you took, a measurement, what a witness said. Field Notes lets you speak or type a note without taking a photo, and stamps each one with the time and your GPS position, just like a photo. Notes go into an open log that you keep for a whole job or search until you close it, together with the photos and videos you take along the way.</p>
+
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h4>Turn It On</h4>
+                        <p>Field Notes is off by default. Go to Settings &rarr; Capture and turn on <em>Field Notes</em>. A <strong>Notes</strong> tab appears between Camera and Library.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h4>Start a Log</h4>
+                        <p>On the Notes tab, tap <em>Start Log</em>. It's named with the date and time, like "Log 22 Oct, 08:12"; type over it with the job or search name. Until you close it, every note, photo, and video goes into this log.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h4>Speak or Type</h4>
+                        <p>Tap the microphone and talk, then tap again to save. Each note lands in the log with its time and position, and turns into text a moment later.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h4>Close and Share</h4>
+                        <p>When the job or search is over, open the &#8942; menu at the top right and choose <em>Close Log</em>, then <em>Close and Share Report</em> to send the whole log as a PDF report.</p>
+                    </div>
+                </div>
+
+                <h3>Ways to Record</h3>
+                <ul>
+                    <li><strong>Tap</strong> the microphone to start, and tap again to save.</li>
+                    <li><strong>Hold</strong> it while you talk, and let go to save.</li>
+                    <li>Press a <strong>volume button</strong> to start, and again to save. Handy with gloves on.</li>
+                    <li>Tap the <strong>keyboard</strong> button to type a note, then <em>Save Note</em>.</li>
+                    <li>From outside the app, the <em>Record note</em> shortcut and the <em>Stampr Note</em> Quick Settings tile open the Notes tab already recording (see <a href="#shortcuts">Quick Settings Tile & Shortcuts</a>).</li>
+                </ul>
+                <p>While a note records, the screen stays on and the phone buzzes briefly as it starts and stops. Tap the X beside the microphone to throw a recording away. A note can run for up to five minutes; at five minutes Stampr saves it, and you can tap the microphone to carry on in a new one.</p>
+                <div class="tip-box">
+                    <strong>Nothing is lost:</strong> a note is saved the moment it stops. If you press Back, switch tabs, or leave the app in the middle of a note, what you've said so far is kept as a note.
+                </div>
+
+                <h3>Time and Place</h3>
+                <p>Each note is stamped with where you were when you <em>started</em> it: coordinates in your chosen format, altitude, and GPS accuracy, plus the street address when <em>Street Address</em> is on. There's no compass bearing on a note, as you weren't aiming the camera at anything. The strip above the microphone shows your current position; when its dot is green, that's the position your next note gets.</p>
+                <p>If there's no fresh fix when you start, Stampr uses the first one that arrives within a minute. If none arrives, the note is still kept and marked <strong>NO GPS FIX</strong>, the same as a photo. The strip says why there's no position (<em>Waiting for GPS…</em>, <em>Phone location is off</em>, or <em>No location access</em>) and offers a button to fix it.</p>
+
+                <h3>From Speech to Text</h3>
+                <p>Notes are turned into text on the phone by the same Whisper speech model as photo voice notes, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. If the speech model isn't on the phone yet, recordings are still kept: the Notes tab offers the one-time download (about 32&nbsp;MB), and waiting notes are transcribed once it's in. If a transcription fails, the note keeps its recording and Stampr tries again; you can also open the note and tap <em>Transcribe</em>.</p>
+                <p>On phones with on-device AI, <em>AI Note Cleanup</em> tidies notes and suggests tags, as it does for photos. The original transcript is always kept.</p>
+
+                <h3>The Open Log</h3>
+                <p>A log is a project that stays open: while it's open, every new note, photo, and video goes into it, so a whole search reads as one timeline, oldest first, with a divider for each day. The Notes tab shows the open log, with its name and a count at the top and the newest entry at the bottom. The &#8942; menu manages it:</p>
+                <ul>
+                    <li><strong>Start a New Log…</strong>: begin another log, which closes the current one.</li>
+                    <li><strong>Switch Log…</strong> (or <strong>Open a Log…</strong> when none is open): open an existing log. Any project can be one.</li>
+                    <li><strong>Close Log</strong>: new notes, photos, and videos stop going into it. It stays in the Library as a project, and you can open it again any time.</li>
+                    <li><strong>Export PDF Report</strong> and <strong>Share Log as Text</strong>: see <a href="#sharing-notes">Sharing Notes</a> below.</li>
+                </ul>
+                <p>The camera button beside the microphone takes you to the camera, and the photos and videos you take go into the open log. Notes made with no log open are kept too, under No Project, and can be filed later.</p>
+                <div class="tip-box">
+                    <strong>Good to know:</strong> the open log is your default project, the one new photos are filed into. Starting a log makes it the default, and closing it clears the default, so photos taken after the search stay out of its log.
+                </div>
+
+                <h3>Reading and Editing a Note</h3>
+                <p>Tap the play button on a note to hear it right in the log, or tap the note to open it. On a note's screen you can play the recording, read its stamp, correct the text (the original transcript stays one tap away), add or remove tags, move it to another project or log, see where it was taken on a map with its coordinates, MGRS / USNG reference, altitude, and accuracy, share it, or delete it.</p>
+                <p>Notes also appear in the Library and in their project, alongside your photos and videos. A project with notes can be read as a log too: tap the list icon at the top of the project.</p>
+
+                <h3 id="sharing-notes">Sharing Notes</h3>
+                <ul>
+                    <li><strong>PDF report</strong>: &#8942; &rarr; <em>Export PDF Report</em>, or <em>Close and Share Report</em> as you close the log. Notes sit among the photos and videos in time order, marked VOICE NOTE or TYPED NOTE, with their words, tags, and location, and with pins on the map overview. A report of notes alone is titled "Stampr Field Notes".</li>
+                    <li><strong>As text</strong>: &#8942; &rarr; <em>Share Log as Text</em> sends the whole log, oldest first, as plain text you can paste into a message, an email, or an incident record. One note goes the same way from its screen with <em>Share as Text</em>, or with its recording attached using <em>Share with Recording</em>.</li>
+                    <li><strong>With photos</strong>: share a selection from the Library that includes notes, and the notes travel as the message text and as a Notes.txt file beside the photos and report.</li>
+                    <li><strong>Data export</strong>: CSV, KML, and GeoJSON exports include notes, so a search's notes can go straight into Google Earth or a GIS tool.</li>
+                    <li><strong>Project files</strong>: <em>Share Project File</em> includes notes and their recordings.</li>
+                </ul>
+                <div class="tip-box">
+                    <strong>Free and unlimited:</strong> field notes never use one of your 15 free captures a month. Only photos and videos count.
+                </div>
+                <p>Turning Field Notes off hides the Notes tab, the shortcut, and the tile. Notes you've already made stay in the Library.</p>
             </section>
 
             <!-- Photo Library -->
@@ -192,13 +283,13 @@
                 <h2>Photo Library</h2>
 
                 <h3>Browsing Photos</h3>
-                <p>The Library tab shows all your photos in a grid sorted by date. Use the filter menu to narrow by time period, project, or <strong>tag</strong>. Use the search bar to find photos by notes (including the original transcript), tags, address, or project name.</p>
+                <p>The Library tab shows all your photos, videos, and field notes in a grid sorted by date. Use the filter menu to narrow by time period, project, or <strong>tag</strong>. Use the search bar to find items by notes (including the original transcript), tags, address, or project name; type "video" to list your videos, or "notes" to list your field notes.</p>
 
                 <h3>Map View</h3>
-                <p>Toggle the map icon to see your photos plotted on an OpenStreetMap view. <strong>Tap any marker to open that photo's details.</strong> Only photos with valid GPS coordinates appear on the map.</p>
+                <p>Toggle the map icon to see your photos, videos, and notes plotted on an OpenStreetMap view. <strong>Tap any marker to open its details.</strong> Only items with valid GPS coordinates appear on the map.</p>
 
-                <h3>Selecting Multiple Photos</h3>
-                <p>Tap "Select" to enter selection mode, then tap photos to choose them. "Select All" picks up everything currently listed. The toolbar can then:</p>
+                <h3>Selecting Multiple Items</h3>
+                <p>Tap "Select" to enter selection mode, then tap photos, videos, or notes to choose them. "Select All" picks up everything currently listed. The toolbar can then:</p>
                 <ul>
                     <li><strong>Move to project</strong>: file the whole selection into a project in one go, or create a new project on the spot. Every moved photo is re-stamped so the project name on the image matches where it now lives.</li>
                     <li><strong>Share</strong>: send the selection, with the PDF report attached.</li>
@@ -247,7 +338,7 @@
                 <p>To file a batch, use "Select" in the Library or inside a project, choose the photos, and tap the move icon in the toolbar. Either way the stamp on each photo is re-rendered so the project name burned onto the image matches the project it now belongs to.</p>
 
                 <h3>Default Project</h3>
-                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job.</p>
+                <p>Set a default project so all new photos are automatically assigned to it. This is useful when you're on-site and want every photo tagged to the current job. With Field Notes on, the default project is also the open log on the Notes tab, so new notes go into it too.</p>
 
                 <h3>Renaming & Deleting</h3>
                 <p>Open the project menu to rename or delete. After renaming, Stampr asks if you want to update the project name on all existing photos. When deleting, you can keep the photos unassigned or delete them too.</p>
@@ -263,6 +354,7 @@
                     <li>A branded cover header (your logo appears here with Pro)</li>
                     <li>A map overview page with numbered pins matching the photo list</li>
                     <li>Every photo embedded at quality, with its full metadata table, notes, and tags</li>
+                    <li>Videos as a still frame marked VIDEO with the clip's length, and field notes as their words, tags, and location</li>
                 </ul>
                 <p>Don't need the report? Turn off <em>Include Report When Sharing</em> in Settings to share just the photos.</p>
                 <p>You can also send the report on its own. Open a project, then choose <em>Export PDF Report</em> from the project menu to share just the PDF, without the photo files alongside it.</p>
@@ -271,7 +363,7 @@
                 <p>Every stamped photo also carries machine-readable GPS coordinates, altitude, bearing, and the capture time in its EXIF metadata. Shared photos pin correctly in Google Photos, Google Earth, GIS packages, and insurance claims software. You can turn this off in Settings if you need location-free files.</p>
 
                 <h3>Data Export: CSV, KML, GeoJSON</h3>
-                <p>From any project's menu, choose <em>Export Data</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags.</p>
+                <p>From any project's menu, choose <em>Export CSV</em>, <em>Export KML</em>, or <em>Export GeoJSON</em> to generate a spreadsheet-ready CSV, a KML file for Google Earth, or GeoJSON for GIS tools. Each row/placemark carries the filename, timestamp, coordinates, altitude, accuracy, bearing, address, notes, and tags. Field notes are included as rows and placemarks of their own.</p>
             </section>
 
             <!-- Project Files -->
@@ -283,7 +375,7 @@
                     <div class="step-num">1</div>
                     <div class="step-content">
                         <h4>Share the Project File</h4>
-                        <p>Open the project, tap the menu, and choose <em>Share Project File</em>. Stampr packs every photo (stamped and original), voice note, and all metadata into one <strong>.stamprproj</strong> file you can send by Quick Share, email, Drive, or anything else.</p>
+                        <p>Open the project, tap the menu, and choose <em>Share Project File</em>. Stampr packs every photo (stamped and original), voice note, field note with its recording, and all metadata into one <strong>.stamprproj</strong> file you can send by Quick Share, email, Drive, or anything else. Videos aren't included; share them individually.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -316,11 +408,12 @@
                     </thead>
                     <tbody>
                         <tr><td>Stamp Text Size</td><td>Font size of the stamp overlay (8–24pt)</td><td>12pt</td></tr>
-                        <tr><td>Coordinates</td><td>Decimal Degrees, DMS, UTM, or MGRS</td><td>Decimal</td></tr>
+                        <tr><td>Coordinates</td><td>Decimal Degrees, DMS, UTM, or MGRS / USNG</td><td>Decimal</td></tr>
                         <tr><td>Units</td><td>Metric (m) or Imperial (ft) for altitude and accuracy</td><td>Metric</td></tr>
                         <tr><td>North Reference</td><td>True or magnetic north; bearings are marked &deg;T or &deg;M</td><td>True</td></tr>
                         <tr><td>Voice Notes</td><td>Off, Prompt After Photo, or Hands-Free</td><td>Prompt</td></tr>
                         <tr><td>Voice Recognition Model</td><td>One-time ~32&nbsp;MB download; transcription then runs fully on-device</td><td>n/a</td></tr>
+                        <tr><td>Field Notes</td><td>Adds the Notes tab for GPS-stamped voice or typed notes without a photo, plus the Record note shortcut and Stampr Note tile</td><td>Off</td></tr>
                         <tr><td>AI Note Cleanup</td><td>On-device AI tidies dictation and suggests tags</td><td>On*</td></tr>
                         <tr><td>Require GPS Fix</td><td>Block the shutter until coordinates are locked</td><td>Off</td></tr>
                         <tr><td>Maximum Resolution</td><td>Capture at the sensor's full resolution</td><td>Off</td></tr>
@@ -329,9 +422,10 @@
                         <tr><td>Street Address</td><td>Looks the address up and stamps it. Turning this off also stops the lookup, so your coordinates stay on the device</td><td>On</td></tr>
                         <tr><td>Print Notes on Photo</td><td>Burns voice transcription onto the stamp</td><td>Off</td></tr>
                         <tr><td>Embed GPS in File (EXIF)</td><td>Machine-readable location inside the photo file</td><td>On</td></tr>
+                        <tr><td>Auto-Save to Gallery</td><td>Also saves stamped photos and videos to your gallery (Pictures/Stampr, Movies/Stampr)</td><td>Off</td></tr>
                         <tr><td>Map on Stamp</td><td>Small OpenStreetMap inset on the photo (uses the network)</td><td>Off</td></tr>
                         <tr><td>Include Report When Sharing</td><td>Attach the PDF field report when sharing photos</td><td>On</td></tr>
-                        <tr><td>Location Services</td><td>Enable GPS, address, and compass data</td><td>On</td></tr>
+                        <tr><td>Location Services</td><td>GPS, address, and compass data for photos, videos, and notes</td><td>On</td></tr>
                         <tr><td>Watermark / Logo</td><td>Custom text or logo branding on photos and reports (Pro)</td><td>None</td></tr>
                     </tbody>
                 </table>
@@ -341,7 +435,7 @@
             <!-- Stampr Pro -->
             <section id="stampr-pro">
                 <h2>Stampr Pro</h2>
-                <p>Stampr includes 15 free photos or videos per month. Recordings draw on the same monthly allowance as stills. To unlock unlimited captures and remove the watermark, purchase Stampr Pro, a one-time payment with no subscription, ever.</p>
+                <p>Stampr includes 15 free photos or videos per month. Recordings draw on the same monthly allowance as stills. Field notes are free and unlimited and never use the allowance. To unlock unlimited captures and remove the watermark, purchase Stampr Pro, a one-time payment with no subscription, ever.</p>
 
                 <div class="tip-box">
                     <strong>What you get with Pro:</strong> Unlimited photos and videos, no "Stampr" watermark, a custom text watermark or your own <strong>logo</strong> on every photo and PDF report, and right after upgrading, Stampr offers to re-stamp your existing photos to remove the free watermark from them too.
@@ -356,8 +450,9 @@
                 <h2>Quick Settings Tile & Shortcuts</h2>
                 <h3>Quick Settings Tile</h3>
                 <p>Add the <em>Stampr Camera</em> tile to your Quick Settings shade for the fastest path to a stamped photo: swipe down from the top of the screen, tap the edit (pencil) button, and drag the Stampr Camera tile into your panel. One tap opens the camera ready to shoot, even from the lock screen shade.</p>
+                <p>With <a href="#field-notes">Field Notes</a> on, a second tile, <em>Stampr Note</em>, is available the same way. One tap opens the Notes tab already recording; tap the microphone to save.</p>
                 <h3>App Shortcuts</h3>
-                <p>Long-press the Stampr icon on your home screen for <em>Take Stamped Photo</em> and <em>Open Library</em> shortcuts. You can drag either onto your home screen as its own one-tap icon.</p>
+                <p>Long-press the Stampr icon on your home screen for <em>Take a stamped photo</em> and <em>Open the Stampr library</em> shortcuts, plus <em>Record a field note</em> when Field Notes is on. You can drag any of them onto your home screen as its own one-tap icon.</p>
             </section>
 
             <!-- Permissions -->
@@ -369,11 +464,11 @@
                 </div>
                 <div class="info-card">
                     <h3>Location (precise)</h3>
-                    <p>Used to stamp GPS coordinates, altitude, bearing, and street address onto photos, only while you're using the app. You can disable location in Settings if you don't need location data.</p>
+                    <p>Used to stamp GPS coordinates, altitude, bearing, and street address onto photos and videos, and the position onto field notes, only while you're using the app. You can disable location in Settings if you don't need location data.</p>
                 </div>
                 <div class="info-card">
                     <h3>Microphone</h3>
-                    <p>Needed for voice notes and video sound. Only used while recording. Voice transcription happens on-device: your audio is never sent to any server.</p>
+                    <p>Needed for voice notes, field notes, and video sound. Only used while recording. Voice transcription happens on-device: your audio is never sent to any server. Without microphone access you can still type field notes.</p>
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
@@ -387,7 +482,7 @@
 
                 <details class="faq-toggle">
                     <summary>Where are my photos stored?</summary>
-                    <div class="faq-answer">Photos are stored in Stampr's private storage on your device. Cloud backup (Google One) covers your settings only; photos are not uploaded anywhere. When you move to a new phone with Android's device-to-device transfer, everything comes across. To keep copies of important work, share project files or export your data. Stamped videos are saved to your gallery.</div>
+                    <div class="faq-answer">Photos, videos, and field notes are stored in Stampr's private storage on your device. Cloud backup (Google One) covers your settings only; nothing else is uploaded anywhere. When you move to a new phone with Android's device-to-device transfer, everything comes across. To keep copies of important work, share project files or export your data, or turn on <em>Auto-Save to Gallery</em> to also keep copies of your stamped photos and videos in your gallery.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Do my photos sync between devices?</summary>
@@ -414,8 +509,8 @@
                     <div class="faq-answer">Nothing is transmitted to our servers; we don't have any. Your photos, voice notes, and transcripts never leave the device. Two features do look something up while you use them: the street address lookup sends the coordinate to the platform geocoder, and map imagery is fetched from OpenStreetMap. Turn off <em>Street Address</em> and leave <em>Map on Stamp</em> off and no coordinate leaves the device at all.</div>
                 </details>
                 <details class="faq-toggle">
-                    <summary>What are UTM and MGRS formats?</summary>
-                    <div class="faq-answer">Grid coordinate systems used by surveyors, engineers, and emergency services. Switch the coordinate format in Settings and the stamp, detail view, and PDF reports all follow. Decimal degrees and DMS remain available.</div>
+                    <summary>What are UTM and MGRS / USNG formats?</summary>
+                    <div class="faq-answer">Grid coordinate systems used by surveyors, engineers, search and rescue, and emergency services. In the US, USNG is the same grid as MGRS, and Stampr writes it in the spaced USNG style (for example 18S UJ 23480 06470). Switch the coordinate format in Settings and the stamp, field notes, detail view, and PDF reports all follow. Decimal degrees and DMS remain available.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Why is the address not showing?</summary>
@@ -434,8 +529,24 @@
                     <div class="faq-answer">Hands-free listens for about two seconds of silence after you've spoken. On very loud sites the background noise can keep it recording; tap the checkmark on the recording bar to finish immediately, or the X to discard. You can always fall back to the hold-to-record prompt mode in Settings &rarr; Voice Notes.</div>
                 </details>
                 <details class="faq-toggle">
-                    <summary>My video saved without a stamp / I can't find my video</summary>
-                    <div class="faq-answer">Stamped videos are saved to your gallery, not the in-app Library; look in Google Photos or your gallery app under Movies/Stampr. Processing happens right after you stop recording; keep the app open until you see the "Stamped video saved to Movies" confirmation.</div>
+                    <summary>I can't find my video</summary>
+                    <div class="faq-answer">Videos are in Stampr's Library with your photos, and in their project. Stampr stamps a video right after you stop recording and confirms with "Video saved to Library". Copies go to your gallery (Movies/Stampr) only if <em>Auto-Save to Gallery</em> is on in Settings. If stamping ever fails, Stampr keeps the unstamped original in the Library and tells you so.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Where is the Notes tab?</summary>
+                    <div class="faq-answer">It appears when Field Notes is on. Field Notes is off by default; turn it on in Settings &rarr; Capture &rarr; Field Notes. See <a href="#field-notes">Field Notes</a>.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Do field notes count toward the 15 free captures a month?</summary>
+                    <div class="faq-answer">No. Field notes are free and unlimited, with or without Stampr Pro. Only photos and videos use the monthly allowance.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>A note says it hasn't been turned into text yet</summary>
+                    <div class="faq-answer">Transcription needs the speech model on the phone (about 32&nbsp;MB, downloaded once). Until it's there, recordings are kept and the Notes tab offers the download; waiting notes are transcribed as soon as it finishes. If a transcription fails, the note keeps its recording and Stampr tries again. You can also open the note and tap <em>Transcribe</em>.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>A field note was stamped NO GPS FIX</summary>
+                    <div class="faq-answer">The phone had no fresh position when the note started, and none arrived within the next minute. The note is kept with its time and words. Before recording, check the strip above the microphone: a green dot means notes will get that position. If it says <em>Phone location is off</em> or <em>No location access</em>, tap its button to fix it. Under heavy tree cover or in a canyon a fix can take longer, so give it a moment in the open if you can.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>I purchased Pro but it's not showing. What do I do?</summary>
