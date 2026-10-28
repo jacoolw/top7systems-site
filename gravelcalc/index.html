@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GravelCalc &ndash; Gravel, Mulch &amp; Topsoil Calculator for iPhone. Volume and weight.</title>
+    <meta name="description" content="Work out how much gravel, mulch, topsoil, sand, decomposed granite or river rock you need &mdash; in cubic yards and in tons, using real material densities. Truck loads, waste factors and cost estimates. Works entirely offline.">
+    <meta name="keywords" content="gravel calculator, mulch calculator, topsoil calculator, sand calculator, decomposed granite calculator, river rock calculator, how much gravel do I need, cubic yards to tons, landscaping calculator app, fill calculator, offline gravel calculator">
+    <link rel="canonical" href="https://top7systems.net/gravelcalc/">
+    <meta name="apple-itunes-app" content="app-id=6761389391">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Top 7 Systems">
+    <meta property="og:url" content="https://top7systems.net/gravelcalc/">
+    <meta property="og:title" content="GravelCalc &mdash; Order by the yard or by the ton.">
+    <meta property="og:description" content="Volume and weight for gravel, mulch, topsoil, sand, DG and river rock, using real material densities. Truck loads and cost estimates. Works offline.">
+    <meta property="og:image" content="https://top7systems.net/gravelcalc/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GravelCalc &mdash; Order by the yard or by the ton.">
+    <meta name="twitter:description" content="Volume and weight for six landscaping materials, using real densities. Truck loads and cost estimates. Works offline.">
+    <meta name="twitter:image" content="https://top7systems.net/gravelcalc/og-image.png">
+    <meta name="theme-color" content="#2E2722">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "GravelCalc: Fill Calculator",
+          "operatingSystem": "iOS",
+          "applicationCategory": "UtilitiesApplication",
+          "url": "https://top7systems.net/gravelcalc/",
+          "image": "https://top7systems.net/gravelcalc/icon.png",
+          "description": "Volume and weight calculator for gravel, mulch, topsoil, sand, decomposed granite and river rock. Rectangle, circle, triangle and L-shaped areas, with waste factors, dump truck loads, cost estimates and combined project totals. Imperial or metric, works entirely offline with no account.",
+          "featureList": "Six materials with accurate densities; four area shapes including L-shape; volume in cubic yards and cubic metres; weight in tons and tonnes; waste factors from 0 to 15 percent; dump truck loads; cost estimates with delivery fee; mixed-material project totals; reference tables for densities, recommended depths, coverage and truck sizes; imperial and metric; fully offline",
+          "downloadUrl": "https://apps.apple.com/app/gravelcalc-fill-calculator/id6761389391",
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+          "author": {"@type": "Organization", "name": "Top 7 Systems", "url": "https://top7systems.net"}
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"Why does GravelCalc calculate weight as well as volume?","acceptedAnswer":{"@type":"Answer","text":"Many landscape suppliers sell by weight (tons) rather than by volume (cubic yards). GravelCalc converts between the two using each material's density, so you can compare quotes and order the right amount however your supplier prices it."}},
+            {"@type":"Question","name":"How deep should I spread gravel, mulch or topsoil?","acceptedAnswer":{"@type":"Answer","text":"As a general rule: 2 to 4 inches for gravel driveways and paths, 2 to 3 inches for mulch, and 4 to 6 inches for topsoil in garden beds. The app pre-selects a recommended depth when you choose a material, and the Reference tab has the full table."}},
+            {"@type":"Question","name":"What waste factor should I use?","acceptedAnswer":{"@type":"Answer","text":"7% is the standard recommendation. Use 5% for simple flat areas, 10% for slopes or irregular shapes, and 15% where compaction is expected. Gravel and decomposed granite compact significantly, so add another 10 to 15% if you plan to run a plate compactor over them."}},
+            {"@type":"Question","name":"Can I calculate several materials in one project?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each calculation added to the Project tab remembers its material, so gravel for the driveway, mulch for the beds and topsoil for the lawn can sit in one project with separate and combined totals."}},
+            {"@type":"Question","name":"Does GravelCalc work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, entirely. There is no account and no internet connection required, so it works in the yard or anywhere you have your phone."}},
+            {"@type":"Question","name":"Is my data sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Your project, pricing and preferences are saved on your device and are never sent to any server."}}
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand: #A9743F; --brand-light: #D9A760; --brand-deep: #80552C; --brand-glow: rgba(169,116,63,0.22);
+            --ink: #241E1A; --dark: #2E2722; --dark-2: #272019; --dark-3: #3B322A;
+            --surface: #ffffff; --surface-alt: #F8F5F1;
+            --text: #241E1A; --text-2: #5C5147; --on-dark: #F3EDE6; --muted-dark: #AFA296;
+            --border: #E7DFD6; --border-dark: #463B32;
+            --moss: #6E7F4F;
+            --radius: 12px; --radius-lg: 20px; --radius-xl: 28px;
+            --shadow-md: 0 4px 20px rgba(36,30,26,0.08); --shadow-lg: 0 16px 56px rgba(36,30,26,0.20);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); background: var(--surface); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3 { line-height: 1.12; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; margin-bottom: 12px; }
+        h3 { font-size: 1.15rem; font-weight: 700; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-light); }
+        .lead { font-size: 1.15rem; color: var(--text-2); max-width: 660px; }
+        .section { padding: 92px 0; }
+        @media (max-width: 720px) { .section { padding: 60px 0; } }
+        .section-head { max-width: 740px; margin-bottom: 44px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, background .15s ease, border-color .15s ease; }
+        .btn--brand { background: var(--brand); color: #fff; box-shadow: 0 8px 24px var(--brand-glow); }
+        .btn--brand:hover { transform: translateY(-2px); background: var(--brand-deep); }
+        .btn--ghost { border: 1.5px solid var(--border-dark); color: var(--on-dark); }
+        .btn--ghost:hover { border-color: var(--brand-light); color: var(--brand-light); }
+        .btn svg { width: 19px; height: 19px; flex: none; }
+        :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 8px; }
+
+        /* Nav */
+        .nav { position: sticky; top: 0; z-index: 50; background: rgba(39,32,25,0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-dark); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+        .brand { display: flex; align-items: center; gap: 10px; color: var(--on-dark); text-decoration: none; font-weight: 800; }
+        .brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-links { display: flex; gap: 22px; align-items: center; }
+        .nav-links a { color: var(--muted-dark); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--on-dark); }
+        .nav-links .btn { padding: 10px 16px; font-size: 0.9rem; }
+        @media (max-width: 760px) { .nav-links a:not(.btn) { display: none; } }
+
+        /* Hero */
+        .hero { background: linear-gradient(170deg, var(--dark) 0%, var(--dark-2) 60%, var(--ink) 100%); color: var(--on-dark); padding: 80px 0 88px; }
+        .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 56px; align-items: center; }
+        .hero h1 { font-size: clamp(2.5rem, 5.6vw, 4.1rem); font-weight: 900; margin: 18px 0 20px; }
+        .hero h1 .accent { color: var(--brand-light); }
+        .hero p.lead { color: var(--muted-dark); font-size: 1.18rem; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0 18px; }
+        .hero-note { color: var(--muted-dark); font-size: 0.92rem; }
+        .hero-note b { color: var(--on-dark); }
+        @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+        /* Density card, doubling as the hero visual */
+        .density { background: var(--dark-3); border: 1px solid var(--border-dark); border-radius: var(--radius-xl); padding: 26px 28px; box-shadow: var(--shadow-lg); }
+        .density h2 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-light); margin-bottom: 4px; }
+        .density .cap { color: var(--muted-dark); font-size: 0.88rem; margin-bottom: 16px; }
+        .density table { width: 100%; border-collapse: collapse; }
+        .density th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted-dark); font-weight: 700; padding-bottom: 9px; border-bottom: 1px solid var(--border-dark); }
+        .density th:not(:first-child), .density td:not(:first-child) { text-align: right; }
+        .density td { padding: 11px 0; border-bottom: 1px solid rgba(70,59,50,0.6); font-size: 0.95rem; }
+        .density tr:last-child td { border-bottom: 0; }
+        .density td:first-child { font-weight: 600; color: var(--on-dark); }
+        .density td:not(:first-child) { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--brand-light); font-size: 0.9rem; }
+        @media (max-width: 420px) { .density { padding: 20px 18px; } .density td, .density th { font-size: 0.85rem; } }
+
+        /* Trust bar */
+        .trust { background: var(--dark-2); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); color: var(--muted-dark); }
+        .trust-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 38px; padding: 18px 0; font-size: 0.92rem; font-weight: 600; }
+        .trust-inner span::before { content: "\2713"; color: var(--brand-light); margin-right: 8px; }
+
+        /* Materials */
+        .mats { background: var(--surface-alt); }
+        .mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        @media (max-width: 880px) { .mat-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .mat-grid { grid-template-columns: 1fr; } }
+        .mat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+        .mat .sw { width: 38px; height: 38px; border-radius: 10px; margin-bottom: 14px; border: 1px solid rgba(0,0,0,0.08); }
+        .mat p { color: var(--text-2); font-size: 0.96rem; margin-top: 7px; }
+        .mat .d { display: inline-block; margin-top: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; color: var(--brand-deep); background: rgba(169,116,63,0.10); padding: 3px 8px; border-radius: 5px; }
+
+        /* Shapes */
+        .shape-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        @media (max-width: 880px) { .shape-grid { grid-template-columns: repeat(2, 1fr); } }
+        .shape { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+        .shape .ic { width: 42px; height: 42px; border-radius: 11px; background: rgba(169,116,63,0.12); color: var(--brand-deep); display: grid; place-items: center; margin-bottom: 14px; }
+        .shape .ic svg { width: 22px; height: 22px; }
+        .shape p { color: var(--text-2); font-size: 0.94rem; margin-top: 6px; }
+        .shape code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; color: var(--brand-deep); background: rgba(169,116,63,0.08); padding: 2px 6px; border-radius: 5px; display: inline-block; margin-top: 10px; }
+
+        /* Checks */
+        .checks { list-style: none; margin-top: 22px; max-width: 680px; }
+        .checks li { padding: 11px 0 11px 32px; position: relative; color: var(--text-2); border-bottom: 1px solid var(--border); }
+        .checks li:last-child { border-bottom: 0; }
+        .checks li::before { content: "\2713"; position: absolute; left: 0; top: 11px; width: 21px; height: 21px; border-radius: 50%; background: rgba(169,116,63,0.14); color: var(--brand-deep); font-size: 0.72rem; font-weight: 800; display: grid; place-items: center; }
+        .checks b { color: var(--text); }
+
+        /* Waste */
+        .waste { background: var(--ink); color: var(--on-dark); }
+        .waste h2 { color: #fff; }
+        .waste .lead { color: var(--muted-dark); }
+        .wtable { margin-top: 36px; border: 1px solid var(--border-dark); border-radius: var(--radius-lg); overflow: hidden; }
+        .wrow { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding: 16px 22px; border-bottom: 1px solid var(--border-dark); align-items: baseline; }
+        .wrow:last-child { border-bottom: 0; }
+        .wrow b { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.12rem; color: var(--brand-light); }
+        .wrow span { color: var(--muted-dark); font-size: 0.97rem; }
+        .wrow.is-default { background: rgba(169,116,63,0.14); }
+        .wrow.is-default span { color: var(--on-dark); }
+        @media (max-width: 560px) { .wrow { grid-template-columns: 1fr; gap: 4px; } }
+
+        /* FAQ */
+        .faq { background: var(--surface-alt); }
+        .faq details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 12px; }
+        .faq summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; color: var(--brand-deep); font-size: 1.4rem; font-weight: 700; line-height: 1; flex: none; }
+        .faq details[open] summary::after { content: "\2212"; }
+        .faq p { color: var(--text-2); margin-top: 12px; }
+        .faq a { color: var(--brand-deep); font-weight: 600; }
+
+        /* CTA + footer */
+        .cta { background: linear-gradient(140deg, var(--brand-deep) 0%, var(--brand) 100%); color: #fff; text-align: center; }
+        .cta h2 { color: #fff; }
+        .cta p { max-width: 540px; margin: 0 auto 28px; font-size: 1.1rem; color: rgba(255,255,255,0.92); }
+        .cta .hero-ctas { justify-content: center; margin-bottom: 14px; }
+        .cta .btn--brand { background: #fff; color: var(--brand-deep); box-shadow: 0 10px 30px rgba(0,0,0,0.18); }
+        .cta .btn--brand:hover { background: #fdf6ee; }
+        .cta small { color: rgba(255,255,255,0.85); }
+        footer { background: var(--ink); color: var(--muted-dark); padding: 44px 0; font-size: 0.92rem; }
+        .foot-inner { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; align-items: center; }
+        footer a { color: var(--muted-dark); text-decoration: none; }
+        footer a:hover { color: var(--on-dark); }
+        .foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn:hover { transform: none; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="/"><img src="/gravelcalc/icon.png" alt="GravelCalc icon"> GravelCalc</a>
+            <div class="nav-links">
+                <a href="#materials">Materials</a>
+                <a href="#shapes">Shapes</a>
+                <a href="#faq">FAQ</a>
+                <a href="/gravelcalc/support">Support</a>
+                <a class="btn btn--brand" href="#get">Get the app</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">iPhone &amp; iPad &middot; Works offline</span>
+                <h1>Order by the yard, <span class="accent">or by the ton.</span></h1>
+                <p class="lead">Suppliers price gravel by the cubic yard and mulch by the ton, and the two are not the same number. GravelCalc works out both from the area you measured, using the real density of the material you picked.</p>
+                <div class="hero-ctas" id="get">
+                    <a class="btn btn--brand" href="https://apps.apple.com/app/gravelcalc-fill-calculator/id6761389391" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download on the App Store
+                    </a>
+                    <a class="btn btn--ghost" href="#materials">See the materials</a>
+                </div>
+                <p class="hero-note"><b>No account. No subscription. No internet needed.</b> Imperial or metric, set to your country by default.</p>
+            </div>
+            <div class="density">
+                <h2>Material densities, built in</h2>
+                <p class="cap">The numbers GravelCalc uses to turn volume into weight.</p>
+                <table>
+                    <thead><tr><th scope="col">Material</th><th scope="col">tons/yd&sup3;</th><th scope="col">tonnes/m&sup3;</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gravel</td><td>1.40</td><td>1.83</td></tr>
+                        <tr><td>Mulch</td><td>0.40</td><td>0.52</td></tr>
+                        <tr><td>Topsoil</td><td>1.08</td><td>1.41</td></tr>
+                        <tr><td>Sand</td><td>1.35</td><td>1.76</td></tr>
+                        <tr><td>Decomposed granite</td><td>1.50</td><td>1.96</td></tr>
+                        <tr><td>River rock</td><td>1.35</td><td>1.76</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </header>
+
+    <div class="trust">
+        <div class="container trust-inner">
+            <span>Six materials</span>
+            <span>Four area shapes</span>
+            <span>Volume and weight</span>
+            <span>Imperial &amp; metric</span>
+            <span>100% offline</span>
+        </div>
+    </div>
+
+    <section class="section mats" id="materials">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow" style="color: var(--brand-deep)">Materials</span>
+                <h2>Six materials, each with its own weight</h2>
+                <p class="lead">Mulch is a third the weight of gravel for the same volume. Pick the material first and every number after it is right for that material.</p>
+            </div>
+            <div class="mat-grid">
+                <div class="mat">
+                    <div class="sw" style="background:#8C8C87"></div>
+                    <h3>Gravel</h3>
+                    <p>Driveways, drainage, base layers and paths.</p>
+                    <span class="d">1.40 tons/yd&sup3;</span>
+                </div>
+                <div class="mat">
+                    <div class="sw" style="background:#6B4A2F"></div>
+                    <h3>Mulch</h3>
+                    <p>Garden beds, tree rings and playground areas.</p>
+                    <span class="d">0.40 tons/yd&sup3;</span>
+                </div>
+                <div class="mat">
+                    <div class="sw" style="background:#4A3B2A"></div>
+                    <h3>Topsoil</h3>
+                    <p>Garden beds, lawn prep and raised beds.</p>
+                    <span class="d">1.08 tons/yd&sup3;</span>
+                </div>
+                <div class="mat">
+                    <div class="sw" style="background:#D8C9A3"></div>
+                    <h3>Sand</h3>
+                    <p>Paver base, sandboxes and levelling.</p>
+                    <span class="d">1.35 tons/yd&sup3;</span>
+                </div>
+                <div class="mat">
+                    <div class="sw" style="background:#B08D5E"></div>
+                    <h3>Decomposed granite</h3>
+                    <p>Pathways, patios and xeriscaping.</p>
+                    <span class="d">1.50 tons/yd&sup3;</span>
+                </div>
+                <div class="mat">
+                    <div class="sw" style="background:#9AA3A8"></div>
+                    <h3>River rock</h3>
+                    <p>Decorative landscaping, dry creek beds and borders.</p>
+                    <span class="d">1.35 tons/yd&sup3;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="shapes">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow" style="color: var(--brand-deep)">Shapes</span>
+                <h2>Measure the area the way it is actually shaped</h2>
+                <p class="lead">Including the L-shape, for the driveway that wraps a corner or the bed with a notch out of it.</p>
+            </div>
+            <div class="shape-grid">
+                <div class="shape">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="1"/></svg></div>
+                    <h3>Rectangle</h3>
+                    <p>Driveways, beds, paths and patios.</p>
+                    <code>L &times; W &times; D</code>
+                </div>
+                <div class="shape">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></div>
+                    <h3>Circle</h3>
+                    <p>Tree rings, fire pit surrounds, round patios.</p>
+                    <code>&pi; &times; r&sup2; &times; D</code>
+                </div>
+                <div class="shape">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4 21 20H3z"/></svg></div>
+                    <h3>Triangle</h3>
+                    <p>Triangular beds and corner areas.</p>
+                    <code>&frac12; &times; b &times; h &times; D</code>
+                </div>
+                <div class="shape">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h7v9h9v7H4z"/></svg></div>
+                    <h3>L-shape</h3>
+                    <p>A rectangle minus a cutout: wrapping paths and notched beds.</p>
+                    <code>(A &minus; cutout) &times; D</code>
+                </div>
+            </div>
+            <ul class="checks">
+                <li><b>Volume and weight together</b> &mdash; cubic yards or metres alongside tons or tonnes, so you can read either off the same screen.</li>
+                <li><b>Dump truck loads</b> against your local capacity, 10&nbsp;yd&sup3; or 7.6&nbsp;m&sup3; by default and editable in Settings.</li>
+                <li><b>Cost estimates</b> from a price per yard or metre plus an optional flat delivery fee.</li>
+                <li><b>Mixed-material projects</b> &mdash; gravel for the driveway, mulch for the beds and topsoil for the lawn, in one project with separate and combined totals.</li>
+                <li><b>A shareable summary</b> in plain text, to send to a supplier or a client from any app.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section waste">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Waste factor</span>
+                <h2>Spread, settle, compact &mdash; then come up short</h2>
+                <p class="lead">A second delivery for half a yard costs more than the material. GravelCalc adds the allowance and shows you what it added.</p>
+            </div>
+            <div class="wtable">
+                <div class="wrow"><b>0%</b><span>Exact volume only &mdash; not recommended for ordering.</span></div>
+                <div class="wrow"><b>5%</b><span>Simple rectangular areas on flat, prepared ground.</span></div>
+                <div class="wrow is-default"><b>7%</b><span>The default, and the standard recommendation for most landscaping jobs.</span></div>
+                <div class="wrow"><b>10%</b><span>Irregular shapes, sloped ground, areas with obstacles.</span></div>
+                <div class="wrow"><b>15%</b><span>Complex layouts, hard-to-access areas, or where compaction is expected.</span></div>
+                <div class="wrow"><b>Custom</b><span>Any percentage you want to work to.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow" style="color: var(--brand-deep)">Questions</span>
+                <h2>Before you download</h2>
+            </div>
+            <details open>
+                <summary>Why calculate weight as well as volume?</summary>
+                <p>Many landscape suppliers sell by weight rather than by volume. GravelCalc converts between the two using each material's density, so you can compare quotes and order the right amount however your supplier prices it.</p>
+            </details>
+            <details>
+                <summary>How deep should I spread it?</summary>
+                <p>As a rule of thumb: 2&ndash;4 inches for gravel driveways and paths, 2&ndash;3 inches for mulch, and 4&ndash;6 inches for topsoil in garden beds. The app pre-selects a recommended depth when you choose a material, and the Reference tab carries the full table along with coverage per cubic yard.</p>
+            </details>
+            <details>
+                <summary>What waste factor should I use?</summary>
+                <p>7% is the default and the standard recommendation. Use 5% for simple flat areas, 10% for slopes or irregular shapes, and 15% where compaction is expected. Gravel and decomposed granite compact significantly, so add another 10&ndash;15% if you plan to run a plate compactor over them.</p>
+            </details>
+            <details>
+                <summary>Can I calculate several materials in one project?</summary>
+                <p>Yes. Each calculation added to the Project tab remembers its material, so a driveway, a set of beds and a lawn can sit in one project with separate and combined totals.</p>
+            </details>
+            <details>
+                <summary>Does it work offline?</summary>
+                <p>Entirely. There is no account to create and no internet connection required, so it works in the yard, at the supplier, or anywhere you have your phone.</p>
+            </details>
+            <details>
+                <summary>Is my data sent anywhere?</summary>
+                <p>No. Your project, pricing and preferences are saved on your device and are never sent to any server. See the <a href="/gravelcalc/privacy">privacy policy</a>. The formulas behind every number are published in full on the <a href="/gravelcalc/support">support page</a>.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <h2>Measure it. Price it. Order it.</h2>
+            <p>GravelCalc is on iPhone and iPad, and it works wherever the job is.</p>
+            <div class="hero-ctas">
+                <a class="btn btn--brand" href="https://apps.apple.com/app/gravelcalc-fill-calculator/id6761389391" target="_blank" rel="noopener">Download on the App Store</a>
+            </div>
+            <small>Pouring concrete instead? <a href="/concretecalc/" style="color:#fff; text-decoration: underline;">ConcreteCalc</a> does the same job for slabs, footings and columns.</small>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container foot-inner">
+            <p>&copy; 2026 Top 7 Systems</p>
+            <nav class="foot-links" aria-label="GravelCalc pages">
+                <a href="/">All apps</a>
+                <a href="/gravelcalc/support">Support</a>
+                <a href="/gravelcalc/privacy">Privacy</a>
+                <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
