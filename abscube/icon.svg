@@ -1,14 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ABS Cube">
-  <defs>
-    <linearGradient id="abscube-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00a651"/>
-      <stop offset="1" stop-color="#00662f"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#abscube-bg)"/>
-  <!-- subtle baseline -->
-  <line x1="12" y1="48" x2="52" y2="48" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-linecap="round"/>
-  <!-- gold rising trend line (forecast) -->
-  <polyline points="12,42 22,36 31,39 41,26 52,16" fill="none" stroke="#ffcd00" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="52" cy="16" r="3.4" fill="#ffcd00"/>
+  <rect width="64" height="64" fill="#2457f5"/>
+  <!-- a cube, one face lifted: the product's name, drawn -->
+  <path d="M32 9 53 20.5v23L32 55 11 43.500v-23z" fill="#ffffff"/>
+  <path d="M32 9 53 20.5 32 32 11 20.5z" fill="#a9c8ff"/>
+  <path d="M32 32 53 20.5v23L32 55z" fill="#eb6834"/>
+  <path d="M32 9 53 20.5v23L32 55 11 43.500v-23zM11 20.5 32 32l21-11.500M32 32v23" fill="none" stroke="#0d1526" stroke-width="3.5" stroke-linejoin="round"/>
 </svg>
