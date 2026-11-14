@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ABS Cube">
-  <rect width="64" height="64" fill="#2457f5"/>
+  <rect width="64" height="64" fill="#0f5499"/>
   <!-- a cube, one face lifted: the product's name, drawn -->
-  <path d="M32 9 53 20.5v23L32 55 11 43.500v-23z" fill="#ffffff"/>
-  <path d="M32 9 53 20.5 32 32 11 20.5z" fill="#a9c8ff"/>
-  <path d="M32 32 53 20.5v23L32 55z" fill="#eb6834"/>
-  <path d="M32 9 53 20.5v23L32 55 11 43.500v-23zM11 20.5 32 32l21-11.500M32 32v23" fill="none" stroke="#0d1526" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M32 9 53 20.5v23L32 55 11 43.5v-23z" fill="#ffffff"/>
+  <path d="M32 9 53 20.5 32 32 11 20.5z" fill="#c6dbef"/>
+  <path d="M32 32 53 20.5v23L32 55z" fill="#f59e0b"/>
+  <path d="M32 9 53 20.5v23L32 55 11 43.5v-23zM11 20.5 32 32l21-11.5M32 32v23" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
 </svg>
