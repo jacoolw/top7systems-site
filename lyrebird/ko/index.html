@@ -116,6 +116,9 @@
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
         .hero-note { margin-top: 22px; font-size: 0.96rem; color: var(--on-night-muted); max-width: 34em; }
         .hero-note b { color: var(--cream); }
+        .hero-also { margin-top: 14px; font-size: 0.96rem; font-weight: 700; }
+        .hero-also a { color: var(--wattle-bright); text-decoration: none; border-bottom: 1px solid rgba(243, 197, 82, 0.5); padding-bottom: 1px; }
+        .hero-also a:hover { border-bottom-color: var(--wattle-bright); }
         .hero-visual { display: flex; justify-content: center; align-self: end; }
         .phone { width: min(330px, 78vw); border-radius: 44px 44px 0 0; overflow: hidden; border: 9px solid #0A1711; border-bottom: 0; box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(243, 234, 211, 0.14); background: #0A1711; }
         .phone img { width: 100%; aspect-ratio: 640 / 1180; object-fit: cover; object-position: top; }
@@ -247,6 +250,8 @@
                 </div>
                 <p class="english-note">앱과 시험은 영어로 되어 있습니다. 앱 안에서 공식 책자를 한국어로 읽을 수 있습니다.</p>
                 <p class="hero-note"><b>무료로 시작하세요.</b> 모든 강의는 평생 무료입니다. 한 번만 구입하면 모든 연습 문제를 풀 수 있고 모의시험도 무제한으로 볼 수 있습니다. 구독 없음, 광고 없음, 회원가입 없음.</p>
+                <!-- The same page for the other store. build.py and build_android.py put in the language's own wording and address. -->
+                <p class="hero-also"><a href="/android/lyrebird/ko/">Android용 Lyrebird</a></p>
             </div>
             <div class="hero-visual">
                 <div class="phone"><img src="/lyrebird/shots/home.jpg" alt="The Lyrebird Today screen: a lyrebird's tail with sixteen feathers, a readiness score and the next lesson" width="640" height="1390"></div>
@@ -450,6 +455,7 @@
                 <a href="/lyrebird/support">지원</a>
                 <a href="/lyrebird/privacy">개인정보 처리방침</a>
                 <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+                <a href="/android/lyrebird/ko/">Android용 Lyrebird</a>
             </div>
             <div class="fine">
                 <p>Lyrebird는 독립적인 학습 도구입니다. 호주 정부나 호주 내무부(Department of Home Affairs)가 만든 것이 아니며, 이들 기관과 제휴 관계가 없고 승인이나 보증을 받지도 않았습니다. 공식 책자와 공식 연습 시험은 <a href="https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond">immi.homeaffairs.gov.au</a>에서 무료로 제공됩니다.</p>

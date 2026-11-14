@@ -116,6 +116,9 @@
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
         .hero-note { margin-top: 22px; font-size: 0.96rem; color: var(--on-night-muted); max-width: 34em; }
         .hero-note b { color: var(--cream); }
+        .hero-also { margin-top: 14px; font-size: 0.96rem; font-weight: 700; }
+        .hero-also a { color: var(--wattle-bright); text-decoration: none; border-bottom: 1px solid rgba(243, 197, 82, 0.5); padding-bottom: 1px; }
+        .hero-also a:hover { border-bottom-color: var(--wattle-bright); }
         .hero-visual { display: flex; justify-content: center; align-self: end; }
         .phone { width: min(330px, 78vw); border-radius: 44px 44px 0 0; overflow: hidden; border: 9px solid #0A1711; border-bottom: 0; box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(243, 234, 211, 0.14); background: #0A1711; }
         .phone img { width: 100%; aspect-ratio: 640 / 1180; object-fit: cover; object-position: top; }
@@ -247,6 +250,8 @@
                 </div>
                 <p class="english-note">ऐप और परीक्षा अंग्रेज़ी में हैं। ऐप के अंदर आप आधिकारिक पुस्तिका हिन्दी में पढ़ सकते हैं।</p>
                 <p class="hero-note"><b>मुफ़्त में शुरू करें।</b> हर पाठ हमेशा के लिए मुफ़्त है। एक बार की खरीद से सभी अभ्यास प्रश्न और असीमित मॉक परीक्षाएँ खुल जाती हैं। कोई सब्सक्रिप्शन नहीं, कोई विज्ञापन नहीं, कोई खाता नहीं।</p>
+                <!-- The same page for the other store. build.py and build_android.py put in the language's own wording and address. -->
+                <p class="hero-also"><a href="/android/lyrebird/hi/">Android के लिए Lyrebird</a></p>
             </div>
             <div class="hero-visual">
                 <div class="phone"><img src="/lyrebird/shots/home.jpg" alt="The Lyrebird Today screen: a lyrebird's tail with sixteen feathers, a readiness score and the next lesson" width="640" height="1390"></div>
@@ -450,6 +455,7 @@
                 <a href="/lyrebird/support">सहायता</a>
                 <a href="/lyrebird/privacy">गोपनीयता</a>
                 <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+                <a href="/android/lyrebird/hi/">Android के लिए Lyrebird</a>
             </div>
             <div class="fine">
                 <p>Lyrebird पढ़ाई में मदद करने वाला एक स्वतंत्र ऐप है। इसे ऑस्ट्रेलियाई सरकार या गृह मामला विभाग (Department of Home Affairs) ने नहीं बनाया है, यह उनसे जुड़ा नहीं है, और इसे उनकी मान्यता या समर्थन प्राप्त नहीं है। आधिकारिक पुस्तिका और आधिकारिक अभ्यास परीक्षा <a href="https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond">immi.homeaffairs.gov.au</a> पर मुफ़्त उपलब्ध हैं।</p>

@@ -116,6 +116,9 @@
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
         .hero-note { margin-top: 22px; font-size: 0.96rem; color: var(--on-night-muted); max-width: 34em; }
         .hero-note b { color: var(--cream); }
+        .hero-also { margin-top: 14px; font-size: 0.96rem; font-weight: 700; }
+        .hero-also a { color: var(--wattle-bright); text-decoration: none; border-bottom: 1px solid rgba(243, 197, 82, 0.5); padding-bottom: 1px; }
+        .hero-also a:hover { border-bottom-color: var(--wattle-bright); }
         .hero-visual { display: flex; justify-content: center; align-self: end; }
         .phone { width: min(330px, 78vw); border-radius: 44px 44px 0 0; overflow: hidden; border: 9px solid #0A1711; border-bottom: 0; box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(243, 234, 211, 0.14); background: #0A1711; }
         .phone img { width: 100%; aspect-ratio: 640 / 1180; object-fit: cover; object-position: top; }
@@ -247,6 +250,8 @@
                 </div>
                 <p class="english-note">التطبيق والاختبار باللغة الإنجليزية. داخل التطبيق يمكنك قراءة الكتيّب الرسمي باللغة العربية.</p>
                 <p class="hero-note"><b>ابدأ مجانًا.</b> جميع الدروس مجانية دائمًا. عملية شراء واحدة تفتح لك جميع الأسئلة التدريبية وعددًا غير محدود من الاختبارات التجريبية. بلا اشتراك، بلا إعلانات، بلا حساب.</p>
+                <!-- The same page for the other store. build.py and build_android.py put in the language's own wording and address. -->
+                <p class="hero-also"><a href="/android/lyrebird/ar/">Lyrebird لـ Android</a></p>
             </div>
             <div class="hero-visual">
                 <div class="phone"><img src="/lyrebird/shots/home.jpg" alt="The Lyrebird Today screen: a lyrebird's tail with sixteen feathers, a readiness score and the next lesson" width="640" height="1390"></div>
@@ -450,6 +455,7 @@
                 <a href="/lyrebird/support">الدعم</a>
                 <a href="/lyrebird/privacy">الخصوصية</a>
                 <a href="mailto:support@top7systems.net">support@top7systems.net</a>
+                <a href="/android/lyrebird/ar/">Lyrebird لـ Android</a>
             </div>
             <div class="fine">
                 <p>تطبيق Lyrebird أداة دراسية مستقلة. وهو ليس من إعداد الحكومة الأسترالية ولا وزارة الشؤون الداخلية، وليس تابعًا لأي منهما، ولا يحظى بتأييدهما. الكتيّب الرسمي والاختبار التدريبي الرسمي متاحان على <a href="https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond">immi.homeaffairs.gov.au</a> مجانًا.</p>
