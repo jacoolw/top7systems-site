@@ -6,6 +6,9 @@
     <title>FootInch Support &amp; Help — keys, solvers, formulas, voice entry | Top 7 Systems</title>
     <meta name="description" content="How to use FootInch: feet-inch-fraction entry, areas and volumes, rise/run/diagonal/pitch, the tape ruler, voice entry, every solver's formula, FootInch Pro and restoring purchases.">
     <link rel="canonical" href="https://top7systems.net/footinch/support">
+    <link rel="alternate" hreflang="en" href="https://top7systems.net/footinch/support">
+    <link rel="alternate" hreflang="es" href="https://top7systems.net/footinch/es/support">
+    <link rel="alternate" hreflang="x-default" href="https://top7systems.net/footinch/support">
     <meta name="apple-itunes-app" content="app-id=6821729200">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +44,11 @@
             .shots { gap: 12px; }
             .shots img { width: calc(50% - 6px); }
         }
+        .doc-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 32px; }
+        .doc-top .back-link { margin-bottom: 0; }
+        .lang-switch { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+        .doc .lang-switch a { color: var(--text-secondary); }
+        .doc .lang-switch a[aria-current] { color: var(--text); font-weight: 600; }
     </style>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -60,7 +68,10 @@
     </header>
     <main class="container">
         <article class="doc">
-            <a href="/footinch/" class="back-link">&larr; Back to FootInch</a>
+            <div class="doc-top">
+                <a href="/footinch/" class="back-link">&larr; Back to FootInch</a>
+                <nav class="lang-switch" aria-label="Language"><a href="/footinch/support" hreflang="en" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/footinch/es/support" hreflang="es" lang="es">Español</a></nav>
+            </div>
             <h1>FootInch — Support &amp; Help</h1>
             <p class="last-updated">FootInch is a feet-inch-fraction construction calculator for iPhone and iPad, with the same engine and solvers as <a href="/android/footinch/">FootInch for Android</a>. Pay once, no subscription. Email <a href="mailto:support@top7systems.net">support@top7systems.net</a> and you'll hear back from the person who built it.</p>
 
