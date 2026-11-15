@@ -13,6 +13,9 @@
     <meta property="og:image" content="https://top7systems.net/footinch/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://top7systems.net/android/footinch/">
+    <link rel="alternate" hreflang="en" href="https://top7systems.net/android/footinch/">
+    <link rel="alternate" hreflang="es" href="https://top7systems.net/android/footinch/es/">
+    <link rel="alternate" hreflang="x-default" href="https://top7systems.net/android/footinch/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -70,7 +73,14 @@
         .nav-links a:hover { color: var(--text-on-dark); }
         .nav-links .btn { padding: 10px 16px; font-size: 0.9rem; }
         .nav-links a.btn--brand, .nav-links a.btn--brand:hover { color: #1a1200; white-space: nowrap; }
-        @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
+        @media (max-width: 1000px) { .nav-links a:not(.btn) { display: none; } }
+
+        /* Language switch */
+        .lang-switch { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; font-size: 0.85rem; font-weight: 600; color: var(--muted-dark); }
+        .lang-switch a { color: var(--muted-dark); text-decoration: none; }
+        .lang-switch a:hover { color: var(--text-on-dark); text-decoration: underline; }
+        .lang-switch a[aria-current] { color: var(--text-on-dark); }
+        .lang-switch span { opacity: 0.5; }
 
         /* Hero */
         .hero { position: relative; background: linear-gradient(180deg, rgba(12,10,8,0.78) 0%, rgba(12,10,8,0.55) 55%, rgba(17,18,20,0.96) 100%), url('/footinch/hero.jpg') center 38% / cover no-repeat; color: var(--text-on-dark); padding: 88px 0 0; overflow: hidden; }
@@ -243,6 +253,7 @@
     <header class="hero" id="top">
         <div class="container hero-grid">
             <div>
+                <nav class="lang-switch" aria-label="Language"><a href="/android/footinch/" hreflang="en" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/android/footinch/es/" hreflang="es" lang="es">Español</a></nav>
                 <span class="eyebrow">Android phones &amp; tablets · Pay once · No subscription</span>
                 <h1>Every jobsite calculation. <span class="accent">One price.</span></h1>
                 <p class="lead">FootInch is the feet-inch-fraction calculator built for framers, carpenters, concrete crews, roofers and serious DIYers. Type measurements the way you read a tape, see the mark on a real ruler, and solve rafters, stairs, concrete and layouts without a yearly bill.</p>
@@ -280,7 +291,7 @@
             <div class="demo-copy reveal">
                 <span class="eyebrow">Try it here</span>
                 <h2>Type it like you read the tape.</h2>
-                <p class="lead">This is the real FootInch entry logic running in your browser. Press the keys below or use your keyboard: digits, <code>f</code> for feet, <code>i</code> for inches, <code>/</code> for fractions, <code>+ − * /</code> and <code>Enter</code>.</p>
+                <p class="lead">This is the real FootInch entry logic running in your browser. Press the keys below or use your keyboard: digits, <code>f</code> for feet, <code>i</code> for inches, <code>/</code> for fractions, <code>+ − *</code> and <code>Enter</code>.</p>
                 <ol>
                     <li>Press <code>5</code> <code>ft</code> <code>6</code> <code>in</code> <code>3</code> <code>/</code> <code>8</code> — the display reads 5' 6-3/8".</li>
                     <li>Press <code>+</code> <code>2</code> <code>ft</code> <code>=</code> — you get 7' 6-3/8", and the ruler shows where the mark lands.</li>
