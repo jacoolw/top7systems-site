@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stampr&nbsp;: photos et vidéos horodatées et géolocalisées, notes vocales | iPhone et Android</title>
+    <meta name="description" content="Incrustez les coordonnées GPS, l’adresse et vos notes vocales dans vos photos et vidéos, ou prenez des notes de terrain horodatées et géolocalisées sans photo. Classement par projet, rapports PDF, synchronisation iCloud privée sur iPhone. Sans abonnement.">
+    <meta name="keywords" content="appareil photo GPS, photo horodatée, photo géolocalisée, photo horodatée et géolocalisée, tampon GPS, vidéo géolocalisée, notes vocales, notes de terrain, photo de chantier, suivi de chantier, rapport photo PDF, état des lieux photo, constat de sinistre, expertise, géotag, application photo GPS, synchronisation iCloud">
+    <link rel="canonical" href="https://top7systems.net/stampr/fr/">
+    <link rel="alternate" hreflang="en" href="https://top7systems.net/stampr/">
+    <link rel="alternate" hreflang="pt-BR" href="https://top7systems.net/stampr/pt/">
+    <link rel="alternate" hreflang="es" href="https://top7systems.net/stampr/es/">
+    <link rel="alternate" hreflang="id" href="https://top7systems.net/stampr/id/">
+    <link rel="alternate" hreflang="de" href="https://top7systems.net/stampr/de/">
+    <link rel="alternate" hreflang="fr" href="https://top7systems.net/stampr/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://top7systems.net/stampr/">
+    <meta name="apple-itunes-app" content="app-id=6761292625">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Top 7 Systems">
+    <meta property="og:url" content="https://top7systems.net/stampr/fr/">
+    <meta property="og:title" content="Stampr&nbsp;: la caméra GPS qui tamponne vos photos et vidéos">
+    <meta property="og:description" content="Parlez. Tamponnez. C’est fait. La caméra GPS de terrain qui incruste coordonnées, adresse et notes vocales dans vos photos et vidéos.">
+    <meta property="og:image" content="https://top7systems.net/stampr/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stampr&nbsp;: la caméra GPS qui tamponne vos photos et vidéos">
+    <meta name="twitter:description" content="Coordonnées, adresse et notes vocales incrustées dans vos photos et vidéos. Rapports PDF avec photos intégrées. iPhone, iPad et Android.">
+    <meta name="twitter:image" content="https://top7systems.net/stampr/og-image.png">
+    <meta name="theme-color" content="#111111">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stampr/landing.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Stampr: GPS Photo Stamp",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "UtilitiesApplication",
+  "url": "https://top7systems.net/stampr/",
+  "image": "https://top7systems.net/stampr/icon.png",
+  "description": "Caméra GPS de terrain qui incruste les coordonnées, l’adresse et des notes vocales mises au propre par IA dans les photos et les vidéos, garde des notes de terrain horodatées et géolocalisées sans photo, et exporte des rapports PDF avec photos intégrées. Achat unique, sans abonnement.",
+  "inLanguage": "fr",
+  "downloadUrl": [
+    "https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625",
+    "https://play.google.com/store/apps/details?id=net.top7systems.stampr"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Top 7 Systems",
+    "url": "https://top7systems.net"
+  }
+}
+    </script>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAV
+         ============================================================ -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <div class="nav-left">
+                    <a href="/" class="nav-back" aria-label="Retour à Top 7 Systems" title="Retour à Top 7 Systems">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+                        <span class="nav-back-text">Top 7 Systems</span>
+                    </a>
+                    <a href="/stampr/fr/" class="nav-brand">
+                        <img src="/stampr/icon.png" alt="Stampr">
+                        <span>Stampr</span>
+                    </a>
+                </div>
+                <button class="nav-hamburger" aria-label="Ouvrir le menu" onclick="document.querySelector('.nav-links').classList.add('open')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+                <div class="nav-links">
+                    <button class="nav-close" aria-label="Fermer le menu" onclick="document.querySelector('.nav-links').classList.remove('open')">&times;</button>
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#how-it-works">Comment ça marche</a>
+                    <a href="#platforms">iPhone et Android</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#download" class="nav-cta">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Caméra GPS pour photos et vidéos tamponnées - iPhone et Android
+                </div>
+                <h1>Parlez. <span class="accent">Tamponnez.</span> C’est fait.</h1>
+                <p class="hero-subtitle">Prenez une photo ou filmez une vidéo, dictez vos notes&nbsp;: Stampr incruste les coordonnées GPS, la date et l’heure et la transcription de vos notes vocales directement dans l’image. Rien à taper, rien à oublier. Vous parlez, vous photographiez.</p>
+                <div class="hero-ctas">
+                    <a href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625" class="store-badge" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <div class="store-label">
+                            <small>Télécharger dans l’</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" class="store-badge" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-2.302 1.33-1.817-1.33 1.817-1.33zM5.864 2.658L16.8 8.99l-2.302 2.303-8.635-8.635z"/></svg>
+                        <div class="store-label">
+                            <small>Disponible sur</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="hero-devices">
+                    <div class="device-frame iphone">
+                        <img src="/stampr/screenshots/camera.png" alt="Caméra de Stampr sur iPhone avec les données GPS en direct sur l’image&nbsp;: coordonnées, adresse et cap">
+                        <span class="device-label">iPhone</span>
+                    </div>
+                    <div class="device-frame android">
+                        <img src="/stampr/screenshots/android/camera.png" alt="Caméra de Stampr sur Android avec le tampon GPS affiché sur l’image">
+                        <span class="device-label">Android</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         TRUST BAR
+         ============================================================ -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    Tampon GPS
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    </div>
+                    Photo et vidéo
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+                    </div>
+                    Notes vocales
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    Rapports PDF
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    Sans abonnement
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    100&nbsp;% privé
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURES
+         ============================================================ -->
+    <section class="section" id="features">
+        <div class="container">
+
+            <!-- Feature 1: GPS Stamping -->
+            <div class="feature-row reveal">
+                <div class="feature-text">
+                    <span class="section-label">Tampon GPS professionnel</span>
+                    <h2>Chaque photo porte sa position exacte</h2>
+                    <p>Stampr incruste dans chaque photo les coordonnées GPS, l’adresse postale, l’altitude, le cap, la date et l’heure, et le nom de votre projet. Les données GPS sont aussi intégrées aux métadonnées EXIF&nbsp;: vos photos se placent au bon endroit dans Photos, dans les logiciels SIG et dans les outils de gestion de sinistres.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Coordonnées en degrés décimaux, DMS, UTM ou MGRS
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Altitude en mètres ou en pieds, nord géographique ou magnétique
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Précision GPS signalée par couleur, déclenchement bloqué sans signal GPS en option
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Fuseau horaire de la prise de vue conservé sur le tampon et dans l’EXIF
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="/stampr/screenshots/stamped-photo.png" alt="Tampon GPS de Stampr avec coordonnées, adresse, altitude et cap">
+                </div>
+            </div>
+
+            <!-- Feature 2: Video -->
+            <div class="feature-row reverse reveal">
+                <div class="feature-text">
+                    <span class="section-label">Vidéo avec tampon GPS</span>
+                    <h2>Filmez&nbsp;: le GPS est incrusté dans chaque image</h2>
+                    <p>Passez en mode vidéo et filmez une visite. Stampr fige le tampon GPS, le nom du projet, l’adresse, l’altitude, le cap et l’heure à l’instant où vous lancez l’enregistrement, et les incruste dans la vidéo&nbsp;: la position accompagne la séquence, même une fois sortie de l’appli. La bande-son est transcrite sur l’appareil en une note modifiable, retrouvable par la recherche, exactement comme les notes vocales de vos photos.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bandeau du tampon incrusté dans la vidéo, pas seulement dans les métadonnées
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bande-son transcrite automatiquement en une note consultable
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Vidéos rangées dans les mêmes projets, rapports PDF et exports que vos photos
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="/stampr/screenshots/video-detail.png" alt="Lecture d’une vidéo dans Stampr, avec le bandeau du tampon GPS incrusté dans l’image et la note transcrite de la visite">
+                </div>
+            </div>
+
+            <!-- Feature 3: Voice Notes -->
+            <div class="feature-row reveal">
+                <div class="feature-text">
+                    <span class="section-label">Notes vocales</span>
+                    <h2>Dictez vos constats. Ils s’affichent sur la photo.</h2>
+                    <p>Après chaque photo, dictez une note vocale. Stampr la transcrit sur l’appareil et ajoute le texte au tampon, directement sur l’image. Sur les appareils compatibles, une IA embarquée met la dictée au propre en une légende claire, avec des tags suggérés. Elle retire seulement les hésitations et les scories de la dictée, n’invente jamais rien, et la transcription mot pour mot est toujours conservée.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mode mains libres, pour travailler avec des gants
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mise au propre et tags automatiques par IA, entièrement sur l’appareil
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Réécoute de l’audio d’origine à tout moment
+                        </li>
+                    </ul>
+                    <a class="platform-store-link" href="https://apps.apple.com/app/id6761292625?ppid=046d6abb-d65d-4075-b3a5-716f5337811a&amp;pt=127886316&amp;ct=web-voice&amp;mt=8" target="_blank" rel="noopener">Essayer les notes vocales sur iPhone &rarr;</a>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="/stampr/screenshots/voice-note.png" alt="Enregistrement d’une note vocale dans Stampr avec transcription en direct">
+                </div>
+            </div>
+
+            <!-- Feature 4: Field Notes -->
+            <div class="feature-row reverse reveal" id="field-notes">
+                <div class="feature-text">
+                    <span class="section-label">Notes de terrain <span class="label-pill">Nouveau</span></span>
+                    <h2>Des notes sans photo, horodatées et géolocalisées comme une photo</h2>
+                    <p>Tout ce qui mérite d’être consigné ne se photographie pas. Activez les notes de terrain et Stampr ajoute un onglet Notes&nbsp;: appuyez sur le micro et parlez, ou écrivez, et chaque note reçoit l’heure et votre position GPS, comme une photo, puis elle est convertie en texte sur le téléphone. Gardez un journal ouvert pendant tout un chantier ou toute une opération de recherche. Les photos et vidéos prises en chemin y entrent aussi, et quand vous le fermez, vous pouvez partager l’ensemble sous forme de rapport PDF.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Appuyez sur le micro ou maintenez-le. Les mains prises&nbsp;? Siri ou le bouton Action sur iPhone, un bouton de volume sur Android
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Coordonnées, altitude et précision sur chaque note, dans le format de votre choix, MGRS / USNG compris
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Une seule chronologie par opération&nbsp;: notes, photos et vidéos, des plus anciennes aux plus récentes
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Gratuit et illimité. Désactivé par défaut, à activer dans les réglages
+                        </li>
+                    </ul>
+                    <div class="feature-store-links">
+                        <a class="platform-store-link" href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625?pt=127886316&amp;ct=web-fieldnotes&amp;mt=8" target="_blank" rel="noopener">Télécharger dans l’App Store &rarr;</a>
+                        <a class="platform-store-link" href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener">Disponible sur Google Play &rarr;</a>
+                    </div>
+                </div>
+                <div class="feature-visual feature-visual-pair">
+                    <figure>
+                        <img class="feature-screenshot" src="/stampr/screenshots/field-notes.png" alt="Onglet Notes de Stampr pour iPhone avec le journal ouvert d’une opération de recherche&nbsp;: notes vocales et écrites avec tags, coordonnées MGRS, altitude et précision, au-dessus du bouton d’enregistrement" loading="lazy">
+                        <figcaption>iPhone</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="feature-screenshot" src="/stampr/screenshots/android/field-notes.png" alt="Onglet Notes de Stampr pour Android avec le journal ouvert d’une opération de recherche&nbsp;: notes vocales et écrites avec tags, coordonnées USNG, altitude et précision, au-dessus du bouton d’enregistrement" loading="lazy">
+                        <figcaption>Android</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Feature 5: Organize by Project -->
+            <div class="feature-row reveal">
+                <div class="feature-text">
+                    <span class="section-label">Classement par projet</span>
+                    <h2>Chaque photo à sa place. Chaque projet sous la main.</h2>
+                    <p>Regroupez vos photos dans des projets repérés par couleur. Définissez un projet par défaut et chaque nouvelle prise de vue y est classée automatiquement. Passez de la grille de photos à une carte interactive pour voir exactement où chaque photo a été prise. Triez par date, des plus récentes ou des plus anciennes, et filtrez par période, projet ou tag.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Projets en couleur, classement automatique
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Carte interactive avec repères de position
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Recherche dans les notes, les adresses et les tags
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Synchronisation iCloud privée sur iPhone, pour retrouver votre travail sur un nouveau téléphone
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="/stampr/screenshots/library.png" alt="Bibliothèque de Stampr avec les cartes de projets, les boutons de filtre et de tri, et une grille de photos groupées par jour">
+                </div>
+            </div>
+
+            <!-- Feature 6: PDF Reports -->
+            <div class="feature-row reverse reveal">
+                <div class="feature-text">
+                    <span class="section-label">Rapports et export</span>
+                    <h2>Des rapports PDF professionnels en un geste</h2>
+                    <p>Partagez vos photos et vidéos tamponnées une par une ou par lots. Stampr génère un PDF professionnel&nbsp;: photos intégrées par ordre chronologique, vidéos avec leurs propres métadonnées, carte d’ensemble aux repères numérotés, pagination exacte et métadonnées complètes pour chaque prise de vue. Exportez les données du projet en CSV, KML ou GeoJSON pour vos tableurs, Google Earth et vos outils SIG.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Rapports PDF avec page de garde, carte et métadonnées
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Export CSV, KML et GeoJSON
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Fichiers projet (.stamprproj) à partager avec vos collègues
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <img class="feature-screenshot" src="/stampr/screenshots/pdf-report.png" alt="Rapport PDF de Stampr avec carte d’ensemble et photos tamponnées">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS
+         ============================================================ -->
+    <section class="section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="steps-header reveal">
+                <span class="section-label">Comment ça marche</span>
+                <h2 class="section-title">Trois étapes. Zéro paperasse.</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">De la poche à la photo documentée en quelques secondes. Rien à taper, aucun formulaire, pas besoin d’ordinateur.</p>
+            </div>
+            <div class="steps-grid reveal">
+                <div class="step-card">
+                    <div class="step-number"><span>📸</span></div>
+                    <h3>Photographiez</h3>
+                    <p>Prenez une photo ou filmez une vidéo. Stampr l’enregistre avec les coordonnées GPS précises, l’adresse, l’altitude et le cap, figés à l’instant exact de la prise de vue.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number"><span>🎙️</span></div>
+                    <h3>Dictez</h3>
+                    <p>Dictez une note vocale. Vos mots sont transcrits sur l’appareil et ajoutés au tampon, directement sur la photo. Vous portez des gants&nbsp;? Passez en mode mains libres.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number"><span>📄</span></div>
+                    <h3>Partagez</h3>
+                    <p>Envoyez vos photos tamponnées avec un rapport PDF professionnel. GPS, notes, carte et métadonnées&nbsp;: tout tient dans un seul document, exploitable tout de suite par votre équipe ou votre client.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WHO IT'S FOR
+         ============================================================ -->
+    <section class="section section-dark" id="personas">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Conçu pour le terrain</span>
+                <h2 class="section-title">Des photos géolocalisées et commentées, sans ralentir</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Suivi de chantier ou constat de sinistre&nbsp;: Stampr remplace le porte-bloc, le carnet et l’appli photo séparée par une seule méthode de travail.</p>
+            </div>
+            <div class="personas-grid reveal">
+                <div class="persona-card">
+                    <div class="persona-icon">🏗️</div>
+                    <h3>BTP et chantiers</h3>
+                    <p>Documentez l’avancement, les malfaçons et les contrôles avec des photos géolocalisées et des visites filmées. Produisez les rapports PDF pour vos clients et vos obligations de conformité sans quitter le chantier.</p>
+                    <a class="persona-link" href="https://apps.apple.com/app/id6761292625?ppid=a521d1dd-a715-401c-adf5-a0925f0a211e&amp;pt=127886316&amp;ct=web-construction&amp;mt=8" target="_blank" rel="noopener">Stampr pour le suivi de chantier &rarr;</a>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-icon">🛡️</div>
+                    <h3>Assurance et expertise</h3>
+                    <p>Rassemblez les preuves d’un sinistre avec des tampons GPS incrustés dans l’image et des constats dictés. Les paires de photos avant/après simplifient l’expertise.</p>
+                    <a class="persona-link" href="https://apps.apple.com/app/id6761292625?ppid=a521d1dd-a715-401c-adf5-a0925f0a211e&amp;pt=127886316&amp;ct=web-insurance&amp;mt=8" target="_blank" rel="noopener">Stampr pour les sinistres &rarr;</a>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-icon">🌿</div>
+                    <h3>Environnement</h3>
+                    <p>Relevez placettes de végétation, zones d’érosion et état des habitats avec des coordonnées précises et des vidéos tamponnées. Exportez en KML pour la cartographie SIG et en GeoJSON pour l’analyse.</p>
+                    <a class="persona-link" href="https://apps.apple.com/app/id6761292625?ppid=fb180a3f-59d1-43f6-b146-51bb4a28b15e&amp;pt=127886316&amp;ct=web-environmental&amp;mt=8" target="_blank" rel="noopener">Stampr pour les travaux SIG &rarr;</a>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-icon">🏠</div>
+                    <h3>Immobilier et gestion de biens</h3>
+                    <p>Constituez des dossiers de biens à vos couleurs, avec votre propre filigrane. Classez par bien et partagez des rapports professionnels avec les acquéreurs et les agents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SCREENSHOT CAROUSEL
+         ============================================================ -->
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Stampr en action</span>
+                <h2 class="section-title">Conçu pour les professionnels qui travaillent dehors</h2>
+            </div>
+            <div class="screenshot-scroll reveal">
+                <img src="/stampr/screenshots/camera.png" alt="Caméra avec les données GPS en direct sur l’image">
+                <img src="/stampr/screenshots/stamped-photo.png" alt="Photo tamponnée avec les données GPS">
+                <img src="/stampr/screenshots/video-detail.png" alt="Lecture d’une vidéo avec tampon GPS et note transcrite de la visite">
+                <img src="/stampr/screenshots/voice-note.png" alt="Enregistrement d’une note vocale">
+                <img src="/stampr/screenshots/library.png" alt="Bibliothèque de photos et vidéos avec les cartes de projets, les boutons de filtre et de tri, et les prises de vue groupées par jour">
+                <img src="/stampr/screenshots/map-view.png" alt="Carte interactive avec les repères des photos le long de l’Embarcadero, à San Francisco">
+                <img src="/stampr/screenshots/photo-detail.png" alt="Détail d’une photo avec le bandeau du tampon, la transcription de la note vocale et les tags">
+                <img src="/stampr/screenshots/pdf-report.png" alt="Création d’un rapport PDF">
+                <img src="/stampr/screenshots/settings.png" alt="Réglages avec les options de capture, le filigrane et le logo, et l’interrupteur de synchronisation iCloud">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PLATFORMS: IPHONE & ANDROID
+         ============================================================ -->
+    <section class="section" id="platforms">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">iPhone et Android</span>
+                <h2 class="section-title">Deux applis natives. Une seule méthode.</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Stampr est développé en natif pour chaque plateforme, avec le même format de tampon, les mêmes projets, rapports PDF et exports. Voici ce qui est propre à chacune. L’appli Android est disponible en français&nbsp;; l’appli iPhone est pour l’instant en anglais.</p>
+            </div>
+            <div class="platform-grid reveal">
+                <div class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Stampr pour iPhone
+                    </h3>
+                    <p class="platform-req">Nécessite iOS 26.2 ou version ultérieure. Fonctionne sur iPhone et iPad.</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Synchronisation iCloud privée&nbsp;: photos, projets, notes vocales et notes de terrain vous suivent sur un nouveau téléphone. Facultative, à activer ou désactiver dans les réglages
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Transcription sur l’appareil avec Apple Speech, mise au propre par IA avec Apple Intelligence
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Mise au point au toucher avec verrouillage AE/AF, caméra avant ou arrière, flash désactivé/auto/activé, déclenchement par bouton de volume
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bouton Action, Siri et recherche Spotlight dans vos notes
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><a href="#field-notes">Notes de terrain</a> mains libres&nbsp;: dites «&nbsp;Record a note in Stampr&nbsp;», appuyez sur le bouton Action, ou maintenez l’icône de l’appli et choisissez Record Note</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Stampr Pro&nbsp;: 4,99&nbsp;$&nbsp;US, achat unique
+                        </li>
+                    </ul>
+                    <a class="platform-store-link" href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625" target="_blank" rel="noopener">Télécharger dans l’App Store &rarr;</a>
+                </div>
+                <div class="platform-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.27-.86-.31-.16-.69-.04-.86.27l-1.87 3.23C14.83 8.35 13.02 8 11.99 8c-1.02 0-2.84.35-4.45.94L5.67 5.71c-.16-.31-.54-.43-.86-.27-.31.16-.43.55-.27.86l1.84 3.18C2.92 11.07 1 14.12 1 17.5h22c0-3.38-1.92-6.43-5.4-8.02zM7 15.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                        Stampr pour Android
+                    </h3>
+                    <p class="platform-req">Nécessite Android 10 ou version ultérieure.</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Stockage uniquement local&nbsp;: rien n’est envoyé en ligne, par principe
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Transcription sur l’appareil avec Whisper (modèle d’environ 32&nbsp;Mo téléchargé une seule fois, fonctionne sur tous les téléphones), mise au propre par IA sur les téléphones dotés d’une IA embarquée
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span><a href="#field-notes">Notes de terrain</a> mains libres&nbsp;: appuyez sur un bouton de volume, ou utilisez la vignette Note Stampr des Réglages rapides ou le raccourci Dicter une note</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Carte OpenStreetMap facultative sur le tampon, adresses modifiables
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Vignette des Réglages rapides et raccourcis sur l’écran d’accueil
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Stampr Pro&nbsp;: 9,99&nbsp;$&nbsp;US, achat unique
+                        </li>
+                    </ul>
+                    <a class="platform-store-link" href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" target="_blank" rel="noopener">Disponible sur Google Play &rarr;</a>
+                </div>
+            </div>
+            <div class="platform-shared-note reveal">
+                <strong>Les fichiers projet suivent votre équipe.</strong> Les deux applis réunissent tout un chantier (photos, originaux, notes vocales et métadonnées) dans un seul fichier .stamprproj à transmettre à un collègue, et l’importation ne crée jamais de doublons. Aujourd’hui, les fichiers projet passent d’un iPhone à un autre et d’un téléphone Android à un autre&nbsp;; Stampr pour Android utilise déjà le format multiplateforme, et l’échange entre iPhone et Android arrive avec une prochaine mise à jour iOS.
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+         ============================================================ -->
+    <section class="section section-alt" id="pricing">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">Des tarifs simples</span>
+                <h2 class="section-title">Gratuit pour commencer. Un seul paiement pour tout débloquer.</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Pas d’abonnement. Pas de frais cachés. Vous payez une fois, c’est à vous pour toujours.</p>
+            </div>
+            <div class="pricing-grid reveal">
+                <div class="pricing-card">
+                    <h3>Gratuit</h3>
+                    <div class="pricing-price">0&nbsp;$ <small>pour toujours</small></div>
+                    <p class="pricing-desc">15 photos ou vidéos tamponnées par mois, avec toutes les fonctions essentielles.</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tampon GPS et notes vocales
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Classement par projet
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Rapports PDF et export des données
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            15 photos ou vidéos par mois
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Notes de terrain illimitées
+                        </li>
+                        <li class="disabled">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Filigrane et logo personnalisés
+                        </li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-tag">Le plus choisi</div>
+                    <h3>Stampr Pro</h3>
+                    <div class="pricing-price">4,99&nbsp;$ <small>achat unique</small></div>
+                    <p class="pricing-desc">4,99&nbsp;$&nbsp;US sur iPhone, 9,99&nbsp;$&nbsp;US sur Android. Photos et vidéos illimitées, à votre marque. Vous payez une fois, c’est à vous pour toujours.</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tout ce qu’offre la version gratuite
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Photos et vidéos tamponnées en illimité
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Filigrane texte personnalisé
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Votre logo sur les photos
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sans le filigrane par défaut
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="reveal" style="text-align: center;">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Questions fréquentes</h2>
+            </div>
+            <div class="faq-list reveal">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Stampr fonctionne-t-il hors connexion&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Le tampon GPS et la transcription des notes vocales fonctionnent entièrement hors connexion. La recherche de l’adresse postale nécessite une connexion Internet, mais les coordonnées sont toujours ajoutées au tampon, même sans réseau mobile.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Stampr peut-il aussi tamponner des vidéos&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Passez la caméra en mode vidéo&nbsp;: Stampr enregistre une séquence avec le tampon GPS, l’adresse, le cap et l’heure incrustés dans l’image, figés au moment où vous lancez l’enregistrement. La bande-son est transcrite sur l’appareil en une note consultable, et la vidéo est rangée dans les mêmes projets, rapports PDF et exports que vos photos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Puis-je enregistrer une note sans prendre de photo&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, sur iPhone comme sur Android. Activez les notes de terrain dans Réglages &rarr; Capture (sur iPhone, Settings &rarr; Capture) et un onglet Notes apparaît. Dictez ou écrivez une note&nbsp;: elle est horodatée et géolocalisée, puis convertie en texte sur le téléphone. Les notes vont dans un journal ouvert, le temps d’un chantier ou d’une opération de recherche, avec vos photos et vidéos, et à la fermeture du journal, Stampr propose un rapport PDF. Gratuit et illimité. Consultez le guide des notes de terrain pour <a href="/stampr/help.html#field-notes">iPhone (en anglais)</a> ou <a href="/android/stampr/fr/help#field-notes">Android</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Mes données restent-elles privées&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Stampr ne collecte aucune donnée personnelle et ne nous en transmet aucune. Pas de statistiques d’utilisation, pas de pistage, pas de compte. Sur Android, tout reste sur votre appareil. Sur iPhone, vos photos et vos notes peuvent aussi se synchroniser via votre propre iCloud privé, auquel nous n’avons pas accès, et vous pouvez désactiver cette synchronisation dans les réglages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Que comprend la version gratuite&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tout, sauf la personnalisation à votre marque. Vous avez le tampon GPS, l’enregistrement vidéo, les notes vocales, la mise au propre par IA, le classement par projet, les rapports PDF et tous les formats d’export. La version gratuite comprend 15 photos ou vidéos tamponnées par mois, avec un petit filigrane «&nbsp;Stampr&nbsp;». Les notes de terrain sont gratuites et illimitées, et ne comptent jamais dans les 15.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Y a-t-il un abonnement&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Non. Stampr Pro est un achat unique&nbsp;: 4,99&nbsp;$&nbsp;US sur iPhone, 9,99&nbsp;$&nbsp;US sur Android. Vous payez une fois, c’est à vous pour toujours. Aucun prélèvement récurrent, pas de frais cachés.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Dans quels formats puis-je exporter&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Stampr exporte des rapports PDF avec cartes et métadonnées, du CSV pour les tableurs, du KML pour Google Earth, du GeoJSON pour les outils SIG, et des fichiers projet .stamprproj pour partager des projets entiers avec vos collègues.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Les données GPS sont-elles intégrées au fichier photo&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Les coordonnées GPS sont intégrées aux métadonnées EXIF de la photo&nbsp;: vos photos se placent au bon endroit dans Apple Photos, Google Photos, les logiciels SIG et les outils de gestion de sinistres, et pas seulement sous forme de texte sur l’image.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Mes photos se synchronisent-elles entre mes appareils&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sur iPhone, oui. Photos, projets, notes vocales et notes de terrain se synchronisent via votre propre iCloud privé, et votre bibliothèque vous suit sur un nouveau téléphone. Vous pouvez désactiver la synchronisation dans les réglages. Sur Android, le stockage est uniquement local et rien n’est envoyé en ligne&nbsp;; utilisez les fichiers projet (.stamprproj) pour transférer votre travail d’un appareil à l’autre.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Les utilisateurs d’iPhone et d’Android peuvent-ils partager des projets&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aujourd’hui, les fichiers projet passent d’un iPhone à un autre et d’un téléphone Android à un autre. Stampr pour Android lit et écrit déjà le format multiplateforme .stamprproj&nbsp;; une prochaine mise à jour iOS ajoutera ce même format, ce qui permettra aux équipes mixtes iPhone et Android d’échanger le même fichier de chantier.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Puis-je mettre le logo de mon entreprise sur les photos&nbsp;?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui. Avec Stampr Pro, vous pouvez ajouter un filigrane texte personnalisé et importer le logo de votre entreprise. Les deux apparaissent sur chaque photo tamponnée et dans les rapports PDF. Idéal pour des documents à vos couleurs.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="final-cta" id="download">
+        <div class="container reveal">
+            <h2>Documentez mieux, dès aujourd’hui</h2>
+            <p>Téléchargez Stampr gratuitement sur iPhone ou Android. Passez à Pro quand vous le souhaitez. Sans pression, sans abonnement.</p>
+            <div class="hero-ctas">
+                <a href="https://apps.apple.com/app/stampr-gps-photo-stamp/id6761292625" class="store-badge" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    <div class="store-label">
+                        <small>Télécharger dans l’</small>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=net.top7systems.stampr" class="store-badge" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-2.302 1.33-1.817-1.33 1.817-1.33zM5.864 2.658L16.8 8.99l-2.302 2.303-8.635-8.635z"/></svg>
+                    <div class="store-label">
+                        <small>Disponible sur</small>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+            </div>
+            <p class="privacy-note">Pas de compte. Pas de pistage. Vos photos restent sur votre appareil, ou dans votre propre iCloud privé si vous activez la synchronisation sur iPhone.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    <a href="/android/stampr/fr/help">Aide</a>
+                    <a href="/android/stampr/fr/support">Assistance</a>
+                    <a href="/android/stampr/fr/privacy">Confidentialité</a>
+                    <a href="/android/stampr/fr/terms">Conditions</a>
+                    <a href="/">Toutes les applis</a>
+                    <a href="mailto:support@top7systems.net">Contact</a>
+                </div>
+                <p>&copy; 2026 <a href="/" style="color: inherit; text-decoration: none;">Top 7 Systems</a></p>
+                <nav class="footer-langs" aria-label="Langue">
+                    <a href="/stampr/" lang="en" hreflang="en">English</a>
+                    <a href="/stampr/pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+                    <a href="/stampr/es/" lang="es" hreflang="es">Español</a>
+                    <a href="/stampr/id/" lang="id" hreflang="id">Bahasa Indonesia</a>
+                    <a href="/stampr/de/" lang="de" hreflang="de">Deutsch</a>
+                    <a href="/stampr/fr/" lang="fr" hreflang="fr" aria-current="true">Français</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <script src="/stampr/landing.js"></script>
+
+</body>
+</html>
