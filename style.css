@@ -948,3 +948,14 @@ footer a:hover {
         font-size: 1.75rem;
     }
 }
+
+/* On a phone, a table whose words are too long for its columns (the settings
+   table in German or Spanish, say) hyphenates them rather than pushing the
+   whole page wider than the screen. */
+@media (max-width: 600px) {
+    .doc th, .doc td {
+        padding: 10px 8px;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+}

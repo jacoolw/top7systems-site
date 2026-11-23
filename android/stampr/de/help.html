@@ -94,7 +94,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Sprachnotiz hinzufügen (optional)</h4>
-                        <p>Nach jedem Foto die Mikrofontaste gedrückt halten und eine Sprachnotiz aufnehmen. Stampr transkribiert sie auf dem Gerät (vorher wird einmalig ein Sprachmodell mit ca. 32&nbsp;MB zum Download angeboten). Auf unterstützten Geräten glättet eine KI auf dem Gerät das Diktat zu einer sauberen Bildunterschrift und schlägt Tags vor. Lieber ganz ohne Hände? In den Einstellungen bei Sprachnotizen „Freihändig“ wählen: Dann nimmt Stampr nach jedem Foto automatisch auf und stoppt, sobald du aufhörst zu sprechen.</p>
+                        <p>Nach jedem Foto die Mikrofontaste gedrückt halten und eine Sprachnotiz aufnehmen. Stampr transkribiert sie auf dem Gerät (vorher wird einmalig ein Sprachmodell zum Download angeboten: ca. 32&nbsp;MB für Englisch, 60&nbsp;MB für andere Sprachen). Auf unterstützten Geräten glättet eine KI auf dem Gerät das Diktat zu einer sauberen Bildunterschrift und schlägt Tags vor. Lieber ganz ohne Hände? In den Einstellungen bei Sprachnotizen „Freihändig“ wählen: Dann nimmt Stampr nach jedem Foto automatisch auf und stoppt, sobald du aufhörst zu sprechen.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -156,7 +156,37 @@
                 <p>Sprachnotizen liefern Zusammenhang, der mühsam zu tippen wäre: Zustand vor Ort, Beobachtungen, Maße oder Anweisungen. Stampr transkribiert sie auf dem Gerät und kann den Text direkt ins Foto stempeln.</p>
 
                 <h3>Das Sprachmodell</h3>
-                <p>Die Transkription läuft komplett auf dem Smartphone, mit dem Open-Source-Spracherkennungsmodell Whisper: keine Cloud, kein Konto, und sie funktioniert auf <em>jedem</em> Android-Smartphone, nicht nur auf Spitzenmodellen. Beim ersten Einsatz von Sprachnotizen bietet Stampr den einmaligen Download des Modells an (ca. 32&nbsp;MB). Starten lässt er sich auch unter Einstellungen &rarr; Sprachmodell. Danach funktioniert die Transkription vollständig offline.</p>
+                <p>Die Transkription läuft komplett auf dem Smartphone, mit dem Open-Source-Spracherkennungsmodell Whisper: keine Cloud, kein Konto, und sie funktioniert auf <em>jedem</em> Android-Smartphone, nicht nur auf Spitzenmodellen. Beim ersten Einsatz von Sprachnotizen bietet Stampr den einmaligen Download des Modells an: ca. 32&nbsp;MB, wenn das Smartphone auf Englisch eingestellt ist, und ca. 60&nbsp;MB bei jeder anderen Sprache, denn die wird erst mit einem größeren Modell gut verstanden. Starten lässt er sich auch unter Einstellungen &rarr; Sprachmodell. Danach funktioniert die Transkription vollständig offline.</p>
+                <p>Hast du Sprachnotizen schon mit einer früheren Version in einer anderen Sprache als Englisch genutzt, funktioniert alles weiter wie bisher. Stampr behält das vorhandene Modell, lädt das genauere von selbst herunter, sobald das Smartphone das nächste Mal im WLAN ist, und wechselt dann darauf. Solange nur mobile Daten verfügbar sind, wartet Stampr damit. Wer nicht warten möchte, findet unter Einstellungen &rarr; Sprachmodell die Taste <em>Aktualisieren</em>.</p>
+
+                <h3 id="high-accuracy">Das hochgenaue Sprachmodell (optional)</h3>
+                <p>Für alle, die viel diktieren und durch Fehler Zeit verlieren, gibt es ein zweites, deutlich größeres Sprachmodell. In unseren eigenen Tests mit aufgenommenen Sätzen erkannte es etwa halb so viele Wörter falsch wie das Standardmodell, in einem ruhigen Raum ebenso wie mit Hintergrundlärm:</p>
+                <table>
+                    <thead>
+                        <tr><th>Falsche Wörter je 100</th><th>Standardmodell</th><th>Hochgenaues Modell</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Spanisch</td><td>13</td><td>5</td></tr>
+                        <tr><td>Französisch</td><td>31</td><td>9</td></tr>
+                        <tr><td>Deutsch</td><td>21</td><td>10</td></tr>
+                        <tr><td>Portugiesisch</td><td>18</td><td>9</td></tr>
+                        <tr><td>Englisch</td><td>13</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <p><small>40 aufgenommene Sätze pro Sprache: lange, förmliche Sätze, laut vorgelesen. Kurze Notizen, nah am Smartphone gesprochen, gelingen mit beiden Modellen besser.</small></p>
+                <ul>
+                    <li><strong>Herunterladen</strong>: Einstellungen &rarr; Aufnahme &rarr; Hochgenaues Sprachmodell &rarr; <em>Herunterladen</em>. Das Modell ist ca. 670&nbsp;MB groß, daher WLAN nutzen und Stampr geöffnet lassen, bis der Download fertig ist. Bricht die Verbindung ab, erneut auf <em>Herunterladen</em> tippen: Der Download macht dort weiter, wo er stehen geblieben ist.</li>
+                    <li><strong>Verwenden</strong>: Einschalten muss man nichts. Sobald das Modell auf dem Smartphone ist, wird jede Sprachnotiz, jede Feldnotiz und jede Video-Tonspur damit transkribiert, und in seiner Zeile in den Einstellungen steht <em>Wird für alle Sprachnotizen verwendet</em>.</li>
+                    <li><strong>Entfernen</strong>: In derselben Zeile auf <em>Entfernen</em> tippen, um den Speicherplatz wieder freizugeben. Sprachnotizen nutzen dann wieder das Standardmodell, und das hochgenaue Modell lässt sich jederzeit erneut herunterladen.</li>
+                    <li><strong>Voraussetzung</strong>: ein Smartphone mit mindestens 6&nbsp;GB Arbeitsspeicher (RAM), denn das Modell belegt bei der Arbeit etwa 1&nbsp;GB. Auf einem Smartphone mit weniger steht das in der Zeile, und Stampr nutzt weiter das Standardmodell.</li>
+                    <li><strong>Sprachen</strong>: Bulgarisch, Dänisch, Deutsch, Englisch, Estnisch, Finnisch, Französisch, Griechisch, Italienisch, Kroatisch, Lettisch, Litauisch, Maltesisch, Niederländisch, Polnisch, Portugiesisch, Rumänisch, Russisch, Schwedisch, Slowakisch, Slowenisch, Spanisch, Tschechisch, Ukrainisch und Ungarisch. Welche davon gesprochen wird, erkennt das Modell von selbst. In jeder anderen Sprache (zum Beispiel Indonesisch) nutzt Stampr das Standardmodell.</li>
+                    <li><strong>Weiterhin privat</strong>: Wie das Standardmodell läuft es komplett auf dem Smartphone. Das Netz wird nur für den Download selbst genutzt.</li>
+                </ul>
+                <p>Die erste Notiz nach einer Pause dauert ein paar Sekunden länger, weil das Modell erst geladen wird. Danach ist es so schnell wie das Standardmodell. Wird der Arbeitsspeicher des Smartphones doch einmal zu knapp, nutzt Stampr für diese Notiz das Standardmodell, statt zu scheitern. Das Modell ist Parakeet von NVIDIA (TDT 0.6B v3), veröffentlicht unter der Lizenz CC BY 4.0.</p>
+
+                <div class="tip-box">
+                    <strong>Tipp:</strong> Egal mit welchem Modell: das Smartphone wie beim Telefonieren oder höchstens eine Armlänge entfernt halten und in seine Richtung sprechen. Eine Stimme vom anderen Ende des Raums oder gegen starken Wind ist für jedes Sprachmodell schwer zu verstehen.
+                </div>
 
                 <h3>Drei Modi für Sprachnotizen</h3>
                 <p>Unter Einstellungen &rarr; Sprachnotizen lässt sich wählen, wie Sprachnotizen funktionieren:</p>
@@ -257,7 +287,7 @@
                 <p>Gibt es beim Start kein aktuelles GPS-Signal, nimmt Stampr die erste Position, die innerhalb einer Minute eintrifft. Kommt keine, bleibt die Notiz trotzdem erhalten und wird wie ein Foto mit <strong>NO GPS FIX</strong> markiert. Die Leiste nennt den Grund für die fehlende Position (<em>Warten auf GPS…</em>, <em>Gerätestandort ist aus</em> oder <em>Kein Standortzugriff</em>) und bietet eine Taste, um das zu beheben.</p>
 
                 <h3>Von der Sprache zum Text</h3>
-                <p>Notizen werden auf dem Gerät mit demselben Whisper-Sprachmodell zu Text wie die Sprachnotizen zu Fotos, eine nach der anderen. Viele Notizen kurz hintereinander reihen sich also einfach ein. Hochgeladen wird nichts. Ist das Sprachmodell noch nicht auf dem Gerät, bleiben die Aufnahmen trotzdem erhalten: Der Tab „Notizen“ bietet den einmaligen Download an (ca. 32&nbsp;MB), und wartende Notizen werden transkribiert, sobald er fertig ist. Schlägt eine Transkription fehl, behält die Notiz ihre Aufnahme, und Stampr versucht es erneut. Alternativ die Notiz öffnen und auf <em>Transkribieren</em> tippen.</p>
+                <p>Notizen werden auf dem Gerät mit demselben Sprachmodell zu Text wie die Sprachnotizen zu Fotos, eine nach der anderen. Viele Notizen kurz hintereinander reihen sich also einfach ein. Hochgeladen wird nichts. Ist das Sprachmodell noch nicht auf dem Gerät, bleiben die Aufnahmen trotzdem erhalten: Der Tab „Notizen“ bietet den einmaligen Download an, und wartende Notizen werden transkribiert, sobald er fertig ist. Schlägt eine Transkription fehl, behält die Notiz ihre Aufnahme, und Stampr versucht es erneut. Alternativ die Notiz öffnen und auf <em>Transkribieren</em> tippen.</p>
                 <p>Auf Smartphones mit KI auf dem Gerät glättet <em>Notizen mit KI glätten</em> auch Feldnotizen und schlägt Tags vor, genau wie bei Fotos. Das Originaltranskript bleibt immer erhalten.</p>
 
                 <h3>Das offene Protokoll</h3>
@@ -425,7 +455,8 @@
                         <tr><td>Einheiten</td><td>Metrisch (m) oder Imperial (ft) für Höhe und Genauigkeit</td><td>Metrisch</td></tr>
                         <tr><td>Nordreferenz</td><td>Geografischer oder magnetischer Norden, Richtungen sind mit &deg;T oder &deg;M gekennzeichnet</td><td>Geografisch</td></tr>
                         <tr><td>Sprachnotizen</td><td>Aus, Nach Foto anbieten oder Freihändig</td><td>Nach Foto anbieten</td></tr>
-                        <tr><td>Sprachmodell</td><td>Einmaliger Download, ca. 32&nbsp;MB, danach läuft die Transkription komplett auf dem Gerät</td><td>entfällt</td></tr>
+                        <tr><td>Sprachmodell</td><td>Das Standard-Sprachmodell. Einmaliger Download (ca. 32&nbsp;MB für Englisch, 60&nbsp;MB für andere Sprachen), danach läuft die Transkription komplett auf dem Gerät</td><td>entfällt</td></tr>
+                        <tr><td>Hochgenaues Sprachmodell</td><td>Optionales größeres Sprachmodell (ca. 670&nbsp;MB), das etwa halb so viele Fehler macht. Erfordert ein Smartphone mit 6&nbsp;GB Arbeitsspeicher. Siehe <a href="#high-accuracy">Das hochgenaue Sprachmodell</a></td><td>Nicht heruntergeladen</td></tr>
                         <tr><td>Feldnotizen</td><td>Ergänzt den Tab „Notizen“ für gesprochene oder getippte Notizen mit GPS-Stempel ohne Foto, dazu die Verknüpfung „Notiz aufnehmen“ und die Kachel „Stampr-Notiz“</td><td>Aus</td></tr>
                         <tr><td>Notizen mit KI glätten</td><td>KI auf dem Gerät glättet das Diktat und schlägt Tags vor</td><td>An*</td></tr>
                         <tr><td>GPS-Signal voraussetzen</td><td>Sperrt den Auslöser, bis die Koordinaten feststehen</td><td>Aus</td></tr>
@@ -485,7 +516,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
-                    <p>Genutzt für die Ermittlung der Straßenadresse, Kartenbilder von OpenStreetMap, den einmaligen Download des Sprachmodells und Google Play Billing. Aufnehmen, Stempeln und Transkribieren funktionieren offline. Ist <em>Straßenadresse</em> ausgeschaltet, entfällt die Abfrage ganz, und <em>Karte im Stempel</em> ist standardmäßig aus. Stampr lässt sich also nutzen, ohne dass auch nur eine Koordinate das Gerät verlässt.</p>
+                    <p>Genutzt für die Ermittlung der Straßenadresse, Kartenbilder von OpenStreetMap, die Downloads der Sprachmodelle und Google Play Billing. Aufnehmen, Stempeln und Transkribieren funktionieren offline. Ist <em>Straßenadresse</em> ausgeschaltet, entfällt die Abfrage ganz, und <em>Karte im Stempel</em> ist standardmäßig aus. Stampr lässt sich also nutzen, ohne dass auch nur eine Koordinate das Gerät verlässt.</p>
                 </div>
             </section>
 
@@ -511,7 +542,15 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Warum lädt Stampr vor der ersten Sprachnotiz eine Datei herunter?</summary>
-                    <div class="faq-answer">Die Transkription läuft komplett auf dem Smartphone, mit dem Sprachmodell Whisper. Es ist ca. 32&nbsp;MB groß und wird einmal heruntergeladen. Danach funktioniert die Transkription vollständig offline, und deine Audioaufnahmen verlassen nie das Gerät. Starten oder prüfen lässt sich der Download unter Einstellungen &rarr; Sprachmodell.</div>
+                    <div class="faq-answer">Die Transkription läuft komplett auf dem Smartphone, mit dem Sprachmodell Whisper. Es wird einmal heruntergeladen (ca. 32&nbsp;MB für Englisch, 60&nbsp;MB für andere Sprachen). Danach funktioniert die Transkription vollständig offline, und deine Audioaufnahmen verlassen nie das Gerät. Starten oder prüfen lässt sich der Download unter Einstellungen &rarr; Sprachmodell.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Meine Sprachnotizen enthalten Fehler. Geht das genauer?</summary>
+                    <div class="faq-answer">Zwei Dinge helfen. Höchstens eine Armlänge vom Smartphone entfernt und in seine Richtung sprechen: Abstand und Wind kosten mehr Genauigkeit als alles andere. Und auf einem Smartphone mit mindestens 6&nbsp;GB Arbeitsspeicher unter Einstellungen &rarr; Aufnahme das optionale hochgenaue Sprachmodell herunterladen: In unseren Tests erkannte es etwa halb so viele Wörter falsch, und es deckt 25 europäische Sprachen ab. Siehe <a href="#high-accuracy">Das hochgenaue Sprachmodell</a>. Außerdem lässt sich jede Notiz von Hand korrigieren, das Originaltranskript bleibt immer erhalten.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Warum kann ich das hochgenaue Sprachmodell nicht herunterladen?</summary>
+                    <div class="faq-answer">Seine Zeile in den Einstellungen nennt, welcher von drei Gründen dahintersteckt. Es braucht ein Smartphone mit mindestens 6&nbsp;GB Arbeitsspeicher (RAM). Es deckt 25 europäische Sprachen ab: Ist das Smartphone auf eine andere Sprache eingestellt, bleibt Stampr beim Standardmodell. Und es braucht ca. 670&nbsp;MB freien Speicher. Siehe <a href="#high-accuracy">Das hochgenaue Sprachmodell</a>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Was braucht „Notizen mit KI glätten“?</summary>
@@ -555,7 +594,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Eine Notiz ist noch nicht in Text umgewandelt</summary>
-                    <div class="faq-answer">Für die Transkription muss das Sprachmodell auf dem Smartphone sein (ca. 32&nbsp;MB, einmaliger Download). Bis dahin bleiben die Aufnahmen erhalten, und der Tab „Notizen“ bietet den Download an. Wartende Notizen werden transkribiert, sobald er fertig ist. Schlägt eine Transkription fehl, behält die Notiz ihre Aufnahme, und Stampr versucht es erneut. Alternativ die Notiz öffnen und auf <em>Transkribieren</em> tippen.</div>
+                    <div class="faq-answer">Für die Transkription muss das Sprachmodell auf dem Smartphone sein (einmaliger Download). Bis dahin bleiben die Aufnahmen erhalten, und der Tab „Notizen“ bietet den Download an. Wartende Notizen werden transkribiert, sobald er fertig ist. Schlägt eine Transkription fehl, behält die Notiz ihre Aufnahme, und Stampr versucht es erneut. Alternativ die Notiz öffnen und auf <em>Transkribieren</em> tippen.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Eine Feldnotiz wurde mit NO GPS FIX gestempelt</summary>

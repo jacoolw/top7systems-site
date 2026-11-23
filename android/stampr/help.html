@@ -94,7 +94,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Add a Voice Note (Optional)</h4>
-                        <p>After each photo, hold the microphone button to record a voice note. Stampr transcribes it on-device (a one-time ~32&nbsp;MB speech model download is offered first), and on supported devices an on-device AI tidies the dictation into a clean caption with suggested tags. Prefer fully hands-free? Turn on Hands-Free mode in Settings and Stampr records automatically after every shot, stopping when you stop talking.</p>
+                        <p>After each photo, hold the microphone button to record a voice note. Stampr transcribes it on-device (a one-time speech model download is offered first: about 32&nbsp;MB for English, 60&nbsp;MB for other languages), and on supported devices an on-device AI tidies the dictation into a clean caption with suggested tags. Prefer fully hands-free? Turn on Hands-Free mode in Settings and Stampr records automatically after every shot, stopping when you stop talking.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -156,7 +156,37 @@
                 <p>Voice notes add context that would be tedious to type: site conditions, observations, measurements, or instructions. Stampr transcribes them on-device and can burn the text directly onto the photo.</p>
 
                 <h3>The Speech Model</h3>
-                <p>Transcription runs entirely on your phone using the open-source Whisper speech-recognition model: no cloud, no account, and it works on <em>every</em> Android phone, not just flagships. The first time you use voice notes, Stampr offers a one-time model download (about 32&nbsp;MB); you can also start it from Settings &rarr; Voice Recognition Model. After that, transcription works completely offline.</p>
+                <p>Transcription runs entirely on your phone using the open-source Whisper speech-recognition model: no cloud, no account, and it works on <em>every</em> Android phone, not just flagships. The first time you use voice notes, Stampr offers a one-time model download: about 32&nbsp;MB when your phone is set to English, and about 60&nbsp;MB for any other language, which needs a larger model to be understood well. You can also start it from Settings &rarr; Voice Recognition Model. After that, transcription works completely offline.</p>
+                <p>If you already used voice notes in a language other than English with an earlier version, nothing stops working. Stampr keeps the model it has, downloads the more accurate one by itself the next time you are on Wi-Fi, and switches over. On mobile data it waits; if you would rather not, Settings &rarr; Voice Recognition Model shows an <em>Update</em> button.</p>
+
+                <h3 id="high-accuracy">The High-Accuracy Voice Model (Optional)</h3>
+                <p>If you dictate a lot and the mistakes cost you time, there is a second, much larger speech model. In our own tests on recorded sentences it got about half as many words wrong as the standard model, in a quiet room and with noise in the background:</p>
+                <table>
+                    <thead>
+                        <tr><th>Words wrong per 100</th><th>Standard model</th><th>High-accuracy model</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Spanish</td><td>13</td><td>5</td></tr>
+                        <tr><td>French</td><td>31</td><td>9</td></tr>
+                        <tr><td>German</td><td>21</td><td>10</td></tr>
+                        <tr><td>Portuguese</td><td>18</td><td>9</td></tr>
+                        <tr><td>English</td><td>13</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <p><small>40 recorded sentences per language: long, formal sentences read aloud. Short notes spoken close to the phone come out better than this with either model.</small></p>
+                <ul>
+                    <li><strong>Get it</strong>: Settings &rarr; Capture &rarr; High-Accuracy Voice Model &rarr; <em>Download</em>. It is about 670&nbsp;MB, so use Wi-Fi and keep Stampr open until it finishes. If the connection drops, tap <em>Download</em> again and it carries on from where it stopped.</li>
+                    <li><strong>Use it</strong>: there is nothing to switch on. Once the model is on the phone, every voice note, field note, and video soundtrack is transcribed with it, and its row in Settings reads <em>In use</em>.</li>
+                    <li><strong>Remove it</strong>: tap <em>Remove</em> in the same row to get the space back. Voice notes go back to the standard model, and you can download it again whenever you like.</li>
+                    <li><strong>What it needs</strong>: a phone with at least 6&nbsp;GB of memory (RAM), because the model takes about 1&nbsp;GB while it works. On a phone with less, the row says so and Stampr keeps using the standard model.</li>
+                    <li><strong>Languages</strong>: Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish, and Ukrainian. It works out by itself which one it is hearing. In any other language (Indonesian, for example) Stampr uses the standard model.</li>
+                    <li><strong>Still private</strong>: like the standard model, it runs entirely on your phone. The only network use is the download itself.</li>
+                </ul>
+                <p>The first note after a pause takes a few seconds longer, while the model loads; after that it is as quick as the standard one. If the phone is ever too short of memory, Stampr uses the standard model for that note rather than fail. The model is NVIDIA's Parakeet (TDT 0.6B v3), shared under the CC BY 4.0 licence.</p>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> whichever model you use, hold the phone as you would for a call, or within arm's length, and speak toward it. A voice from across the room, or into a strong wind, is hard for any speech model.
+                </div>
 
                 <h3>Three Voice Modes</h3>
                 <p>Choose how voice notes work in Settings &rarr; Voice Notes:</p>
@@ -257,7 +287,7 @@
                 <p>If there's no fresh fix when you start, Stampr uses the first one that arrives within a minute. If none arrives, the note is still kept and marked <strong>NO GPS FIX</strong>, the same as a photo. The strip says why there's no position (<em>Waiting for GPS…</em>, <em>Phone location is off</em>, or <em>No location access</em>) and offers a button to fix it.</p>
 
                 <h3>From Speech to Text</h3>
-                <p>Notes are turned into text on the phone by the same Whisper speech model as photo voice notes, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. If the speech model isn't on the phone yet, recordings are still kept: the Notes tab offers the one-time download (about 32&nbsp;MB), and waiting notes are transcribed once it's in. If a transcription fails, the note keeps its recording and Stampr tries again; you can also open the note and tap <em>Transcribe</em>.</p>
+                <p>Notes are turned into text on the phone by the same speech model as photo voice notes, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. If the speech model isn't on the phone yet, recordings are still kept: the Notes tab offers the one-time download, and waiting notes are transcribed once it's in. If a transcription fails, the note keeps its recording and Stampr tries again; you can also open the note and tap <em>Transcribe</em>.</p>
                 <p>On phones with on-device AI, <em>AI Note Cleanup</em> tidies notes and suggests tags, as it does for photos. The original transcript is always kept.</p>
 
                 <h3>The Open Log</h3>
@@ -425,7 +455,8 @@
                         <tr><td>Units</td><td>Metric (m) or Imperial (ft) for altitude and accuracy</td><td>Metric</td></tr>
                         <tr><td>North Reference</td><td>True or magnetic north; bearings are marked &deg;T or &deg;M</td><td>True</td></tr>
                         <tr><td>Voice Notes</td><td>Off, Prompt After Photo, or Hands-Free</td><td>Prompt</td></tr>
-                        <tr><td>Voice Recognition Model</td><td>One-time ~32&nbsp;MB download; transcription then runs fully on-device</td><td>n/a</td></tr>
+                        <tr><td>Voice Recognition Model</td><td>The standard speech model. One-time download (about 32&nbsp;MB for English, 60&nbsp;MB for other languages); transcription then runs fully on-device</td><td>n/a</td></tr>
+                        <tr><td>High-Accuracy Voice Model</td><td>Optional larger speech model (about 670&nbsp;MB) that makes about half as many mistakes. Needs a phone with 6&nbsp;GB of memory. See <a href="#high-accuracy">The High-Accuracy Voice Model</a></td><td>Not downloaded</td></tr>
                         <tr><td>Field Notes</td><td>Adds the Notes tab for GPS-stamped voice or typed notes without a photo, plus the Record note shortcut and Stampr Note tile</td><td>Off</td></tr>
                         <tr><td>AI Note Cleanup</td><td>On-device AI tidies dictation and suggests tags</td><td>On*</td></tr>
                         <tr><td>Require GPS Fix</td><td>Block the shutter until coordinates are locked</td><td>Off</td></tr>
@@ -485,7 +516,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
-                    <p>Used for street address lookup, OpenStreetMap imagery, the one-time speech model download, and Google Play Billing. Capture, stamping, and transcription all work offline. Turning off <em>Street Address</em> stops the lookup entirely, and <em>Map on Stamp</em> is off by default, so you can run Stampr without either sending a coordinate off the device.</p>
+                    <p>Used for street address lookup, OpenStreetMap imagery, the speech model downloads, and Google Play Billing. Capture, stamping, and transcription all work offline. Turning off <em>Street Address</em> stops the lookup entirely, and <em>Map on Stamp</em> is off by default, so you can run Stampr without either sending a coordinate off the device.</p>
                 </div>
             </section>
 
@@ -511,7 +542,15 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Why does Stampr download a file before my first voice note?</summary>
-                    <div class="faq-answer">Voice transcription runs entirely on your phone using the Whisper speech model, which is about 32&nbsp;MB and downloads once. After that, transcription works completely offline and your audio never leaves the device. You can start or check the download in Settings &rarr; Voice Recognition Model.</div>
+                    <div class="faq-answer">Voice transcription runs entirely on your phone using the Whisper speech model, which downloads once (about 32&nbsp;MB for English, 60&nbsp;MB for other languages). After that, transcription works completely offline and your audio never leaves the device. You can start or check the download in Settings &rarr; Voice Recognition Model.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>My voice notes come out with mistakes. Can they be more accurate?</summary>
+                    <div class="faq-answer">Two things help. Speak within arm's length of the phone and toward it: distance and wind cost more accuracy than anything else. And on a phone with at least 6&nbsp;GB of memory, download the optional High-Accuracy Voice Model in Settings &rarr; Capture: in our tests it got about half as many words wrong, and it covers 25 European languages. See <a href="#high-accuracy">The High-Accuracy Voice Model</a>. You can also correct any note by hand; the original transcript is always kept.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Why can't I download the High-Accuracy Voice Model?</summary>
+                    <div class="faq-answer">Its row in Settings says which of three things is in the way. It needs a phone with at least 6&nbsp;GB of memory (RAM). It covers 25 European languages, so with the phone set to another language Stampr stays with the standard model. And it needs about 670&nbsp;MB of free storage. See <a href="#high-accuracy">The High-Accuracy Voice Model</a>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>What does AI Note Cleanup need?</summary>
@@ -555,7 +594,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>A note says it hasn't been turned into text yet</summary>
-                    <div class="faq-answer">Transcription needs the speech model on the phone (about 32&nbsp;MB, downloaded once). Until it's there, recordings are kept and the Notes tab offers the download; waiting notes are transcribed as soon as it finishes. If a transcription fails, the note keeps its recording and Stampr tries again. You can also open the note and tap <em>Transcribe</em>.</div>
+                    <div class="faq-answer">Transcription needs the speech model on the phone (downloaded once). Until it's there, recordings are kept and the Notes tab offers the download; waiting notes are transcribed as soon as it finishes. If a transcription fails, the note keeps its recording and Stampr tries again. You can also open the note and tap <em>Transcribe</em>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>A field note was stamped NO GPS FIX</summary>

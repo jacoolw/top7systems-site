@@ -94,7 +94,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Tambahkan catatan suara (opsional)</h4>
-                        <p>Setelah setiap foto, tahan tombol mikrofon untuk merekam catatan suara. Stampr mentranskripsinya di perangkat (sebelumnya Anda ditawari unduhan model suara sekali saja, sekitar 32&nbsp;MB), dan di perangkat yang didukung, AI di perangkat merapikan dikte menjadi keterangan yang bersih dengan saran tag. Ingin sepenuhnya tanpa sentuh? Aktifkan mode <em>Handsfree</em> di Setelan, dan Stampr otomatis merekam setelah setiap foto lalu berhenti saat Anda selesai berbicara.</p>
+                        <p>Setelah setiap foto, tahan tombol mikrofon untuk merekam catatan suara. Stampr mentranskripsinya di perangkat (sebelumnya Anda ditawari unduhan model suara sekali saja: sekitar 32&nbsp;MB untuk bahasa Inggris, 60&nbsp;MB untuk bahasa lain), dan di perangkat yang didukung, AI di perangkat merapikan dikte menjadi keterangan yang bersih dengan saran tag. Ingin sepenuhnya tanpa sentuh? Aktifkan mode <em>Handsfree</em> di Setelan, dan Stampr otomatis merekam setelah setiap foto lalu berhenti saat Anda selesai berbicara.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -156,7 +156,38 @@
                 <p>Catatan suara menambahkan konteks yang merepotkan jika harus diketik: kondisi lapangan, pengamatan, hasil ukur, atau instruksi. Stampr mentranskripsinya di perangkat dan dapat mencetak teksnya langsung di foto.</p>
 
                 <h3>Model suara</h3>
-                <p>Transkripsi berjalan sepenuhnya di ponsel Anda dengan model pengenalan suara open source Whisper: tanpa cloud, tanpa akun, dan berfungsi di <em>semua</em> ponsel Android, bukan hanya ponsel kelas atas. Saat pertama kali Anda memakai catatan suara, Stampr menawarkan unduhan model sekali saja (sekitar 32&nbsp;MB); Anda juga bisa memulainya dari Setelan &rarr; Model pengenalan suara. Setelah itu, transkripsi berfungsi sepenuhnya secara offline.</p>
+                <p>Transkripsi berjalan sepenuhnya di ponsel Anda dengan model pengenalan suara open source Whisper: tanpa cloud, tanpa akun, dan berfungsi di <em>semua</em> ponsel Android, bukan hanya ponsel kelas atas. Saat pertama kali Anda memakai catatan suara, Stampr menawarkan unduhan model sekali saja: sekitar 32&nbsp;MB jika ponsel Anda disetel ke bahasa Inggris, dan sekitar 60&nbsp;MB untuk bahasa lain, yang memerlukan model lebih besar agar dapat dikenali dengan baik. Anda juga bisa memulainya dari Setelan &rarr; Model pengenalan suara. Setelah itu, transkripsi berfungsi sepenuhnya secara offline.</p>
+                <p>Jika Anda sudah memakai catatan suara dalam bahasa selain bahasa Inggris di versi sebelumnya, semuanya tetap berfungsi. Stampr tetap memakai model yang sudah ada, mengunduh sendiri model yang lebih akurat begitu ponsel terhubung ke Wi-Fi, lalu beralih ke model itu. Selama memakai data seluler, Stampr menunggu; jika Anda tidak ingin menunggu, ada tombol <em>Perbarui</em> di Setelan &rarr; Model pengenalan suara.</p>
+
+                <h3 id="high-accuracy">Model suara akurasi tinggi (opsional)</h3>
+                <p>Jika Anda sering mendikte dan kesalahan transkripsi menyita waktu Anda, ada model suara kedua yang jauh lebih besar. Dalam pengujian kami sendiri dengan kalimat rekaman, jumlah kata yang salah kira-kira separuh dari model standar, baik di ruangan yang tenang maupun dengan kebisingan latar.</p>
+                <p>Model ini <strong>belum mendukung bahasa Indonesia</strong>, jadi jika ponsel Anda disetel ke bahasa Indonesia, Stampr tetap memakai model standar (di versi ini, model 60&nbsp;MB yang lebih besar dan lebih akurat).</p>
+                <table>
+                    <thead>
+                        <tr><th>Kata yang salah per 100 kata</th><th>Model standar</th><th>Model akurasi tinggi</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Spanyol</td><td>13</td><td>5</td></tr>
+                        <tr><td>Prancis</td><td>31</td><td>9</td></tr>
+                        <tr><td>Jerman</td><td>21</td><td>10</td></tr>
+                        <tr><td>Portugis</td><td>18</td><td>9</td></tr>
+                        <tr><td>Inggris</td><td>13</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <p><small>40 kalimat rekaman per bahasa: kalimat panjang dan formal yang dibacakan. Catatan pendek yang diucapkan dekat ponsel memberi hasil lebih baik daripada ini, dengan model mana pun.</small></p>
+                <ul>
+                    <li><strong>Mendapatkannya</strong>: Setelan &rarr; Pengambilan gambar &rarr; Model suara akurasi tinggi &rarr; <em>Unduh</em>. Ukurannya sekitar 670&nbsp;MB, jadi pakailah Wi-Fi dan biarkan Stampr terbuka sampai selesai. Jika koneksi terputus, ketuk <em>Unduh</em> lagi dan unduhan berlanjut dari titik terakhirnya.</li>
+                    <li><strong>Memakainya</strong>: tidak ada yang perlu diaktifkan. Begitu model ada di ponsel, setiap catatan suara, catatan lapangan, dan suara video ditranskripsi dengan model ini, dan barisnya di Setelan bertuliskan <em>Dipakai untuk semua catatan suara</em>.</li>
+                    <li><strong>Menghapusnya</strong>: ketuk <em>Hapus</em> di baris yang sama untuk mendapatkan kembali ruang penyimpanannya. Catatan suara kembali memakai model standar, dan Anda bisa mengunduhnya lagi kapan saja.</li>
+                    <li><strong>Yang diperlukan</strong>: ponsel dengan memori (RAM) minimal 6&nbsp;GB, karena model ini memakai sekitar 1&nbsp;GB selama bekerja. Di ponsel dengan memori lebih kecil, barisnya menyampaikan hal itu dan Stampr tetap memakai model standar.</li>
+                    <li><strong>Bahasa</strong>: Belanda, Bulgaria, Ceko, Denmark, Estonia, Finlandia, Hungaria, Inggris, Italia, Jerman, Kroasia, Latvia, Lituania, Malta, Polandia, Portugis, Prancis, Rumania, Rusia, Slovakia, Slovenia, Spanyol, Swedia, Ukraina, dan Yunani. Model ini mengenali sendiri bahasa yang sedang didengarnya. Untuk bahasa lain, termasuk bahasa Indonesia, Stampr memakai model standar.</li>
+                    <li><strong>Tetap privat</strong>: seperti model standar, model ini berjalan sepenuhnya di ponsel Anda. Jaringan hanya dipakai untuk unduhan itu sendiri.</li>
+                </ul>
+                <p>Catatan pertama setelah jeda butuh beberapa detik lebih lama, selama model dimuat; setelah itu secepat model standar. Jika suatu saat memori ponsel tidak mencukupi, Stampr memakai model standar untuk catatan itu agar transkripsi tidak gagal. Modelnya adalah Parakeet dari NVIDIA (TDT 0.6B v3), yang dibagikan dengan lisensi CC BY 4.0.</p>
+
+                <div class="tip-box">
+                    <strong>Tips:</strong> model mana pun yang Anda pakai, pegang ponsel seperti saat menelepon, atau paling jauh sejangkauan tangan, dan berbicaralah ke arah ponsel. Suara dari seberang ruangan, atau di tengah angin kencang, sulit dikenali model suara mana pun.
+                </div>
 
                 <h3>Tiga mode suara</h3>
                 <p>Pilih cara kerja catatan suara di Setelan &rarr; Catatan suara:</p>
@@ -257,7 +288,7 @@
                 <p>Jika belum ada sinyal GPS terbaru saat Anda mulai, Stampr memakai posisi pertama yang masuk dalam satu menit. Jika tidak ada yang masuk, catatan tetap disimpan dan ditandai <strong>NO GPS FIX</strong>, sama seperti foto. Strip menjelaskan mengapa posisi belum ada (<em>Menunggu GPS…</em>, <em>Lokasi ponsel nonaktif</em>, atau <em>Tanpa akses lokasi</em>) dan menyediakan tombol untuk mengatasinya.</p>
 
                 <h3>Dari ucapan ke teks</h3>
-                <p>Catatan diubah menjadi teks di ponsel oleh model suara Whisper yang sama dengan catatan suara foto, satu per satu, jadi beberapa catatan yang dibuat beruntun cukup mengantre. Tidak ada yang diunggah. Jika model suara belum ada di ponsel, rekaman tetap disimpan: tab Catatan menawarkan unduhan sekali saja (sekitar 32&nbsp;MB), dan catatan yang menunggu akan ditranskripsi setelah model terpasang. Jika transkripsi gagal, catatan tetap menyimpan rekamannya dan Stampr mencoba lagi; Anda juga bisa membuka catatan dan mengetuk <em>Transkripsikan</em>.</p>
+                <p>Catatan diubah menjadi teks di ponsel oleh model suara yang sama dengan catatan suara foto, satu per satu, jadi beberapa catatan yang dibuat beruntun cukup mengantre. Tidak ada yang diunggah. Jika model suara belum ada di ponsel, rekaman tetap disimpan: tab Catatan menawarkan unduhan sekali saja, dan catatan yang menunggu akan ditranskripsi setelah model terpasang. Jika transkripsi gagal, catatan tetap menyimpan rekamannya dan Stampr mencoba lagi; Anda juga bisa membuka catatan dan mengetuk <em>Transkripsikan</em>.</p>
                 <p>Di ponsel yang memiliki AI di perangkat, <em>Rapikan catatan dengan AI</em> merapikan catatan dan menyarankan tag, sama seperti pada foto. Transkripsi aslinya selalu disimpan.</p>
 
                 <h3>Log terbuka</h3>
@@ -425,7 +456,8 @@
                         <tr><td>Satuan</td><td>Metrik (m) atau Imperial (ft) untuk ketinggian dan akurasi</td><td>Metrik</td></tr>
                         <tr><td>Acuan utara</td><td>Utara sejati atau utara magnetis; arah ditandai &deg;T atau &deg;M</td><td>Utara sejati</td></tr>
                         <tr><td>Catatan suara</td><td>Nonaktif, Tawarkan setelah foto, atau Handsfree</td><td>Tawarkan setelah foto</td></tr>
-                        <tr><td>Model pengenalan suara</td><td>Sekali unduh, sekitar 32&nbsp;MB; setelah itu transkripsi berjalan sepenuhnya di perangkat</td><td>-</td></tr>
+                        <tr><td>Model pengenalan suara</td><td>Model suara standar. Sekali unduh (sekitar 32&nbsp;MB untuk bahasa Inggris, 60&nbsp;MB untuk bahasa lain); setelah itu transkripsi berjalan sepenuhnya di perangkat</td><td>-</td></tr>
+                        <tr><td>Model suara akurasi tinggi</td><td>Model suara opsional yang lebih besar (sekitar 670&nbsp;MB) dengan kesalahan kira-kira separuhnya. Memerlukan ponsel dengan memori 6&nbsp;GB. Lihat <a href="#high-accuracy">Model suara akurasi tinggi</a></td><td>Belum diunduh</td></tr>
                         <tr><td>Catatan lapangan</td><td>Menambahkan tab Catatan untuk catatan suara atau catatan teks berstempel GPS tanpa foto, serta pintasan Rekam catatan dan kartu Catatan Stampr</td><td>Nonaktif</td></tr>
                         <tr><td>Rapikan catatan dengan AI</td><td>AI di perangkat merapikan dikte dan menyarankan tag</td><td>Aktif*</td></tr>
                         <tr><td>Wajibkan sinyal GPS</td><td>Tombol rana tidak aktif sampai koordinat terkunci</td><td>Nonaktif</td></tr>
@@ -485,7 +517,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
-                    <p>Dipakai untuk pencarian alamat jalan, gambar peta OpenStreetMap, unduhan model suara sekali saja, dan Google Play Billing. Pengambilan gambar, pemberian stempel, dan transkripsi semuanya berfungsi offline. Menonaktifkan <em>Alamat jalan</em> menghentikan pencarian alamat sepenuhnya, dan <em>Peta di stempel</em> nonaktif secara default, jadi Anda bisa memakai Stampr tanpa ada fitur yang mengirim koordinat keluar dari perangkat.</p>
+                    <p>Dipakai untuk pencarian alamat jalan, gambar peta OpenStreetMap, unduhan model suara, dan Google Play Billing. Pengambilan gambar, pemberian stempel, dan transkripsi semuanya berfungsi offline. Menonaktifkan <em>Alamat jalan</em> menghentikan pencarian alamat sepenuhnya, dan <em>Peta di stempel</em> nonaktif secara default, jadi Anda bisa memakai Stampr tanpa ada fitur yang mengirim koordinat keluar dari perangkat.</p>
                 </div>
             </section>
 
@@ -511,7 +543,15 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Mengapa Stampr mengunduh file sebelum catatan suara pertama saya?</summary>
-                    <div class="faq-answer">Transkripsi suara berjalan sepenuhnya di ponsel Anda dengan model suara Whisper, yang berukuran sekitar 32&nbsp;MB dan cukup diunduh sekali. Setelah itu, transkripsi berfungsi sepenuhnya offline dan audio Anda tidak pernah keluar dari perangkat. Anda bisa memulai atau memeriksa unduhan di Setelan &rarr; Model pengenalan suara.</div>
+                    <div class="faq-answer">Transkripsi suara berjalan sepenuhnya di ponsel Anda dengan model suara Whisper, yang cukup diunduh sekali (sekitar 32&nbsp;MB untuk bahasa Inggris, 60&nbsp;MB untuk bahasa lain). Setelah itu, transkripsi berfungsi sepenuhnya offline dan audio Anda tidak pernah keluar dari perangkat. Anda bisa memulai atau memeriksa unduhan di Setelan &rarr; Model pengenalan suara.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Catatan suara saya banyak kesalahannya. Bisakah dibuat lebih akurat?</summary>
+                    <div class="faq-answer">Ada dua hal yang membantu. Dalam bahasa apa pun, berbicaralah ke arah ponsel dari jarak paling jauh sejangkauan tangan: jarak dan angin menurunkan akurasi lebih dari apa pun. Lalu, jika ponsel Anda disetel ke salah satu dari 25 bahasa Eropa yang didukung (misalnya bahasa Inggris; bahasa Indonesia belum termasuk) dan memorinya minimal 6&nbsp;GB, unduh <em>Model suara akurasi tinggi</em> yang opsional di Setelan &rarr; Pengambilan gambar: dalam pengujian kami, jumlah kata yang salah kira-kira separuhnya. Lihat <a href="#high-accuracy">Model suara akurasi tinggi</a>. Anda juga bisa memperbaiki sendiri catatan mana pun; transkripsi aslinya selalu disimpan.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Mengapa saya tidak bisa mengunduh Model suara akurasi tinggi?</summary>
+                    <div class="faq-answer">Barisnya di Setelan menyebutkan mana dari tiga hal berikut yang menjadi penghalang. Model ini memerlukan ponsel dengan memori (RAM) minimal 6&nbsp;GB. Model ini mendukung 25 bahasa Eropa, jadi jika ponsel disetel ke bahasa lain, termasuk bahasa Indonesia, Stampr tetap memakai model standar. Dan model ini memerlukan ruang penyimpanan kosong sekitar 670&nbsp;MB. Lihat <a href="#high-accuracy">Model suara akurasi tinggi</a>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Apa yang diperlukan untuk Rapikan catatan dengan AI?</summary>
@@ -555,7 +595,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Catatan menunjukkan belum diubah menjadi teks</summary>
-                    <div class="faq-answer">Transkripsi memerlukan model suara di ponsel (sekitar 32&nbsp;MB, cukup diunduh sekali). Selama model belum ada, rekaman tetap disimpan dan tab Catatan menawarkan unduhan; catatan yang menunggu ditranskripsi begitu unduhan selesai. Jika transkripsi gagal, catatan tetap menyimpan rekamannya dan Stampr mencoba lagi. Anda juga bisa membuka catatan dan mengetuk <em>Transkripsikan</em>.</div>
+                    <div class="faq-answer">Transkripsi memerlukan model suara di ponsel (cukup diunduh sekali). Selama model belum ada, rekaman tetap disimpan dan tab Catatan menawarkan unduhan; catatan yang menunggu ditranskripsi begitu unduhan selesai. Jika transkripsi gagal, catatan tetap menyimpan rekamannya dan Stampr mencoba lagi. Anda juga bisa membuka catatan dan mengetuk <em>Transkripsikan</em>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Catatan lapangan diberi stempel NO GPS FIX</summary>

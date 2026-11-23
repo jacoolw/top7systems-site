@@ -94,7 +94,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Ajoutez une note vocale (facultatif)</h4>
-                        <p>Après chaque photo, maintenez le bouton micro pour dicter une note vocale. Stampr la transcrit sur l’appareil (le téléchargement unique d’un modèle vocal d’environ 32&nbsp;Mo vous est d’abord proposé) et, sur les appareils compatibles, une IA embarquée met la dictée au propre en une légende claire, avec des tags suggérés. Vous préférez ne rien toucher&nbsp;? Activez le mode <em>Mains libres</em> dans Réglages&nbsp;: Stampr enregistre automatiquement après chaque photo et s’arrête quand vous cessez de parler.</p>
+                        <p>Après chaque photo, maintenez le bouton micro pour dicter une note vocale. Stampr la transcrit sur l’appareil (le téléchargement unique d’un modèle vocal vous est d’abord proposé&nbsp;: environ 32&nbsp;Mo pour l’anglais, 60&nbsp;Mo pour les autres langues) et, sur les appareils compatibles, une IA embarquée met la dictée au propre en une légende claire, avec des tags suggérés. Vous préférez ne rien toucher&nbsp;? Activez le mode <em>Mains libres</em> dans Réglages&nbsp;: Stampr enregistre automatiquement après chaque photo et s’arrête quand vous cessez de parler.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -156,7 +156,37 @@
                 <p>Les notes vocales apportent le contexte qu’il serait fastidieux de taper&nbsp;: état du site, constats, mesures ou consignes. Stampr les transcrit sur l’appareil et peut incruster le texte directement dans la photo.</p>
 
                 <h3>Le modèle vocal</h3>
-                <p>La transcription se fait entièrement sur votre téléphone, avec le modèle de reconnaissance vocale open source Whisper&nbsp;: pas de cloud, pas de compte, et cela fonctionne sur <em>tous</em> les téléphones Android, pas seulement les haut de gamme. La première fois que vous utilisez les notes vocales, Stampr propose de télécharger le modèle, une seule fois (environ 32&nbsp;Mo)&nbsp;; vous pouvez aussi lancer ce téléchargement depuis Réglages &rarr; Modèle de reconnaissance vocale. Ensuite, la transcription fonctionne entièrement hors connexion.</p>
+                <p>La transcription se fait entièrement sur votre téléphone, avec le modèle de reconnaissance vocale open source Whisper&nbsp;: pas de cloud, pas de compte, et cela fonctionne sur <em>tous</em> les téléphones Android, pas seulement les haut de gamme. La première fois que vous utilisez les notes vocales, Stampr propose de télécharger le modèle, une seule fois&nbsp;: environ 32&nbsp;Mo si votre téléphone est réglé en anglais, et environ 60&nbsp;Mo pour toute autre langue, qui demande un modèle plus volumineux pour être bien comprise. Vous pouvez aussi lancer ce téléchargement depuis Réglages &rarr; Modèle de reconnaissance vocale. Ensuite, la transcription fonctionne entièrement hors connexion.</p>
+                <p>Si vous utilisiez déjà les notes vocales dans une autre langue que l’anglais avec une version précédente, rien ne cesse de fonctionner. Stampr garde le modèle déjà installé, télécharge de lui-même le modèle plus précis à votre prochaine connexion Wi-Fi, puis l’utilise à la place. En données mobiles, il attend&nbsp;; si vous préférez ne pas attendre, un bouton <em>Mettre à jour</em> apparaît dans Réglages &rarr; Modèle de reconnaissance vocale.</p>
+
+                <h3 id="high-accuracy">Le modèle vocal haute précision (facultatif)</h3>
+                <p>Si vous dictez beaucoup et que les erreurs vous font perdre du temps, il existe un second modèle vocal, bien plus volumineux. Lors de nos propres essais sur des phrases enregistrées, il s’est trompé sur environ deux fois moins de mots que le modèle standard, dans une pièce calme comme avec du bruit de fond&nbsp;:</p>
+                <table>
+                    <thead>
+                        <tr><th>Mots erronés sur 100</th><th>Modèle standard</th><th>Modèle haute précision</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Espagnol</td><td>13</td><td>5</td></tr>
+                        <tr><td>Français</td><td>31</td><td>9</td></tr>
+                        <tr><td>Allemand</td><td>21</td><td>10</td></tr>
+                        <tr><td>Portugais</td><td>18</td><td>9</td></tr>
+                        <tr><td>Anglais</td><td>13</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <p><small>40 phrases enregistrées par langue&nbsp;: des phrases longues, au style soutenu, lues à voix haute. Les notes courtes, dictées près du téléphone, donnent de meilleurs résultats que cela, avec l’un comme avec l’autre modèle.</small></p>
+                <ul>
+                    <li><strong>L’obtenir</strong>&nbsp;: Réglages &rarr; Capture &rarr; Modèle vocal haute précision &rarr; <em>Télécharger</em>. Il pèse environ 670&nbsp;Mo&nbsp;: utilisez le Wi-Fi et gardez Stampr ouvert jusqu’à la fin. Si la connexion est interrompue, appuyez de nouveau sur <em>Télécharger</em>&nbsp;: le téléchargement reprend là où il s’était arrêté.</li>
+                    <li><strong>L’utiliser</strong>&nbsp;: il n’y a rien à activer. Dès que le modèle est sur le téléphone, toutes les notes vocales, les notes de terrain et les bandes-son des vidéos sont transcrites avec lui, et sa ligne dans Réglages indique <em>Utilisé pour toutes les notes vocales</em>.</li>
+                    <li><strong>Le supprimer</strong>&nbsp;: appuyez sur <em>Supprimer</em>, sur la même ligne, pour récupérer l’espace. Les notes vocales utilisent de nouveau le modèle standard, et vous pouvez télécharger à nouveau le modèle haute précision quand vous voulez.</li>
+                    <li><strong>Ce qu’il lui faut</strong>&nbsp;: un téléphone avec au moins 6&nbsp;Go de mémoire vive (RAM), car le modèle occupe environ 1&nbsp;Go pendant qu’il travaille. Sur un téléphone qui en a moins, la ligne l’indique et Stampr continue d’utiliser le modèle standard.</li>
+                    <li><strong>Langues</strong>&nbsp;: allemand, anglais, bulgare, croate, danois, espagnol, estonien, finnois, français, grec, hongrois, italien, letton, lituanien, maltais, néerlandais, polonais, portugais, roumain, russe, slovaque, slovène, suédois, tchèque et ukrainien. Il reconnaît de lui-même la langue qu’il entend. Dans toute autre langue (l’indonésien, par exemple), Stampr utilise le modèle standard.</li>
+                    <li><strong>Toujours privé</strong>&nbsp;: comme le modèle standard, il fonctionne entièrement sur votre téléphone. Le réseau ne sert qu’au téléchargement lui-même.</li>
+                </ul>
+                <p>La première note après une pause prend quelques secondes de plus, le temps que le modèle se charge&nbsp;; ensuite, il est aussi rapide que le modèle standard. Si le téléphone vient à manquer de mémoire, Stampr utilise le modèle standard pour cette note plutôt que d’échouer. Il s’agit du modèle Parakeet de NVIDIA (TDT 0.6B v3), diffusé sous licence CC BY 4.0.</p>
+
+                <div class="tip-box">
+                    <strong>Astuce&nbsp;:</strong> quel que soit le modèle utilisé, tenez le téléphone comme pour un appel, ou à bout de bras tout au plus, et parlez dans sa direction. Une voix venue de l’autre bout de la pièce, ou en plein vent, est difficile à comprendre pour n’importe quel modèle vocal.
+                </div>
 
                 <h3>Trois modes de notes vocales</h3>
                 <p>Choisissez le fonctionnement des notes vocales dans Réglages &rarr; Notes vocales&nbsp;:</p>
@@ -257,7 +287,7 @@
                 <p>Si aucune position récente n’est disponible au début de la note, Stampr retient la première qui arrive dans la minute. Si rien n’arrive, la note est quand même conservée, avec la mention <strong>NO GPS FIX</strong>, comme une photo. Le bandeau indique pourquoi il n’y a pas de position (<em>En attente du signal GPS…</em>, <em>Position du téléphone désactivée</em> ou <em>Position non autorisée</em>) et propose un bouton pour y remédier.</p>
 
                 <h3>De la voix au texte</h3>
-                <p>Les notes sont converties en texte sur le téléphone par le même modèle vocal Whisper que les notes vocales des photos, une note à la fois&nbsp;: une série de notes rapprochées se met simplement en file d’attente. Rien n’est envoyé en ligne. Si le modèle vocal n’est pas encore sur le téléphone, les enregistrements sont tout de même conservés&nbsp;: l’onglet Notes propose le téléchargement unique (environ 32&nbsp;Mo), et les notes en attente sont transcrites dès qu’il est installé. Si une transcription échoue, la note garde son enregistrement et Stampr réessaie&nbsp;; vous pouvez aussi ouvrir la note et appuyer sur <em>Transcrire</em>.</p>
+                <p>Les notes sont converties en texte sur le téléphone par le même modèle vocal que les notes vocales des photos, une note à la fois&nbsp;: une série de notes rapprochées se met simplement en file d’attente. Rien n’est envoyé en ligne. Si le modèle vocal n’est pas encore sur le téléphone, les enregistrements sont tout de même conservés&nbsp;: l’onglet Notes propose le téléchargement unique, et les notes en attente sont transcrites dès qu’il est installé. Si une transcription échoue, la note garde son enregistrement et Stampr réessaie&nbsp;; vous pouvez aussi ouvrir la note et appuyer sur <em>Transcrire</em>.</p>
                 <p>Sur les téléphones dotés d’une IA embarquée, la <em>Mise au propre par IA</em> nettoie les notes et suggère des tags, comme pour les photos. La transcription d’origine est toujours conservée.</p>
 
                 <h3>Le journal ouvert</h3>
@@ -425,7 +455,8 @@
                         <tr><td>Unités</td><td>Métrique (m) ou Impérial (ft) pour l’altitude et la précision</td><td>Métrique</td></tr>
                         <tr><td>Nord de référence</td><td>Nord géographique ou magnétique&nbsp;; les caps sont marqués &deg;T ou &deg;M</td><td>Géographique</td></tr>
                         <tr><td>Notes vocales</td><td>Désactivées, Proposer après la photo ou Mains libres</td><td>Proposer après la photo</td></tr>
-                        <tr><td>Modèle de reconnaissance vocale</td><td>Téléchargement unique d’environ 32&nbsp;Mo&nbsp;; la transcription se fait ensuite entièrement sur l’appareil</td><td>Sans objet</td></tr>
+                        <tr><td>Modèle de reconnaissance vocale</td><td>Le modèle vocal standard. Téléchargement unique (environ 32&nbsp;Mo pour l’anglais, 60&nbsp;Mo pour les autres langues)&nbsp;; la transcription se fait ensuite entièrement sur l’appareil</td><td>Sans objet</td></tr>
+                        <tr><td>Modèle vocal haute précision</td><td>Modèle vocal facultatif, plus volumineux (environ 670&nbsp;Mo), qui fait environ deux fois moins d’erreurs. Nécessite un téléphone avec 6&nbsp;Go de mémoire. Voir <a href="#high-accuracy">Le modèle vocal haute précision</a></td><td>Non téléchargé</td></tr>
                         <tr><td>Notes de terrain</td><td>Ajoute l’onglet Notes pour des notes vocales ou écrites, sans photo, horodatées et géolocalisées, ainsi que le raccourci Dicter une note et la vignette Note Stampr</td><td>Désactivé</td></tr>
                         <tr><td>Mise au propre par IA</td><td>Une IA embarquée met la dictée au propre et suggère des tags</td><td>Activé*</td></tr>
                         <tr><td>Exiger le signal GPS</td><td>Bloque le déclencheur jusqu’à l’obtention des coordonnées</td><td>Désactivé</td></tr>
@@ -485,7 +516,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
-                    <p>Sert à la recherche de l’adresse postale, aux cartes OpenStreetMap, au téléchargement unique du modèle vocal et à Google Play Billing. La capture, le tampon et la transcription fonctionnent tous hors connexion. Désactiver <em>Adresse postale</em> arrête complètement la recherche d’adresse, et <em>Carte sur le tampon</em> est désactivée par défaut&nbsp;: vous pouvez donc utiliser Stampr sans qu’aucune de ces deux fonctions n’envoie de coordonnées hors de l’appareil.</p>
+                    <p>Sert à la recherche de l’adresse postale, aux cartes OpenStreetMap, aux téléchargements des modèles vocaux et à Google Play Billing. La capture, le tampon et la transcription fonctionnent tous hors connexion. Désactiver <em>Adresse postale</em> arrête complètement la recherche d’adresse, et <em>Carte sur le tampon</em> est désactivée par défaut&nbsp;: vous pouvez donc utiliser Stampr sans qu’aucune de ces deux fonctions n’envoie de coordonnées hors de l’appareil.</p>
                 </div>
             </section>
 
@@ -511,7 +542,15 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Pourquoi Stampr télécharge-t-il un fichier avant ma première note vocale&nbsp;?</summary>
-                    <div class="faq-answer">La transcription se fait entièrement sur votre téléphone, avec le modèle vocal Whisper, qui pèse environ 32&nbsp;Mo et ne se télécharge qu’une fois. Ensuite, la transcription fonctionne entièrement hors connexion et votre audio ne quitte jamais l’appareil. Vous pouvez lancer ou vérifier le téléchargement dans Réglages &rarr; Modèle de reconnaissance vocale.</div>
+                    <div class="faq-answer">La transcription se fait entièrement sur votre téléphone, avec le modèle vocal Whisper, qui ne se télécharge qu’une fois (environ 32&nbsp;Mo pour l’anglais, 60&nbsp;Mo pour les autres langues). Ensuite, la transcription fonctionne entièrement hors connexion et votre audio ne quitte jamais l’appareil. Vous pouvez lancer ou vérifier le téléchargement dans Réglages &rarr; Modèle de reconnaissance vocale.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Mes notes vocales contiennent des erreurs. Peuvent-elles être plus précises&nbsp;?</summary>
+                    <div class="faq-answer">Deux choses aident. Parlez en direction du téléphone, à bout de bras tout au plus&nbsp;: la distance et le vent nuisent à la précision plus que tout le reste. Et sur un téléphone doté d’au moins 6&nbsp;Go de mémoire, téléchargez le modèle vocal haute précision (facultatif) dans Réglages &rarr; Capture&nbsp;: lors de nos essais, il s’est trompé sur environ deux fois moins de mots, et il couvre 25 langues européennes. Voir <a href="#high-accuracy">Le modèle vocal haute précision</a>. Vous pouvez aussi corriger n’importe quelle note à la main&nbsp;; la transcription d’origine est toujours conservée.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Pourquoi ne puis-je pas télécharger le modèle vocal haute précision&nbsp;?</summary>
+                    <div class="faq-answer">Sa ligne dans Réglages indique lequel de ces trois obstacles est en cause. Il nécessite un téléphone avec au moins 6&nbsp;Go de mémoire vive (RAM). Il couvre 25 langues européennes&nbsp;: si le téléphone est réglé dans une autre langue, Stampr s’en tient au modèle standard. Et il lui faut environ 670&nbsp;Mo d’espace de stockage libre. Voir <a href="#high-accuracy">Le modèle vocal haute précision</a>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>De quoi la mise au propre par IA a-t-elle besoin&nbsp;?</summary>
@@ -555,7 +594,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Une note indique qu’elle n’a pas encore été convertie en texte</summary>
-                    <div class="faq-answer">La transcription nécessite que le modèle vocal soit sur le téléphone (environ 32&nbsp;Mo, téléchargé une seule fois). En attendant, les enregistrements sont conservés et l’onglet Notes propose le téléchargement&nbsp;; les notes en attente sont transcrites dès qu’il est terminé. Si une transcription échoue, la note garde son enregistrement et Stampr réessaie. Vous pouvez aussi ouvrir la note et appuyer sur <em>Transcrire</em>.</div>
+                    <div class="faq-answer">La transcription nécessite que le modèle vocal soit sur le téléphone (téléchargé une seule fois). En attendant, les enregistrements sont conservés et l’onglet Notes propose le téléchargement&nbsp;; les notes en attente sont transcrites dès qu’il est terminé. Si une transcription échoue, la note garde son enregistrement et Stampr réessaie. Vous pouvez aussi ouvrir la note et appuyer sur <em>Transcrire</em>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Une note de terrain porte la mention NO GPS FIX</summary>

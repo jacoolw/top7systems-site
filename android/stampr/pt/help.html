@@ -94,7 +94,7 @@
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Adicione uma nota de voz (opcional)</h4>
-                        <p>Depois de cada foto, segure o botão do microfone para gravar uma nota de voz. O Stampr transcreve a nota no próprio celular (antes, ele oferece o download único de um modelo de voz de ~32&nbsp;MB) e, em aparelhos compatíveis, a IA do próprio aparelho arruma o ditado e gera uma legenda limpa, com sugestões de tags. Prefere não tocar em nada? Ative o modo Mãos livres nos Ajustes e o Stampr grava sozinho depois de cada foto e para quando você para de falar.</p>
+                        <p>Depois de cada foto, segure o botão do microfone para gravar uma nota de voz. O Stampr transcreve a nota no próprio celular (antes, ele oferece o download único de um modelo de voz: cerca de 32&nbsp;MB para o inglês, 60&nbsp;MB para os outros idiomas) e, em aparelhos compatíveis, a IA do próprio aparelho arruma o ditado e gera uma legenda limpa, com sugestões de tags. Prefere não tocar em nada? Ative o modo Mãos livres nos Ajustes e o Stampr grava sozinho depois de cada foto e para quando você para de falar.</p>
                     </div>
                 </div>
                 <div class="step">
@@ -156,7 +156,37 @@
                 <p>As notas de voz acrescentam o contexto que daria trabalho digitar: condições do local, observações, medidas ou instruções. O Stampr transcreve tudo no próprio celular e pode carimbar o texto direto na foto.</p>
 
                 <h3>O modelo de voz</h3>
-                <p>A transcrição roda inteiramente no celular, com o Whisper, modelo de reconhecimento de fala de código aberto: sem nuvem, sem conta, e funciona em <em>qualquer</em> celular Android, não só nos topos de linha. Na primeira vez que você usa as notas de voz, o Stampr oferece o download único do modelo (cerca de 32&nbsp;MB); também dá para iniciá-lo em Ajustes &rarr; Modelo de reconhecimento de voz. Depois disso, a transcrição funciona totalmente offline.</p>
+                <p>A transcrição roda inteiramente no celular, com o Whisper, modelo de reconhecimento de fala de código aberto: sem nuvem, sem conta, e funciona em <em>qualquer</em> celular Android, não só nos topos de linha. Na primeira vez que você usa as notas de voz, o Stampr oferece o download único do modelo: cerca de 32&nbsp;MB quando o celular está em inglês e cerca de 60&nbsp;MB para qualquer outro idioma, que precisa de um modelo maior para ser bem entendido. Também dá para iniciar o download em Ajustes &rarr; Modelo de reconhecimento de voz. Depois disso, a transcrição funciona totalmente offline.</p>
+                <p>Se você já usava as notas de voz em outro idioma que não o inglês, em uma versão anterior do app, nada para de funcionar. O Stampr mantém o modelo que já tem, baixa sozinho o mais preciso na próxima vez que houver Wi-Fi e passa a usá-lo. Com dados móveis, ele espera; se preferir não esperar, Ajustes &rarr; Modelo de reconhecimento de voz mostra o botão <em>Atualizar</em>.</p>
+
+                <h3 id="high-accuracy">O Modelo de voz de alta precisão (opcional)</h3>
+                <p>Para quem dita muito e perde tempo com os erros, há um segundo modelo de voz, bem maior. Nos nossos próprios testes com frases gravadas, ele errou cerca de metade das palavras que o modelo padrão errou, tanto em ambiente silencioso quanto com ruído de fundo:</p>
+                <table>
+                    <thead>
+                        <tr><th>Palavras erradas a cada 100</th><th>Modelo padrão</th><th>Modelo de alta precisão</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Espanhol</td><td>13</td><td>5</td></tr>
+                        <tr><td>Francês</td><td>31</td><td>9</td></tr>
+                        <tr><td>Alemão</td><td>21</td><td>10</td></tr>
+                        <tr><td>Português</td><td>18</td><td>9</td></tr>
+                        <tr><td>Inglês</td><td>13</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <p><small>40 frases gravadas por idioma: frases longas e formais, lidas em voz alta. Notas curtas, faladas perto do celular, saem melhor do que isso com qualquer um dos dois modelos.</small></p>
+                <ul>
+                    <li><strong>Para baixar</strong>: Ajustes &rarr; Captura &rarr; Modelo de voz de alta precisão &rarr; <em>Baixar</em>. São cerca de 670&nbsp;MB, então use Wi-Fi e mantenha o Stampr aberto até terminar. Se a conexão cair, toque em <em>Baixar</em> de novo e o download continua de onde parou.</li>
+                    <li><strong>Para usar</strong>: não é preciso ativar nada. Com o modelo no celular, é ele que transcreve todas as notas de voz, as notas de campo e o áudio dos vídeos, e a linha dele nos Ajustes mostra <em>Em uso</em>.</li>
+                    <li><strong>Para remover</strong>: toque em <em>Remover</em> na mesma linha para liberar o espaço. As notas de voz voltam a usar o modelo padrão, e dá para baixar o de alta precisão de novo quando quiser.</li>
+                    <li><strong>O que ele exige</strong>: um celular com pelo menos 6&nbsp;GB de memória (RAM), porque o modelo ocupa cerca de 1&nbsp;GB enquanto trabalha. Em um celular com menos, a linha avisa e o Stampr continua usando o modelo padrão.</li>
+                    <li><strong>Idiomas</strong>: alemão, búlgaro, croata, dinamarquês, eslovaco, esloveno, espanhol, estoniano, finlandês, francês, grego, holandês, húngaro, inglês, italiano, letão, lituano, maltês, polonês, português, romeno, russo, sueco, tcheco e ucraniano. Ele identifica sozinho qual deles está ouvindo. Em qualquer outro idioma (indonésio, por exemplo), o Stampr usa o modelo padrão.</li>
+                    <li><strong>Continua privado</strong>: assim como o modelo padrão, ele roda inteiramente no celular. O único uso da rede é o próprio download.</li>
+                </ul>
+                <p>A primeira nota depois de uma pausa demora alguns segundos a mais, enquanto o modelo é carregado; depois disso, ele é tão rápido quanto o padrão. Se em algum momento faltar memória no celular, o Stampr usa o modelo padrão naquela nota, em vez de falhar. O modelo é o Parakeet, da NVIDIA (TDT 0.6B v3), distribuído sob a licença CC BY 4.0.</p>
+
+                <div class="tip-box">
+                    <strong>Dica:</strong> seja qual for o modelo, segure o celular como em uma ligação, ou a no máximo um braço de distância, e fale na direção dele. Uma voz que vem do outro lado da sala, ou contra um vento forte, é difícil para qualquer modelo de voz.
+                </div>
 
                 <h3>Três modos de voz</h3>
                 <p>Escolha como as notas de voz funcionam em Ajustes &rarr; Notas de voz:</p>
@@ -257,7 +287,7 @@
                 <p>Se não houver um sinal de GPS recente quando você começar, o Stampr usa o primeiro que chegar em até um minuto. Se não chegar nenhum, a nota é mantida assim mesmo e marcada com <strong>NO GPS FIX</strong>, como acontece com uma foto. A faixa diz por que não há posição (<em>Aguardando GPS…</em>, <em>Localização do celular desativada</em> ou <em>Sem acesso à localização</em>) e oferece um botão para resolver.</p>
 
                 <h3>Da fala ao texto</h3>
-                <p>As notas viram texto no próprio celular, com o mesmo modelo de voz Whisper das notas de voz das fotos, uma nota de cada vez; assim, uma sequência rápida de notas simplesmente entra na fila. Nada é enviado para a internet. Se o modelo de voz ainda não estiver no celular, as gravações são mantidas mesmo assim: a aba Notas oferece o download único (cerca de 32&nbsp;MB), e as notas em espera são transcritas assim que ele termina. Se uma transcrição falhar, a nota mantém a gravação e o Stampr tenta de novo; você também pode abrir a nota e tocar em <em>Transcrever</em>.</p>
+                <p>As notas viram texto no próprio celular, com o mesmo modelo de voz das notas de voz das fotos, uma nota de cada vez; assim, uma sequência rápida de notas simplesmente entra na fila. Nada é enviado para a internet. Se o modelo de voz ainda não estiver no celular, as gravações são mantidas mesmo assim: a aba Notas oferece o download único, e as notas em espera são transcritas assim que ele termina. Se uma transcrição falhar, a nota mantém a gravação e o Stampr tenta de novo; você também pode abrir a nota e tocar em <em>Transcrever</em>.</p>
                 <p>Em celulares com IA no próprio aparelho, a <em>Revisão de notas com IA</em> arruma as notas e sugere tags, como faz com as fotos. A transcrição original é sempre mantida.</p>
 
                 <h3>O diário aberto</h3>
@@ -425,7 +455,8 @@
                         <tr><td>Unidades</td><td>Métrico (m) ou Imperial (ft), para altitude e precisão</td><td>Métrico (m)</td></tr>
                         <tr><td>Norte de referência</td><td>Norte verdadeiro ou norte magnético; as direções levam &deg;T ou &deg;M</td><td>Norte verdadeiro</td></tr>
                         <tr><td>Notas de voz</td><td>Desativadas, Perguntar após a foto ou Mãos livres</td><td>Perguntar após a foto</td></tr>
-                        <tr><td>Modelo de reconhecimento de voz</td><td>Download único de ~32&nbsp;MB; depois, a transcrição roda toda no próprio celular</td><td>n/a</td></tr>
+                        <tr><td>Modelo de reconhecimento de voz</td><td>O modelo de voz padrão. Download único (cerca de 32&nbsp;MB para o inglês, 60&nbsp;MB para os outros idiomas); depois, a transcrição roda toda no próprio celular</td><td>n/a</td></tr>
+                        <tr><td>Modelo de voz de alta precisão</td><td>Modelo de voz opcional, maior (cerca de 670&nbsp;MB), que comete cerca de metade dos erros. Requer um celular com 6&nbsp;GB de memória. Veja <a href="#high-accuracy">O Modelo de voz de alta precisão</a></td><td>Não baixado</td></tr>
                         <tr><td>Notas de campo</td><td>Adiciona a aba Notas, para notas de voz ou digitadas com carimbo de GPS, sem foto, além do atalho Gravar nota e do bloco Nota Stampr</td><td>Desativado</td></tr>
                         <tr><td>Revisão de notas com IA</td><td>A IA do próprio celular arruma o ditado e sugere tags</td><td>Ativado*</td></tr>
                         <tr><td>Exigir sinal de GPS</td><td>Bloqueia o disparador enquanto não há sinal de GPS</td><td>Desativado</td></tr>
@@ -485,7 +516,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Internet</h3>
-                    <p>Usada para a busca do endereço, as imagens de mapa do OpenStreetMap, o download único do modelo de voz e o Google Play Billing. Captura, carimbo e transcrição funcionam offline. Desativar <em>Endereço</em> interrompe a busca por completo, e <em>Mapa no carimbo</em> vem desativado, então dá para usar o Stampr sem que nenhum dos dois envie uma coordenada para fora do aparelho.</p>
+                    <p>Usada para a busca do endereço, as imagens de mapa do OpenStreetMap, os downloads dos modelos de voz e o Google Play Billing. Captura, carimbo e transcrição funcionam offline. Desativar <em>Endereço</em> interrompe a busca por completo, e <em>Mapa no carimbo</em> vem desativado, então dá para usar o Stampr sem que nenhum dos dois envie uma coordenada para fora do aparelho.</p>
                 </div>
             </section>
 
@@ -511,7 +542,15 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Por que o Stampr baixa um arquivo antes da minha primeira nota de voz?</summary>
-                    <div class="faq-answer">A transcrição da voz roda inteiramente no celular, com o modelo de voz Whisper, que tem cerca de 32&nbsp;MB e é baixado uma única vez. Depois disso, a transcrição funciona totalmente offline e o seu áudio nunca sai do aparelho. Você pode iniciar ou acompanhar o download em Ajustes &rarr; Modelo de reconhecimento de voz.</div>
+                    <div class="faq-answer">A transcrição da voz roda inteiramente no celular, com o modelo de voz Whisper, que é baixado uma única vez (cerca de 32&nbsp;MB para o inglês, 60&nbsp;MB para os outros idiomas). Depois disso, a transcrição funciona totalmente offline e o seu áudio nunca sai do aparelho. Você pode iniciar ou acompanhar o download em Ajustes &rarr; Modelo de reconhecimento de voz.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Minhas notas de voz saem com erros. Dá para deixá-las mais precisas?</summary>
+                    <div class="faq-answer">Duas coisas ajudam. Fale a no máximo um braço de distância do celular e na direção dele: a distância e o vento prejudicam a precisão mais do que qualquer outra coisa. E, em um celular com pelo menos 6&nbsp;GB de memória, baixe o Modelo de voz de alta precisão, que é opcional, em Ajustes &rarr; Captura: nos nossos testes, ele errou cerca de metade das palavras que o modelo padrão errou, e ele cobre 25 idiomas europeus. Veja <a href="#high-accuracy">O Modelo de voz de alta precisão</a>. Você também pode corrigir qualquer nota à mão; a transcrição original é sempre mantida.</div>
+                </details>
+                <details class="faq-toggle">
+                    <summary>Por que não consigo baixar o Modelo de voz de alta precisão?</summary>
+                    <div class="faq-answer">A linha dele nos Ajustes diz qual destas três coisas está impedindo o download. Ele requer um celular com pelo menos 6&nbsp;GB de memória (RAM). Ele cobre 25 idiomas europeus; por isso, com o celular em outro idioma, o Stampr fica com o modelo padrão. E ele precisa de cerca de 670&nbsp;MB de espaço livre. Veja <a href="#high-accuracy">O Modelo de voz de alta precisão</a>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Do que a Revisão de notas com IA precisa?</summary>
@@ -555,7 +594,7 @@
                 </details>
                 <details class="faq-toggle">
                     <summary>Uma nota diz que ainda não foi transformada em texto</summary>
-                    <div class="faq-answer">A transcrição precisa do modelo de voz no celular (cerca de 32&nbsp;MB, baixado uma única vez). Enquanto ele não está lá, as gravações são mantidas e a aba Notas oferece o download; as notas em espera são transcritas assim que ele termina. Se uma transcrição falhar, a nota mantém a gravação e o Stampr tenta de novo. Você também pode abrir a nota e tocar em <em>Transcrever</em>.</div>
+                    <div class="faq-answer">A transcrição precisa do modelo de voz no celular (baixado uma única vez). Enquanto ele não está lá, as gravações são mantidas e a aba Notas oferece o download; as notas em espera são transcritas assim que ele termina. Se uma transcrição falhar, a nota mantém a gravação e o Stampr tenta de novo. Você também pode abrir a nota e tocar em <em>Transcrever</em>.</div>
                 </details>
                 <details class="faq-toggle">
                     <summary>Uma nota de campo foi carimbada com NO GPS FIX</summary>
