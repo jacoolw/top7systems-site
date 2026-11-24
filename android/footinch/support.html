@@ -6,6 +6,9 @@
     <title>FootInch for Android: Support &amp; Help | Top 7 Systems</title>
     <meta name="description" content="Support, how-to and the published formulas for FootInch for Android, the feet-inch-fraction construction calculator with rafter, stair, roofing, concrete and layout solvers.">
     <link rel="canonical" href="https://top7systems.net/android/footinch/support">
+    <link rel="alternate" hreflang="en" href="https://top7systems.net/android/footinch/support">
+    <link rel="alternate" hreflang="es" href="https://top7systems.net/android/footinch/es/support">
+    <link rel="alternate" hreflang="x-default" href="https://top7systems.net/android/footinch/support">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,6 +20,11 @@
         .tip-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: 0.9rem; color: #92400e; }
         .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 40px; }
         .toc ul { padding-left: 20px; } .toc a { text-decoration: none; color: var(--accent); }
+        .doc-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 32px; }
+        .doc-top .back-link { margin-bottom: 0; }
+        .lang-switch { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+        .doc .lang-switch a { color: var(--text-secondary); }
+        .doc .lang-switch a[aria-current] { color: var(--text); font-weight: 600; }
     </style>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -36,7 +44,10 @@
     </header>
     <main class="container">
         <article class="doc">
-            <a href="/android/footinch/" class="back-link">&larr; Back to FootInch for Android</a>
+            <div class="doc-top">
+                <a href="/android/footinch/" class="back-link">&larr; Back to FootInch for Android</a>
+                <nav class="lang-switch" aria-label="Language"><a href="/android/footinch/support" hreflang="en" lang="en" aria-current="page">English</a><span aria-hidden="true">|</span><a href="/android/footinch/es/support" hreflang="es" lang="es">Español</a></nav>
+            </div>
             <h1>FootInch for Android: Support &amp; Help</h1>
             <p class="last-updated">FootInch is a feet-inch-fraction construction calculator for Android phones and tablets. Pay once, no subscription. The same engine and solvers as <a href="/footinch/">FootInch for iPhone and iPad</a>.</p>
 
@@ -121,7 +132,7 @@
                 <div class="formula-card"><h3>Equal spacing</h3>
                     <div class="formula">Gap at both ends: n = ceil((L − max gap) ÷ (width + max gap)), gap = (L − n × width) ÷ (n + 1)<br>Member at both ends: n = ceil((L + max gap) ÷ (width + max gap)), gap = (L − n × width) ÷ (n − 1)</div></div>
                 <div class="formula-card"><h3>Pitch &amp; slope</h3>
-                    <div class="formula">x:12 → angle = atan(x ÷ 12)      percent = tan(angle) × 100      rafter factor = 1 ÷ cos(angle)      hip pitch = tan(angle) × 17 per 17</div></div>
+                    <div class="formula">x:12 → angle = atan(x ÷ 12)      percent = tan(angle) × 100      rafter factor = 1 ÷ cos(angle)      hip pitch = tan(angle) × 12 per 17</div></div>
             </section>
 
             <section id="pro">

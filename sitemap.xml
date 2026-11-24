@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://top7systems.net/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://top7systems.net/ascent/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/ascent/support</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/ascent/privacy</loc><lastmod>2026-10-29</lastmod></url>
@@ -17,16 +17,22 @@
   <url><loc>https://top7systems.net/footinch/</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://top7systems.net/footinch/support</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://top7systems.net/footinch/privacy</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://top7systems.net/footinch/es/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/footinch/es/support</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/footinch/es/privacy</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/android/footinch/</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://top7systems.net/android/footinch/support</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://top7systems.net/android/footinch/privacy</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://top7systems.net/android/footinch/terms</loc><lastmod>2026-10-12</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/pt/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/es/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/id/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/de/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/stampr/fr/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/footinch/es/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/footinch/es/support</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/footinch/es/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/pt/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/es/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/id/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/de/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/stampr/fr/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/stampr/help</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/stampr/support</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/stampr/privacy</loc><lastmod>2026-10-29</lastmod></url>
@@ -53,29 +59,29 @@
   <url><loc>https://top7systems.net/android/localwave/privacy</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/android/localwave/support</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/android/localwave/terms</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/privacy</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/support</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/privacy</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/support</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/terms</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/pt/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/pt/support</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/pt/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/pt/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/pt/support</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/pt/privacy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/pt/terms</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/es/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/es/support</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/es/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/es/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/es/support</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/es/privacy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/es/terms</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/id/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/id/support</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/id/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/id/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/id/support</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/id/privacy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/id/terms</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/de/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/de/support</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/de/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/de/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/de/support</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/de/privacy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/de/terms</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/fr/help</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/fr/support</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/stampr/fr/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/fr/help</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/fr/support</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://top7systems.net/android/stampr/fr/privacy</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://top7systems.net/android/stampr/fr/terms</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/android/ascent/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://top7systems.net/android/ascent/support</loc><lastmod>2026-10-29</lastmod></url>
@@ -99,6 +105,10 @@
   <url><loc>https://top7systems.net/encore/support</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://top7systems.net/encore/privacy</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://top7systems.net/encore/terms</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://top7systems.net/justso/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://top7systems.net/justso/support</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://top7systems.net/justso/privacy</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://top7systems.net/justso/terms</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://top7systems.net/lyrebird/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/lyrebird/support</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://top7systems.net/lyrebird/privacy</loc><lastmod>2026-11-14</lastmod></url>
@@ -110,15 +120,15 @@
   <url><loc>https://top7systems.net/lyrebird/tl/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/lyrebird/es/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/lyrebird/ko/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/</loc><lastmod>2026-11-17</lastmod></url>
   <url><loc>https://top7systems.net/android/lyrebird/support</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://top7systems.net/android/lyrebird/privacy</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/zh/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/vi/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/hi/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/ne/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/ar/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/tl/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/es/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://top7systems.net/android/lyrebird/ko/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/zh/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/vi/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/hi/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/ne/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/ar/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/tl/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/es/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://top7systems.net/android/lyrebird/ko/</loc><lastmod>2026-11-17</lastmod></url>
 </urlset>
