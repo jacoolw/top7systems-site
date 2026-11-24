@@ -32,7 +32,7 @@
         <article class="doc">
             <a href="/" class="back-link">&larr; Back to all apps</a>
             <h1>Stampr — Help & User Guide</h1>
-            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.8 for iPhone and iPad.</p>
+            <p>Everything you need to know to get the most out of Stampr. This guide covers Stampr 2.9.1 for iPhone and iPad.</p>
 
             <!-- Table of Contents -->
             <div class="toc">
@@ -142,6 +142,7 @@
 
                 <h3>Level Indicator</h3>
                 <p>A subtle bubble level in the centre of the viewfinder shows when your horizon is straight. It turns <strong>green</strong> when you're level within 1.5&deg;, in both portrait and landscape, and gives a small haptic tick as it locks on. Great for straight-on documentation shots. You can turn it off in Settings.</p>
+                <p>Point the back camera at the ground and, within about 17&deg; of straight down, the level becomes a <strong>bull's-eye</strong>: the bubble floats to the high side, and inside the centre ring it all turns green with a tick. Tilt and roll read to a tenth of a degree. Made for a clue beside a ruler, a document, or a floor plan. The front camera has no bull's-eye.</p>
 
                 <h3>Require GPS Fix</h3>
                 <p>If your work demands coordinates on every shot, enable <em>Require GPS Fix</em> in Settings. The shutter will then wait for a GPS lock, with a "Capture Anyway" escape hatch if you need the shot regardless.</p>
@@ -171,8 +172,15 @@
                     <li><strong>Off</strong> — No voice prompt. You can still add notes later from the photo detail screen.</li>
                 </ul>
 
+                <h3 id="languages">Your Language</h3>
+                <p>Stampr transcribes in your iPhone's language: the first language in Settings &rarr; General &rarr; Language &amp; Region that Apple's on-device speech recognition covers. That includes English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, Hindi and other Indian languages, and through Apple's dictation model Arabic, Catalan, Czech, Danish, Dutch, Finnish, Greek, Hebrew, Hungarian, Indonesian, Malay, Norwegian, Polish, Romanian, Russian, Swedish, Thai, Turkish, Ukrainian, Vietnamese and more. The list comes from iOS. The first note in a new language may wait while iOS downloads its speech model; the recording is kept meanwhile.</p>
+                <p>Before Stampr 2.9.1, voice notes on an iPhone set to a language other than English were heard as English. To fix an older note, open it and tap <em>Transcribe Again</em>.</p>
+
+                <h3 id="transcribe-again">Transcribe Again</h3>
+                <p>Open a photo, video, or field note and tap <em>Transcribe Again</em> under its note to turn the recording into text once more, for example after changing your iPhone's language. Stampr asks first and says what will change: the new transcript replaces the old one and anything you typed stays, unless the note was cleaned up by AI or edited since, in which case its whole text is replaced. Nothing changes until the new words arrive, and if nothing is heard the note stays as it was. A photo that prints its note is restamped. On a video (on the iPhone that recorded it) only the note in the Library changes; a note already burned into the video stays as it was.</p>
+
                 <h3>AI Note Cleanup</h3>
-                <p>On devices with Apple Intelligence, Stampr's <em>AI Note Cleanup</em> tidies your dictation into a clear, professional caption and suggests up to five searchable tags, entirely on-device. "um so there's a crack on the uh north wall" becomes "Crack on north wall." Cleanup is strictly grounded: it only removes dictation artifacts and can never invent content. Every cleaned note is checked word by word against your transcript, and if anything doesn't match, Stampr falls back to the verbatim transcript. The verbatim transcript is always kept too: tap <em>Show original transcript</em> on any photo to see exactly what was said.</p>
+                <p>On devices with Apple Intelligence, Stampr's <em>AI Note Cleanup</em> tidies your dictation into a clear, professional caption and suggests up to five searchable tags, entirely on-device. "um so there's a crack on the uh north wall" becomes "There's a crack on the north wall." Cleanup is strictly grounded: it only removes fillers, repeated words, and false starts, and can never invent content. Every cleaned note is checked word by word against your transcript: if it adds anything, or drops anything else, Stampr keeps the verbatim transcript. Accents and capital letters stay as you said them. The verbatim transcript is always kept too: tap <em>Show original transcript</em> on any photo to see exactly what was said.</p>
                 <p>In the voice note sheet you can flip between the AI-cleaned version and the original before saving. On devices without Apple Intelligence, the verbatim transcription is used as-is.</p>
 
                 <div class="tip-box">
@@ -195,14 +203,14 @@
                     <div class="step-num">2</div>
                     <div class="step-content">
                         <h4>Record</h4>
-                        <p>Tap to start recording (with sound), tap again to stop. Recordings cap at 3 minutes. The GPS data, address, bearing, and time are frozen at the moment recording starts and burned into every frame, along with your watermark or logo.</p>
+                        <p>Tap to start recording (with sound), tap again to stop. Recordings cap at 3 minutes. The GPS data, address, bearing, and time are frozen at the moment recording starts and burned into every frame, along with your watermark or logo. While it records, a microphone shows <em>Listening…</em> (or <em>No sound</em> if the microphone is off), and the red dot swells with your voice.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
                     <div class="step-content">
                         <h4>Saved to your Library</h4>
-                        <p>The stamped clip saves straight into your in-app Library ("Video saved to Library"), where it shows in the grid with a duration badge. Its soundtrack is transcribed on-device into a searchable, editable note, exactly like a photo voice note.</p>
+                        <p>The stamped clip saves straight into your in-app Library ("Video saved to Library"), where it shows in the grid with a duration badge. Its soundtrack is transcribed on-device into a searchable, editable note, exactly like a photo voice note. The viewfinder shows the soundtrack being transcribed and, with Print Notes on, the note being stamped onto the video, then tells you when the voice note is added. The camera stays ready to shoot meanwhile.</p>
                     </div>
                 </div>
                 <div class="screenshot-single">
@@ -269,7 +277,7 @@
                 <p>If there's no fresh fix when you start, Stampr uses the first one that arrives within a minute. If none arrives, the note is still kept and marked <strong>NO GPS FIX</strong>, the same as a photo. The strip says why there's no position (<em>Waiting for GPS…</em>, <em>Location is off in Stampr</em>, <em>Location access is off for Stampr</em>, or <em>Stampr can't use your location yet</em>) and offers a button to fix it.</p>
 
                 <h3>From Speech to Text</h3>
-                <p>Notes are turned into text on the phone by Apple's on-device speech recognition, as photo voice notes are, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. A note waiting its turn shows <em>Transcribing…</em>. The first time, iOS may need to download its speech model; the recording is kept meanwhile. If a note can't be transcribed, it keeps its recording and Stampr tries again the next time it opens. You can also open the note and tap <em>Transcribe</em>, or <em>Try Again</em> if no speech was recognised.</p>
+                <p>Notes are turned into text on the phone by Apple's on-device speech recognition, in your iPhone's language (see <a href="#languages">Your Language</a>), as photo voice notes are, one note at a time, so a quick run of notes simply queues up. Nothing is uploaded. A note waiting its turn shows <em>Transcribing…</em>. The first time, iOS may need to download its speech model; the recording is kept meanwhile. If a note can't be transcribed, it keeps its recording and Stampr tries again the next time it opens. You can also open the note and tap <em>Transcribe</em>, or <em>Try Again</em> if no speech was recognised. To redo a finished transcript, tap <a href="#transcribe-again"><em>Transcribe Again</em></a>.</p>
                 <p>On devices with Apple Intelligence, <em>AI Note Cleanup</em> tidies notes and suggests tags, as it does for photos. The original transcript is always kept: tap <em>Show original transcript</em> on the note.</p>
 
                 <h3>The Open Log</h3>
@@ -286,7 +294,7 @@
                 </div>
 
                 <h3>Reading and Editing a Note</h3>
-                <p>Tap the play button on a note to hear it right in the log, or tap the note to open it. On a note's screen you can play the recording, read its stamp, correct the text (the original transcript stays one tap away), add or remove tags, move it to another project or log, see where it was taken on a map with its address, coordinates, UTM and MGRS / USNG references, altitude, and accuracy, open it in Maps, share it, or delete it. In the log, touch and hold a note for <em>Copy Text</em>, <em>Share Note</em>, and <em>Delete Note</em>.</p>
+                <p>Tap the play button on a note to hear it right in the log, or tap the note to open it. On a note's screen you can play the recording, read its stamp, correct the text (the original transcript stays one tap away), redo the transcript with <em>Transcribe Again</em>, add or remove tags, move it to another project or log, see where it was taken on a map with its address, coordinates, UTM and MGRS / USNG references, altitude, and accuracy, open it in Maps, share it, or delete it. In the log, touch and hold a note for <em>Copy Text</em>, <em>Share Note</em>, and <em>Delete Note</em>.</p>
                 <p>Notes also appear in the Library and in their project, alongside your photos and videos, and Spotlight finds them by their words. A project with notes can be read as a log too: tap the list button at the top of the project (<em>Show as log</em>).</p>
 
                 <h3 id="sharing-notes">Sharing Notes</h3>
@@ -341,7 +349,7 @@
                 <ul>
                     <li><strong>Stamped photo</strong> — The full image with GPS data burned on; tap for fullscreen</li>
                     <li><strong>Project</strong> — Tap to change or assign a project</li>
-                    <li><strong>Notes & tags</strong> — AI-cleaned caption (editable), the original transcript, and tag chips you can add or remove</li>
+                    <li><strong>Notes & tags</strong> — AI-cleaned caption (editable), the original transcript, <em>Transcribe Again</em> for a voice note, and tag chips you can add or remove</li>
                     <li><strong>Before / After</strong> — Link this photo with another to document repairs; share the pair as a side-by-side composite</li>
                     <li><strong>Location</strong> — Interactive map, street address, coordinates, and the UTM reference</li>
                     <li><strong>GPS Data</strong> — Altitude, bearing, tilt/roll, accuracy, and capture time</li>
