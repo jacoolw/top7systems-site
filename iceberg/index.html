@@ -183,6 +183,45 @@ h2{font-size:clamp(2rem,4.5vw,3.7rem)}
 .you .ask{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,196,119,.2);color:var(--ink);font-size:.95rem}
 .you .ask b{font:500 .6rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--surf-hi);display:block;margin-bottom:7px}
 
+/* explain panels + figure captions */
+.ft{font-weight:650;font-size:1.04rem;color:var(--ink);line-height:1.3}
+.fs{font-size:.88rem;color:var(--ink3);margin:5px 0 18px;max-width:64ch}
+.ex{margin-top:20px}
+.ex summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 9px;border-radius:99px;border:1px solid rgba(127,230,255,.38);background:rgba(31,159,204,.14);
+  font:500 .66rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);min-height:42px;transition:background .2s,border-color .2s;user-select:none}
+.ex summary::-webkit-details-marker{display:none}
+.ex summary:hover{background:rgba(31,159,204,.28);border-color:var(--ice-hi)}
+.ex .q{width:24px;height:24px;border-radius:50%;background:var(--ice-hi);color:#031626;display:grid;place-items:center;font:800 .86rem/1 var(--sans);letter-spacing:0;transition:transform .3s}
+.ex[open] .q{transform:rotate(360deg)}
+.ex .lo{display:none}.ex[open] .lo{display:inline}.ex[open] .lc{display:none}
+.exb{margin-top:14px;padding:26px;border-radius:20px;background:rgba(3,22,40,.86);border:1px solid rgba(127,230,255,.26);display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;animation:exin .4s cubic-bezier(.2,.7,.2,1);text-align:left}
+@keyframes exin{from{opacity:0;transform:translateY(-8px)}}
+.exb h4{font:500 .6rem/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--ice-hi);margin:0 0 11px}
+.exb p{font-size:.95rem;color:var(--ink2);line-height:1.55}
+.exb .rep{border-left:2px solid var(--surf-hi);padding-left:18px}
+.exb .rep h4{color:var(--surf-hi)}
+.exb .rep p{color:var(--ink)}
+.exb cite{display:block;margin-top:12px;font:500 .56rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-style:normal}
+.exdive{padding-top:34px;text-align:center}
+.exdive .ex{margin-top:0}
+
+/* insights */
+.kick .nn{font-family:var(--sans);font-stretch:122%;font-weight:820;font-size:3rem;line-height:.74;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--ice-hi);text-shadow:0 0 28px rgba(127,230,255,.35);margin-right:6px}
+.insight{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:20px 24px;border-radius:18px;max-width:800px;
+  background:linear-gradient(100deg,rgba(127,230,255,.2),rgba(127,230,255,.05));border:1px solid rgba(127,230,255,.5);box-shadow:0 0 0 6px rgba(127,230,255,.05),0 18px 50px rgba(0,10,24,.35)}
+.insight .tag{font:700 .6rem/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#031626;background:var(--ice-hi);padding:8px 10px;border-radius:7px;white-space:nowrap;margin-top:2px}
+.insight p{font-size:1.1rem;line-height:1.45;color:var(--ink)!important;margin:0!important}
+.insight p b{font-weight:740;color:#fff}
+.six{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.six a{display:flex;flex-direction:column;height:100%;padding:26px 26px 22px;border-radius:24px;text-decoration:none;position:relative;overflow:hidden;
+  background:linear-gradient(170deg,rgba(127,230,255,.13),rgba(127,230,255,.03));border:1px solid rgba(127,230,255,.3);transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s}
+.six a:hover{transform:translateY(-5px);border-color:var(--ice-hi);background:linear-gradient(170deg,rgba(127,230,255,.22),rgba(127,230,255,.06))}
+.six .n{font-stretch:122%;font-weight:820;font-size:4.4rem;line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--ice-hi);margin-bottom:22px}
+.six a:hover .n{color:var(--ice-hi)}
+.six b{font-size:1.4rem;font-weight:760;font-stretch:106%;line-height:1.1;letter-spacing:-.015em;margin-bottom:10px}
+.six .x{color:var(--ink2);font-size:.96rem;flex:1}
+.six .go{margin-top:20px;color:var(--ice-hi);font-size:.6rem}
+
 /* why now */
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .why .panel .num{font-size:clamp(2.6rem,5vw,4rem);display:block;margin-bottom:14px}
@@ -365,7 +404,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
   .eq{grid-template-columns:1fr 1fr}.eq .op{display:none}
   .scalegrid,.mapgrid,.blind,.proof{grid-template-columns:1fr}
   .detail{position:static}
-  .cav,.jobs{grid-template-columns:1fr 1fr}
+  .cav,.jobs,.six{grid-template-columns:1fr 1fr}
   .c-tip{left:auto;right:20px;width:280px}
 }
 @media (max-width:860px){
@@ -389,6 +428,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
   .c-mass{top:21.5%}.c-five{top:43.5%}.c-where{top:66%}
   .c-five .mini{display:none}
   .why,.steps,.isnt,.twin,.cav,.eras,.tl,.jobs{grid-template-columns:1fr}
+  .six{grid-template-columns:1fr}.six .n{font-size:3.4rem}.insight{grid-template-columns:1fr;gap:12px;padding:18px}.insight .tag{justify-self:start}.insight p{font-size:1rem}.kick .nn{font-size:2.3rem}
   .you .acts{grid-template-columns:1fr}.you .acts .panel,.you .acts .panel:nth-child(n+4){grid-column:auto}
   .eras::before{left:7px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--ink3),var(--ice-hi))}
   .era{padding:0 0 34px 38px}.era::before{position:absolute;left:0;top:2px;margin:0}
@@ -423,11 +463,13 @@ footer a{color:var(--ink);text-underline-offset:3px}
   <a href="#why"><span>Why now</span></a>
   <a href="#measure"><span>The measure</span></a>
   <a href="#method"><span>The model</span></a>
-  <a href="#scale"><span>To scale</span></a>
-  <a href="#map"><span>Geography</span></a>
-  <a href="#shape"><span>Shape</span></a>
-  <a href="#blind"><span>Blind spot</span></a>
-  <a href="#proof"><span>Proof</span></a>
+  <a href="#insights"><span>Six insights</span></a>
+  <a href="#proof"><span>01 Proof</span></a>
+  <a href="#scale"><span>02 Scale</span></a>
+  <a href="#map"><span>03 Geography</span></a>
+  <a href="#surprise"><span>04 Surprise</span></a>
+  <a href="#shape"><span>05 Shape</span></a>
+  <a href="#blind"><span>06 Blind spot</span></a>
   <a href="#you"><span>For managers</span></a>
   <a href="#caveats"><span>Fine print</span></a>
 </nav>
@@ -543,6 +585,17 @@ footer a{color:var(--ink);text-underline-offset:3px}
 <div class="deep">
 <main>
 
+<div class="wrap exdive">
+  <details class="ex">
+    <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain the iceberg picture</span><span class="lo">Hide explanation</span></summary>
+    <div class="exb">
+      <div><h4>What you are looking at</h4><p>One iceberg stands for all the work in the US that AI tools can technically do, measured by the wages paid for it. It is not the whole economy: most wage value sits outside the iceberg altogether.</p></div>
+      <div><h4>How to read it</h4><p>The line on the left is a ruler, marked in percent of all US wages. The white tip rises 2.2 units above the waterline: AI use you can already see, in tech jobs. The blue mass goes 11.7 units down: office work AI can do that has not surfaced yet. The heights are to scale, so the picture is the comparison.</p></div>
+      <div class="rep"><h4>What the report says</h4><p>Visible AI adoption in computing and technology is about 2.2% of wage value, roughly $211 billion. Technical capability reaches much further, through administrative, financial and professional services: about 11.7%, roughly $1.2 trillion.</p><cite>Paraphrased from the abstract and figure 3</cite></div>
+    </div>
+  </details>
+</div>
+
 <section class="s" id="short">
   <div class="wrap">
     <header class="sh rv">
@@ -554,7 +607,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
       <div class="panel rv" style="--d:.1s"><span class="n">02</span><h3>The bigger part is ordinary office work.</h3><p>AI tools can already perform tasks worth nearly 12% of wages, mostly in administration, finance, HR and customer support. Five times the visible part.</p></div>
       <div class="panel rv" style="--d:.2s"><span class="n">03</span><h3>It is about tasks, and nobody's dashboard shows it.</h3><p>The study measures what AI can do inside a job, not jobs lost. Headcount, budget and economic reports will pick it up last.</p></div>
     </div>
-    <p class="note rv">The study covers the United States only. No Australian figures are given.</p>
+    <p class="note rv">The study covers the United States only. No Australian figures are given. Further down, the Explain button under each graphic gives a plain guide to what it shows. <a href="#insights">Skip to the six insights ↓</a></p>
   </div>
 </section>
 
@@ -620,6 +673,14 @@ footer a{color:var(--ink);text-underline-offset:3px}
       <span class="op" aria-hidden="true">=</span>
       <div class="t res"><span class="mono" style="color:var(--ice-hi)">Result</span><h3>Exposure, from 0 to 100%</h3><p>Comparable across jobs, industries, counties and states.</p></div>
     </div>
+    <details class="ex rv">
+      <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this formula</span><span class="lo">Hide explanation</span></summary>
+      <div class="exb">
+        <div><h4>What you are looking at</h4><p>The recipe behind the score for a single job. Each of the 923 occupations gets its own result, and those are added up to give a figure for a county, a state or the country.</p></div>
+        <div><h4>How to read it</h4><p>Left to right: list the skills the job needs, mark the ones AI tools can perform, then weight by what the work is paid. A score of 12% does not mean 12% of people lose work. It means about 12% of what the job is paid for sits in skills AI can do.</p></div>
+        <div class="rep"><h4>What the report says</h4><p>The report sums the Index up as “A skills-centered KPI for the AI economy.” A skill counts as automatable when tools exist that AI models can use to carry out the task.</p><cite>Quoted and paraphrased from section 4</cite></div>
+      </div>
+    </details>
     <div class="isnt">
       <div class="panel yes rv">
         <p class="mono" style="color:var(--ice-hi)">It measures</p>
@@ -646,6 +707,8 @@ footer a{color:var(--ink);text-underline-offset:3px}
       <p class="lede">Each worker becomes a software agent with skills, tasks and a location. Each AI tool is tagged with the skills it can perform. Skills are the shared currency: where both sides land on the same one, that is exposure.</p>
     </header>
     <div class="panel rv">
+      <p class="ft">How the model connects people, skills and AI tools</p>
+      <p class="fs">A simplified sketch. Workers on the left, AI tools on the right, and the skills both can reach in the middle.</p>
       <div class="cols3">
         <div><span class="num"><span data-count="151">151</span>M</span><span class="mono">workers</span></div>
         <div><span class="num"><span data-count="32" data-sep="1">32</span>,000+</span><span class="mono">skills</span></div>
@@ -656,6 +719,14 @@ footer a{color:var(--ink);text-underline-offset:3px}
         <span><i style="background:var(--ice)"></i>Skill both people and AI tools perform: counted as exposure</span>
         <span><i style="border:1.5px solid rgba(255,255,255,.6)"></i>Skill only people perform, for now</span>
       </div>
+      <details class="ex">
+        <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this graphic</span><span class="lo">Hide explanation</span></summary>
+        <div class="exb">
+          <div><h4>What you are looking at</h4><p>A simplified sketch of the model, not real data. Twelve dots stand in for 151 million workers, eight bars for 32,000 skills, and six diamonds for 13,000 AI tools.</p></div>
+          <div><h4>How to read it</h4><p>Lines from the left show skills that workers use. Lines from the right show skills that AI tools can perform. A bar lit blue is reached from both sides: that overlap is what the Index counts. An empty bar is a skill only people perform for now.</p></div>
+          <div class="rep"><h4>What the report says</h4><p>Workers and AI tools are mapped onto the same skill list, which makes it possible to compare directly what people do with what AI systems can do.</p><cite>Paraphrased from section 3</cite></div>
+        </div>
+      </details>
     </div>
     <div class="steps">
       <div class="panel rv"><span class="n">01 · CAPTURE</span><h3>Map the human workforce</h3><p>151 million workers across 923 occupations and 3,000 counties, each with skills, tasks and a place.</p></div>
@@ -672,12 +743,73 @@ footer a{color:var(--ink);text-underline-offset:3px}
   </div>
 </section>
 
+<section class="s" id="insights">
+  <div class="glow" style="width:640px;height:460px;left:50%;margin-left:-320px;top:60px;background:rgba(31,159,204,.2)"></div>
+  <div class="wrap">
+    <header class="sh rv">
+      <p class="kick mono"><b>The findings</b><i></i>What the report concludes</p>
+      <h2>Six insights. <span class="hi-i">This is the part to remember.</span></h2>
+      <p class="lede">The report draws six conclusions from the model. Each one is unpacked below with its own graphic. Pick one to jump to it, or keep scrolling to take them in order.</p>
+    </header>
+    <ol class="six">
+      <li class="rv" style="--d:0.00s"><a href="#proof"><span class="n">01</span><b>The model checks out</b><span class="x">It predicts real career moves and matches where AI is actually used.</span><span class="go mono">See the evidence ↓</span></a></li>
+      <li class="rv" style="--d:0.08s"><a href="#scale"><span class="n">02</span><b>Tech disruption is real, but small</b><span class="x">About 2% of wage value. The part beyond tech is five times larger.</span><span class="go mono">See the evidence ↓</span></a></li>
+      <li class="rv" style="--d:0.16s"><a href="#map"><span class="n">03</span><b>White-collar exposure is in every state</b><span class="x">Not a coastal story. Small and industrial states outrank California.</span><span class="go mono">See the evidence ↓</span></a></li>
+      <li class="rv" style="--d:0.00s"><a href="#surprise"><span class="n">04</span><b>Factory states face an office-work surprise</b><span class="x">Small tech sectors hide double-digit exposure in the back office.</span><span class="go mono">See the evidence ↓</span></a></li>
+      <li class="rv" style="--d:0.08s"><a href="#shape"><span class="n">05</span><b>The shape decides the strategy</b><span class="x">Concentrated in a few sectors, or spread across many: different plans.</span><span class="go mono">See the evidence ↓</span></a></li>
+      <li class="rv" style="--d:0.16s"><a href="#blind"><span class="n">06</span><b>The usual metrics miss it</b><span class="x">GDP, income and unemployment explain less than 5% of it.</span><span class="go mono">See the evidence ↓</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="proof">
+  <div class="wrap">
+    <header class="sh rv">
+      <p class="kick mono"><span class="nn">01</span><b>Insight 1 of 6</b><i></i>Proof</p>
+      <h2>Does it match the real world? Two tests.</h2>
+      <div class="insight"><span class="tag">Insight 1</span><p><b>The model checks out against the real world.</b> Skill similarity predicts 85% of real career moves, and the Index agrees with measured AI use in 69% of states.</p></div>
+    </header>
+    <div class="proof">
+      <div class="panel rv">
+        <p class="mono" style="color:var(--ink3)">Test 1 · Career moves</p>
+        <span class="num"><span data-count="85">85</span>%</span>
+        <h3>of real career moves predicted</h3>
+        <p>When people change jobs, they mostly move between occupations the model rates as highly similar in skills. So the skill map reflects how the labour market actually behaves.</p>
+        <div class="meter" aria-hidden="true"><i style="--w:85%"></i></div>
+      </div>
+      <div class="panel rv" style="--d:.1s">
+        <p class="mono" style="color:var(--ink3)">Test 2 · Actual AI use</p>
+        <span class="num"><span data-count="69">69</span>%</span>
+        <h3>agreement with where AI is really used</h3>
+        <p>States were ranked by predicted exposure and by measured use of Claude (the Anthropic Economic Index), then sorted into three tiers. Each dot is one of the 51 places compared.</p>
+        <p class="fs" style="margin:16px 0 0">Rows: how much AI is actually used. Columns: where the Index predicted each place would rank. Dots on the highlighted diagonal are matches.</p>
+        <div class="mx" id="mx" role="img" aria-label="Three by three grid comparing actual AI use tier with predicted tier. 35 of 51 match: 8 of 13 leading, 18 of 25 middle, 9 of 13 trailing."></div>
+        <div class="mxkey">
+          <span><u style="background:#eef8ff"></u>Same tier on both: 35</span>
+          <span><u style="border:2px solid #eef8ff"></u>Index ahead of use: 9</span>
+          <span><u style="background:rgba(238,248,255,.3)"></u>Index behind use: 7</span>
+        </div>
+        <p class="note">When it misses, it usually errs high, in places like Texas and North Carolina where the workforce is exposed but use has not caught up. That is what an early-warning measure should do.</p>
+      </div>
+    </div>
+    <details class="ex rv">
+      <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain these two tests</span><span class="lo">Hide explanation</span></summary>
+      <div class="exb">
+        <div><h4>What you are looking at</h4><p>Two checks of the model against real-world data it was not built from. The left panel is a single score with a progress bar. The right panel is a scorecard of prediction against reality.</p></div>
+        <div><h4>How to read it</h4><p>In the grid, each dot is one place. Rows are how much AI is actually used there. Columns are where the Index predicted it would rank. Solid dots on the highlighted diagonal are matches: 35 of 51, or 69%. Hollow dots are places where the Index expected more than current use. Faint dots are where it expected less.</p></div>
+        <div class="rep"><h4>What the report says</h4><p>8 of 13 leading states and 9 of 13 trailing states match exactly. Where the two disagree, the Index more often shows higher exposure than current use, which is how a leading indicator should behave.</p><cite>Paraphrased from section 5.1</cite></div>
+      </div>
+    </details>
+  </div>
+</section>
+
 <section class="s" id="scale">
   <div class="wrap">
     <header class="sh rv">
-      <p class="kick mono"><b>Insight 02</b><i></i>To scale</p>
+      <p class="kick mono"><span class="nn">02</span><b>Insight 2 of 6</b><i></i>To scale</p>
       <h2>The part everyone talks about is <span class="hi-s">$22 in every $1,000</span> of wages.</h2>
       <p class="lede">Here is the whole US wage bill, about $9.4 trillion a year, as a thousand squares. Switch between the two measures.</p>
+      <div class="insight"><span class="tag">Insight 2</span><p><b>The tech disruption is real, but small.</b> Headlines follow tech skills, yet those jobs carry only about 2% of wage value. The hidden part beyond tech is five times larger.</p></div>
     </header>
     <div class="scalegrid">
       <div class="readout rv">
@@ -691,8 +823,18 @@ footer a{color:var(--ink);text-underline-offset:3px}
         <p class="tag"><span class="sw s" id="wSw"></span><span id="wTag">Surface Index</span></p>
       </div>
       <div class="rv" style="--d:.1s">
+        <p class="ft">All US wages, drawn as 1,000 squares</p>
+        <p class="fs">Lit squares are the share paid for work AI tools can do. Dark squares are everything else.</p>
         <div class="waffle s" id="waffle" role="img" aria-label="Grid of 1,000 squares. 22 are lit for the Surface Index and 117 for the Iceberg Index."></div>
         <p class="note">Each square is 0.1% of US wage value, roughly $9.4 billion a year.</p>
+        <details class="ex">
+          <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this graphic</span><span class="lo">Hide explanation</span></summary>
+          <div class="exb">
+            <div><h4>What you are looking at</h4><p>All the wages paid in the US in a year, about $9.4 trillion, drawn as 1,000 equal squares. One square is one thousandth of the total.</p></div>
+            <div><h4>How to read it</h4><p>Lit squares are the share paid for work AI tools can do, on the measure you select. Surface lights 22 squares. Iceberg lights 117. The two are shown one at a time because they are two ways of counting, not two piles to add up.</p></div>
+            <div class="rep"><h4>What the report says</h4><p>The Surface Index is 2.2%, about $211 billion across 1.9 million workers in technology occupations. The Iceberg Index averages 11.7%, five times larger.</p><cite>Paraphrased from sections 5.2 and 5.3</cite></div>
+          </div>
+        </details>
       </div>
     </div>
     <div class="panel aside rv">
@@ -709,9 +851,10 @@ footer a{color:var(--ink);text-underline-offset:3px}
   <div class="glow" style="width:560px;height:560px;left:-200px;top:200px;background:rgba(31,159,204,.18)"></div>
   <div class="wrap">
     <header class="sh rv">
-      <p class="kick mono"><b>Insight 03</b><i></i>Geography</p>
+      <p class="kick mono"><span class="nn">03</span><b>Insight 3 of 6</b><i></i>Geography</p>
       <h2>Above the surface it is a <span class="hi-s">coastal</span> story. Below, it is <span class="hi-i">everywhere.</span></h2>
       <p class="lede">Tech exposure piles up in a few states. The hidden exposure does not: small and industrial states outrank California. Tap a state to see what the report says about it.</p>
+      <div class="insight"><span class="tag">Insight 3</span><p><b>White-collar exposure is in every state.</b> The administrative and financial work AI can do is worth five times the visible tech disruption, and it is spread across the whole country, not just the coasts.</p></div>
     </header>
     <div class="mapgrid">
       <div class="rv">
@@ -719,9 +862,18 @@ footer a{color:var(--ink);text-underline-offset:3px}
           <button type="button" data-m="s" aria-pressed="true">Surface Index</button>
           <button type="button" data-m="i" aria-pressed="false">Iceberg Index</button>
         </div>
-        <div class="tiles s" id="tiles"></div>
+        <p class="fs" style="margin:18px 0 0">Each square is one US state, placed roughly where it sits on the map. Numbers are Index values in percent.</p>
+        <div class="tiles s" id="tiles" style="margin-top:14px"></div>
         <div class="legend" id="mapLegend"></div>
         <p class="note">The report publishes full maps but quotes figures for only some states in its text. This map shows only what is stated. Ohio is quoted as 11.8% in one section and 11.34% in another; the first is used here.</p>
+        <details class="ex">
+          <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this map</span><span class="lo">Hide explanation</span></summary>
+          <div class="exb">
+            <div><h4>What you are looking at</h4><p>A map of the US redrawn as a grid. Each square is one state, placed roughly where it sits geographically, so small states are as easy to see as large ones.</p></div>
+            <div><h4>How to read it</h4><p>Use the buttons to switch index. A filled square with a number has its value quoted in the report. An outlined square is a state the report names without giving a figure. On the Iceberg view every square is tinted, because the report finds exposure in all states. Tap any square for detail.</p></div>
+            <div class="rep"><h4>What the report says</h4><p>Administrative and financial exposure is spread across all states rather than concentrated on the coasts. States such as Delaware and South Dakota score higher than California.</p><cite>Paraphrased from section 5.3</cite></div>
+          </div>
+        </details>
       </div>
       <aside class="panel detail rv" style="--d:.1s" aria-live="polite">
         <p class="mono" id="dMode">Surface Index</p>
@@ -734,16 +886,19 @@ footer a{color:var(--ink);text-underline-offset:3px}
   </div>
 </section>
 
-<section class="s" id="shape" style="padding-top:90px">
+<section class="s" id="surprise" style="padding-top:90px">
   <div class="wrap">
     <div class="panel blind rv">
       <div class="txt">
-        <p class="kick mono"><b>Insight 04</b><i></i>The surprise</p>
+        <p class="kick mono"><span class="nn">04</span><b>Insight 4 of 6</b><i></i>The surprise</p>
         <h3>Factory states face it in the back office first.</h3>
+        <div class="insight"><span class="tag">Insight 4</span><p><b>Factory states face a hidden office-work surprise.</b> States like Ohio and Michigan carry double-digit exposure in white-collar work while attention goes to physical automation. It can be up to ten times their tech-sector exposure.</p></div>
         <p>Ohio, Michigan and Tennessee have small tech sectors, so they look safe on the surface. Underneath sits double-digit exposure in the office work that keeps factories and supply chains running: financial analysis, coordination, administration.</p>
         <p>A state planning for robots on the factory floor could be caught out by software in the accounts department.</p>
       </div>
       <div>
+        <p class="ft">Share of wages exposed: visible versus hidden</p>
+        <p class="fs">Two bars per place, same scale. The wider the difference, the more is hidden.</p>
         <div class="lg"><span><span class="sw s"></span>Surface Index</span><span><span class="sw i"></span>Iceberg Index</span></div>
         <div class="bars" role="img" aria-label="Bar chart. Tennessee: Surface 1.3%, Iceberg 11.6%. United States: Surface 2.2%, Iceberg 11.7%. Virginia: Surface 3.6%, Iceberg 12.48%.">
           <div class="brow"><h3>Tennessee<small>about 9× gap</small></h3><div class="pair"><div class="s"><i style="--w:9.3%"></i><span>1.3%</span></div><div class="i"><i style="--w:82.9%;--d:.15s"></i><span>11.6%</span></div></div></div>
@@ -751,13 +906,22 @@ footer a{color:var(--ink);text-underline-offset:3px}
           <div class="brow"><h3>Virginia<small>about 3.5× gap</small></h3><div class="pair"><div class="s"><i style="--w:25.7%;--d:.2s"></i><span>3.6%</span></div><div class="i"><i style="--w:89.1%;--d:.35s"></i><span>12.48%</span></div></div></div>
         </div>
         <p class="note">Gap = Iceberg Index divided by Surface Index, from the report's figures. Tech-heavy states see their exposure coming. Others do not.</p>
+        <details class="ex">
+          <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this chart</span><span class="lo">Hide explanation</span></summary>
+          <div class="exb">
+            <div><h4>What you are looking at</h4><p>Two bars for each place, on the same scale. Orange is the Surface Index: exposure in tech jobs. Blue is the Iceberg Index: exposure in office work more widely.</p></div>
+            <div><h4>How to read it</h4><p>Bar length is a percentage of that place's wage value. Compare the two bars in a row: the wider the difference, the more of the exposure is hidden from view. Tennessee has the shortest orange bar and a blue bar nearly as long as anyone's.</p></div>
+            <div class="rep"><h4>What the report says</h4><p>Tennessee has a Surface Index of 1.3% and an Iceberg Index of 11.6%. Its administrative and service functions show up to ten times the technical exposure of its visible technology jobs.</p><cite>Paraphrased from section 5.4</cite></div>
+          </div>
+        </details>
       </div>
     </div>
 
-    <header class="sh rv" style="margin-top:120px">
-      <p class="kick mono"><b>Insight 05</b><i></i>Shape</p>
+    <header class="sh rv" id="shape" style="margin-top:120px">
+      <p class="kick mono"><span class="nn">05</span><b>Insight 5 of 6</b><i></i>Shape</p>
       <h2>Same exposure, different shape.</h2>
       <p class="lede">Two states can score alike and need opposite plans. What matters is whether the exposure is packed into a couple of industries or spread across many. The report measures that with a standard concentration score, the HHI.</p>
+      <div class="insight"><span class="tag">Insight 5</span><p><b>The shape of the exposure decides the strategy.</b> The same level of exposure can need opposite responses. Concentrated exposure suits action in specific sectors. Spread-out exposure needs coordination across many.</p></div>
     </header>
     <div class="panel rv">
       <p class="mono" style="color:var(--ink3)">Industry concentration of exposure (HHI) · states range from 1,422 to 1,895</p>
@@ -771,6 +935,14 @@ footer a{color:var(--ink);text-underline-offset:3px}
           <div><b>Concentrated</b><span class="mono">≥ 1,738</span>Allows targeted action in a few sectors.</div>
         </div>
       </div>
+      <details class="ex">
+        <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this scale</span><span class="lo">Hide explanation</span></summary>
+        <div class="exb">
+          <div><h4>What you are looking at</h4><p>A scale for how bunched-up a state's exposure is. HHI is a standard economics score: low means spread across many industries, high means packed into a few.</p></div>
+          <div><h4>How to read it</h4><p>The bar runs from 1,400 to 1,900, the range US states fall in, and is split into three bands. The pins mark Iowa, where exposure is spread out, and Delaware, where it is concentrated in finance. Position shows how exposure is distributed, not how much there is.</p></div>
+          <div class="rep"><h4>What the report says</h4><p>Concentrated exposure allows targeted, sector-specific action. Distributed exposure demands broad coordination across many sectors.</p><cite>Paraphrased from section 5.5 and appendix B</cite></div>
+        </div>
+      </details>
     </div>
     <div class="twin">
       <div class="panel rv"><p class="mono">Iowa · Iceberg Index</p><span class="num">12.22%</span><h3>Spread thin</h3><p>One of the most diversified profiles in the country. Typical of the manufacturing belt, where exposure runs through logistics, production, administration and services.</p></div>
@@ -782,11 +954,14 @@ footer a{color:var(--ink);text-underline-offset:3px}
 <section class="s" id="blind">
   <div class="wrap">
     <header class="sh rv">
-      <p class="kick mono"><b>Insight 06</b><i></i>Blind spot</p>
+      <p class="kick mono"><span class="nn">06</span><b>Insight 6 of 6</b><i></i>Blind spot</p>
       <h2>GDP, income and unemployment cannot see it.</h2>
       <p class="lede">The usual dashboards partly track the visible tip, because richer states have bigger tech sectors. For what lies below, each of them explains <b>less than 5%</b> of the differences between states.</p>
+      <div class="insight"><span class="tag">Insight 6</span><p><b>The usual metrics miss the hidden risk.</b> GDP and unemployment follow today's visible tech disruption. They do not pick up the nationwide spread of white-collar exposure.</p></div>
     </header>
     <div class="panel rv">
+      <p class="ft">How much of each index the usual measures can account for</p>
+      <p class="fs">100% would mean the measure predicts the index perfectly. 0% means it tells you nothing.</p>
       <div class="lg"><span><span class="sw s"></span>Explains the Surface Index</span><span><span class="sw i"></span>Explains the Iceberg Index</span></div>
       <div class="bars" role="img" aria-label="R squared values. GDP: 0.35 for Surface, 0.04 for Iceberg. Per-capita income: 0.18 and 0.00. Unemployment: 0.05 and 0.03.">
         <div class="brow"><h3>State GDP</h3><div class="pair"><div class="s"><i style="--w:77.8%"></i><span>35%</span></div><div class="i"><i style="--w:8.9%;--d:.15s"></i><span>4%</span></div></div></div>
@@ -794,37 +969,14 @@ footer a{color:var(--ink);text-underline-offset:3px}
         <div class="brow"><h3>Unemployment</h3><div class="pair"><div class="s"><i style="--w:11.1%;--d:.2s"></i><span>5%</span></div><div class="i"><i style="--w:6.7%;--d:.35s"></i><span>3%</span></div></div></div>
       </div>
       <p class="note">Share of state-to-state variation explained (R²) when states are ranked on each measure, using Q2 2025 data.</p>
-    </div>
-  </div>
-</section>
-
-<section class="s" id="proof">
-  <div class="wrap">
-    <header class="sh rv">
-      <p class="kick mono"><b>Insight 01</b><i></i>Proof</p>
-      <h2>Does it match the real world? Two tests.</h2>
-    </header>
-    <div class="proof">
-      <div class="panel rv">
-        <p class="mono" style="color:var(--ink3)">Test 1 · Career moves</p>
-        <span class="num"><span data-count="85">85</span>%</span>
-        <h3>of real career moves predicted</h3>
-        <p>When people change jobs, they mostly move between occupations the model rates as highly similar in skills. So the skill map reflects how the labour market actually behaves.</p>
-        <div class="meter" aria-hidden="true"><i style="--w:85%"></i></div>
-      </div>
-      <div class="panel rv" style="--d:.1s">
-        <p class="mono" style="color:var(--ink3)">Test 2 · Actual AI use</p>
-        <span class="num"><span data-count="69">69</span>%</span>
-        <h3>agreement with where AI is really used</h3>
-        <p>States were ranked by predicted exposure and by measured use of Claude (the Anthropic Economic Index), then sorted into three tiers. Each dot is one of the 51 places compared.</p>
-        <div class="mx" id="mx" role="img" aria-label="Three by three grid comparing actual AI use tier with predicted tier. 35 of 51 match: 8 of 13 leading, 18 of 25 middle, 9 of 13 trailing."></div>
-        <div class="mxkey">
-          <span><u style="background:#eef8ff"></u>Same tier on both: 35</span>
-          <span><u style="border:2px solid #eef8ff"></u>Index ahead of use: 9</span>
-          <span><u style="background:rgba(238,248,255,.3)"></u>Index behind use: 7</span>
+      <details class="ex">
+        <summary><span class="q" aria-hidden="true">?</span><span class="lc">Explain this chart</span><span class="lo">Hide explanation</span></summary>
+        <div class="exb">
+          <div><h4>What you are looking at</h4><p>A test of whether three everyday economic measures can predict each index. States were ranked on each measure and on each index, and the rankings compared.</p></div>
+          <div><h4>How to read it</h4><p>Each bar is the share of the differences between states that a measure accounts for. Orange bars test the Surface Index, blue bars the Iceberg Index. Orange has some length: GDP tells you a fair bit about visible tech exposure. Blue barely registers: none of the three tells you about what is hidden.</p></div>
+          <div class="rep"><h4>What the report says</h4><p>Traditional metrics line up moderately with the Surface Index, but their relationship with the Iceberg Index is negligible. Each explains less than five percent of the variation.</p><cite>Paraphrased from section 5.6 and figure 8</cite></div>
         </div>
-        <p class="note">When it misses, it usually errs high, in places like Texas and North Carolina where the workforce is exposed but use has not caught up. That is what an early-warning measure should do.</p>
-      </div>
+      </details>
     </div>
   </div>
 </section>
@@ -1005,7 +1157,7 @@ function el(t,c,h){var e=document.createElement(t); if(c)e.className=c; if(h!=nu
 (function(){
   var mx=$('#mx'); if(!mx) return;
   var D=[[8,3,2],[5,18,2],[0,4,9]], R=['Leading<br>in AI use','Middle','Trailing'], C=['Index: top 13','Index: middle 25','Index: bottom 13'], k=0;
-  mx.appendChild(el('div','h',''));
+  mx.appendChild(el('div','h','Actual ↓<br>Predicted →'));
   C.forEach(function(c){mx.appendChild(el('div','h c',c))});
   D.forEach(function(row,r){
     mx.appendChild(el('div','h',R[r]));
