@@ -59,7 +59,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* ---------- scene: sky + dive ---------- */
 .scene{position:relative;overflow:hidden;z-index:0}
-.sky{position:absolute;inset:0 0 auto 0;height:calc(var(--top) + var(--H) * .17045);
+.sky{position:absolute;inset:0 0 calc(var(--H) * .82955) 0;
   background:linear-gradient(180deg,#040818 0%,#0a1338 30%,#142a63 58%,#24508f 80%,#4d7fb0 93%,#c99a8e 100%)}
 .stars,.stars2{position:absolute;inset:0;background-repeat:repeat;
   -webkit-mask-image:linear-gradient(#000 35%,transparent 82%);mask-image:linear-gradient(#000 35%,transparent 82%)}
@@ -79,16 +79,26 @@ html.js .rv.in{opacity:1;transform:none}
 .aurora i:nth-child(2){background:radial-gradient(52% 40% at 72% 42%,rgba(110,150,255,.45),transparent 70%);animation-delay:-9s;animation-duration:23s}
 @keyframes sway{from{transform:translate3d(-4%,0,0) skewX(-8deg) scaleY(.9)}to{transform:translate3d(5%,3%,0) skewX(10deg) scaleY(1.12)}}
 
-.hero{position:relative;height:var(--top);display:flex;flex-direction:column;z-index:2}
+.hero{position:relative;min-height:var(--top);display:flex;flex-direction:column;z-index:2}
 .bar{display:flex;justify-content:space-between;align-items:center;padding:22px 28px}
 .bar a{text-decoration:none;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
 .bar a:hover{color:#fff}
 .bar .brand{color:#fff;font-weight:700}
-.hero-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 22px 6px}
+.hero-in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6px 22px 14px}
 .hero .mono{color:var(--ink2)}
-.hero h1{font-size:clamp(2.35rem,6.3vw,5.4rem);font-weight:800;font-stretch:112%;margin:18px 0 20px;max-width:15ch;line-height:.96}
+.hero h1{font-size:clamp(2.1rem,4.8vw,4.2rem);font-weight:800;font-stretch:112%;margin:16px 0 24px;max-width:20ch;line-height:.98}
 .hero h1 em{font-style:normal;background:linear-gradient(180deg,#eafaff 20%,#63d8ff 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lede{max-width:44ch;color:#d6e6f3;font-size:clamp(1rem,1.5vw,1.16rem)}
+.what{width:100%;max-width:880px;padding:22px 28px 18px;border-radius:22px;background:var(--glass);border:1px solid var(--line);text-align:left;
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 20px 60px rgba(0,8,20,.35)}
+.what h2{font:700 .64rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ice-hi);margin:0 0 12px}
+.what .wd{font-size:clamp(1.12rem,1.9vw,1.44rem);line-height:1.3;color:var(--ink);font-weight:480;margin:0;max-width:44ch}
+.what .wd b{font-weight:740;color:#fff}
+.what .wf{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.what .wf h3{font:600 .58rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 8px}
+.what .wf p{font-size:.9rem;line-height:1.45;color:var(--ink2);margin:0}
+.what .wf b{color:var(--ink);font-weight:680}
+.what .ws{font-size:.78rem;color:var(--ink3);margin:14px 0 0}
 .cue{margin-top:22px;display:inline-flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ink2)}
 .cue i{width:1px;height:30px;background:linear-gradient(#fff,transparent);animation:drop 2.2s ease-in-out infinite;transform-origin:50% 0}
 @keyframes drop{0%{transform:scaleY(0);opacity:0}40%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1) translateY(16px);opacity:0}}
@@ -411,6 +421,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
   :root{--H:1120px}
   body{font-size:16px}
   .bar{padding:16px 18px}
+  .hero-in{padding:6px 16px 18px}.what{padding:18px 18px 16px;border-radius:18px}.what .wf{grid-template-columns:1fr;gap:14px}
   .wrap{padding:0 18px}
   section.s{padding:84px 0 24px}
   .sh{margin-bottom:36px}
@@ -485,8 +496,17 @@ footer a{color:var(--ink);text-underline-offset:3px}
     <div class="hero-in">
       <p class="mono">The Iceberg Index · MIT + Oak Ridge National Laboratory · Explained</p>
       <h1>AI's reach into work is mostly <em>underwater.</em></h1>
-      <p class="lede">A US study modelled 151 million workers against 13,000 AI tools. The AI everyone talks about turned out to be the tip.</p>
-      <a class="cue mono" href="#dive">Dive<i></i></a>
+      <div class="what">
+        <h2>What is the Iceberg Index?</h2>
+        <p class="wd">A percentage that shows <b>how much of the work people are paid for could already be done by today's AI tools.</b></p>
+        <div class="wf">
+          <div><h3>How to read it</h3><p>The US scores <b>11.7%</b>. About 12 cents of every wage dollar pays for skills AI can already perform.</p></div>
+          <div><h3>Why an iceberg</h3><p>The AI use we can see today, mostly in tech jobs, is <b>2.2%</b>. That is the tip. The 11.7% sits below the waterline.</p></div>
+          <div><h3>What it is not</h3><p>A forecast of job losses. It shows where AI is <b>capable</b>, not where it will be used, or when.</p></div>
+        </div>
+        <p class="ws">From a US study by MIT and Oak Ridge National Laboratory that modelled 151 million workers against 13,000 AI tools.</p>
+      </div>
+      <a class="cue mono" href="#dive">See it to scale<i></i></a>
     </div>
   </header>
 

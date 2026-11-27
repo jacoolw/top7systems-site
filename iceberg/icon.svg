@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Iceberg Index explainer">
+  <rect width="64" height="64" fill="#0a1a3a"/>
+  <!-- small tip above the waterline, large mass below: the report's finding, drawn -->
+  <rect y="22" width="64" height="42" fill="#06223b"/>
+  <path d="M26 22 31 11 35 15 39 22z" fill="#ffffff"/>
+  <path d="M18 22h28l5 10-6 12-9 12-8-6-9-12-4-9z" fill="#1f9fcc"/>
+  <path d="M18 22h28l5 10-13 4-10-6z" fill="#7fe6ff"/>
+  <path d="M0 22h64" stroke="#c97f25" stroke-width="2.5"/>
+</svg>
